@@ -77,29 +77,86 @@ export default {
       'banner3': require(`@/assets/vessel_new_century.jpg`),
     }
   },
-
-  mounted() {
-    // todo this is for moving images na patong patong
-    /*
-    let bg = document.getElementById('bg');
-    let moon = document.getElementById('moon');
-    let mountain = document.getElementById('mountain');
-    let road = document.getElementById('road');
-    let text = document.getElementById('text');
-
-    window.addEventListener('scroll', function(){
-      const value = window.scrollY;
-
-      bg.style.top = value * 0.5 + 'px';
-      moon.style.left = -value * 0.5 + 'px';
-      mountain.style.top = -value * 0.15 + 'px';
-      road.style.top = value * 0.15 + 'px';
-      text.style.top = value + 'px';
-    }) */
-  }
 }
 </script>
 
 <style scoped>
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
 
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  left: auto;
+  right: auto;
+  z-index: 10;
+}
+.carousel-indicators {
+  border-radius: 100px;
+  top: 60%;
+  margin: auto;
+  left: auto;
+  right: auto;
+  justify-content: start;
+}
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: calc(90vh - 125px);
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.parallax-effect {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+@media (min-width: 576px) {
+  #VMCKeyVisual {
+    margin-top: 85px;
+  }
+}
+
+@media (min-width: 768px) {
+  #VMCKeyVisual {
+    margin-top: 85px;
+  }
+}
+
+@media (min-width: 992px) {
+  #VMCKeyVisual {
+    margin-top: 105px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #VMCKeyVisual {
+    margin-top: 105px;
+  }
+}
 </style>
