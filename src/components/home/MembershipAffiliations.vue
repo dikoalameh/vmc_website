@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-
+    Membership and Affiliations
   </div>
 </template>
 
