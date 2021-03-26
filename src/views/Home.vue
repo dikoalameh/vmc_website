@@ -35,6 +35,11 @@ export default {
     'latest-news': LatestNews,
     'crew-fleet-status': CrewFleetStatus,
   },
+  data() {
+    return {
+      'affiliateISO' :require(`@/assets/affiliates/iso_9001.jpg`),
+    }
+  },
 }
 </script>
 
