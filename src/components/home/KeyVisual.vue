@@ -9,7 +9,7 @@
         </ol>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner1+')'}">
+        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner1+')'}" id="BannerOne">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner2+')'}">
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner2+')'} " id="BannerTwo">
           <svg class="bd-placeholder-img" style="opacity: 50%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner3+')'}">
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner3+')'}" id="BannerThree">
           <svg class="bd-placeholder-img" style="opacity: 50%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
@@ -106,6 +106,21 @@ export default {
       'banner3': require(`@/assets/vessel_new_century.jpg`),
     }
   },
+  mounted() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const carousel1 = document.getElementById('BannerOne');
+    const carousel2 = document.getElementById('BannerTwo');
+    const carousel3 = document.getElementById('BannerThree');
+
+    if (w > 992 && w < h) {
+      carousel1.style.height = "60vh"
+      carousel2.style.height = "60vh"
+      carousel3.style.height = "60vh"
+    }
+    console.log('width ' + w);
+    console.log('height ' + h);
+  }
 }
 </script>
 

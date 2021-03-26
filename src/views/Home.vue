@@ -19,6 +19,10 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1 vmc-bg-img-repeat"
+         :style="{ backgroundImage: 'url('+affiliateTexture+')' }">
+      <membershipa-affiliations />
+    </div>
   </div>
 </template>
 
@@ -27,6 +31,7 @@
 import KeyVisual from '../components/home/KeyVisual';
 import LatestNews from '../components/home/LatestNews';
 import CrewFleetStatus from '../components/home/CrewFleetStatus';
+import MembershipAffiliations from '../components/home/MembershipAffiliations';
 
 export default {
   name: 'Home',
@@ -34,15 +39,19 @@ export default {
     'key-visual': KeyVisual,
     'latest-news': LatestNews,
     'crew-fleet-status': CrewFleetStatus,
+    'membershipa-affiliations': MembershipAffiliations,
   },
   data() {
     return {
       'affiliateISO' :require(`@/assets/affiliates/iso_9001.jpg`),
+      'affiliateTexture' :require(`@/assets/fabric-texture.png`)
     }
   },
 }
 </script>
 
 <style scoped>
-
+.vmc-bg-img-repeat {
+  background-repeat: repeat;
+}
 </style>
