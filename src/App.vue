@@ -18,6 +18,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+* {
+  font-family: 'Roboto', "Noto Sans SC", "Open Sans", sans-serif;
+}
 </style>

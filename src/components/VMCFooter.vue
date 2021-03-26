@@ -1,42 +1,37 @@
 <template>
-  <footer CLASS="bg-light">
-    <div class="container">
-      <div class="row vmc-py-big">
-        <div class="col-12 text-center my-2">
-          <h2 class="h1 font-weight-light vmc-heading">CONNECT TO US</h2>
-          <h5 class="h5 mb-4">
-            For inquiries, feedback, questions you may contact us @
-          </h5>
-        </div>
-        <div class="col-12 text-center">
-          <a href="tel:8524-1691" class="btn vmc-btn-circle vmc-btn-outline-prime mx-1">
-            <font-awesome-icon icon="phone-alt" class="mr-2"/>
-            8524-1691
-          </a>
-          <a href="tel:8524-3661" class="btn vmc-btn-circle vmc-btn-prime mx-1">
-            <font-awesome-icon icon="phone-alt" class="mr-2"/>
-            8524-3661
-          </a>
-          <a href="tel:8526-1034" class="btn vmc-btn-circle vmc-btn-outline-prime mx-1">
-            <font-awesome-icon icon="phone-alt" class="mr-2"/>
-            8526-1034
-          </a>
-          <p class="mt-3 mb-4">
-            <a href="mailto:vmcgroup@veritas.com.ph" class="btn vmc-btn-circle vmc-btn-prime px-4 mb-2">
-              <font-awesome-icon icon="envelope" class="mr-2"/>
-              vmcgroup@veritas.com.ph
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
+  <footer>
     <div class="container-fluid vmc-bg-prime-5">
       <div class="container">
-        <div class="row py-4">
-          <div class="col-sm-6">
-            <small style="letter-spacing: .5pt; color: #f8f9f9;">&#169; 2021 VERITAS MARITIME CORPORATION. All Rights Reserved.</small>
+        <div class="row py-4 d-flex">
+          <div class="col-lg-12">
+            <ul class="nav" id="FooterNav">
+              <li class="nav-item">
+                <router-link class="nav-link pl-0" to="/about">About</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/news">News</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/programs">Programs</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/crew">Crew</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/schedules">Schedules</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/career">Career</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/contact">Contact Us</router-link>
+              </li>
+            </ul>
           </div>
-          <div class="col-sm-6 text-right">
+          <div class="col-lg-6 center-on-small-left">
+            <p class="mb-0" style="font-size:14px; letter-spacing: .5pt; color: #f8f9f9;">&#169; 2021 VERITAS MARITIME CORPORATION. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 center-on-small-right">
             <a href="https://www.google.com/maps/place/Marc+2000+Tower,+1973+Taft+Avenue,+Malate,+Manila/@14.5704722,120.988873,17z/data=!3m1!4b1!4m5!3m4!1s0x3397c98108700525:0x41932a9873f9fb00!8m2!3d14.5704722!4d120.9910617"
                class="small" style="letter-spacing: .5pt; color: #f8f9f9;">
               15F MARC 2000 TOWER 1973 Taft Ave., Malate Manila</a>
@@ -54,5 +49,75 @@ export default {
 </script>
 
 <style scoped>
+#FooterNav a {
+  padding: .5rem;
+  color: var(--vmc-dark-0);
+}
 
+#FooterNav a:hover {
+  color: var(--vmc-secondary-5);
+}
+
+#FooterNav a.router-link-exact-active {
+  font-weight: bold;
+  color: var(--vmc-secondary-5);
+}
+#FooterNav {
+  justify-content: center;
+}
+.center-on-small-left {
+  text-align: center;
+}
+.center-on-small-right {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  #FooterNav {
+    justify-content: center;
+  }
+  .center-on-small-left {
+    text-align: center;
+  }
+  .center-on-small-right {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #FooterNav {
+    justify-content: center;
+  }
+
+  .center-on-small-left {
+    text-align: center;
+  }
+
+  .center-on-small-right {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  #FooterNav {
+    justify-content: start;
+  }
+  .center-on-small-left {
+    text-align: left;
+  }
+  .center-on-small-right {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1200px) {
+  #FooterNav {
+    justify-content: start;
+  }
+  .center-on-small-left {
+    text-align: left;
+  }
+  .center-on-small-right {
+    text-align: right;
+  }
+}
 </style>

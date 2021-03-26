@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <page-heading page-title-name="ABOUT VERITAS"/>
+
   </div>
 </template>
 <script>

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
-  --vmc-primary-0  : #e6f4ff;
-  --vmc-primary-1  : #91d0ff;
-  --vmc-primary-2  : #4db2ff;
-  --vmc-primary-3  : #0995ff;
-  --vmc-primary-4  : #0070c4;
+  --vmc-primary-1  : #DAE5EE;
+  --vmc-primary-2  : #DAE5EE;
+  --vmc-primary-3  : #84a7c6;
+  --vmc-primary-4  : #0862A5;
   --vmc-primary-5  : #004980;   /* DEFAULT */
   --vmc-primary-6  : #003f6f;
   --vmc-primary-7  : #00365e;
@@ -12,17 +11,17 @@
   --vmc-primary-9  : #00223c;
   --vmc-primary-10 : #00192b;
   
-  --vmc-secondary-0  : #dff;
-  --vmc-secondary-1  : #aafeff;
-  --vmc-secondary-2  : #66feff;
-  --vmc-secondary-3  : #22feff;
-  --vmc-secondary-4  : #00dbdd;
-  --vmc-secondary-5  : #009899; /* DEFAULT */
-  --vmc-secondary-6  : #008788;
-  --vmc-secondary-7  : #007677;
-  --vmc-secondary-8  : #006566;
-  --vmc-secondary-9  : #055;
-  --vmc-secondary-10 : #044;
+  --vmc-secondary-0  : #e8f6f6;
+  --vmc-secondary-1  : #d0ecec;
+  --vmc-secondary-2  : #b8e2e2;
+  --vmc-secondary-3  : #9fd8d9;
+  --vmc-secondary-4  : #87cecf;
+  --vmc-secondary-5  : #6FC4C5; /* DEFAULT */
+  --vmc-secondary-6  : #57babb;
+  --vmc-secondary-7  : #45aaab;
+  --vmc-secondary-8  : #3b9293;
+  --vmc-secondary-9  : #317a7b;
+  --vmc-secondary-10 : #286262;
   
   --vmc-danger-0  : #fbd9db;
   --vmc-danger-1  : #f59ba0;
@@ -36,12 +35,12 @@
   --vmc-danger-9  : #740c12;
   --vmc-danger-10 : #55090d;
   
-  --vmc-dark-0  : #f8f9f9;
-  --vmc-dark-1  : #d4d7d9;
-  --vmc-dark-2  : #b0b5ba;
-  --vmc-dark-3  : #8c939a;
-  --vmc-dark-4  : #6a7178;
-  --vmc-dark-5  : #4a4f54;      /* DEFAULT */
+  --vmc-dark-0  : #FBFBFB;
+  --vmc-dark-1  : #f4f4f3;
+  --vmc-dark-2  : #acadae;
+  --vmc-dark-3  : #A2A3A4;
+  --vmc-dark-4  : #88959E;
+  --vmc-dark-5  : #4A4F54;      /* DEFAULT */
   --vmc-dark-6  : #42474b;
   --vmc-dark-7  : #3a3e42;
   --vmc-dark-8  : #323639;
@@ -49,73 +48,31 @@
   --vmc-dark-10 : #222527;
   
 }
-
-/* -- adding custom font -- */
-@font-face {
-  font-family: Roboto-100;
-  src: url("/public/fonts/Roboto/Roboto-Thin.ttf");
-}
-@font-face {
-  font-family: Roboto-300;
-  src: url("/public/fonts/Roboto/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: Roboto-400;
-  src: url("/public/fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: Roboto-500;
-  src: url("/public/fonts/Roboto/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: Roboto-700;
-  src: url("/public/fonts/Roboto/Roboto-Bold.ttf");
-}
-@font-face {
-  font-family: Roboto-900;
-  src: url("/public/fonts/Roboto/Roboto-Black.ttf");
-}
-@font-face {
-  font-family: RalewayThin;
-  src: url("/public/fonts/Raleway/static/Raleway-Thin.ttf");
-}
-@font-face {
-  font-family: RalewayExtraLight;
-  src: url("/public/fonts/Raleway/static/Raleway-ExtraLight.ttf");
-}
-@font-face {
-  font-family: RalewayLight;
-  src: url("/public/fonts/Raleway/static/Raleway-Light.ttf");
-}
-@font-face {
-  font-family:RalewayRegular;
-  src: url("/public/fonts/Raleway/static/Raleway-Regular.ttf");
-}
-@font-face {
-  font-family: RalewayMedium;
-  src: url("/public/fonts/Raleway/static/Raleway-SemiBold.ttf");
-}
-@font-face {
-  font-family: RalewayBold;
-  src: url("/public/fonts/Raleway/static/Raleway-SemiBold.ttf");
-}
-/* -- end adding custom font -- */
-
 * {
-  font-family: 'Raleway', sans-serif;
   color: var(--vmc-dark-5);
+}
+p {
+  color: var(--vmc-dark-4);
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* Spacing */
 .vmc-py-big {
-  padding: 5rem 0;
+  padding: 4.5rem 0;
 }
 
+
+/* for borders */
+.rounded-medium {
+  border-radius: 10px;
+}
 
 /* Backgrounds */
-.vmc-bg-prime-0 {
-  background-color: var(--vmc-primary-0);
-}
 .vmc-bg-prime-1 {
   background-color: var(--vmc-primary-1);
 }
@@ -254,6 +211,12 @@
 .vmc-text-primary {
   color: var(--vmc-primary-5);
 }
+.vmc-text-primary-child * {
+  color: var(--vmc-primary-5);
+}
+.vmc-text-primary-2 {
+  color: var(--vmc-primary-3);
+}
 .vmc-text-secondary {
   color: var(--vmc-secondary-5);
 }
@@ -278,6 +241,7 @@
 
 .vmc-btn-outline-white {
   border: 1px solid var(--vmc-dark-0);
+  background-color: rgba(255, 255, 255, 0.15);
   color: var(--vmc-dark-0);
 }
 .vmc-btn-outline-white * {
@@ -388,6 +352,47 @@
   color: var(--vmc-dark-0);
 }
 .vmc-btn-prime:hover, .vmc-btn-prime:active, .vmc-btn-prime:focus {
+  outline: none;
+  box-shadow: none;
+}
+.vmc-btn-prime-2 {
+  border: 1px solid var(--vmc-primary-3);
+  background-color: var(--vmc-primary-3);
+  color: var(--vmc-dark-0);
+}
+.vmc-btn-prime-2 * {
+  color: var(--vmc-dark-0);
+}
+.vmc-btn-prime-2:hover {
+  border: 1px solid var(--vmc-primary-3);
+  background-color: transparent;
+  color: var(--vmc-primary-3);
+}
+.vmc-btn-prime-2:hover * {
+  color: var(--vmc-primary-3);
+}
+.vmc-btn-prime-2:hover, .vmc-btn-prime-2:active, .vmc-btn-prime-2:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.vmc-btn-secondary {
+  border: 1px solid var(--vmc-secondary-5);
+  background-color: var(--vmc-secondary-5);
+  color: var(--vmc-dark-0);
+}
+.vmc-btn-prime * {
+  color: var(--vmc-dark-0);
+}
+.vmc-btn-secondary:hover {
+  border: 1px solid var(--vmc-secondary-7);
+  background-color: var(--vmc-secondary-7);
+  color: var(--vmc-dark-0);
+}
+.vmc-btn-secondary:hover * {
+  color: var(--vmc-dark-0);
+}
+.vmc-btn-secondary:hover, .vmc-btn-secondary:active, .vmc-btn-secondary:focus {
   outline: none;
   box-shadow: none;
 }

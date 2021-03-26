@@ -1,35 +1,42 @@
 <template>
   <header class="fixed-top shadow-sm bg-white">
-    <nav class="navbar navbar-expand-lg navbar-light container py-md-0">
-      <a class="navbar-brand" href="/" style="font-size: 24px;">
-        <img :src="vmcLogo" alt="" style="width: 85px; margin-right: 1rem;">
-        <span class="d-none d-sm-inline-block" >Veritas Maritime Corporation</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#VMCNavigation" aria-controls="VMCNavigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-light container py-0">
+      <div class="navbar-brand">
+        <div class="row d-flex align-items-center">
+          <div class="col-sm-auto">
+            <a href="/"><img :src="vmcLogo" alt="" style="width: 85px;"></a>
+          </div>
+          <div class="col-sm-auto px-0 d-none d-sm-inline-block">
+            <a href="/" style="text-decoration: none">
+              <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
+              <p class="mb-0 text-center vmc-text-primary-2" id="VMCTag">QUALITY CREW, QUALITY SERVICE</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#VMCNavigation" aria-controls="VMCNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="vmc-text-primary-child"><font-awesome-icon icon="bars" style="zoom: 1.5;"/></span>
       </button>
-      <div class="collapse navbar-collapse" id="VMCCallToAction">
-        <div class="row ml-auto">
-          <div class="col-sm-12 ml-auto text-right">
-            <span class="h6">Hotline: </span>
-            <a href="tel:0917-511-1372" class="btn btn-sm vmc-btn-circle vmc-btn-outline-prime mx-1">
+      <div class="collapse navbar-collapse">
+        <div class="row ml-auto pl-0 mr-0">
+          <div class="col-sm-12 ml-auto text-right" id="VMCCallToAction">
+            <font-awesome-icon icon="phone-alt" class="mx-2"/>
+            <span style="font-weight: 500" class="vmc-text-primary-2">Hotlines: </span>
+            <a href="tel:0917-511-1372" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
               Globe: 0917-511-1372
             </a>
-            <a href="tel:0947-996-0107" class="btn btn-sm vmc-btn-circle vmc-btn-outline-prime mx-1">
+            <a href="tel:0947-996-0107" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
               Smart: 0947-996-0107
             </a>
           </div>
         </div>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light container py-0" style="margin-bottom: -25px">
+    <nav class="navbar navbar-expand-lg navbar-light container py-0" id="NavigationContent">
       <div class="row w-100 ml-0 px-0">
-        <div class="col-12 vmc-bg-prime-5">
+        <div class="col-12 vmc-bg-prime-5 rounded">
           <div class="collapse navbar-collapse" id="VMCNavigation">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                <router-link to="/" class="nav-link" style="width: 80px">Home</router-link>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   About Us
@@ -46,9 +53,9 @@
               <li class="nav-item">
                 <router-link class="nav-link" to="/news" style="width: 77px">News</router-link>
               </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/programs" style="width: 113px">Programs</router-link>
-              </li>
+<!--              <li class="nav-item">-->
+<!--                <router-link class="nav-link" to="/programs" style="width: 113px">Programs</router-link>-->
+<!--              </li>-->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="ProgramsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   Programs
@@ -64,9 +71,6 @@
               </li>
               <li class="nav-item">
                 <router-link class="nav-link" to="/schedule" style="width: 119px">Schedules</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/announcement" style="width: 168px">Announcements</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link" to="/career" style="width: 87px">Career</router-link>
@@ -95,13 +99,12 @@ export default {
 
 <style scoped>
 #VMCNavigation a {
-  padding: 1rem;
+  padding: .75rem 1rem;
   color: var(--vmc-dark-0);
   letter-spacing: 1px;
 }
 
 #VMCNavigation a:hover {
-  font-weight: bold;
   color: var(--vmc-secondary-5);
 }
 
@@ -120,7 +123,83 @@ export default {
   display: block;
 }
 .dropdown a[aria-expanded="true"]{
-  font-weight: bold;
   color: var(--vmc-secondary-5);
+}
+#VMCCallToAction {
+  background: var(--vmc-dark-1);
+  border-radius: 100px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+#VMCCallToAction * {
+  color: var(--vmc-primary-3);
+}
+@media (min-width: 576px) {
+  #NavigationContent {
+    margin-bottom: 0;
+  }
+  #VMCMeaning {
+    font-size:19px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  #VMCTag {
+    font-size:16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  #NavigationContent {
+    margin-bottom: 0;
+  }
+  #VMCMeaning {
+    font-size:24px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  #VMCTag {
+    font-size:20px;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  #NavigationContent {
+    margin-bottom: -25px;
+  }
+  #VMCMeaning {
+    font-size:24px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  #VMCTag {
+    font-size:20px;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  #NavigationContent {
+    margin-bottom: -25px;
+  }
+  #VMCMeaning {
+    font-size:24px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  #VMCTag {
+    font-size:20px;
+    font-weight: 500;
+    line-height: 1;
+  }
 }
 </style>

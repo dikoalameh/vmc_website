@@ -9,14 +9,15 @@ import '/public/css/vmc-custom.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
+  faBars,
   faChevronRight,
   faEnvelope,
   faGreaterThan,
   faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 
-library.add( faPhoneAlt, faEnvelope, faGreaterThan, faChevronRight )
+library.add( faPhoneAlt, faEnvelope, faGreaterThan, faChevronRight, faBars )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
