@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <vmc-header />
     <key-visual />
     <latest-news />
     <div class="container-fluid vmc-py-big">
@@ -23,6 +24,7 @@
          :style="{ backgroundImage: 'url('+affiliateTexture+')' }">
       <membershipa-affiliations />
     </div>
+    <vmc-footer />
   </div>
 </template>
 
@@ -32,10 +34,14 @@ import KeyVisual from '../components/home/KeyVisual';
 import LatestNews from '../components/home/LatestNews';
 import CrewFleetStatus from '../components/home/CrewFleetStatus';
 import MembershipAffiliations from '../components/home/MembershipAffiliations';
+import VMCHeader from '../components/VMCHeader';
+import VMCFooter from '../components/VMCFooter';
 
 export default {
   name: 'Home',
   components: {
+    'vmc-header':VMCHeader,
+    'vmc-footer':VMCFooter,
     'key-visual': KeyVisual,
     'latest-news': LatestNews,
     'crew-fleet-status': CrewFleetStatus,
