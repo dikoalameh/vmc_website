@@ -9,7 +9,8 @@
           <h1 id="Heading404">404</h1>
           <h2 id="HeadingTitle">It seems you landed on non existing page</h2>
           <p id="HeadingDescription">Click button below to go back to the homepage</p>
-          <button class="btn btn-lg vmc-btn-circle vmc-btn-outline-prime px-5" id="GoBack">Home</button>
+          <router-link class="btn btn-lg vmc-btn-circle vmc-btn-outline-prime px-5" to="/" id="GoBack">Home</router-link>
+<!--          <router-link class="btn btn-lg vmc-btn-circle vmc-btn-outline-prime px-5" id="GoBack">Home</router-link>-->
         </div>
       </div>
     </div>

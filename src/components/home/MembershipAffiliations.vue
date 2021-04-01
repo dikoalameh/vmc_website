@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="h1 vmc-text-primary text-center mb-3" style="font-size: 50px">
+    <h2 class="h1 vmc-text-primary text-center mb-3 vmc-heading">
       Memberships and Affiliations
     </h2>
     <carousel :responsive="{

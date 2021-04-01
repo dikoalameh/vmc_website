@@ -49,10 +49,13 @@
   
 }
 * {
-  color: var(--vmc-dark-5);
-}
-p {
   color: var(--vmc-dark-4);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .container-fluid {
@@ -231,7 +234,11 @@ p {
 }
 
 .vmc-heading {
-  font-size: 4rem;
+  font-size: 40px;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
 }
 
 /* buttons */
@@ -399,10 +406,6 @@ p {
 
 
 /* CUSTOMIZE ON HOVER EFFECT */
-.company-affiliates-img {
-  width: 100%;
-  height: auto;
-}
 
 .company-affiliates-text {
   position: absolute;

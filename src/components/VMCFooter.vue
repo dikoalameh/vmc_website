@@ -6,7 +6,7 @@
           <div class="col-lg-12">
             <ul class="nav" id="FooterNav">
               <li class="nav-item">
-                <router-link class="nav-link pl-0" to="/about">About</router-link>
+                <router-link class="nav-link pl-0" :to="{name: 'TheCompany'}">About</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link" to="/news">News</router-link>
@@ -58,7 +58,7 @@ export default {
   color: var(--vmc-secondary-5);
 }
 
-#FooterNav a.router-link-exact-active {
+#FooterNav a.router-link-exact-active, #FooterNav a.router-link-active {
   font-weight: bold;
   color: var(--vmc-secondary-5);
 }

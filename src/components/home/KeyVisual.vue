@@ -16,13 +16,13 @@
           <div class="container">
             <div class="carousel-caption text-left">
               <p class="mb-2 font-weight-normal text-white"
-                 style="letter-spacing: 3px; font-size: 16px;">LOREM IPSUM</p>
+                 style="letter-spacing: 3px; font-size: 16px;">CARRYING A FAMILY LEGACY</p>
               <p class="vmc-text-white font-weight-normal mb-0"
                  style="font-size:55px; font-weight: 500; letter-spacing: 1px;">
-                CAPE SASANQUA
+                TOWARD GROWTH, STABILITY
               </p>
               <p class="vmc-text-white font-weight-light" style="font-size: 23px;">
-                Some representative placeholder content for the first slide of the carousel.
+                One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
               </p>
               <p>
                 <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
@@ -38,13 +38,13 @@
           <div class="container">
             <div class="carousel-caption text-left">
               <p class="mb-2 font-weight-normal text-white"
-                 style="letter-spacing: 3px; font-size: 16px;">LOREM IPSUM</p>
+                 style="letter-spacing: 3px; font-size: 16px;">VERITAS' GEARED TOWARDS</p>
               <p class="vmc-text-white font-weight-normal mb-0"
                  style="font-size:55px; font-weight: 500; letter-spacing: 1px;">
-                CORONA CITRUS
+                THE NEW NORMAL
               </p>
               <p class="vmc-text-white font-weight-light" style="font-size: 23px;">
-                Some representative placeholder content for the first slide of the carousel.
+                Some representative placeholder content for the second slide of the carousel.
               </p>
               <p>
                 <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
@@ -101,8 +101,8 @@ export default {
   name: "KeyVisual",
   data() {
     return {
-      'banner1': require(`@/assets/vessel_cape_sasanqua.jpg`),
-      'banner2': require(`@/assets/vessel_corona_citrus.jpg`),
+      'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
+      'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
       'banner3': require(`@/assets/vessel_new_century.jpg`),
     }
   },
@@ -199,6 +199,9 @@ export default {
   .carousel-indicators {
     bottom: 20%;
   }
+  .carousel-caption {
+    max-width: 500px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -207,6 +210,9 @@ export default {
   }
   .carousel-indicators {
     bottom: 20%;
+  }
+  .carousel-caption {
+    max-width: 680px;
   }
 }
 
@@ -217,6 +223,9 @@ export default {
   .carousel-indicators {
     bottom: 20%;
   }
+  .carousel-caption {
+    max-width: 940px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -225,6 +234,9 @@ export default {
   }
   .carousel-indicators {
     bottom: 20%;
+  }
+  .carousel-caption {
+    max-width: 1140px;
   }
 }
 </style>

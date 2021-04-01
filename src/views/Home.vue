@@ -10,7 +10,7 @@
             <crew-fleet-status />
           </div>
           <div class="col-lg-2 col-md-4 col-6">
-            <img :src="affiliateISO" alt="" style="width: 100%; height: auto">
+            <img :src="affiliateISO" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 pl-0">
             <p class="mb-0">

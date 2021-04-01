@@ -9,7 +9,7 @@
           <div class="col-sm-auto px-0 d-none d-sm-inline-block">
             <a href="/" style="text-decoration: none">
               <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
-              <p class="mb-0 text-center vmc-text-primary-2" id="VMCTag">QUALITY CREW, QUALITY SERVICE</p>
+              <p class="mb-0 text-center vmc-text-primary-2" id="VMCTag">QUALITY SERVICE, QUALITY CREW</p>
             </a>
           </div>
         </div>
@@ -22,12 +22,18 @@
           <div class="col-sm-12 ml-auto text-right" id="VMCCallToAction">
             <font-awesome-icon icon="phone-alt" class="mx-2"/>
             <span style="font-weight: 500" class="vmc-text-primary-2">Hotlines: </span>
-            <a href="tel:0917-511-1372" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
+            <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
               Globe: 0917-511-1372
             </a>
-            <a href="tel:0947-996-0107" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
+            <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
               Smart: 0947-996-0107
             </a>
+<!--            <a href="tel:0917-511-1372" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">-->
+<!--              Globe: 0917-511-1372-->
+<!--            </a>-->
+<!--            <a href="tel:0947-996-0107" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">-->
+<!--              Smart: 0947-996-0107-->
+<!--            </a>-->
           </div>
         </div>
       </div>
@@ -38,13 +44,17 @@
           <div class="collapse navbar-collapse" id="VMCNavigation">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
+                <router-link class="nav-link dropdown-toggle" :to="{path: '/about/'}" event="" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   About Us
-                </a>
+                </router-link>
+<!--                <a class="nav-link dropdown-toggle" href="#" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">-->
+<!--                  About Us-->
+<!--                </a>-->
                 <div class="dropdown-menu" aria-labelledby="AboutUsLink">
-                  <router-link class="dropdown-item" to="/about">The Company</router-link>
-                  <a class="dropdown-item" href="#" style="width: 210px">Organizational Chart</a>
-                  <a class="dropdown-item" href="#">Our Principals</a>
+                  <router-link class="dropdown-item" :to="{name: 'TheCompany'}">The Company</router-link>
+                  <router-link class="dropdown-item" style="width: 210px" :to="{name: 'OrganizationalChart'}">
+                    Organizational Chart</router-link>
+                  <router-link class="dropdown-item" :to="{name: 'OurPrincipals'}">Our Principals</router-link>
                 </div>
               </li>
 <!--              <li class="nav-item">-->
@@ -108,7 +118,7 @@ export default {
   color: var(--vmc-secondary-5);
 }
 
-#VMCNavigation a.router-link-exact-active {
+#VMCNavigation a.router-link-exact-active, #VMCNavigation a.router-link-active {
   font-weight: bold;
   color: var(--vmc-secondary-5);
 }
@@ -124,6 +134,9 @@ export default {
 }
 .dropdown a[aria-expanded="true"]{
   color: var(--vmc-secondary-5);
+}
+.dropdown-item:hover, .dropdown-item:active, .dropdown-item:visited, .dropdown-item:focus{
+  background: var(--vmc-primary-5);
 }
 #VMCCallToAction {
   background: var(--vmc-dark-1);

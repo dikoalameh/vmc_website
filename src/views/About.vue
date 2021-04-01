@@ -1,7 +1,8 @@
 <template>
   <div class="about">
     <vmc-header />
-    <page-heading page-title-name="ABOUT VERITAS"/>
+    <page-heading page-title-name="ABOUT VERITAS" image-link="about/30Years.jpg"/>
+    <router-view></router-view>
     <vmc-footer />
   </div>
 </template>
@@ -15,7 +16,7 @@ export default {
   components: {
     'vmc-header':VMCHeader,
     'vmc-footer':VMCFooter,
-    'page-heading': PageHeading
+    'page-heading': PageHeading,
   }
 }
 </script>

@@ -16,8 +16,11 @@ export default {
   props: ['pageTitleName','imageLink'],
   data() {
     return {
-      'pageBackground': require(`@/assets/about/30Years.jpg`),
+      'pageBackground': require(`@/assets/`+this.imageLink),
     }
+  },
+  created() {
+
   },
   mounted() {
     // todo this is for moving images na patong patong
@@ -47,21 +50,21 @@ export default {
   section {
     position: relative;
     width: 100%;
-    height: 550px;
+    height: 500px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  section:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, var(--vmc-primary-5), transparent);
-    z-index: 10;
-  }
+  /*section:before {*/
+  /*  content: '';*/
+  /*  position: absolute;*/
+  /*  bottom: 0;*/
+  /*  width: 100%;*/
+  /*  height: 100px;*/
+  /*  background: linear-gradient(to top, var(--vmc-dark-1), transparent);*/
+  /*  z-index: 10;*/
+  /*}*/
   section:after {
     content: '';
     position: absolute;
@@ -69,7 +72,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--vmc-primary-5);
+    background: var(--vmc-primary-3);
     mix-blend-mode: color;
     z-index: 10;
   }
@@ -88,6 +91,7 @@ export default {
     font-size: 5rem;
     z-index: 1;
     text-shadow: 2px 2px 5px var(--vmc-dark-10);
+    text-align: center;
   }
   #road {
     z-index: 2;
