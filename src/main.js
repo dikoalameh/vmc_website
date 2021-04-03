@@ -13,12 +13,12 @@ import {
   faBars,
   faChevronRight,
   faEnvelope,
-  faGreaterThan,
-  faPhoneAlt,
+  faGreaterThan, faHandHoldingHeart, faHandshake,
+  faPhoneAlt, faThumbsUp,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 
-library.add( faPhoneAlt, faEnvelope, faGreaterThan, faChevronRight, faBars )
+library.add( faPhoneAlt, faEnvelope, faGreaterThan, faChevronRight, faBars, faThumbsUp, faHandHoldingHeart, faHandshake )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('carousel', OwlCarousel)

@@ -3,9 +3,13 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Page404 from '../views/Page404.vue'
 import About from '../views/About';
+import Contact from '../views/Contact';
 import TheCompany from '../components/about-us/TheCompany';
 import OrganizationalChart from '../components/about-us/OrganizationalChart';
 import OurPrincipals from '../components/about-us/OurPrincipals';
+import ContactUs from '../components/contact-us/ContactUs';
+import News from '../views/News';
+import AllNews from '../components/news/AllNews';
 
 Vue.use(VueRouter)
 
@@ -19,6 +23,7 @@ const routes = [
     path: '/about/',
     name: 'About',
     component: About,
+    redirect: '/about/company',
     children: [
       {
         path: 'company',
@@ -36,6 +41,32 @@ const routes = [
         component: OurPrincipals
       },
       ]
+  },
+  {
+    path: '/news/',
+    name: 'News',
+    component: News,
+    redirect: '/news/all',
+    children: [
+      {
+        path: 'all',
+        name: 'AllNews',
+        component: AllNews
+      },
+    ]
+  },
+  {
+    path: '/contact/',
+    name: 'Contact',
+    component: Contact,
+    redirect: '/contact/us',
+    children: [
+      {
+        path: 'us',
+        name: 'ContactUs',
+        component: ContactUs
+      },
+    ]
   },
   {
     path: '*',

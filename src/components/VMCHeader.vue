@@ -61,7 +61,7 @@
 <!--                <router-link class="nav-link" to="/about" style="width: 114px">About Us</router-link>-->
 <!--              </li>-->
               <li class="nav-item">
-                <router-link class="nav-link" to="/news" style="width: 77px">News</router-link>
+                <router-link class="nav-link" :to="{name: 'News'}" style="width: 77px">News</router-link>
               </li>
 <!--              <li class="nav-item">-->
 <!--                <router-link class="nav-link" to="/programs" style="width: 113px">Programs</router-link>-->
@@ -86,7 +86,7 @@
                 <router-link class="nav-link" to="/career" style="width: 87px">Career</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" to="/contact" style="width: 128px">Contact Us</router-link>
+                <router-link class="nav-link" :to="{name: 'Contact'}" style="width: 128px">Contact Us</router-link>
               </li>
             </ul>
           </div>

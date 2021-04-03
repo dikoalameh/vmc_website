@@ -55,6 +55,32 @@
       </div>
     </div>
     <div class="container-fluid vmc-py-big" >
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-12">
+            <h2 class="h1 vmc-text-primary vmc-heading mb-4">
+              Core Values
+            </h2>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-2">
+            <font-awesome-icon icon="hand-holding-heart" class="fa-5x" />
+            <h4 class="vmc-text-primary-2 font-weight-normal my-3">HONESTY</h4>
+            <p>We value openness and expect truthfulness with each other, with our employees and crew, with our vendors and customers, as reflected in our business records and transactions.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-2">
+            <font-awesome-icon icon="handshake" class="fa-5x" />
+            <h4 class="vmc-text-primary-2 font-weight-normal my-3">INTEGRITY</h4>
+            <p class="px-2">We act in accordance with our moral and ethical values, as the foundation of our individual and corporate actions that drives our organization to succeed.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-2">
+            <font-awesome-icon icon="thumbs-up" class="fa-5x" />
+            <h4 class="vmc-text-primary-2 font-weight-normal my-3">QUALITY SERVICE</h4>
+            <p>We meet or exceed expectations of customers, in providing our reliable service without compromising quality, and continuously improving to achieve service excellence. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
           <div class="col-lg-8 order-lg-5">
