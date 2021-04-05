@@ -25,8 +25,11 @@
                 One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
               </p>
               <p>
-                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
-                   style="font-size: 18px" href="#">Read More</a>
+                <router-link :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}"
+                             class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
+                             style="font-size: 18px">Read More</router-link>
+<!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
+<!--                   style="font-size: 18px" href="#">Read More</a>-->
               </p>
             </div>
           </div>

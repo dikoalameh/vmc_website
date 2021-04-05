@@ -14,7 +14,7 @@
       <div class="item"><img :src="affiliateMARINA" alt="MARINA"></div>
       <div class="item"><img :src="affiliatePJMCC" alt="PJMCC"></div>
       <div class="item"><img :src="affiliatePAMAS" alt="PAMAS"></div>
-      <div class="item"><img :src="affiliateUKAS" alt="UKAS"></div>
+<!--      <div class="item"><img :src="affiliateUKAS" alt="UKAS"></div>-->
       <div class="item" style="margin-right: 0"><img :src="affiliatePDOS" alt="PDOS"></div>
     </carousel>
   </div>
@@ -35,7 +35,7 @@ export default {
       'affiliatePJMCC' :require(`@/assets/affiliates/pjmcc.jpg`),
       'affiliatePAMAS' :require(`@/assets/affiliates/pamas.jpg`),
       'affiliatePDOS' :require(`@/assets/affiliates/pdos.jpg`),
-      'affiliateUKAS' :require(`@/assets/affiliates/ukas.jpg`),
+      // 'affiliateUKAS' :require(`@/assets/affiliates/ukas.jpg`),
     }
   },
 }

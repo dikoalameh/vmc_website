@@ -1,0 +1,66 @@
+<template>
+  <div class="news">
+    <div class="container-fluid vmc-py-big">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="h1 vmc-text-primary vmc-heading">
+              Carrying a family legacy toward growth, stability
+            </h2>
+            <p class="vmc-text-primary-2 letter-spacing-1 mb-0">
+              By Yashika F. Torib — July 17, 2019
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <img :src="jmmPresidency" alt="" class="my-3">
+            <p>One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.</p>
+            <p>The company’s 30th year in the maritime industry was marked with nostalgia as President Ericson Marquez passed the proverbial baton to Jiro, his only son. Jiro is the third generation of his clan to lead the family business, which was founded by his grandfather, Ponciano, in the late 1960s and succeeded by his father, Ericson, who led its expansion from a single manning agency to several established manning companies.</p>
+            <p>Even at a young age, Jiro was destined to follow the footsteps of his elders. In fact, he was the namesake of Jiro Matsushima, president of the Japanese shipping company Nissho Kisen, who started the long-standing partnership with the Marquez clan in the ‘60s.</p>
+            <p>Immediately upon earning his degree in international studies, major in Japanese at the De La Salle University in 1997, the young man was placed under the direct tutelage of their Japanese partners for management training. Now in his early 40s and armed with 17 years’ worth of business immersion and coaching from their foreign counterparts, Jiro has finally moved up the corporate ladder from executive vice president to president of Veritas. He rose from the ranks, literally.</p>
+            <p>As the new president, Jiro plans to uphold and continue the legacy of the company as instituted by his predecessors. “I hope to continue not just my father and grandfather’s legacy, but that of the company itself,” he said whilst acknowledging the daunting responsibility of leading a big company.</p>
+            <p>Veritas started in 1989 as a joint venture company of Mercury Shipping Corp. and K-Line RoRo Bulk Ship Management Co. Ltd. Mercury’s parent company, Virjen Shipping Corp., is owned and established by the Marquez family almost 50 years ago.</p>
+            <p>As the new president, Jiro has got big shoes to fill — a tradition of loyalty and brotherhood with their Japanese partners, a high regard for their culture, while instilling Filipino values among the crew and staff, and leading a company towards expansion as supported by technological advancements, safety culture 0and transparency.</p>
+            <p>“Our fleet is growing and I need to strengten our pool of seafarers; I want to scale up but I’ll be very cautious. Veritas is a traditional company and for the first couple of years of my presidency, my thrust is going back to the basics,” Jiro disclosed, adding that the Marquez family had agreed to an expansion program that had to be done responsibly to ensure the quality of seafarers and safety of their ships.</p>
+            <p>“I want to give the principal their money’s worth. I also want to have a closer relationship with the crew and their family, to make sure that they are all confident with the management and that we will never leave them,” he said.</p>
+            <p>His father, who will continue as chairman of the board, expressed his confidence on Jiro’s capabilities as the new head of Veritas. “We believe everything is possible, if we put our heart into it.”</p>
+            <p>“Whenever we succeed, we are grateful and we recognize the achievements of our people. That is the legacy I am leaving my son with, and I know he already had these values in his heart because he made videos out of it,” he continued.</p>
+            <p>Like his children, Ericson was a product of succession plan when his father, Ponciano, pioneered a business partnership with the Japanese shipping sector about 50 years ago, then a budding market in East Asia, a time when Filipino seamen were largely unknown in the said region.</p>
+            <p>What ultimately sealed the growing partnership between Ponciano and the owners of Kobe Kisen Kaisha was his eldest son, Eric. Constantly tagged along by his father during business meetings in Japan, young Eric sparked the quiet approval and delight of their Japanese partners.</p>
+            <p>For Eric, it was only a trip to haul the baggage of his father and observe how business meetings are done; for their Japanese partners, it was an indication of business stability through succession.</p>
+            <p>“One of the few things people will tell you is that it is very difficult to start a business with the Japanese. It was a hard start but the moment you sealed partnership with them, you’ll learn that their commitment equates to a long-standing relations,” he recalled.</p>
+            <p>“I was trained and immersed very early in this business; my father saw my potential, maybe our foreign partners, too. Establishing a succession plan evidently made them very happy because what they want is stable relations, they don’t want to be moving around. The Japanese truly values loyalty,” Eric added, remembering that he shared the same experience with his son Jiro.</p>
+            <p>“I remember how my father would place a small table and chair inside his office for Jiro when he was still a kid. He told my son that someday he would become a president like him.”</p>
+            <p>What the Marquez family founded with the Japanese ship owners reverberated throughout the decades. Ericson continues to reinforce this partnership with their Japanese counterparts by setting the third generation of the Marquez line to the succession plan.</p>
+            <p>As the family patriarch hands the baton to his son, he was fervent in continuing serving the maritime industry. Eric is an active leader for the Joint Manning Group, a tripartite umbrella organization that involves tripartite discussion between government agencies, maritime labor unions and maritime employers.</p>
+            <p>“There is no retirement,” he laughed. “I will continue volunteering for the industry. But, as for my company, I will not brag about what I did. My only job is to say ‘thank you,”</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <a href="https://www.manilatimes.net/2019/07/17/business/maritime-business/carrying-a-family-legacy-toward-growth-stability/585139/"
+               target="_blank" class="mb-0 mt-3 vmc-text-primary-2" style="opacity: 75%">
+              See Original Post By: The Manila Times
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'CarryingAFamilyLegacyTowardGrowthStability',
+  data() {
+    return {
+      'jmmPresidency': require(`@/assets/news/news_17-06-2019.jpg`),
+    }
+  }
+};
+</script>
+
+<style scoped>
+
+</style>

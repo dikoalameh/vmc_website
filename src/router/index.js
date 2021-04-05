@@ -10,6 +10,9 @@ import OurPrincipals from '../components/about-us/OurPrincipals';
 import ContactUs from '../components/contact-us/ContactUs';
 import News from '../views/News';
 import AllNews from '../components/news/AllNews';
+import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/CarryingAFamilyLegacyTowardGrowthStability';
+import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/SeafaringOrganizationUnderProposedOFWDeptPushed';
+import ModernDayHeroesInTheNewNormal from '../components/news/ModernDayHeroesInTheNewNormal';
 
 Vue.use(VueRouter)
 
@@ -52,6 +55,21 @@ const routes = [
         path: 'all',
         name: 'AllNews',
         component: AllNews
+      },
+      {
+        path: '1',
+        name: 'CarryingAFamilyLegacyTowardGrowthStability',
+        component: CarryingAFamilyLegacyTowardGrowthStability
+      },
+      {
+        path: '2',
+        name: 'SeafaringOrganizationUnderProposedOFWDeptPushed',
+        component: SeafaringOrganizationUnderProposedOFWDeptPushed
+      },
+      {
+        path: '3',
+        name: 'ModernDayHeroesInTheNewNormal',
+        component: ModernDayHeroesInTheNewNormal
       },
     ]
   },

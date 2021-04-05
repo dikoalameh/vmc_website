@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <vmc-header />
-    <page-heading page-title-name="NEWS & UPDATE" image-link="about/30Years.jpg"/>
+    <page-heading page-title-name="NEWS & UPDATE" image-link="news_container.jpg"/>
     <router-view></router-view>
     <vmc-footer />
   </div>
