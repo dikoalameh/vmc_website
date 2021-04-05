@@ -4,11 +4,55 @@
       <div class="row">
         <div class="col-12 mb-md-4 mb-sm-2">
           <h2 class="h1 vmc-text-primary d-flex align-items-center justify-content-center vmc-heading">Latest News
-            <button class="btn btn-lg vmc-btn-circle vmc-btn-prime-2 px-4 py-1 see-all-button">SEE ALL NEWS</button>
+            <router-link :to="{name: 'AllNews'}"
+                         class="btn btn-lg vmc-btn-circle vmc-btn-prime-2 px-4 py-1 see-all-button">
+              SEE ALL NEWS
+            </router-link>
           </h2>
         </div>
       </div>
       <div class="row d-flex justify-content-center">
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer3" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">Modern Day Heroes in the New Normal</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">31 March 2021</p>
+              <router-link :to="{name: 'ModernDayHeroesInTheNewNormal'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer2" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title">Carrying a family legacy toward growth, stability</h4>
+                <p>One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.</p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">17 July 2019</p>
+              <router-link :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer1" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title">Seafaring organization under proposed OFW Department pushed</h4>
+                <p>With the Senate trying to rush the enactment of the new law creating the Department of Overseas Filipino Workers, he country’s biggest umbrella group in the</p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">10 March 2021</p>
+              <router-link :to="{name: 'SeafaringOrganizationUnderProposedOFWDeptPushed'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer3" alt="Card image cap">

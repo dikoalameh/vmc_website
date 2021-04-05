@@ -41,7 +41,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">55</h2>
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">53</h2>
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">

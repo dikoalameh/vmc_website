@@ -69,26 +69,36 @@
           </div>
           <div class="col-md-6">
             <h4 class="font-weight-light mb-1">Send us feedback :</h4>
-            <form>
-              <div class="form-group">
+            <form @submit.prevent="sendFeedback">
+              <div class="form-group" >
                 <label for="Name">Name : <sup class="vmc-text-danger">*</sup></label>
-                <input type="text" class="form-control" id="Name" placeholder="" required>
+                <input type="text" class="form-control" id="Name" placeholder="" required
+                       v-model.trim="fullName">
+                <small>Please enter a name!</small>
               </div>
               <div class="form-group">
                 <label for="ContactNumber">Contact Number : <sup class="vmc-text-danger">*</sup></label>
-                <input type="text" class="form-control" id="ContactNumber" placeholder="" required>
+                <input type="text" class="form-control" id="ContactNumber" placeholder="" required
+                       v-model="contactNumber">
+                <small>Please enter a valid contact number!</small>
               </div>
               <div class="form-group">
                 <label for="Email">Email Address : <sup class="vmc-text-danger">*</sup></label>
-                <input type="email" class="form-control" id="Email" placeholder="" required>
+                <input type="email" class="form-control" id="Email" placeholder="" required
+                       v-model="emailAddress">
+                <small>Please enter a valid email address!</small>
               </div>
               <div class="form-group">
                 <label for="Subject">Subject : <sup class="vmc-text-danger">*</sup></label>
-                <input type="text" class="form-control" id="Subject" placeholder="" required>
+                <input type="text" class="form-control" id="Subject" placeholder="" required
+                       v-model="emailSubject">
+                <small>Please enter a subject!</small>
               </div>
               <div class="form-group">
                 <label for="Message">Message : <sup class="vmc-text-danger">*</sup></label>
-                <textarea class="form-control" id="Message" rows="6" required></textarea>
+                <textarea class="form-control" id="Message" rows="6" required
+                          v-model="emailMessage"></textarea>
+                <small>Please enter a message!</small>
               </div>
               <button type="submit" class="btn vmc-btn-circle vmc-btn-prime-2 px-5">SEND</button>
             </form>
@@ -101,10 +111,31 @@
 
 <script>
 export default {
-name: "ContactUs"
+  name: "ContactUs",
+  data() {
+    return {
+      fullName      : '',
+      contactNumber : '',
+      emailAddress  : '',
+      emailSubject  : '',
+      emailMessage  : '',
+    };
+  },
+  methods: {
+    sendFeedback() {
+
+    },
+    validateInput() {
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+.invalid .form-control {
+  border-color : var(--vmc-danger-5);
+}
+.invalid small {
+  color: var(--vmc-danger-5);
+}
 </style>
