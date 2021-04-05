@@ -73,32 +73,62 @@
               <div class="form-group" >
                 <label for="Name">Name : <sup class="vmc-text-danger">*</sup></label>
                 <input type="text" class="form-control" id="Name" placeholder="" required
-                       v-model.trim="fullName">
-                <small>Please enter a name!</small>
+                       v-model.trim="$v.fullName.$model"
+                       :class="{'is-invalid': $v.fullName.$error, 'is-valid': !$v.fullName.$invalid}">
+<!--                <div class="valid-feedback small">You enter a valid name!</div>-->
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.fullName.required">Name is required. </span>
+                  <span v-if="!$v.fullName.minLength">Name must have at least {{$v.fullName.$params.minLength.min}}. </span>
+                </div>
               </div>
               <div class="form-group">
                 <label for="ContactNumber">Contact Number : <sup class="vmc-text-danger">*</sup></label>
                 <input type="text" class="form-control" id="ContactNumber" placeholder="" required
-                       v-model="contactNumber">
-                <small>Please enter a valid contact number!</small>
+                       v-model.trim="$v.contactNumber.$model"
+                       :class="{'is-invalid': $v.contactNumber.$error, 'is-valid': !$v.contactNumber.$invalid}">
+<!--                <div class="valid-feedback small">You enter a valid contact number!</div>-->
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.contactNumber.required">Contact number is required. </span>
+                  <span v-if="!$v.contactNumber.numeric">Contact field accepts number only. </span>
+                  <span v-if="!$v.contactNumber.minLength">Contact number must have at least {{$v.contactNumber.$params.minLength.min}}. </span>
+                  <span v-if="!$v.contactNumber.maxLength">Contact number must have at most {{$v.contactNumber.$params.maxLength.max}}. </span>
+                </div>
               </div>
               <div class="form-group">
                 <label for="Email">Email Address : <sup class="vmc-text-danger">*</sup></label>
                 <input type="email" class="form-control" id="Email" placeholder="" required
-                       v-model="emailAddress">
-                <small>Please enter a valid email address!</small>
+                       v-model.trim="$v.emailAddress.$model"
+                       :class="{'is-invalid': $v.emailAddress.$error, 'is-valid': !$v.emailAddress.$invalid}">
+<!--                <div class="valid-feedback small">You enter a valid email address!</div>-->
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.emailAddress.required">Email is required. </span>
+                  <span v-if="!$v.emailAddress.email">Please enter a valid email address. </span>
+                </div>
               </div>
               <div class="form-group">
                 <label for="Subject">Subject : <sup class="vmc-text-danger">*</sup></label>
                 <input type="text" class="form-control" id="Subject" placeholder="" required
-                       v-model="emailSubject">
-                <small>Please enter a subject!</small>
+                       v-model.trim="$v.emailSubject.$model"
+                       :class="{'is-invalid': $v.emailSubject.$error, 'is-valid': !$v.emailSubject.$invalid}">
+<!--                <div class="valid-feedback small">You enter a valid email subject!</div>-->
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.emailSubject.required">Subject field is required. </span>
+                  <span v-if="!$v.emailSubject.minLength">Subject must have at least {{$v.emailSubject.$params.minLength.min}}. </span>
+                  <span v-if="!$v.emailSubject.maxLength">Subject must have at most {{$v.emailSubject.$params.maxLength.max}}. </span>
+                </div>
               </div>
               <div class="form-group">
                 <label for="Message">Message : <sup class="vmc-text-danger">*</sup></label>
+<!--                <textarea class="form-control" id="Message" rows="6" required-->
+<!--                          v-model="emailMessage"></textarea>-->
                 <textarea class="form-control" id="Message" rows="6" required
-                          v-model="emailMessage"></textarea>
-                <small>Please enter a message!</small>
+                          v-model.trim="$v.emailMessage.$model"
+                          :class="{'is-invalid': $v.emailMessage.$error, 'is-valid': !$v.emailMessage.$invalid}">
+                </textarea>
+<!--                <div class="valid-feedback small">Great message!</div>-->
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.emailSubject.required">Message is required. </span>
+                </div>
               </div>
               <button type="submit" class="btn vmc-btn-circle vmc-btn-prime-2 px-5">SEND</button>
             </form>
@@ -110,6 +140,7 @@
 </template>
 
 <script>
+import { required, minLength, maxLength, numeric, email } from 'vuelidate/lib/validators'
 export default {
   name: "ContactUs",
   data() {
@@ -119,23 +150,48 @@ export default {
       emailAddress  : '',
       emailSubject  : '',
       emailMessage  : '',
+      submitStatus  : null
     };
+  },
+  validations: {
+    fullName: {
+      required,
+      minLength: minLength(3)
+    },
+    contactNumber: {
+      required,
+      numeric,
+      minLength: minLength(7),
+      maxLength: maxLength(15)
+    },
+    emailAddress: {
+      required,
+      email
+    },
+    emailSubject: {
+      required,
+      minLength: minLength(3),
+      maxLength: maxLength(100)
+    },
+    emailMessage: {
+      required
+    }
   },
   methods: {
     sendFeedback() {
-
+      console.log(this.fullName);
+      console.log(this.contactNumber);
+      console.log(this.emailAddress);
+      console.log(this.emailSubject);
+      console.log(this.emailMessage);
     },
-    validateInput() {
-    }
+
   }
 }
 </script>
 
 <style scoped>
-.invalid .form-control {
-  border-color : var(--vmc-danger-5);
-}
-.invalid small {
+.invalid-feedback {
   color: var(--vmc-danger-5);
 }
 </style>

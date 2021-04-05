@@ -7,6 +7,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '/public/css/vmc-custom.css'
 import OwlCarousel from 'v-owl-carousel'
+import Vuelidate from 'vuelidate'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -22,7 +23,7 @@ library.add( faPhoneAlt, faEnvelope, faGreaterThan, faChevronRight, faBars, faTh
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('carousel', OwlCarousel)
-
+Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 
