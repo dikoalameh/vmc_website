@@ -23,6 +23,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/vmc',
+    name: 'Home',
+    component: Home
+  },
+  {
     path: '/about/',
     name: 'About',
     component: About,
