@@ -20,7 +20,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: '/vmc'
   },
   {
     path: '/vmc',
@@ -92,7 +93,7 @@ const routes = [
     ]
   },
   {
-    path: '*',
+    path: '/*',
     name: 'Page404',
     component: Page404
   }

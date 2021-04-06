@@ -10,7 +10,7 @@
             <b>VERITAS MARITIME CORPORATION</b> is a joint business venture between
             <ul>
               <li>Mercury Shipping Corporation Manila</li>
-              <li>Taiyo Nippon Kisen Co. Ltd., Japan (formerly Kobe Nippon Kisen Kaisha, Ltd.)  </li>
+              <li>Taiyo Nippon Kisen Co. Ltd., Japan </li>
             </ul>
 
             <h2 class="h1 vmc-text-primary vmc-heading">
