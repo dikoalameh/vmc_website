@@ -141,6 +141,7 @@
 
 <script>
 import { required, minLength, maxLength, numeric, email } from 'vuelidate/lib/validators'
+import Swal from 'sweetalert2'
 export default {
   name: "ContactUs",
   data() {
@@ -179,11 +180,28 @@ export default {
   },
   methods: {
     sendFeedback() {
-      console.log(this.fullName);
-      console.log(this.contactNumber);
-      console.log(this.emailAddress);
-      console.log(this.emailSubject);
-      console.log(this.emailMessage);
+      Swal.fire({
+        title: 'Are you sure?',
+        text: 'This will directly contact veritas admin!',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, send it!',
+        confirmButtonColor: '#84a7c6',
+        cancelButtonText: 'Cancel',
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+              'Message Sent!',
+              'Your message has been sent.',
+              'success',
+          )
+          console.log(this.fullName);
+          console.log(this.contactNumber);
+          console.log(this.emailAddress);
+          console.log(this.emailSubject);
+          console.log(this.emailMessage);
+        }
+      })
     },
 
   }
@@ -193,5 +211,9 @@ export default {
 <style scoped>
 .invalid-feedback {
   color: var(--vmc-danger-5);
+}
+.swal2-confirm .swal2-styled {
+  border-radius: 100px;
+  background-color: var(--vmc-primary-3);
 }
 </style>
