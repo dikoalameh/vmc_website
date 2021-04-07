@@ -47,33 +47,35 @@
                 <router-link class="nav-link dropdown-toggle" :to="{path: '/about/'}" event="" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   About Us
                 </router-link>
-<!--                <a class="nav-link dropdown-toggle" href="#" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">-->
-<!--                  About Us-->
-<!--                </a>-->
                 <div class="dropdown-menu" aria-labelledby="AboutUsLink">
-                  <router-link class="dropdown-item" :to="{name: 'TheCompany'}">The Company</router-link>
+                  <router-link class="dropdown-item" :to="{name: 'TheCompany'}">
+                    The Company
+                  </router-link>
                   <router-link class="dropdown-item" style="width: 210px" :to="{name: 'OrganizationalChart'}">
-                    Organizational Chart</router-link>
-                  <router-link class="dropdown-item" :to="{name: 'OurPrincipals'}">Our Principals</router-link>
+                    Organizational Chart
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'OurPrincipals'}">
+                    Our Principals
+                  </router-link>
                 </div>
               </li>
-<!--              <li class="nav-item">-->
-<!--                <router-link class="nav-link" to="/about" style="width: 114px">About Us</router-link>-->
-<!--              </li>-->
               <li class="nav-item">
                 <router-link class="nav-link" :to="{name: 'News'}" style="width: 77px">News</router-link>
               </li>
-<!--              <li class="nav-item">-->
-<!--                <router-link class="nav-link" to="/programs" style="width: 113px">Programs</router-link>-->
-<!--              </li>-->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="ProgramsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
+                <router-link class="nav-link dropdown-toggle" :to="{path: '/programs/'}" event="" id="ProgramsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   Programs
-                </a>
+                </router-link>
                 <div class="dropdown-menu" aria-labelledby="ProgramsLink">
-                  <a class="dropdown-item" href="#">CSR Activities</a>
-                  <a class="dropdown-item" href="#" style="width: 210px">Office Programs</a>
-                  <a class="dropdown-item" href="#">Allottees</a>
+                  <router-link class="dropdown-item" :to="{name: 'CSRActivities'}">
+                    CSR Activities
+                  </router-link>
+                  <router-link class="dropdown-item" style="width: 210px" :to="{name: 'OfficePrograms'}">
+                    Office Programs
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'Allottees'}">
+                    Allottees
+                  </router-link>
                 </div>
               </li>
               <li class="nav-item dropdown">

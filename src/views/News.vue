@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="news">
     <vmc-header />
     <page-heading page-title-name="NEWS & UPDATE" image-link="news_container.jpg"/>
     <router-view></router-view>

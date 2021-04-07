@@ -13,6 +13,10 @@ import AllNews from '../components/news/AllNews';
 import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/CarryingAFamilyLegacyTowardGrowthStability';
 import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/SeafaringOrganizationUnderProposedOFWDeptPushed';
 import ModernDayHeroesInTheNewNormal from '../components/news/ModernDayHeroesInTheNewNormal';
+import Programs from '../views/Programs';
+import CSRActivities from '../components/programs/CSRActivities';
+import OfficePrograms from '../components/programs/OfficePrograms';
+import Allottees from '../components/programs/Allottees';
 
 Vue.use(VueRouter)
 
@@ -76,6 +80,29 @@ const routes = [
         path: '3',
         name: 'ModernDayHeroesInTheNewNormal',
         component: ModernDayHeroesInTheNewNormal
+      },
+    ]
+  },
+  {
+    path: '/programs/',
+    name: 'Programs',
+    component: Programs,
+    redirect: '/programs/csr',
+    children: [
+      {
+        path: 'csr',
+        name: 'CSRActivities',
+        component: CSRActivities
+      },
+      {
+        path: 'office',
+        name: 'OfficePrograms',
+        component: OfficePrograms
+      },
+      {
+        path: 'allottees',
+        name: 'Allottees',
+        component: Allottees
       },
     ]
   },

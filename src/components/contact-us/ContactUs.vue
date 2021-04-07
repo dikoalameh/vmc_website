@@ -70,7 +70,7 @@
             <p class=""><a class="vmc-text-primary-2" href="mailto:veritas_mc@pldtdsl.net">veritas_mc@pldtdsl.net</a></p>
 
             <h4 class="font-weight-light mb-1">Send us feedback :</h4>
-            <form @submit.prevent="sendFeedback">
+            <form @submit.prevent="sendFeedback" ref="sendFeedbackForm">
               <div class="form-group" >
                 <label for="Name">Name : <sup class="vmc-text-danger">*</sup></label>
                 <input type="text" class="form-control" id="Name" placeholder="" required
@@ -194,7 +194,7 @@ export default {
           this.fullName = ''
           this.contactNumber = ''
           this.emailMessage = ''
-          // window.location.reload()
+          this.$nextTick(() => { this.$v.$reset(); });
         }
       })
     },
