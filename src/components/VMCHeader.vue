@@ -79,25 +79,32 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="CrewLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 74px">
+                <router-link class="nav-link dropdown-toggle" :to="{path: '/crew/'}" event="" id="CrewLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 74px;">
                   Crew
-                </a>
+                </router-link>
                 <div class="dropdown-menu" aria-labelledby="CrewLink">
-                  <a class="dropdown-item" href="#">Kline MESP Program</a>
-                  <a class="dropdown-item" href="#">Kline ME+ Bridging Programs</a>
-                  <a class="dropdown-item" href="#">Veritas Cadets</a>
-                  <a class="dropdown-item" href="#">In House Training</a>
-                  <a class="dropdown-item" href="#">Training Programs</a>
+                  <router-link class="dropdown-item" :to="{name: 'KlineMESPProgram'}">
+                    Kline MESP Program
+                  </router-link>
+                  <router-link class="dropdown-item" style="width: 270px" :to="{name: 'KlineMEPlusBridgingPrograms'}">
+                    Kline ME+ Bridging Programs
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'VeritasCadets'}">
+                    Veritas Cadets
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'InHouseTraining'}">
+                    In House Training
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'TrainingPrograms'}">
+                    Training Programs
+                  </router-link>
                 </div>
-<!--                <router-link class="nav-link" to="/crew" style="width: 74px">Crew</router-link>-->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="width: 119px">Schedules</a>
-<!--                <router-link class="nav-link" to="/schedule" style="width: 119px">Schedules</router-link>-->
+                <router-link class="nav-link" :to="{name: 'Schedules'}" style="width: 119px">Schedules</router-link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="width: 87px">Career</a>
-<!--                <router-link class="nav-link" to="/career" style="width: 87px">Career</router-link>-->
+                <router-link class="nav-link" :to="{name: 'Career'}" style="width: 87px">Career</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link" :to="{name: 'Contact'}" style="width: 128px">Contact Us</router-link>

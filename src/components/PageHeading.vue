@@ -88,7 +88,7 @@ export default {
   #text {
     position: relative;
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
     z-index: 1;
     text-shadow: 2px 2px 5px var(--vmc-dark-10);
     text-align: center;
@@ -99,24 +99,28 @@ export default {
   @media (min-width: 576px) {
     #text {
       margin-top: 85px;
+      font-size: 4rem;
     }
   }
 
   @media (min-width: 768px) {
     #text {
       margin-top: 85px;
+      font-size: 5rem;
     }
   }
 
   @media (min-width: 992px) {
     #text {
       margin-top: 105px;
+      font-size: 5rem;
     }
   }
 
   @media (min-width: 1200px) {
     #text {
       margin-top: 105px;
+      font-size: 5rem;
     }
   }
 </style>

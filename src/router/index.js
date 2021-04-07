@@ -17,6 +17,17 @@ import Programs from '../views/Programs';
 import CSRActivities from '../components/programs/CSRActivities';
 import OfficePrograms from '../components/programs/OfficePrograms';
 import Allottees from '../components/programs/Allottees';
+import Crew from '../views/Crew';
+import KlineMESPProgram from '../components/crew/KlineMESPProgram';
+import KlineMEPlusBridgingPrograms
+  from '../components/crew/KlineMEPlusBridgingPrograms';
+import VeritasCadets from '../components/crew/VeritasCadets';
+import InHouseTraining from '../components/crew/InHouseTraining';
+import TrainingPrograms from '../components/crew/TrainingPrograms';
+import Schedules from '../views/Schedules';
+import SchedulesOfVMC from '../components/schedules/SchedulesOfVMC';
+import Career from '../views/Career';
+import CareersInVMC from '../components/career/CareersInVMC';
 
 Vue.use(VueRouter)
 
@@ -103,6 +114,65 @@ const routes = [
         path: 'allottees',
         name: 'Allottees',
         component: Allottees
+      },
+    ]
+  },
+  {
+    path: '/crew/',
+    name: 'Crew',
+    component: Crew,
+    redirect: '/crew/mesp',
+    children: [
+      {
+        path: 'mesp',
+        name: 'KlineMESPProgram',
+        component: KlineMESPProgram
+      },
+      {
+        path: 'meplus',
+        name: 'KlineMEPlusBridgingPrograms',
+        component: KlineMEPlusBridgingPrograms
+      },
+      {
+        path: 'cadets',
+        name: 'VeritasCadets',
+        component: VeritasCadets
+      },
+      {
+        path: 'inhouse',
+        name: 'InHouseTraining',
+        component: InHouseTraining
+      },
+      {
+        path: 'training',
+        name: 'TrainingPrograms',
+        component: TrainingPrograms
+      },
+    ]
+  },
+  {
+    path: '/schedule/',
+    name: 'Schedules',
+    component: Schedules,
+    redirect: '/schedule/all',
+    children: [
+      {
+        path: 'all',
+        name: 'SchedulesOfVMC',
+        component: SchedulesOfVMC
+      },
+    ]
+  },
+  {
+    path: '/career/',
+    name: 'Career',
+    component: Career,
+    redirect: '/career/all',
+    children: [
+      {
+        path: 'all',
+        name: 'CareersInVMC',
+        component: CareersInVMC
       },
     ]
   },
