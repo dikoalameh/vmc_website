@@ -63,11 +63,12 @@
             <h4 class="font-weight-light mb-1">Veritas Hotline</h4>
             <p class="mb-0">0917-511-1372</p>
             <p>0947-996-0107</p>
-            <h4 class="font-weight-light mb-1">E-mail Address</h4>
-            <p class="mb-0"><a class="vmc-text-primary-2" href="mailto:vmcgroup@veritas.com.ph">vmcgroup@veritas.com.ph</a></p>
-            <p class="mb-0"><a class="vmc-text-primary-2" href="mailto:veritas_mc@pldtdsl.net">veritas_mc@pldtdsl.net</a></p>
           </div>
           <div class="col-md-6">
+            <h4 class="font-weight-light mb-1">E-mail Address</h4>
+            <p class="mb-0"><a class="vmc-text-primary-2" href="mailto:vmcgroup@veritas.com.ph">vmcgroup@veritas.com.ph</a></p>
+            <p class=""><a class="vmc-text-primary-2" href="mailto:veritas_mc@pldtdsl.net">veritas_mc@pldtdsl.net</a></p>
+
             <h4 class="font-weight-light mb-1">Send us feedback :</h4>
             <form @submit.prevent="sendFeedback">
               <div class="form-group" >
@@ -75,7 +76,6 @@
                 <input type="text" class="form-control" id="Name" placeholder="" required
                        v-model.trim="$v.fullName.$model"
                        :class="{'is-invalid': $v.fullName.$error, 'is-valid': !$v.fullName.$invalid}">
-<!--                <div class="valid-feedback small">You enter a valid name!</div>-->
                 <div class="invalid-feedback small">
                   <span v-if="!$v.fullName.required">Name is required. </span>
                   <span v-if="!$v.fullName.minLength">Name must have at least {{$v.fullName.$params.minLength.min}}. </span>
@@ -86,7 +86,6 @@
                 <input type="text" class="form-control" id="ContactNumber" placeholder="" required
                        v-model.trim="$v.contactNumber.$model"
                        :class="{'is-invalid': $v.contactNumber.$error, 'is-valid': !$v.contactNumber.$invalid}">
-<!--                <div class="valid-feedback small">You enter a valid contact number!</div>-->
                 <div class="invalid-feedback small">
                   <span v-if="!$v.contactNumber.required">Contact number is required. </span>
                   <span v-if="!$v.contactNumber.numeric">Contact field accepts number only. </span>
@@ -94,29 +93,27 @@
                   <span v-if="!$v.contactNumber.maxLength">Contact number must have at most {{$v.contactNumber.$params.maxLength.max}}. </span>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="Email">Email Address : <sup class="vmc-text-danger">*</sup></label>
-                <input type="email" class="form-control" id="Email" placeholder="" required
-                       v-model.trim="$v.emailAddress.$model"
-                       :class="{'is-invalid': $v.emailAddress.$error, 'is-valid': !$v.emailAddress.$invalid}">
-<!--                <div class="valid-feedback small">You enter a valid email address!</div>-->
-                <div class="invalid-feedback small">
-                  <span v-if="!$v.emailAddress.required">Email is required. </span>
-                  <span v-if="!$v.emailAddress.email">Please enter a valid email address. </span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="Subject">Subject : <sup class="vmc-text-danger">*</sup></label>
-                <input type="text" class="form-control" id="Subject" placeholder="" required
-                       v-model.trim="$v.emailSubject.$model"
-                       :class="{'is-invalid': $v.emailSubject.$error, 'is-valid': !$v.emailSubject.$invalid}">
-<!--                <div class="valid-feedback small">You enter a valid email subject!</div>-->
-                <div class="invalid-feedback small">
-                  <span v-if="!$v.emailSubject.required">Subject field is required. </span>
-                  <span v-if="!$v.emailSubject.minLength">Subject must have at least {{$v.emailSubject.$params.minLength.min}}. </span>
-                  <span v-if="!$v.emailSubject.maxLength">Subject must have at most {{$v.emailSubject.$params.maxLength.max}}. </span>
-                </div>
-              </div>
+<!--              <div class="form-group">-->
+<!--                <label for="Email">Email Address : <sup class="vmc-text-danger">*</sup></label>-->
+<!--                <input type="email" class="form-control" id="Email" placeholder="" required-->
+<!--                       v-model.trim="$v.emailAddress.$model"-->
+<!--                       :class="{'is-invalid': $v.emailAddress.$error, 'is-valid': !$v.emailAddress.$invalid}">-->
+<!--                <div class="invalid-feedback small">-->
+<!--                  <span v-if="!$v.emailAddress.required">Email is required. </span>-->
+<!--                  <span v-if="!$v.emailAddress.email">Please enter a valid email address. </span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="form-group">-->
+<!--                <label for="Subject">Subject : <sup class="vmc-text-danger">*</sup></label>-->
+<!--                <input type="text" class="form-control" id="Subject" placeholder="" required-->
+<!--                       v-model.trim="$v.emailSubject.$model"-->
+<!--                       :class="{'is-invalid': $v.emailSubject.$error, 'is-valid': !$v.emailSubject.$invalid}">-->
+<!--                <div class="invalid-feedback small">-->
+<!--                  <span v-if="!$v.emailSubject.required">Subject field is required. </span>-->
+<!--                  <span v-if="!$v.emailSubject.minLength">Subject must have at least {{$v.emailSubject.$params.minLength.min}}. </span>-->
+<!--                  <span v-if="!$v.emailSubject.maxLength">Subject must have at most {{$v.emailSubject.$params.maxLength.max}}. </span>-->
+<!--                </div>-->
+<!--              </div>-->
               <div class="form-group">
                 <label for="Message">Message : <sup class="vmc-text-danger">*</sup></label>
 <!--                <textarea class="form-control" id="Message" rows="6" required-->
@@ -148,10 +145,7 @@ export default {
     return {
       fullName      : '',
       contactNumber : '',
-      emailAddress  : '',
-      emailSubject  : '',
       emailMessage  : '',
-      submitStatus  : null
     };
   },
   validations: {
@@ -182,7 +176,7 @@ export default {
     sendFeedback() {
       Swal.fire({
         title: 'Are you sure?',
-        text: 'This will directly contact veritas admin!',
+        text: 'This will directly contact Veritas!',
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Yes, send it!',
@@ -190,16 +184,17 @@ export default {
         cancelButtonText: 'Cancel',
       }).then((result) => {
         if (result.value) {
+          window.location.href =
+              `mailto:shantycajulao@gmail.com?subject=Name: ${this.fullName} — Contact Number: ${this.contactNumber}&body=Message: %0D%0A${this.emailMessage}`
           Swal.fire(
-              'Message Sent!',
-              'Your message has been sent.',
+              'Email opened',
+              'Opened your email to validate your email and message',
               'success',
           )
-          console.log(this.fullName);
-          console.log(this.contactNumber);
-          console.log(this.emailAddress);
-          console.log(this.emailSubject);
-          console.log(this.emailMessage);
+          this.fullName = ''
+          this.contactNumber = ''
+          this.emailMessage = ''
+          // window.location.reload()
         }
       })
     },
