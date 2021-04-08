@@ -1,32 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Page404 from '../views/Page404.vue'
-import About from '../views/About';
-import Contact from '../views/Contact';
+// import About from '../views/About';
+// import News from '../views/News';
+// import Programs from '../views/Programs';
+// import Crew from '../views/Crew';
+// import Schedules from '../views/Schedules';
+// import Career from '../views/Career';
+// import Contact from '../views/Contact';
+// import Page404 from '../views/Page404.vue'
 import TheCompany from '../components/about-us/TheCompany';
 import OrganizationalChart from '../components/about-us/OrganizationalChart';
 import OurPrincipals from '../components/about-us/OurPrincipals';
 import ContactUs from '../components/contact-us/ContactUs';
-import News from '../views/News';
 import AllNews from '../components/news/AllNews';
 import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/CarryingAFamilyLegacyTowardGrowthStability';
 import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/SeafaringOrganizationUnderProposedOFWDeptPushed';
 import ModernDayHeroesInTheNewNormal from '../components/news/ModernDayHeroesInTheNewNormal';
-import Programs from '../views/Programs';
 import CSRActivities from '../components/programs/CSRActivities';
 import OfficePrograms from '../components/programs/OfficePrograms';
 import Allottees from '../components/programs/Allottees';
-import Crew from '../views/Crew';
 import KlineMESPProgram from '../components/crew/KlineMESPProgram';
 import KlineMEPlusBridgingPrograms
   from '../components/crew/KlineMEPlusBridgingPrograms';
 import VeritasCadets from '../components/crew/VeritasCadets';
 import InHouseTraining from '../components/crew/InHouseTraining';
 import TrainingPrograms from '../components/crew/TrainingPrograms';
-import Schedules from '../views/Schedules';
 import SchedulesOfVMC from '../components/schedules/SchedulesOfVMC';
-import Career from '../views/Career';
 import CareersInVMC from '../components/career/CareersInVMC';
 
 Vue.use(VueRouter)
@@ -36,17 +36,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    // redirect: '/vmc'
   },
-  // {
-  //   path: '/vmc',
-  //   name: 'Home',
-  //   component: Home
-  // },
   {
     path: '/about',
     name: 'About',
-    component: About,
+    // component: About,
+    component: () => import(/* webpackChunkName: "about" */ "../views/About"),
     redirect: '/about/company',
     children: [
       {
@@ -69,7 +64,8 @@ const routes = [
   {
     path: '/news',
     name: 'News',
-    component: News,
+    // component: News,
+    component: () => import(/* webpackChunkName: "news" */ "../views/News"),
     redirect: '/news/all',
     children: [
       {
@@ -97,7 +93,8 @@ const routes = [
   {
     path: '/programs',
     name: 'Programs',
-    component: Programs,
+    // component: Programs,
+    component: () => import(/* webpackChunkName: "programs" */ "../views/Programs"),
     redirect: '/programs/csr',
     children: [
       {
@@ -120,7 +117,8 @@ const routes = [
   {
     path: '/crew',
     name: 'Crew',
-    component: Crew,
+    // component: Crew,
+    component: () => import(/* webpackChunkName: "crew" */ "../views/Crew"),
     redirect: '/crew/mesp',
     children: [
       {
@@ -153,7 +151,8 @@ const routes = [
   {
     path: '/schedule',
     name: 'Schedules',
-    component: Schedules,
+    // component: Schedules,
+    component: () => import(/* webpackChunkName: "schedule" */ "../views/Schedules"),
     redirect: '/schedule/all',
     children: [
       {
@@ -166,7 +165,8 @@ const routes = [
   {
     path: '/career',
     name: 'Career',
-    component: Career,
+    // component: Career,
+    component: () => import(/* webpackChunkName: "career" */ "../views/Career"),
     redirect: '/career/all',
     children: [
       {
@@ -179,7 +179,8 @@ const routes = [
   {
     path: '/contact',
     name: 'Contact',
-    component: Contact,
+    // component: Contact,
+    component: () => import(/* webpackChunkName: "contact" */ "../views/Contact"),
     redirect: '/contact/us',
     children: [
       {
@@ -192,7 +193,8 @@ const routes = [
   {
     path: '/*',
     name: 'Page404',
-    component: Page404
+    // component: Page404
+    component: () => import(/* webpackChunkName: "404" */ "../views/Page404.vue")
   }
 ]
 
