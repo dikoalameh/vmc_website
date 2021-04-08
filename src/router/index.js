@@ -36,13 +36,13 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    redirect: '/vmc'
+    // redirect: '/vmc'
   },
-  {
-    path: '/vmc',
-    name: 'Home',
-    component: Home
-  },
+  // {
+  //   path: '/vmc',
+  //   name: 'Home',
+  //   component: Home
+  // },
   {
     path: '/about/',
     name: 'About',
@@ -198,7 +198,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  // base: process.env.BASE_URL,
+  base: process.env.BASE_URL,
   routes
 })
 
