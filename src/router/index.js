@@ -44,7 +44,7 @@ const routes = [
   //   component: Home
   // },
   {
-    path: '/about/',
+    path: '/about',
     name: 'About',
     component: About,
     redirect: '/about/company',
@@ -67,7 +67,7 @@ const routes = [
       ]
   },
   {
-    path: '/news/',
+    path: '/news',
     name: 'News',
     component: News,
     redirect: '/news/all',
@@ -95,7 +95,7 @@ const routes = [
     ]
   },
   {
-    path: '/programs/',
+    path: '/programs',
     name: 'Programs',
     component: Programs,
     redirect: '/programs/csr',
@@ -118,7 +118,7 @@ const routes = [
     ]
   },
   {
-    path: '/crew/',
+    path: '/crew',
     name: 'Crew',
     component: Crew,
     redirect: '/crew/mesp',
@@ -151,7 +151,7 @@ const routes = [
     ]
   },
   {
-    path: '/schedule/',
+    path: '/schedule',
     name: 'Schedules',
     component: Schedules,
     redirect: '/schedule/all',
@@ -164,7 +164,7 @@ const routes = [
     ]
   },
   {
-    path: '/career/',
+    path: '/career',
     name: 'Career',
     component: Career,
     redirect: '/career/all',
@@ -177,7 +177,7 @@ const routes = [
     ]
   },
   {
-    path: '/contact/',
+    path: '/contact',
     name: 'Contact',
     component: Contact,
     redirect: '/contact/us',
