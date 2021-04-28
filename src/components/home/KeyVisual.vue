@@ -85,15 +85,15 @@
           <div class="col-auto p-1">
             <button class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn">ADVISORIES</button>
           </div>
-          <div class="col-auto p-1">
-            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">Sixteenth Congress</button>
-          </div>
+<!--          <div class="col-auto p-1">-->
+<!--            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">Sixteenth Congress</button>-->
+<!--          </div>-->
           <div class="col-auto p-1">
             <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">COVID-19 Update</button>
           </div>
-          <div class="col-auto p-1">
-            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">Lorem Ipsum Dolor</button>
-          </div>
+<!--          <div class="col-auto p-1">-->
+<!--            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">Lorem Ipsum Dolor</button>-->
+<!--          </div>-->
         </div>
       </div>
   </div>
