@@ -28,6 +28,10 @@ import InHouseTraining from '../components/crew/InHouseTraining';
 import TrainingPrograms from '../components/crew/TrainingPrograms';
 import SchedulesOfVMC from '../components/schedules/SchedulesOfVMC';
 import CareersInVMC from '../components/career/CareersInVMC';
+import Veritas30thAnniversarySameDayEditVideo
+  from '../components/news/Veritas30thAnniversarySameDayEditVideo';
+import VeritasChristmasVideo2020
+  from '../components/news/VeritasChristmasVideo2020';
 
 Vue.use(VueRouter)
 
@@ -87,6 +91,16 @@ const routes = [
         path: '3',
         name: 'ModernDayHeroesInTheNewNormal',
         component: ModernDayHeroesInTheNewNormal
+      },
+      {
+        path: '4',
+        name: 'Veritas30thAnniversarySameDayEditVideo',
+        component: Veritas30thAnniversarySameDayEditVideo
+      },
+      {
+        path: '5',
+        name: 'VeritasChristmasVideo2020',
+        component: VeritasChristmasVideo2020
       },
     ]
   },

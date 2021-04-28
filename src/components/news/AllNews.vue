@@ -14,6 +14,48 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news5" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Veritas Christmas Video 2020</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — April 28, 2021
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VeritasChristmasVideo2020'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news4" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Veritas 30th Anniversary Same Day Edit Video</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — April 28, 2021
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'Veritas30thAnniversarySameDayEditVideo'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news3" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -83,6 +125,8 @@ export default {
       'news1': require(`@/assets/news/news_17-06-2019.jpg`),
       'news2': require(`@/assets/news/news_10-03-2021.jpg`),
       'news3': require(`@/assets/news/news_31-03-2021.jpg`),
+      'news4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
+      'news5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
     }
   }
 }
