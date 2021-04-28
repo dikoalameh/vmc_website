@@ -25,6 +25,7 @@
       <membershipa-affiliations />
     </div>
     <vmc-footer />
+    <privacy-notice />
   </div>
 </template>
 
@@ -36,6 +37,8 @@ import CrewFleetStatus from '../components/home/CrewFleetStatus';
 import MembershipAffiliations from '../components/home/MembershipAffiliations';
 import VMCHeader from '../components/VMCHeader';
 import VMCFooter from '../components/VMCFooter';
+import PrivacyNotice from '../components/PrivacyNotice';
+import $ from 'jquery'
 
 export default {
   name: 'Home',
@@ -46,13 +49,24 @@ export default {
     'latest-news': LatestNews,
     'crew-fleet-status': CrewFleetStatus,
     'membershipa-affiliations': MembershipAffiliations,
+    'privacy-notice': PrivacyNotice,
   },
   data() {
     return {
       'affiliateISO' :require(`@/assets/affiliates/iso_9001.jpg`),
-      'affiliateTexture' :require(`@/assets/fabric-texture.png`)
+      'affiliateTexture' :require(`@/assets/fabric-texture.png`),
+      'acceptedValue': sessionStorage.getItem("accept"),
     }
   },
+  methods: {
+    checkPrivacyNoticeIfAccepted() {
+      if (sessionStorage.getItem("accept")) $('#PrivacyNotice').modal('hide');
+      else $('#PrivacyNotice').modal('show');
+    }
+  },
+  mounted() {
+    this.checkPrivacyNoticeIfAccepted();
+  }
 }
 </script>
 

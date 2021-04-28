@@ -121,8 +121,8 @@ export default {
       carousel2.style.height = "60vh"
       carousel3.style.height = "60vh"
     }
-    console.log('width ' + w);
-    console.log('height ' + h);
+    // console.log('width ' + w);
+    // console.log('height ' + h);
   }
 }
 </script>
