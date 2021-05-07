@@ -83,17 +83,13 @@
     <div class="container bg-white">
         <div class="row py-3 d-flex align-items-center justify-content-center">
           <div class="col-auto p-1">
-            <button class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn">ADVISORIES</button>
+            <router-link class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn" :to="{name: 'GovernmentAdvisories'}">
+              ADVISORIES
+            </router-link>
           </div>
-<!--          <div class="col-auto p-1">-->
-<!--            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">Sixteenth Congress</button>-->
-<!--          </div>-->
           <div class="col-auto p-1">
             <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">COVID-19 Update</button>
           </div>
-<!--          <div class="col-auto p-1">-->
-<!--            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">Lorem Ipsum Dolor</button>-->
-<!--          </div>-->
         </div>
       </div>
   </div>

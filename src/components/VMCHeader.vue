@@ -43,6 +43,9 @@
         <div class="col-12 vmc-bg-prime-5 rounded">
           <div class="collapse navbar-collapse" id="VMCNavigation">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <router-link :to="{path: '/home'}" class="nav-link" style="width: 77px">Home</router-link>
+              </li>
               <li class="nav-item dropdown">
                 <router-link class="nav-link dropdown-toggle" :to="{path: '/about/'}" event="" id="AboutUsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   About Us
@@ -51,53 +54,73 @@
                   <router-link class="dropdown-item" :to="{name: 'TheCompany'}">
                     The Company
                   </router-link>
-                  <router-link class="dropdown-item" style="width: 210px" :to="{name: 'OrganizationalChart'}">
-                    Organizational Chart
-                  </router-link>
                   <router-link class="dropdown-item" :to="{name: 'OurPrincipals'}">
                     Our Principals
                   </router-link>
                 </div>
               </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{name: 'News'}" style="width: 77px">News</router-link>
+              <li class="nav-item dropdown">
+<!--                <router-link class="nav-link" :to="{name: 'News'}" style="width: 77px">News</router-link>-->
+                <router-link class="nav-link dropdown-toggle" :to="{path: '/news/'}" event="" id="NewsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 95px;">
+                  News
+                </router-link>
+                <div class="dropdown-menu" aria-labelledby="NewsLink">
+                  <router-link class="dropdown-item" :to="{name: 'AllNews'}">
+                    All News
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'CompanyNews'}">
+                    Company News
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'CrewNews'}">
+                    Crew Updates
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'GovernmentAdvisories'}" style="width: 222px;">
+                    Government Advisories
+                  </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'PrincipalMemo'}">
+                    Principal Memo
+                  </router-link>
+                </div>
               </li>
               <li class="nav-item dropdown">
                 <router-link class="nav-link dropdown-toggle" :to="{path: '/programs/'}" event="" id="ProgramsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 125px;">
                   Programs
                 </router-link>
-                <div class="dropdown-menu" aria-labelledby="ProgramsLink">
-                  <router-link class="dropdown-item" :to="{name: 'CSRActivities'}">
-                    CSR Activities
-                  </router-link>
-                  <router-link class="dropdown-item" style="width: 210px" :to="{name: 'OfficePrograms'}">
-                    Office Programs
-                  </router-link>
-                  <router-link class="dropdown-item" :to="{name: 'Allottees'}">
-                    Allottees
-                  </router-link>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <router-link class="nav-link dropdown-toggle" :to="{path: '/crew/'}" event="" id="CrewLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 74px;">
-                  Crew
-                </router-link>
-                <div class="dropdown-menu" aria-labelledby="CrewLink">
-                  <router-link class="dropdown-item" :to="{name: 'KlineMESPProgram'}">
-                    Kline MESP Program
-                  </router-link>
-                  <router-link class="dropdown-item" style="width: 270px" :to="{name: 'KlineMEPlusBridgingPrograms'}">
-                    Kline ME+ Bridging Programs
-                  </router-link>
-                  <router-link class="dropdown-item" :to="{name: 'VeritasCadets'}">
-                    Veritas Cadets
-                  </router-link>
-                  <router-link class="dropdown-item" :to="{name: 'InHouseTraining'}">
-                    In House Training
-                  </router-link>
-                  <router-link class="dropdown-item" :to="{name: 'TrainingPrograms'}">
-                    Training Programs
-                  </router-link>
+                <div class="dropdown-menu dropright" aria-labelledby="ProgramsLink">
+
+                  <div id="CompanyProgramSection" class="dropdown">
+                    <router-link class="nav-link dropdown-toggle" :to="{path: '/programs/company/'}" event="" id="CompanyLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 74px;">
+                      Company
+                    </router-link>
+                    <div class="dropdown-menu ml-0" aria-labelledby="CompanyLink">
+                      <router-link class="dropdown-item" :to="{name: 'CSRActivities'}">
+                        CSR Activities
+                      </router-link>
+                      <router-link class="dropdown-item" style="width: 210px" :to="{name: 'OfficePrograms'}">
+                        Office Programs
+                      </router-link>
+                      <router-link class="dropdown-item" :to="{name: 'Allottees'}">
+                        Allottees
+                      </router-link>
+                    </div>
+                  </div>
+
+                  <div id="CrewSection" class="dropdown">
+                    <router-link class="nav-link dropdown-toggle" :to="{path: '/programs/crew/'}" event="" id="CrewLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 74px;">
+                      Crew
+                    </router-link>
+                    <div class="dropdown-menu ml-0" aria-labelledby="CrewLink">
+                      <router-link class="dropdown-item" :to="{name: 'VeritasCadets'}">
+                        Veritas Cadets
+                      </router-link>
+                      <router-link class="dropdown-item" :to="{name: 'InHouseTraining'}">
+                        In House Training
+                      </router-link>
+                      <router-link class="dropdown-item" :to="{name: 'TrainingPrograms'}">
+                        Training Programs
+                      </router-link>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="nav-item">
@@ -134,7 +157,6 @@ export default {
   color: var(--vmc-dark-0);
   letter-spacing: 1px;
 }
-
 #VMCNavigation a:hover {
   color: var(--vmc-secondary-5);
 }

@@ -10,34 +10,40 @@ import Home from '../views/Home.vue'
 // import Contact from '../views/Contact';
 // import Page404 from '../views/Page404.vue'
 import TheCompany from '../components/about-us/TheCompany';
-import OrganizationalChart from '../components/about-us/OrganizationalChart';
 import OurPrincipals from '../components/about-us/OurPrincipals';
 import ContactUs from '../components/contact-us/ContactUs';
 import AllNews from '../components/news/AllNews';
 import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/CarryingAFamilyLegacyTowardGrowthStability';
 import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/SeafaringOrganizationUnderProposedOFWDeptPushed';
 import ModernDayHeroesInTheNewNormal from '../components/news/ModernDayHeroesInTheNewNormal';
-import CSRActivities from '../components/programs/CSRActivities';
-import OfficePrograms from '../components/programs/OfficePrograms';
-import Allottees from '../components/programs/Allottees';
-import KlineMESPProgram from '../components/crew/KlineMESPProgram';
-import KlineMEPlusBridgingPrograms
-  from '../components/crew/KlineMEPlusBridgingPrograms';
-import VeritasCadets from '../components/crew/VeritasCadets';
-import InHouseTraining from '../components/crew/InHouseTraining';
-import TrainingPrograms from '../components/crew/TrainingPrograms';
+import CSRActivities from '../components/programs/company/CSRActivities';
+import OfficePrograms from '../components/programs/company/OfficePrograms';
+import Allottees from '../components/programs/company/Allottees';
+import VeritasCadets from '../components/programs/crew/VeritasCadets';
+import InHouseTraining from '../components/programs/crew/InHouseTraining';
+import TrainingPrograms from '../components/programs/crew/TrainingPrograms';
 import SchedulesOfVMC from '../components/schedules/SchedulesOfVMC';
 import CareersInVMC from '../components/career/CareersInVMC';
 import Veritas30thAnniversarySameDayEditVideo
   from '../components/news/Veritas30thAnniversarySameDayEditVideo';
 import VeritasChristmasVideo2020
   from '../components/news/VeritasChristmasVideo2020';
+import CompanyNews from '../components/news/CompanyNews';
+import CrewNews from '../components/news/CrewNews';
+import GovernmentAdvisories from '../components/news/GovernmentAdvisories';
+import PrincipalMemo from '../components/news/PrincipalMemo';
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'Home',
+    component: Home,
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     name: 'Home',
     component: Home,
   },
@@ -52,11 +58,6 @@ const routes = [
         path: 'company',
         name: 'TheCompany',
         component: TheCompany
-      },
-      {
-        path: 'organization',
-        name: 'OrganizationalChart',
-        component: OrganizationalChart
       },
       {
         path: 'principal',
@@ -76,6 +77,26 @@ const routes = [
         path: 'all',
         name: 'AllNews',
         component: AllNews
+      },
+      {
+        path: 'company',
+        name: 'CompanyNews',
+        component: CompanyNews
+      },
+      {
+        path: 'crew',
+        name: 'CrewNews',
+        component: CrewNews
+      },
+      {
+        path: 'advisories',
+        name: 'GovernmentAdvisories',
+        component: GovernmentAdvisories
+      },
+      {
+        path: 'memo',
+        name: 'PrincipalMemo',
+        component: PrincipalMemo
       },
       {
         path: '1',
@@ -109,58 +130,57 @@ const routes = [
     name: 'Programs',
     // component: Programs,
     component: () => import(/* webpackChunkName: "programs" */ "../views/Programs"),
-    redirect: '/programs/csr',
+    redirect: '/programs/company/csr',
     children: [
       {
-        path: 'csr',
-        name: 'CSRActivities',
-        component: CSRActivities
+        path: 'company',
+        name: 'Company',
+        // component: Company,
+        component: () => import(/* webpackChunkName: "programs" */ "../views/Company"),
+        redirect: '/programs/company/csr',
+        children: [
+          {
+            path: 'csr',
+            name: 'CSRActivities',
+            component: CSRActivities
+          },
+          {
+            path: 'office',
+            name: 'OfficePrograms',
+            component: OfficePrograms
+          },
+          {
+            path: 'allottees',
+            name: 'Allottees',
+            component: Allottees
+          },
+        ]
       },
       {
-        path: 'office',
-        name: 'OfficePrograms',
-        component: OfficePrograms
+        path: 'crew',
+        name: 'Crew',
+        // component: Crew,
+        component: () => import(/* webpackChunkName: "crew" */ "../views/Crew"),
+        redirect: '/programs/crew/cadets',
+        children: [
+          {
+            path: 'cadets',
+            name: 'VeritasCadets',
+            component: VeritasCadets
+          },
+          {
+            path: 'inhouse',
+            name: 'InHouseTraining',
+            component: InHouseTraining
+          },
+          {
+            path: 'training',
+            name: 'TrainingPrograms',
+            component: TrainingPrograms
+          },
+        ]
       },
-      {
-        path: 'allottees',
-        name: 'Allottees',
-        component: Allottees
-      },
-    ]
-  },
-  {
-    path: '/crew',
-    name: 'Crew',
-    // component: Crew,
-    component: () => import(/* webpackChunkName: "crew" */ "../views/Crew"),
-    redirect: '/crew/mesp',
-    children: [
-      {
-        path: 'mesp',
-        name: 'KlineMESPProgram',
-        component: KlineMESPProgram
-      },
-      {
-        path: 'meplus',
-        name: 'KlineMEPlusBridgingPrograms',
-        component: KlineMEPlusBridgingPrograms
-      },
-      {
-        path: 'cadets',
-        name: 'VeritasCadets',
-        component: VeritasCadets
-      },
-      {
-        path: 'inhouse',
-        name: 'InHouseTraining',
-        component: InHouseTraining
-      },
-      {
-        path: 'training',
-        name: 'TrainingPrograms',
-        component: TrainingPrograms
-      },
-    ]
+    ],
   },
   {
     path: '/schedule',

@@ -1,0 +1,51 @@
+<template>
+  <div class="news">
+    <div class="container-fluid vmc-py-big">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="h1 vmc-text-primary vmc-heading">
+              Government Advisories
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news2" alt="">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Seafaring organization under proposed OFW dept pushed</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By The Manila Times — March 10, 2021
+                    </p>
+                    <p class="d-none d-lg-block">With the Senate trying to rush the enactment of the new law creating the Department of Overseas Filipino Workers, the country’s biggest umbrella group in the manning sector has strongly lobbied for a dedicated organization for the seafaring sector </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'SeafaringOrganizationUnderProposedOFWDeptPushed'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'GovernmentAdvisories',
+  data() {
+    return {
+      'news2': require(`@/assets/news/news_10-03-2021.jpg`),
+    }
+  }
+};
+</script>
+
+<style scoped>
+
+</style>

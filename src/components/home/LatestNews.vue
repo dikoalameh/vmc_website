@@ -14,36 +14,6 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer5" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title">Veritas Christmas Video 2020</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">28 April 2021</p>
-              <router-link :to="{name: 'VeritasChristmasVideo2020'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Veritas 30th Anniversary Same Day Edit Video</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">28 April 2021</p>
-              <router-link :to="{name: 'Veritas30thAnniversarySameDayEditVideo'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer3" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -72,6 +42,21 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer5" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title">Veritas Christmas Video 2020</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">25 December 2020</p>
+              <router-link :to="{name: 'VeritasChristmasVideo2020'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer2" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -80,6 +65,21 @@
               </div>
               <p class="mb-0 mt-3" style="opacity: 50%">17 July 2019</p>
               <router-link :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">Veritas 30th Anniversary Same Day Edit Video</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">11 July 2019</p>
+              <router-link :to="{name: 'Veritas30thAnniversarySameDayEditVideo'}" class="stretched-link"></router-link>
             </div>
           </div>
         </div>

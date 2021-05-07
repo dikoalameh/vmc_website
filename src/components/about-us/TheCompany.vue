@@ -97,16 +97,22 @@
         </div>
       </div>
     </div>
+    <organizational-chart />
   </div>
 </template>
 
 <script>
+import OrganizationalChart from './OrganizationalChart';
+
 export default {
   name: "TheCompany",
   data() {
     return {
     'marc2000Tower': require(`@/assets/about/Marc2000tower.jpg`)
     }
+  },
+  components: {
+    'organizational-chart' : OrganizationalChart,
   }
 }
 </script>

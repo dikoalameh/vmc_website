@@ -8,7 +8,7 @@
               Veritas Christmas Video 2020
             </h2>
             <p class="vmc-text-primary-2 letter-spacing-1 mb-0">
-              By Veritas Admin — April 28, 2021
+              By Veritas Admin — December 25, 2020
             </p>
           </div>
         </div>

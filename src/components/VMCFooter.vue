@@ -6,7 +6,10 @@
           <div class="col-lg-12">
             <ul class="nav" id="FooterNav">
               <li class="nav-item">
-                <router-link class="nav-link pl-0" :to="{name: 'TheCompany'}">About</router-link>
+                <router-link class="nav-link pl-0" :to="{path: '/home'}">Home</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" :to="{name: 'TheCompany'}">About</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link" to="/news">News</router-link>
@@ -15,10 +18,7 @@
                 <router-link class="nav-link" to="/programs">Programs</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" to="/crew">Crew</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/schedules">Schedules</router-link>
+                <router-link class="nav-link" to="/schedule">Schedules</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link" to="/career">Career</router-link>
@@ -32,7 +32,8 @@
             <p class="mb-0" style="font-size:14px; letter-spacing: .5pt; color: #f8f9f9;">&#169; 2021 VERITAS MARITIME CORPORATION. All Rights Reserved.</p>
           </div>
           <div class="col-lg-6 center-on-small-right">
-            <a href="https://www.google.com/maps/place/Marc+2000+Tower,+1973+Taft+Avenue,+Malate,+Manila/@14.5704722,120.988873,17z/data=!3m1!4b1!4m5!3m4!1s0x3397c98108700525:0x41932a9873f9fb00!8m2!3d14.5704722!4d120.9910617"
+            <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37"
+               target="_blank"
                class="small" style="letter-spacing: .5pt; color: #f8f9f9;">
               15F MARC 2000 TOWER 1973 Taft Ave., Malate Manila</a>
           </div>

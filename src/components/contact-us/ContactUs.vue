@@ -10,9 +10,13 @@
           </div>
           <div class="col-md-6">
             <h4 class="font-weight-light mb-1">Address</h4>
-            <a href="https://www.google.com/search?q=15%20Floor%2C%20MARC2000%20Tower%201973%20Taft%20Ave.%2C%20Malate%2C%20Manila%20Philippines%201004&oq=15+Floor%2C+MARC2000+Tower+1973+Taft+Ave.%2C+Malate%2C+Manila+Philippines+1004&aqs=chrome..69i57.207j0j7&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=ALeKk020ufVwJqtSruR2j7u143t4ysbFmQ:1617402927167&rflfq=1&num=10&rldimm=4725167268310940416&lqi=CkgxNSBGbG9vciwgTUFSQzIwMDAgVG93ZXIgMTk3MyBUYWZ0IEF2ZS4sIE1hbGF0ZSwgTWFuaWxhIFBoaWxpcHBpbmVzIDEwMDRIz7LShuiVgIAIWm0KETE1IGZsb29yIG1hcmMyMDAwEAAQARACGAIYAxgEGAUYBhgHGAgiRDE1IGZsb29yIG1hcmMyMDAwIHRvd2VyIDE5NzMgdGFmdCBhdmUgbWFsYXRlIG1hbmlsYSBwaGlsaXBwaW5lcyAxMDA0kgETY29uZG9taW5pdW1fY29tcGxleA&ved=2ahUKEwjmsrq3z-DvAhUDHaYKHatiBvUQvS4wAHoECAYQLw&rlst=f#rlfi=hd:;si:4725167268310940416,l,CkgxNSBGbG9vciwgTUFSQzIwMDAgVG93ZXIgMTk3MyBUYWZ0IEF2ZS4sIE1hbGF0ZSwgTWFuaWxhIFBoaWxpcHBpbmVzIDEwMDRIz7LShuiVgIAIWm0KETE1IGZsb29yIG1hcmMyMDAwEAAQARACGAIYAxgEGAUYBhgHGAgiRDE1IGZsb29yIG1hcmMyMDAwIHRvd2VyIDE5NzMgdGFmdCBhdmUgbWFsYXRlIG1hbmlsYSBwaGlsaXBwaW5lcyAxMDA0kgETY29uZG9taW5pdW1fY29tcGxleA;mv:[[14.5708019,120.9947965],[14.564648000000002,120.9906563]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2"
-               target="_blank" class="vmc-text-primary-2">
-              15 Floor, MARC2000 Tower 1973 Taft Ave., Malate, Manila Philippines 1004</a>
+            <p>15 Floor, MARC2000 Tower 1973 Taft Ave., Malate, Manila Philippines 1004</p>
+            <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37" target="_blank" class="btn vmc-btn-circle vmc-btn-prime-2 px-3 mx-1">
+              Google Maps
+            </a>
+            <a href="https://www.waze.com/en/live-map/directions/philippines/metro-manila/malate/veritas-maritime-corporation?utm_campaign=waze_website&utm_medium=website_menu&utm_source=waze_website&to=place.ChIJt48LqIHJlzMRYCKYCZFTix4" target="_blank" class="btn vmc-btn-circle vmc-btn-prime-2 px-4 mx-1">
+              Waze Map
+            </a>
             <h4 class="font-weight-light mb-1 mt-3">Telephone Number</h4>
             <table>
               <tr>
@@ -58,8 +62,6 @@
             </table>
             <h4 class="font-weight-light mb-1 mt-3">Fax Number</h4>
             <p>(632) 85261029</p>
-            <h4 class="font-weight-light mb-1">Telefax Number</h4>
-            <p>(632) 53101319</p>
             <h4 class="font-weight-light mb-1">Veritas Hotline</h4>
             <p class="mb-0">0917-511-1372</p>
             <p>0947-996-0107</p>
@@ -67,12 +69,34 @@
           <div class="col-md-6">
             <h4 class="font-weight-light mb-1">E-mail Address</h4>
             <p class="mb-0"><a class="vmc-text-primary-2" href="mailto:vmcgroup@veritas.com.ph">vmcgroup@veritas.com.ph</a></p>
-            <p class=""><a class="vmc-text-primary-2" href="mailto:veritas_mc@pldtdsl.net">veritas_mc@pldtdsl.net</a></p>
+            <p class=""><a class="vmc-text-primary-2" href="mailto:vmccomm@veritas.com.ph">vmccomm@veritas.com.ph</a></p>
 
-            <h4 class="font-weight-light mb-1">Send us feedback :</h4>
+            <h4 class="font-weight-light mb-1">Facebook Page</h4>
+            <table>
+              <tr>
+                <th>Veritas Crew</th>
+                <th class="px-2"> : </th>
+                <td>
+                  <a href="https://www.facebook.com/veritas.maritime.587"
+                     target="_blank" class="vmc-text-primary-2">
+                    https://www.facebook.com/veritas.maritime.587</a>
+                </td>
+              </tr>
+              <tr>
+                <th>Veritas Staff</th>
+                <th class="px-2"> : </th>
+                <td>
+                  <a href="https://www.facebook.com/groups/2479528432363079"
+                     target="_blank" class="vmc-text-primary-2">
+                    https://www.facebook.com/groups/2479528432363079</a>
+                </td>
+              </tr>
+            </table>
+
+            <h4 class="font-weight-light mb-1 mt-3">Send us feedback :</h4>
             <form @submit.prevent="sendFeedback" ref="sendFeedbackForm">
               <div class="form-group" >
-                <label for="Name">Name : <sup class="vmc-text-danger">*</sup></label>
+                <label for="Name" class="mb-0">Name : <sup class="vmc-text-danger">*</sup></label>
                 <input type="text" class="form-control" id="Name" placeholder="" required
                        v-model.trim="$v.fullName.$model"
                        :class="{'is-invalid': $v.fullName.$error, 'is-valid': !$v.fullName.$invalid}">
@@ -82,7 +106,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="ContactNumber">Contact Number : <sup class="vmc-text-danger">*</sup></label>
+                <label for="ContactNumber" class="mb-0">Contact Number : <sup class="vmc-text-danger">*</sup></label>
                 <input type="text" class="form-control" id="ContactNumber" placeholder="" required
                        v-model.trim="$v.contactNumber.$model"
                        :class="{'is-invalid': $v.contactNumber.$error, 'is-valid': !$v.contactNumber.$invalid}">
@@ -115,10 +139,10 @@
 <!--                </div>-->
 <!--              </div>-->
               <div class="form-group">
-                <label for="Message">Message : <sup class="vmc-text-danger">*</sup></label>
+                <label for="Message" class="mb-0">Message : <sup class="vmc-text-danger">*</sup></label>
 <!--                <textarea class="form-control" id="Message" rows="6" required-->
 <!--                          v-model="emailMessage"></textarea>-->
-                <textarea class="form-control" id="Message" rows="6" required
+                <textarea class="form-control" id="Message" rows="3" required
                           v-model.trim="$v.emailMessage.$model"
                           :class="{'is-invalid': $v.emailMessage.$error, 'is-valid': !$v.emailMessage.$invalid}">
                 </textarea>
@@ -130,6 +154,13 @@
               <button type="submit" class="btn vmc-btn-circle vmc-btn-prime-2 px-5">SEND</button>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <div class="col-md-12 mb-0 pb-0" id="GoogleMapContainer">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5044557253113!2d120.9890083153022!3d14.570307181723464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c981a80b8fb7%3A0x1e8b539109982260!2sVeritas%20Maritime%20Corporation!5e0!3m2!1sen!2sph!4v1620362498790!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -210,5 +241,8 @@ export default {
 .swal2-confirm .swal2-styled {
   border-radius: 100px;
   background-color: var(--vmc-primary-3);
+}
+#GoogleMapContainer {
+  line-height: 0;
 }
 </style>

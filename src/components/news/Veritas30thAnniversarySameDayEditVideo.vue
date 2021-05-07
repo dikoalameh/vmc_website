@@ -8,7 +8,7 @@
               Veritas 30th Anniversary Same Day Edit Video
             </h2>
             <p class="vmc-text-primary-2 letter-spacing-1 mb-0">
-              By Veritas Admin — April 28, 2021
+              By Veritas Admin — July 11, 2019
             </p>
           </div>
         </div>
