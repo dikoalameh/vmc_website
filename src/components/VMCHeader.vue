@@ -3,13 +3,43 @@
     <nav class="navbar navbar-expand-lg navbar-light container py-0">
       <div class="navbar-brand">
         <div class="row d-flex align-items-center">
-          <div class="col-sm-auto">
+          <div class="col-auto">
             <a href="/"><img :src="vmcLogo" alt="" style="width: 85px;"></a>
           </div>
-          <div class="col-sm-auto px-0 d-none d-sm-inline-block">
+          <div class="col-auto px-0 d-none d-sm-inline-block">
             <a href="/" style="text-decoration: none">
               <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
               <p class="mb-0 text-center vmc-text-primary-2" id="VMCTag">QUALITY SERVICE, QUALITY CREW</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto px-0 d-inline-block d-sm-none">
+        <div class="row no-gutters d-flex align-items-center">
+          <div class="col-auto hotline-vertical text-center">
+            <p class="mb-0 mr-2 vmc-text-primary">V</p>
+            <p class="mb-0 mr-2 vmc-text-primary">E</p>
+            <p class="mb-0 mr-2 vmc-text-primary">R</p>
+            <p class="mb-0 mr-2 vmc-text-primary">I</p>
+            <p class="mb-0 mr-2 vmc-text-primary">T</p>
+            <p class="mb-0 mr-2 vmc-text-primary">A</p>
+            <p class="mb-0 mr-2 vmc-text-primary">S</p>
+          </div>
+          <div class="col-auto hotline-vertical text-center">
+            <p class="mb-0 vmc-text-primary-2">H</p>
+            <p class="mb-0 vmc-text-primary-2">O</p>
+            <p class="mb-0 vmc-text-primary-2">T</p>
+            <p class="mb-0 vmc-text-primary-2">L</p>
+            <p class="mb-0 vmc-text-primary-2">I</p>
+            <p class="mb-0 vmc-text-primary-2">N</p>
+            <p class="mb-0 vmc-text-primary-2">E</p>
+          </div>
+          <div class="col-auto">
+            <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1 mb-1">
+              Globe: 0917-511-1372
+            </a> <br/>
+            <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
+              Smart: 0947-996-0107
             </a>
           </div>
         </div>
@@ -28,12 +58,6 @@
             <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
               Smart: 0947-996-0107
             </a>
-<!--            <a href="tel:0917-511-1372" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">-->
-<!--              Globe: 0917-511-1372-->
-<!--            </a>-->
-<!--            <a href="tel:0947-996-0107" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">-->
-<!--              Smart: 0947-996-0107-->
-<!--            </a>-->
           </div>
         </div>
       </div>
@@ -137,6 +161,20 @@
         </div>
       </div>
     </nav>
+    <div class="container d-none d-sm-block d-md-block d-lg-none py-1">
+      <div class="row ml-auto pl-0 mr-0">
+        <div class="col-sm-12 ml-auto text-right d-flex justify-content-center" id="VMCCallToAction">
+          <font-awesome-icon icon="phone-alt" class="mx-2"/>
+          <span style="font-weight: 500" class="vmc-text-primary-2">Hotlines: </span>
+          <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
+            Globe: 0917-511-1372
+          </a>
+          <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
+            Smart: 0947-996-0107
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -191,6 +229,11 @@ export default {
 #VMCCallToAction * {
   color: var(--vmc-primary-3);
 }
+.hotline-vertical p {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 10px;
+}
 @media (min-width: 576px) {
   #NavigationContent {
     margin-bottom: 0;
@@ -203,7 +246,7 @@ export default {
 
   #VMCTag {
     font-size:16px;
-    font-weight: 500;
+    font-weight: 900;
     line-height: 1;
   }
 }

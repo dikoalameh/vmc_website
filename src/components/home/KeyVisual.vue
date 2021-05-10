@@ -15,13 +15,11 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white"
-                 style="letter-spacing: 3px; font-size: 16px;">CARRYING A FAMILY LEGACY</p>
-              <p class="vmc-text-white font-weight-normal mb-0"
-                 style="font-size:55px; font-weight: 500; letter-spacing: 1px;">
+              <p class="mb-2 font-weight-normal text-white caption-one">CARRYING A FAMILY LEGACY</p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 TOWARD GROWTH, STABILITY
               </p>
-              <p class="vmc-text-white font-weight-light" style="font-size: 23px;">
+              <p class="vmc-text-white font-weight-light caption-three">
                 One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
               </p>
               <p>
@@ -40,13 +38,11 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white"
-                 style="letter-spacing: 3px; font-size: 16px;">VERITAS' GEARED TOWARDS</p>
-              <p class="vmc-text-white font-weight-normal mb-0"
-                 style="font-size:55px; font-weight: 500; letter-spacing: 1px;">
+              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS' GEARED TOWARDS</p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 THE NEW NORMAL
               </p>
-              <p class="vmc-text-white font-weight-light" style="font-size: 23px;">
+              <p class="vmc-text-white font-weight-light caption-three">
                 Some representative placeholder content for the second slide of the carousel.
               </p>
               <p>
@@ -62,13 +58,11 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white"
-                 style="letter-spacing: 3px; font-size: 16px;">LOREM IPSUM</p>
-              <p class="vmc-text-white font-weight-normal mb-0"
-                 style="font-size:55px; font-weight: 500; letter-spacing: 1px;">
+              <p class="mb-2 font-weight-normal text-white caption-one">LOREM IPSUM</p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 NEW CENTURY
               </p>
-              <p class="vmc-text-white font-weight-light" style="font-size: 23px;">
+              <p class="vmc-text-white font-weight-light caption-three">
                 Some representative placeholder content for the first slide of the carousel.
               </p>
               <p>
@@ -179,6 +173,18 @@ export default {
 #VMCKeyVisual {
   margin-top: 85px;
 }
+.caption-one {
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+.caption-two {
+  font-size:40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.caption-three {
+  font-size: 16px;
+}
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
   .carousel-caption {
@@ -187,19 +193,30 @@ export default {
   .carousel-caption p {
     width: 100%;
     margin-bottom: 1.25rem;
-    font-size: 1.25rem;
     line-height: 1.4;
   }
 }
 @media (min-width: 576px) {
   #VMCKeyVisual {
-    margin-top: 85px;
+    margin-top: 135px;
   }
   .carousel-indicators {
     bottom: 20%;
   }
   .carousel-caption {
     max-width: 500px;
+  }
+  .caption-one {
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+  .caption-two {
+    font-size:50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .caption-three {
+    font-size: 21px;
   }
 }
 
@@ -212,6 +229,18 @@ export default {
   }
   .carousel-caption {
     max-width: 680px;
+  }
+  .caption-one {
+    letter-spacing: 3px;
+    font-size: 16px;
+  }
+  .caption-two {
+    font-size:55px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .caption-three {
+    font-size: 23px;
   }
 }
 
