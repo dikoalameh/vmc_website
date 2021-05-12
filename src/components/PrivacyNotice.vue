@@ -15,7 +15,7 @@
               Under the Data Privacy Act of 2012, individuals whose personal information is collected and processed are called data subjects. The company is duty bound to observe and respect your privacy rights, including your right to information, right to access, right to correct, right to remove, right to damages and right to data portability.
             </p>
             <p>
-              VMC may collect Personal Information of a Data Subject only upon signing his or her consent and upon filing the application form. The Personal Information collected shall be processed solely in connection with the Data Subjectâ€™s employment. All Personal information collected have been approved by the management of VMC and its Principal Employer under the specified reason.
+              VMC may collect Personal Information of a Data Subject only upon signing his or her consent and upon filing the application form. The Personal Information collected shall be processed solely in connection with the Data Subject’s employment. All Personal information collected have been approved by the management of VMC and its Principal Employer under the specified reason.
             </p>
             <p>
               All personal data is being stored in a data based system called VERIPRO. A 3rd party company is contracted to manage and set security controls, to safeguard the rights of our personnel and seafarers. Access of 3rd party provider to Personal Information is protected by an OUTSOURCE CONTRACT AGREEMENT.
