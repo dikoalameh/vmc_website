@@ -32,6 +32,7 @@ import CompanyNews from '../components/news/CompanyNews';
 import CrewNews from '../components/news/CrewNews';
 import GovernmentAdvisories from '../components/news/GovernmentAdvisories';
 import PrincipalMemo from '../components/news/PrincipalMemo';
+import CookiePolicy from '../components/CookiePolicy';
 
 Vue.use(VueRouter)
 
@@ -221,6 +222,20 @@ const routes = [
         path: 'us',
         name: 'ContactUs',
         component: ContactUs
+      },
+    ]
+  },
+  {
+    path: '/policy',
+    name: 'Policies',
+    // component: Contact,
+    component: () => import(/* webpackChunkName: "contact" */ "../views/Policies"),
+    redirect: '/policy/cookies',
+    children: [
+      {
+        path: 'cookies',
+        name: 'CookiePolicy',
+        component: CookiePolicy
       },
     ]
   },

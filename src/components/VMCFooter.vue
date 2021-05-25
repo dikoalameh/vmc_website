@@ -32,10 +32,16 @@
             <p class="mb-0" style="font-size:14px; letter-spacing: .5pt; color: #f8f9f9;">&#169; 2021 VERITAS MARITIME CORPORATION. All Rights Reserved.</p>
           </div>
           <div class="col-lg-6 center-on-small-right">
-            <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37"
-               target="_blank"
-               class="small" style="letter-spacing: .5pt; color: #f8f9f9;">
-              15F MARC 2000 TOWER 1973 Taft Ave., Malate Manila</a>
+            <router-link class="small"
+                         :to="{name: 'CookiePolicy'}"
+                         style="letter-spacing: .5pt; color: #f8f9f9;"
+            >
+              Cookies Policy
+            </router-link>
+<!--            <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37"-->
+<!--               target="_blank"-->
+<!--               class="small" style="letter-spacing: .5pt; color: #f8f9f9;">-->
+<!--              15F MARC 2000 TOWER 1973 Taft Ave., Malate Manila</a>-->
           </div>
         </div>
       </div>
