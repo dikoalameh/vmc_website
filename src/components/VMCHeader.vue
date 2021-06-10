@@ -101,6 +101,9 @@
                   <router-link class="dropdown-item" :to="{name: 'GovernmentAdvisories'}" style="width: 222px;">
                     Government Advisories
                   </router-link>
+                  <router-link class="dropdown-item" :to="{name: 'Covid19Update'}">
+                    Covid-19 Update
+                  </router-link>
                   <router-link class="dropdown-item" :to="{name: 'PrincipalMemo'}">
                     Principal Memo
                   </router-link>

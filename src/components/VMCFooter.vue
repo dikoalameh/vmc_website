@@ -3,7 +3,7 @@
     <div class="container-fluid vmc-bg-prime-5">
       <div class="container">
         <div class="row py-4 d-flex">
-          <div class="col-lg-12">
+          <div class="col-lg-9">
             <ul class="nav" id="FooterNav">
               <li class="nav-item">
                 <router-link class="nav-link pl-0" :to="{path: '/home'}">Home</router-link>
@@ -28,14 +28,24 @@
               </li>
             </ul>
           </div>
+          <div class="col-lg-3 center-on-small-right mb-2">
+            <span class="white-icon-color">
+              See us on:
+              <a href="https://www.facebook.com/veritas.maritime.587"
+                 target="_blank" style="padding: 7px 10px 5px; background-color: #4267B2; border-radius: 100px">
+              <font-awesome-icon :icon="[ 'fab', 'facebook-f' ]"
+                                 mask="circle"
+                                 size="1.5x" />
+            </a>
+            </span>
+          </div>
           <div class="col-lg-6 center-on-small-left">
             <p class="mb-0" style="font-size:14px; letter-spacing: .5pt; color: #f8f9f9;">&#169; 2021 VERITAS MARITIME CORPORATION. All Rights Reserved.</p>
           </div>
           <div class="col-lg-6 center-on-small-right">
             <router-link class="small"
                          :to="{name: 'CookiePolicy'}"
-                         style="letter-spacing: .5pt; color: #f8f9f9;"
-            >
+                         style="letter-spacing: .5pt; color: #f8f9f9;">
               Cookies Policy
             </router-link>
 <!--            <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37"-->
@@ -78,7 +88,9 @@ export default {
 .center-on-small-right {
   text-align: center;
 }
-
+.white-icon-color, .white-icon-color * {
+  color: white;
+}
 @media (min-width: 576px) {
   #FooterNav {
     justify-content: center;

@@ -10,7 +10,7 @@
             <img :src="imageContainer" alt="">
           </div>
           <div class="col-lg-8 my-3">
-            <h4 class="font-weight-light mb-0">"K"  Line RoRo Bulkship Management Co., Limited</h4>
+            <h4 class="font-weight-light mb-0">"K" Line Roro Bulk Ship Management Co., Ltd. (KRBS)</h4>
             <p class="vmc-text-primary-2 mb-1">( 16F Marc 2000 Tower 1973 Taft Ave Corner, San Andres St, Malate, Manila )</p>
             <p class="font-weight-light mb-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

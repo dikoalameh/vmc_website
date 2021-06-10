@@ -82,15 +82,6 @@
                     https://www.facebook.com/veritas.maritime.587</a>
                 </td>
               </tr>
-              <tr>
-                <th>Veritas Staff</th>
-                <th class="px-2"> : </th>
-                <td>
-                  <a href="https://www.facebook.com/groups/2479528432363079"
-                     target="_blank" class="vmc-text-primary-2">
-                    https://www.facebook.com/groups/2479528432363079</a>
-                </td>
-              </tr>
             </table>
 
             <h4 class="font-weight-light mb-1 mt-3">Send us feedback :</h4>

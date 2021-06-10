@@ -47,10 +47,10 @@
               <div class="col-md-6">
                 <ul class="mb-0">
                   <li>ISM SEP</li>
-                  <li>TNKC Safety Mgt. System</li>
+                  <li>"K" Line Roro Bulk Ship Management Co., Ltd. (KRBS) Safety Mgt. System</li>
                   <li>Ship Handling & Maneuvering</li>
                   <li>Cargo Handling and Stowage</li>
-                  <li>TNKC Safety Mgt. System,</li>
+                  <li>"K" Line Roro Bulk Ship Management Co., Ltd. (KRBS) Safety Mgt. System,</li>
                   <li>Maritime Law</li>
                   <li>Deck Watchkeeping</li>
                   <li>Ship Handling & Maneuvering</li>

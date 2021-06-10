@@ -14,10 +14,9 @@
             <h4 class="font-weight-light mb-3">Veritas Christmas Party</h4>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="vmcXmasParty1" alt="">
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="vmcXmasParty2" alt="">
+            <photo-gallery-modal :caption="`Veritas Christmas Party`"
+                                 :thumbnail="vmcXmasParty1[0]"
+                                 :images="vmcXmasParty1" />
           </div>
         </div>
       </div>
@@ -29,19 +28,10 @@
             <h4 class="font-weight-light">Veritas Anniversary Party</h4>
           </div>
           <div class="col-md-4 col-sm-6 my-3">
+            <photo-gallery-modal :caption="`Veritas 30th Anniversary`"
+                                 :thumbnail="vmc30Anniversary[0]"
+                                 :images="vmc30Anniversary" />
             <img :src="vmcAnniversary1" alt="">
-          </div>
-          <div class="col-md-4 col-sm-6 my-3">
-            <img :src="vmcAnniversary2" alt="">
-          </div>
-          <div class="col-md-4 col-sm-6 my-3">
-            <img :src="vmcAnniversary3" alt="">
-          </div>
-          <div class="col-md-4 col-sm-6 my-3">
-            <img :src="vmcAnniversary4" alt="">
-          </div>
-          <div class="col-md-4 col-sm-6 my-3">
-            <img :src="vmcAnniversary5" alt="">
           </div>
         </div>
       </div>
@@ -50,17 +40,26 @@
 </template>
 
 <script>
+import PhotoGalleryModal from '../app-layout/PhotoGalleryModal';
+
 export default {
   name: 'OfficePrograms',
+  components: {
+    'photo-gallery-modal' : PhotoGalleryModal
+  },
   data() {
     return {
-      'vmcXmasParty1': require(`@/assets/programs/office/vmcXmasParty2016.jpg`),
-      'vmcXmasParty2': require(`@/assets/programs/office/vmcXmasPartyHawaiian.jpg`),
-      'vmcAnniversary1': require(`@/assets/programs/office/vmc25Anniversary.jpg`),
-      'vmcAnniversary2': require(`@/assets/programs/office/30YearsGroupPhoto.jpg`),
-      'vmcAnniversary3': require(`@/assets/programs/office/30YearsFront.png`),
-      'vmcAnniversary4': require(`@/assets/programs/office/JMMSpeech.png`),
-      'vmcAnniversary5': require(`@/assets/programs/office/JMMSoloSpeech.png`),
+      vmcXmasParty1: [
+        require(`@/assets/programs/office/vmcXmasParty2016.jpg`),
+        require(`@/assets/programs/office/vmcXmasPartyHawaiian.jpg`),
+      ],
+      vmc30Anniversary: [
+        require(`@/assets/programs/office/30YearsGroupPhoto.jpg`),
+        require(`@/assets/programs/office/vmc25Anniversary.jpg`),
+        require(`@/assets/programs/office/30YearsFront.png`),
+        require(`@/assets/programs/office/JMMSpeech.png`),
+        require(`@/assets/programs/office/JMMSoloSpeech.png`),
+      ]
     }
   }
 };

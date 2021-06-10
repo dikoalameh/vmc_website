@@ -10,16 +10,20 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Bicol</h4>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bicol`"
+                                 :thumbnail="bicol[0]"
+                                 :images="bicol" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="bicol1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">June 24, 2017</p>
+            <photo-gallery-modal :caption="`Cagayan De Oro`"
+                                 :thumbnail="cagayan[0]"
+                                 :images="cagayan" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="bicol2" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">2015</p>
+            <photo-gallery-modal :caption="`Davao`"
+                                 :thumbnail="davao[0]"
+                                 :images="davao" />
           </div>
         </div>
       </div>
@@ -27,16 +31,20 @@
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Davao</h4>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bohol`"
+                                 :thumbnail="bohol[0]"
+                                 :images="bohol" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="davao1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">February 19, 2017</p>
+            <photo-gallery-modal :caption="`Cebu`"
+                                 :thumbnail="cebu[0]"
+                                 :images="cebu" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="davao2" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">2015</p>
+            <photo-gallery-modal :caption="`Bacolod`"
+                                 :thumbnail="bacolod[0]"
+                                 :images="bacolod" />
           </div>
         </div>
       </div>
@@ -44,77 +52,15 @@
     <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Cagayan De Oro</h4>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Iloilo`"
+                                 :thumbnail="iloilo[0]"
+                                 :images="iloilo" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="cagayan1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">February 25, 2017</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Bohol</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="bohol1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Nov. 13, 2016</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Cebu</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="cebu1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Nov. 12, 2016</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Bacolod</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="bacolod1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Nov. 19, 2016</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Iloilo</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="iloilo1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Nov. 20, 2016</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Greater Manila</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="gma1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Dec 10, 2016	</p>
+            <photo-gallery-modal :caption="`Greater Manila`"
+                                 :thumbnail="manila[0]"
+                                 :images="manila" />
           </div>
         </div>
       </div>
@@ -123,21 +69,41 @@
 </template>
 
 <script>
+import PhotoGalleryModal from '../app-layout/PhotoGalleryModal';
+
 export default {
   name: 'Allottees',
+  components: {
+    'photo-gallery-modal' : PhotoGalleryModal
+  },
   data() {
     return {
-      'bicol1': require(`@/assets/programs/allottees/2017_bicol.jpg`),
-      'bicol2': require(`@/assets/programs/allottees/2015_bicol.jpg`),
-      'davao1': require(`@/assets/programs/allottees/2017_dvo.jpg`),
-      'davao2': require(`@/assets/programs/allottees/2015_davao.jpg`),
-      'cagayan1': require(`@/assets/programs/allottees/2017_cdo.jpg`),
-      'bohol1': require(`@/assets/programs/allottees/2016_alloottees_bohol.jpg`),
-      'cebu1': require(`@/assets/programs/allottees/2016_alloottees_cebu.jpg`),
-      'bacolod1': require(`@/assets/programs/allottees/2016_alloottees_bacolod.jpg`),
-      'iloilo1': require(`@/assets/programs/allottees/2016_alloottees_iloilo.jpg`),
-      'gma1': require(`@/assets/programs/allottees/2016_alloottees_gma.jpg`),
-
+      bicol: [
+        require(`@/assets/programs/allottees/2017_bicol.jpg`),
+        require(`@/assets/programs/allottees/2015_bicol.jpg`),
+      ],
+      cagayan: [
+        require(`@/assets/programs/allottees/2017_cdo.jpg`),
+      ],
+      davao: [
+        require(`@/assets/programs/allottees/2017_dvo.jpg`),
+        require(`@/assets/programs/allottees/2015_davao.jpg`),
+      ],
+      bohol: [
+        require(`@/assets/programs/allottees/2016_alloottees_bohol.jpg`),
+      ],
+      cebu: [
+        require(`@/assets/programs/allottees/2016_alloottees_cebu.jpg`),
+      ],
+      bacolod: [
+        require(`@/assets/programs/allottees/2016_alloottees_bacolod.jpg`),
+      ],
+      iloilo: [
+        require(`@/assets/programs/allottees/2016_alloottees_iloilo.jpg`),
+      ],
+      manila: [
+        require(`@/assets/programs/allottees/2016_alloottees_gma.jpg`),
+      ]
     }
   }
 };

@@ -9,13 +9,13 @@
         992:{items:5,nav:false}}"
         :autoplay="true"
     >
-      <div class="item" style="margin-left: 0"><img :src="affiliateKLMA" alt="KLMA"></div>
+      <div class="item"><img :src="affiliateKLMA" alt="KLMA"></div>
       <div class="item"><img :src="affiliatePRC" alt="PRC"></div>
       <div class="item"><img :src="affiliateMARINA" alt="MARINA"></div>
       <div class="item"><img :src="affiliatePJMCC" alt="PJMCC"></div>
       <div class="item"><img :src="affiliatePAMAS" alt="PAMAS"></div>
 <!--      <div class="item"><img :src="affiliateUKAS" alt="UKAS"></div>-->
-      <div class="item" style="margin-right: 0"><img :src="affiliatePDOS" alt="PDOS"></div>
+      <div class="item"><img :src="affiliatePDOS" alt="PDOS"></div>
     </carousel>
   </div>
 </template>

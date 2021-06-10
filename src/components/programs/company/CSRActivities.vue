@@ -13,14 +13,10 @@
           <div class="col-12">
             <h4 class="font-weight-light mb-3">Outside Veritas Activities</h4>
           </div>
-
           <div class="col-md-4 col-sm-6">
-            <img :src="specialChildrenXmasParty" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Christmas Party for Special Children</p>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img :src="bakingLesson" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Baking Lesson September 18, 2014</p>
+            <photo-gallery-modal :caption="`Christmas Party for Special Children`"
+                                 :thumbnail="csrImagesBatchOne[0]"
+                                 :images="csrImagesBatchOne" />
           </div>
         </div>
       </div>
@@ -32,32 +28,39 @@
             <h4 class="font-weight-light mb-3">Vessel Send Off Party</h4>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="loyaltyAwardee1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Loyalty Awardee</p>
+            <photo-gallery-modal :caption="`Loyalty Awardee`"
+                                 :thumbnail="loyaltyAwardee[0]"
+                                 :images="loyaltyAwardee" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="cadetsTeambuilding1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Cadets Teambuilding</p>
+            <photo-gallery-modal :caption="`Cadets Teambuilding`"
+                                 :thumbnail="cadetsTeambuilding1[0]"
+                                 :images="cadetsTeambuilding1" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="horizonHighway1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Send-Off Ceremony M/V Horizon Highway</p>
+            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Horizon Highway`"
+                                 :thumbnail="horizonHighway1[0]"
+                                 :images="horizonHighway1" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="capeHayatomo1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Send-Off Ceremony M/V Cape Hayatomo</p>
+            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Cape Hayatomo`"
+                                 :thumbnail="capeHayatomo1[0]"
+                                 :images="capeHayatomo1" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="shiningBliss1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Send-Off Ceremony M/V Shining Bliss</p>
+            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Shining Bliss`"
+                                 :thumbnail="shiningBliss1[0]"
+                                 :images="shiningBliss1" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="coronaUtility1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Send-Off Ceremony M/V Corona Utility</p>
+            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Corona Utility`"
+                                 :thumbnail="coronaUtility1[0]"
+                                 :images="coronaUtility1" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <img :src="driveGreen1" alt="">
-            <p class="vmc-text-primary-2 letter-spacing-1 mt-1 text-center">Send-Off Ceremony M/V Drive Green</p>
+            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Drive Green`"
+                                 :thumbnail="driveGreen1[0]"
+                                 :images="driveGreen1" />
           </div>
         </div>
       </div>
@@ -66,19 +69,44 @@
 </template>
 
 <script>
+import PhotoGalleryModal from '../app-layout/PhotoGalleryModal';
 export default {
   name: 'CSRActivities',
+  components: {
+    'photo-gallery-modal' : PhotoGalleryModal
+  },
   data() {
     return {
-      'specialChildrenXmasParty': require(`@/assets/programs/csr/SpecialChildrenXMasParty_2014.jpg`),
-      'bakingLesson': require(`@/assets/programs/csr/bakingLesson.jpg`),
-      'loyaltyAwardee1': require(`@/assets/programs/csr/2014-Loyalty-Awardee_18.jpg`),
-      'horizonHighway1': require(`@/assets/programs/csr/2017_horizon.jpg`),
-      'capeHayatomo1': require(`@/assets/programs/csr/2017_hayatomo.jpg`),
-      'shiningBliss1': require(`@/assets/programs/csr/shining_bliss.jpg`),
-      'coronaUtility1': require(`@/assets/programs/csr/corona_utility.jpg`),
-      'driveGreen1': require(`@/assets/programs/csr/drive_green.jpg`),
-      'cadetsTeambuilding1': require(`@/assets/programs/csr/cadets_teambuilding.jpg`),
+      csrImagesBatchOne : [
+        require(`@/assets/programs/csr/SpecialChildrenXMasParty_2014.jpg`),
+      ],
+      loyaltyAwardee: [
+        require(`@/assets/programs/csr/2014-Loyalty-Awardee_18.jpg`),
+        require(`@/assets/programs/csr/2017_horizon.jpg`),
+        require(`@/assets/programs/csr/2017_hayatomo.jpg`),
+        require(`@/assets/programs/csr/shining_bliss.jpg`),
+        require(`@/assets/programs/csr/corona_utility.jpg`),
+        require(`@/assets/programs/csr/drive_green.jpg`),
+        require(`@/assets/programs/csr/cadets_teambuilding.jpg`)
+      ],
+      horizonHighway1: [
+        require(`@/assets/programs/csr/2017_horizon.jpg`)
+      ],
+      capeHayatomo1: [
+        require(`@/assets/programs/csr/2017_hayatomo.jpg`)
+      ],
+      shiningBliss1: [
+        require(`@/assets/programs/csr/shining_bliss.jpg`)
+      ],
+      coronaUtility1: [
+        require(`@/assets/programs/csr/corona_utility.jpg`)
+      ],
+      driveGreen1: [
+        require(`@/assets/programs/csr/drive_green.jpg`)
+      ],
+      cadetsTeambuilding1: [
+        require(`@/assets/programs/csr/cadets_teambuilding.jpg`)
+      ],
     }
   }
 };

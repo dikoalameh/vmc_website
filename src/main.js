@@ -14,14 +14,32 @@ import {
   faBars,
   faChevronRight,
   faEnvelope,
-  faGreaterThan, faHandHoldingHeart, faHandshake,
-  faPhoneAlt, faThumbsUp,
+  faGreaterThan,
+  faHandHoldingHeart,
+  faHandshake,
+  faPhoneAlt,
+  faThumbsUp,
+  faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 
-library.add( faPhoneAlt, faEnvelope, faGreaterThan, faChevronRight, faBars, faThumbsUp, faHandHoldingHeart, faHandshake )
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
+import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
+
+library.add( faPhoneAlt,
+    faEnvelope,
+    faGreaterThan,
+    faChevronRight,
+    faBars,
+    faThumbsUp,
+    faHandHoldingHeart,
+    faHandshake,
+    faChevronLeft,
+    faFacebookF)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-layers', FontAwesomeLayers)
+Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
 Vue.component('carousel', OwlCarousel)
 Vue.use(Vuelidate)
 

@@ -13,9 +13,9 @@ import TheCompany from '../components/about-us/TheCompany';
 import OurPrincipals from '../components/about-us/OurPrincipals';
 import ContactUs from '../components/contact-us/ContactUs';
 import AllNews from '../components/news/AllNews';
-import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/CarryingAFamilyLegacyTowardGrowthStability';
-import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/SeafaringOrganizationUnderProposedOFWDeptPushed';
-import ModernDayHeroesInTheNewNormal from '../components/news/ModernDayHeroesInTheNewNormal';
+import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/articles/CarryingAFamilyLegacyTowardGrowthStability';
+import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/articles/SeafaringOrganizationUnderProposedOFWDeptPushed';
+import ModernDayHeroesInTheNewNormal from '../components/news/articles/ModernDayHeroesInTheNewNormal';
 import CSRActivities from '../components/programs/company/CSRActivities';
 import OfficePrograms from '../components/programs/company/OfficePrograms';
 import Allottees from '../components/programs/company/Allottees';
@@ -25,14 +25,15 @@ import TrainingPrograms from '../components/programs/crew/TrainingPrograms';
 import SchedulesOfVMC from '../components/schedules/SchedulesOfVMC';
 import CareersInVMC from '../components/career/CareersInVMC';
 import Veritas30thAnniversarySameDayEditVideo
-  from '../components/news/Veritas30thAnniversarySameDayEditVideo';
+  from '../components/news/articles/Veritas30thAnniversarySameDayEditVideo';
 import VeritasChristmasVideo2020
-  from '../components/news/VeritasChristmasVideo2020';
+  from '../components/news/articles/VeritasChristmasVideo2020';
 import CompanyNews from '../components/news/CompanyNews';
 import CrewNews from '../components/news/CrewNews';
 import GovernmentAdvisories from '../components/news/GovernmentAdvisories';
 import PrincipalMemo from '../components/news/PrincipalMemo';
 import CookiePolicy from '../components/CookiePolicy';
+import Covid19Update from '../components/news/Covid19Update';
 
 Vue.use(VueRouter)
 
@@ -98,6 +99,11 @@ const routes = [
         path: 'memo',
         name: 'PrincipalMemo',
         component: PrincipalMemo
+      },
+      {
+        path: 'covid-19',
+        name: 'Covid19Update',
+        component: Covid19Update
       },
       {
         path: '1',

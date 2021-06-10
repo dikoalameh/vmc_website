@@ -23,9 +23,9 @@
                 One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
               </p>
               <p>
-                <router-link :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}"
-                             class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
-                             style="font-size: 18px">Read More</router-link>
+<!--                <router-link :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}"-->
+<!--                             class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
+<!--                             style="font-size: 18px">Read More</router-link>-->
 <!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
 <!--                   style="font-size: 18px" href="#">Read More</a>-->
               </p>
@@ -46,8 +46,8 @@
                 Some representative placeholder content for the second slide of the carousel.
               </p>
               <p>
-                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
-                   style="font-size: 18px" href="#">Read More</a>
+<!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
+<!--                   style="font-size: 18px" href="#">Read More</a>-->
               </p>
             </div>
           </div>
@@ -66,8 +66,8 @@
                 Some representative placeholder content for the first slide of the carousel.
               </p>
               <p>
-                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"
-                   style="font-size: 18px" href="#">Read More</a>
+<!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
+<!--                   style="font-size: 18px" href="#">Read More</a>-->
               </p>
             </div>
           </div>
@@ -82,7 +82,9 @@
             </router-link>
           </div>
           <div class="col-auto p-1">
-            <button class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn">COVID-19 Update</button>
+            <router-link class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn" :to="{name: 'Covid19Update'}">
+              COVID-19 Update
+            </router-link>
           </div>
         </div>
       </div>
