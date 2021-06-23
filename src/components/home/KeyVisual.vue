@@ -42,13 +42,6 @@
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 THE NEW NORMAL
               </p>
-              <p class="vmc-text-white font-weight-light caption-three">
-                Some representative placeholder content for the second slide of the carousel.
-              </p>
-              <p>
-<!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
-<!--                   style="font-size: 18px" href="#">Read More</a>-->
-              </p>
             </div>
           </div>
         </div>
@@ -58,16 +51,8 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">LOREM IPSUM</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                NEW CENTURY
-              </p>
-              <p class="vmc-text-white font-weight-light caption-three">
-                Some representative placeholder content for the first slide of the carousel.
-              </p>
-              <p>
-<!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
-<!--                   style="font-size: 18px" href="#">Read More</a>-->
+                NEW VESSELS
               </p>
             </div>
           </div>
@@ -98,7 +83,7 @@ export default {
     return {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
       'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
-      'banner3': require(`@/assets/vessel_new_century.jpg`),
+      'banner3': require(`@/assets/keyvisuals/banner3_0.jpg`)
     }
   },
   mounted() {
@@ -152,7 +137,7 @@ export default {
 }
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: calc(90vh - 125px);
+  height: calc(100vh - 100px);
 }
 .carousel-item > img {
   position: absolute;
