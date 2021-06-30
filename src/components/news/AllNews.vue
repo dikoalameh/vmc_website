@@ -14,6 +14,27 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news6" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Retired Crew Virtual Awarding Ceremony</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — May 27, 2021
+                    </p>
+                    <p class="d-none d-lg-block">
+                      On May 27, 2021, 15 - 31 service years crew in Veritas Maritime Corporation held a retired crew virtual awarding ceremony via zoom.
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'RetiredCrewVirtualAwardingCeremony'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news3" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -127,6 +148,7 @@ export default {
       'news3': require(`@/assets/news/news_31-03-2021.jpg`),
       'news4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
       'news5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
+      'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
     }
   }
 }

@@ -34,6 +34,9 @@ import GovernmentAdvisories from '../components/news/GovernmentAdvisories';
 import PrincipalMemo from '../components/news/PrincipalMemo';
 import CookiePolicy from '../components/CookiePolicy';
 import Covid19Update from '../components/news/Covid19Update';
+import RetiredCrewVirtualAwardingCeremony
+  from '../components/news/articles/RetiredCrewVirtualAwardingCeremony';
+// import ContactUsNew from '../components/contact-us/ContactUsNew';
 
 Vue.use(VueRouter)
 
@@ -129,6 +132,11 @@ const routes = [
         path: '5',
         name: 'VeritasChristmasVideo2020',
         component: VeritasChristmasVideo2020
+      },
+      {
+        path: '6',
+        name: 'RetiredCrewVirtualAwardingCeremony',
+        component: RetiredCrewVirtualAwardingCeremony
       },
     ]
   },
@@ -229,6 +237,11 @@ const routes = [
         name: 'ContactUs',
         component: ContactUs
       },
+      // {
+      //   path: 'new',
+      //   name: 'ContactUsNew',
+      //   component: ContactUsNew
+      // },
     ]
   },
   {

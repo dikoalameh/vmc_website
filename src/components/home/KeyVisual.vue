@@ -6,10 +6,41 @@
           <li data-target="#VMCKeyVisual" data-slide-to="0" class="active"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="1"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="2"></li>
+          <li data-target="#VMCKeyVisual" data-slide-to="3"></li>
+          <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
         </ol>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner1+')'}" id="BannerOne">
+        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner5+')'}" id="BannerFive">
+          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <p class="mb-2 font-weight-normal text-white caption-one">PROUD SEAMAN OF VERITAS MARITIME CORPORATION</p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
+                TAGA VERITAS AKO!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner4+')'}" id="BannerFour">
+          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <p class="mb-2 font-weight-normal text-white caption-one">RETIRED CREW VIRTUAL AWARDING CEREMONY</p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
+                MAY 27, 2021
+              </p>
+              <p class="vmc-text-white font-weight-light caption-three">
+                15 - 31 Service years in Veritas Maritime Corporation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner1+')'}" id="BannerOne">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
@@ -22,13 +53,6 @@
               <p class="vmc-text-white font-weight-light caption-three">
                 One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
               </p>
-              <p>
-<!--                <router-link :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}"-->
-<!--                             class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
-<!--                             style="font-size: 18px">Read More</router-link>-->
-<!--                <a class="btn vmc-btn-circle vmc-btn-outline-white mt-5 px-4"-->
-<!--                   style="font-size: 18px" href="#">Read More</a>-->
-              </p>
             </div>
           </div>
         </div>
@@ -38,7 +62,7 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS' GEARED TOWARDS</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS GEARED TOWARDS</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 THE NEW NORMAL
               </p>
@@ -51,6 +75,7 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
+              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS ACQUIRED</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 NEW VESSELS
               </p>
@@ -83,7 +108,9 @@ export default {
     return {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
       'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
-      'banner3': require(`@/assets/keyvisuals/banner3_0.jpg`)
+      'banner3': require(`@/assets/keyvisuals/banner3_0.jpg`),
+      'banner4': require(`@/assets/keyvisuals/retirees_63021.jpg`),
+      'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
     }
   },
   mounted() {
@@ -92,11 +119,15 @@ export default {
     const carousel1 = document.getElementById('BannerOne');
     const carousel2 = document.getElementById('BannerTwo');
     const carousel3 = document.getElementById('BannerThree');
+    const carousel4 = document.getElementById('BannerFour');
+    const carousel5 = document.getElementById('BannerFive');
 
     if (w > 992 && w < h) {
       carousel1.style.height = "60vh"
       carousel2.style.height = "60vh"
       carousel3.style.height = "60vh"
+      carousel4.style.height = "60vh"
+      carousel5.style.height = "60vh"
     }
     // console.log('width ' + w);
     // console.log('height ' + h);

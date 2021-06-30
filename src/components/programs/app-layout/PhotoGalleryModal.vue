@@ -10,13 +10,17 @@
           <span class="lightbox-close" style="margin-top: -14px" @click.stop="hide">&times;</span>
           <span class="text-white"> {{index + 1}} / {{images.length}}</span>
         </div>
-        <div class="lightbox-modal-body">
+        <div class="lightbox-modal-body" id="ImageContainer">
           <span :class="{'invisible': !hasPrevious()}">
             <font-awesome-icon icon="chevron-left" size="3x"
                                class="pr-3"
                                @click.stop="previous"/>
             </span>
-            <img style="width: calc(100% - 75px)" :src="images[index]">
+            <img id="ModalImg"
+                 style="max-width: calc(100% - 75px);
+                        width: auto;
+                        max-height: calc(100vh - 200px)"
+                        :src="images[index]">
           <span :class="{'invisible': !hasNext()}">
             <font-awesome-icon icon="chevron-right" size="3x"
                                class="pl-3"
@@ -94,7 +98,7 @@ export default {
             break;
         }
       }
-    }
+    },
   },
   mounted() {
     window.addEventListener('keydown', this.onKeyboardDown)

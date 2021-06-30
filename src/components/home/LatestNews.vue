@@ -14,6 +14,21 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">Retired Crew Virtual Awarding Ceremony</h4>
+                <p>
+                  On May 27, 2021, 15 - 31 service years crew in Veritas Maritime Corporation held a retired crew virtual awarding ceremony via zoom.
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">27 May 2021</p>
+              <router-link :to="{name: 'RetiredCrewVirtualAwardingCeremony'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer3" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -111,6 +126,7 @@ name: "LatestNews",
       'newsContainer3': require(`@/assets/news/news_31-03-2021.jpg`),
       'newsContainer4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
       'newsContainer5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
+      'newsContainer6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
     }
   }
 }
