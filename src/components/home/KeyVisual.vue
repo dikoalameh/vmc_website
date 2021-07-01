@@ -75,9 +75,12 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS ACQUIRED</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS ACQUIRED NEW VESSEL</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                NEW VESSELS
+                MV VIJAYANAGAR
+              </p>
+              <p class="vmc-text-white font-weight-light caption-three">
+                Despite the pandemic, Veritas never stop giving quality service to the shipping industry and even acquired their 61st vessel this year.
               </p>
             </div>
           </div>
@@ -108,7 +111,7 @@ export default {
     return {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
       'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
-      'banner3': require(`@/assets/keyvisuals/banner3_0.jpg`),
+      'banner3': require(`@/assets/keyvisuals/VIJAYANAGAR.jpg`),
       'banner4': require(`@/assets/keyvisuals/retirees_63021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
     }

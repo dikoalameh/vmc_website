@@ -11,12 +11,17 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <h4 class="font-weight-light">Vessel Visitation</h4>
+            <h4 class="font-weight-light">Crew Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
             <photo-gallery-modal :caption="`Veritas Latest Vessel Visitation`"
                                  :thumbnail="vesselVisitation[0]"
                                  :images="vesselVisitation" />
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <photo-gallery-modal :caption="`Loyalty Award 2021`"
+                                 :thumbnail="loyaltyAward2021[0]"
+                                 :images="loyaltyAward2021" />
           </div>
         </div>
       </div>
@@ -25,23 +30,14 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h4 class="font-weight-light mb-3">Veritas Christmas Party</h4>
+            <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Veritas Christmas Party`"
                                  :thumbnail="vmcXmasParty1[0]"
                                  :images="vmcXmasParty1" />
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light">Veritas Anniversary Party</h4>
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Veritas 30th Anniversary`"
                                  :thumbnail="vmc30Anniversary[0]"
                                  :images="vmc30Anniversary" />
@@ -49,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -139,7 +135,7 @@ export default {
         require(`@/assets/programs/office/cadets_teambuilding.jpg`)
       ],
       vesselVisitation: [
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_1_63021.jpg`),
+        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_1_63021_crop.jpg`),
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_2_63021.jpg`),
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_3_63021.jpg`),
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_4_63021.jpg`),
@@ -152,6 +148,13 @@ export default {
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_11_63021.jpg`),
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_12_63021.jpg`),
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_13_63021.jpg`),
+      ],
+      loyaltyAward2021: [
+        require(`@/assets/programs/office/loyaltyaward2021/AB_Avellaneda.jpg`),
+        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Albay.jpg`),
+        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Daluz.jpg`),
+        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Panaguiton.jpg`),
+        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Suyat.jpg`),
       ]
     }
   }

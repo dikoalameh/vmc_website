@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="my-3" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/542517193?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Veritas 2020 Christmas Video"></iframe></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare quam viverra orci sagittis eu volutpat odio facilisis mauris. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Tristique senectus et netus et malesuada. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Ut tellus elementum sagittis vitae et leo. Pretium fusce id velit ut tortor pretium viverra suspendisse. Lectus nulla at volutpat diam. Faucibus in ornare quam viverra. Vestibulum rhoncus est pellentesque elit ullamcorper. Natoque penatibus et magnis dis parturient montes.</p>
+            <p>The talented and hardworking staff of Veritas made a video tribute for the Christmas season to remind us that we are one family facing this pandemic. </p>
           </div>
         </div>
         <div class="row">

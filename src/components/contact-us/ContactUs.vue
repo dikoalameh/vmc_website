@@ -71,18 +71,41 @@
             <p class="mb-0"><a class="vmc-text-primary-2" href="mailto:vmcgroup@veritas.com.ph">vmcgroup@veritas.com.ph</a></p>
             <p class=""><a class="vmc-text-primary-2" href="mailto:vmccomm@veritas.com.ph">vmccomm@veritas.com.ph</a></p>
 
-            <h4 class="font-weight-light mb-1">Facebook Page</h4>
-            <table>
-              <tr>
-                <th>Veritas Crew</th>
-                <th class="px-2"> : </th>
-                <td>
-                  <a href="https://www.facebook.com/veritas.maritime.587"
-                     target="_blank" class="vmc-text-primary-2">
-                    https://www.facebook.com/veritas.maritime.587</a>
-                </td>
-              </tr>
-            </table>
+            <h4 class="font-weight-light mb-1">Facebook Contact</h4>
+            <div class="row">
+              <div class="col-lg-4 d-flex justify-content-lg-between align-items-center font-weight-bold pr-0">
+                <span>Facebok Page</span>
+                <span class="ml-2">:</span>
+              </div>
+              <div class="col-lg-8 text-break">
+                <a href="https://www.facebook.com/VeritasMaritimeCorporation"
+                   target="_blank" class="vmc-text-primary-2">
+                  https://www.facebook.com/VeritasMaritimeCorporation</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 d-flex justify-content-lg-between align-items-center font-weight-bold pr-0">
+                <span>Veritas Crew</span>
+                <span class="ml-2">:</span>
+              </div>
+              <div class="col-lg-8 text-break">
+                <a href="https://www.facebook.com/veritas.maritime.587"
+                   target="_blank" class="vmc-text-primary-2">
+                  https://www.facebook.com/veritas.maritime.587</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 d-flex justify-content-lg-between align-items-center font-weight-bold pr-0">
+                <span>Veritas Crew Allottee</span>
+                <span class="ml-2">:</span>
+              </div>
+              <div class="col-lg-8 text-break">
+                <a href="https://www.facebook.com/profile.php?id=100069043972456"
+                   target="_blank" class="vmc-text-primary-2">
+                  https://www.facebook.com/profile.php?id=100069043972456</a>
+              </div>
+            </div>
+
 
             <h4 class="font-weight-light mb-1 mt-3">Send us feedback :</h4>
             <form @submit.prevent="sendFeedback" ref="sendFeedbackForm">

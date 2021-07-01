@@ -11,22 +11,12 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <h4 class="font-weight-light mb-3">Clean Up Drive</h4>
+            <h4 class="font-weight-light mb-3">Outside Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Manila Bay Clean Up Drive`"
-                                 :thumbnail="manilaBayCleanUp"
+                                 :thumbnail="manilaBayCleanUp[0]"
                                  :images="manilaBayCleanUp" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Outside Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Christmas Party for Special Children`"
@@ -52,7 +42,9 @@ export default {
         require(`@/assets/programs/csr/SpecialChildrenXMasParty_2014.jpg`),
       ],
       manilaBayCleanUp: [
-        require(`@/assets/no_image.jpg`)
+        require(`@/assets/programs/csr/manilabaycleanup/Manila-Bay-Clean-Up-Drive-1.jpg`),
+        require(`@/assets/programs/csr/manilabaycleanup/Manila Bay Cleanup Drive 2.jpg`),
+        require(`@/assets/programs/csr/manilabaycleanup/Manila Bay Clean Up Drive 3.jpg`),
       ]
     }
   }

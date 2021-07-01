@@ -84,7 +84,7 @@
                       By Veritas Admin — December 25, 2020
                     </p>
                     <p class="d-none d-lg-block">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      The talented and hardworking staff of Veritas made a video tribute for the Christmas season to remind us that we are one family facing this pandemic.
                     </p>
                     <router-link class="vmc-text-primary-2" :to="{name: 'VeritasChristmasVideo2020'}">continue reading . . .</router-link>
                   </div>
@@ -124,7 +124,7 @@
                       By Veritas Admin — July 11, 2019
                     </p>
                     <p class="d-none d-lg-block">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      Same day video shoot and edit for the 30th-anniversary celebration of Veritas.
                     </p>
                     <router-link class="vmc-text-primary-2" :to="{name: 'Veritas30thAnniversarySameDayEditVideo'}">continue reading . . .</router-link>
                   </div>

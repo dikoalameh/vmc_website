@@ -62,7 +62,7 @@
               <div style="height: 200px; overflow-y: hidden">
                 <h4 class="card-title">Veritas Christmas Video 2020</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  The talented and hardworking staff of Veritas made a video tribute for the Christmas season to remind us that we are one family facing this pandemic.
                 </p>
               </div>
               <p class="mb-0 mt-3" style="opacity: 50%">25 December 2020</p>
@@ -90,7 +90,7 @@
               <div style="height: 200px; overflow-y: hidden">
                 <h4 class="card-title" style="height: 56px; overflow: hidden">Veritas 30th Anniversary Same Day Edit Video</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  Same day video shoot and edit for the 30th-anniversary celebration of Veritas.
                 </p>
               </div>
               <p class="mb-0 mt-3" style="opacity: 50%">11 July 2019</p>
