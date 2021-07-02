@@ -140,9 +140,6 @@
                       <router-link class="dropdown-item" :to="{name: 'VeritasCadets'}">
                         Veritas Cadets
                       </router-link>
-                      <router-link class="dropdown-item" :to="{name: 'InHouseTraining'}">
-                        In House Training
-                      </router-link>
                       <router-link class="dropdown-item" :to="{name: 'TrainingPrograms'}">
                         Training Programs
                       </router-link>

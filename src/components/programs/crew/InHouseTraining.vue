@@ -1,3 +1,4 @@
+<!--todo un used component-->
 <template>
   <div class="vmc-cadets">
     <div class="container-fluid vmc-py-big">

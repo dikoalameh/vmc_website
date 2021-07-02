@@ -97,8 +97,8 @@ export default {
   data() {
     return {
       'krbs': require(`@/assets/principals/kline_krbs_logo.jpg`),
-      'kagoshima': require(`@/assets/no_image.jpg`),
-      'ftlogistics': require(`@/assets/no_image.jpg`),
+      'kagoshima': require(`@/assets/principals/fujitrans_logo.jpg`),
+      'ftlogistics': require(`@/assets/principals/fujitrans_logo.jpg`),
       'sansho': require(`@/assets/principals/sancho_kaiun_logo.jpg`),
     }
   }

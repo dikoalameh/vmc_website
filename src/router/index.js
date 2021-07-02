@@ -20,7 +20,6 @@ import CSRActivities from '../components/programs/company/CSRActivities';
 import OfficePrograms from '../components/programs/company/OfficePrograms';
 import Allottees from '../components/programs/company/Allottees';
 import VeritasCadets from '../components/programs/crew/VeritasCadets';
-import InHouseTraining from '../components/programs/crew/InHouseTraining';
 import TrainingPrograms from '../components/programs/crew/TrainingPrograms';
 import SchedulesOfVMC from '../components/schedules/SchedulesOfVMC';
 import CareersInVMC from '../components/career/CareersInVMC';
@@ -182,11 +181,6 @@ const routes = [
             path: 'cadets',
             name: 'VeritasCadets',
             component: VeritasCadets
-          },
-          {
-            path: 'inhouse',
-            name: 'InHouseTraining',
-            component: InHouseTraining
           },
           {
             path: 'training',
