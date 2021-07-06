@@ -60,6 +60,7 @@
 
 <script>
 import Vue from 'vue';
+import {API_URL} from '../config/apiUrl';
 
 export default {
   name: 'VMCFooter',
@@ -69,7 +70,7 @@ export default {
     }
   },
   mounted() {
-    Vue.axios.get('http://vmc_website_api.test/api/public/visitor-count',this.newComment)
+    Vue.axios.get(API_URL.index()+'visitor-count',this.newComment)
     .then((res)=> {
       this.visitor = res.data
     })

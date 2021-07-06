@@ -136,6 +136,7 @@
                 </textarea>
                 <div class="invalid-feedback small">
                   <span v-if="!$v.newComment.message.required">Message is required. </span>
+                  <span v-if="!$v.newComment.message.minLength">Contact number must have at least {{$v.newComment.message.$params.minLength.min}}. </span>
                 </div>
               </div>
               <button type="submit" class="btn vmc-btn-circle vmc-btn-prime-2 px-5">SEND</button>
@@ -161,6 +162,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import {email, maxLength, minLength, numeric, required} from 'vuelidate/lib/validators';
 Vue.use(VueAxios, axios)
+import {API_URL} from '../../config/apiUrl';
 
 export default {
   name: 'ContactUsNew',
@@ -191,7 +193,8 @@ export default {
         email
       },
       message: {
-        required
+        required,
+        minLength: minLength(5)
       }
     }
   },
@@ -199,7 +202,7 @@ export default {
     sendFeedback() {
       Swal.fire({
         title: 'Are you sure?',
-        text: 'This will directly contact Veritas!',
+        text: 'This will directly sent to Veritas!',
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Yes, send it!',
@@ -207,9 +210,7 @@ export default {
         cancelButtonText: 'Cancel',
       }).then((result) => {
         if (result.value) {
-          // window.location.href =
-          //     `mailto:shantycajulao@gmail.com?subject=Name: ${this.fullName} — Contact Number: ${this.contactNumber}&body=Message: %0D%0A${this.emailMessage}`
-          Vue.axios.post('http://vmc_website_api.test/api/public/comments',this.newComment)
+          Vue.axios.post(API_URL.index()+'comments',this.newComment)
           .then((res)=> {
             Swal.fire(
                 'Success',
@@ -223,14 +224,6 @@ export default {
         }
       })
     },
-    // sendComment(e) {
-    //   Vue.axios.post('http://vmc_website_api.test/api/public/comments',this.newComment)
-    //   .then((res)=> {
-    //     console.log(res.data)
-    //   })
-    //   console.log(this.newComment)
-    //   e.preventDefault();
-    // }
   }
 };
 </script>

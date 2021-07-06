@@ -75,13 +75,14 @@
 
 <script>
 import Vue from 'vue';
+import {API_URL} from '../config/apiUrl';
 
 export default {
   name: 'PrivacyNotice',
   methods: {
     acceptPrivacyNotice() {
       // sessionStorage.setItem("accept","yes");
-      Vue.axios.post('http://vmc_website_api.test/api/public/ip',this.newComment)
+      Vue.axios.post(API_URL.index()+'ip',this.newComment)
       .then((res)=> {
         sessionStorage.setItem("accept", res.data);
       })
