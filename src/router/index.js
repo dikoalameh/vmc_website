@@ -11,7 +11,6 @@ import Home from '../views/Home.vue'
 // import Page404 from '../views/Page404.vue'
 import TheCompany from '../components/about-us/TheCompany';
 import OurPrincipals from '../components/about-us/OurPrincipals';
-import ContactUs from '../components/contact-us/ContactUs';
 import AllNews from '../components/news/AllNews';
 import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/articles/CarryingAFamilyLegacyTowardGrowthStability';
 import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/articles/SeafaringOrganizationUnderProposedOFWDeptPushed';
@@ -35,7 +34,7 @@ import CookiePolicy from '../components/CookiePolicy';
 import Covid19Update from '../components/news/Covid19Update';
 import RetiredCrewVirtualAwardingCeremony
   from '../components/news/articles/RetiredCrewVirtualAwardingCeremony';
-// import ContactUsNew from '../components/contact-us/ContactUsNew';
+import ContactUsNew from '../components/contact-us/ContactUsNew';
 
 Vue.use(VueRouter)
 
@@ -48,7 +47,7 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'Home',
+    // name: 'Home',
     component: Home,
   },
   {
@@ -226,16 +225,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "contact" */ "../views/Contact"),
     redirect: '/contact/us',
     children: [
+      // {
+      //   path: 'us',
+      //   name: 'ContactUs',
+      //   component: ContactUs
+      // },
       {
         path: 'us',
-        name: 'ContactUs',
-        component: ContactUs
+        name: 'ContactUsNew',
+        component: ContactUsNew
       },
-      // {
-      //   path: 'new',
-      //   name: 'ContactUsNew',
-      //   component: ContactUsNew
-      // },
     ]
   },
   {

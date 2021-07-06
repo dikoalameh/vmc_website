@@ -74,11 +74,17 @@
 </template>
 
 <script>
+import Vue from 'vue';
+
 export default {
   name: 'PrivacyNotice',
   methods: {
     acceptPrivacyNotice() {
-      sessionStorage.setItem("accept","yes");
+      // sessionStorage.setItem("accept","yes");
+      Vue.axios.post('http://vmc_website_api.test/api/public/ip',this.newComment)
+      .then((res)=> {
+        sessionStorage.setItem("accept", res.data);
+      })
     },
 
   },

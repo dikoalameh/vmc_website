@@ -31,11 +31,11 @@
           <div class="col-lg-3 center-on-small-right mb-2">
             <span class="white-icon-color">
               See us on:
-              <a href="https://www.facebook.com/veritas.maritime.587"
+              <a href="https://www.facebook.com/VeritasMaritimeCorporation"
                  target="_blank" style="padding: 7px 10px 5px; background-color: #4267B2; border-radius: 100px">
               <font-awesome-icon :icon="[ 'fab', 'facebook-f' ]"
                                  mask="circle"
-                                 size="1.5x" />
+                                  />
             </a>
             </span>
           </div>
@@ -48,10 +48,9 @@
                          style="letter-spacing: .5pt; color: #f8f9f9;">
               Cookies Policy
             </router-link>
-<!--            <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37"-->
-<!--               target="_blank"-->
-<!--               class="small" style="letter-spacing: .5pt; color: #f8f9f9;">-->
-<!--              15F MARC 2000 TOWER 1973 Taft Ave., Malate Manila</a>-->
+            <span class="text-white small" style="letter-spacing: .5pt; color: #f8f9f9;">
+              | Total Visitor(s): <strong class="text-white">{{visitor}}</strong>
+            </span>
           </div>
         </div>
       </div>
@@ -60,8 +59,21 @@
 </template>
 
 <script>
+import Vue from 'vue';
+
 export default {
   name: 'VMCFooter',
+  data() {
+    return {
+      visitor : '',
+    }
+  },
+  mounted() {
+    Vue.axios.get('http://vmc_website_api.test/api/public/visitor-count',this.newComment)
+    .then((res)=> {
+      this.visitor = res.data
+    })
+  }
 };
 </script>
 

@@ -85,39 +85,57 @@
             </table>
 
             <h4 class="font-weight-light mb-1 mt-3">Send us comments / feedback :</h4>
-            <form @submit.prevent="sendFeedback" ref="sendFeedbackForm">
+            <form @submit.prevent="sendFeedback" ref="sendFeedbackForm" method="post">
               <div class="form-group mb-1">
                 <label for="FullName" class="mb-0">Full Name: <sup class="vmc-text-danger">*</sup></label>
                 <input class="form-control" id="FullName"
-                       required aria-required="true">
-                <div class="error-message small">
-                  <span>Test Error</span>
+                       required aria-required="true"
+                       v-model.trim="$v.newComment.name.$model"
+                       :class="{'is-invalid': $v.newComment.name.$error, 'is-valid': !$v.newComment.name.$invalid}"
+                >
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.newComment.name.required">Name is required. </span>
+                  <span v-if="!$v.newComment.name.minLength">Name must have at least {{$v.newComment.name.$params.minLength.min}}. </span>
                 </div>
               </div>
               <div class="form-group mb-1">
                 <label for="EmailAddress" class="mb-0">Email Address: <sup class="vmc-text-danger">*</sup></label>
                 <input class="form-control" id="EmailAddress"
-                       required aria-required="true">
-                <div class="error-message small">
-                  <span>Test Error</span>
+                       required aria-required="true"
+                       v-model.trim="$v.newComment.email.$model"
+                       :class="{'is-invalid': $v.newComment.email.$error, 'is-valid': !$v.newComment.email.$invalid}"
+                >
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.newComment.email.required">Email is required. </span>
+                  <span v-if="!$v.newComment.email.email">Please enter a valid email address. </span>
                 </div>
               </div>
               <div class="form-group mb-1">
                 <label for="ContactNumber" class="mb-0">Contact Number: <sup class="vmc-text-danger">*</sup></label>
                 <input class="form-control" id="ContactNumber"
-                       required aria-required="true">
-                <div class="error-message small">
-                  <span>Test Error</span>
+                       required aria-required="true"
+                       v-model.trim="$v.newComment.contact_number.$model"
+                       :class="{'is-invalid': $v.newComment.contact_number.$error, 'is-valid': !$v.newComment.contact_number.$invalid}"
+                >
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.newComment.contact_number.required">Contact number is required. </span>
+                  <span v-if="!$v.newComment.contact_number.numeric">Contact field accepts number only. </span>
+                  <span v-if="!$v.newComment.contact_number.minLength">Contact number must have at least {{$v.newComment.contact_number.$params.minLength.min}}. </span>
+                  <span v-if="!$v.newComment.contact_number.maxLength">Contact number must have at most {{$v.newComment.contact_number.$params.maxLength.max}}. </span>
                 </div>
               </div>
               <div class="form-group mb-1">
                 <label for="Message" class="mb-0">
                   Feedback / Comments: <sup class="vmc-text-danger">*</sup>
                 </label>
-                <textarea name="Message" id="Message" class="form-control" rows="4" required>
+                <textarea name="Message" id="Message"
+                          class="form-control" rows="4" required
+                          v-model.trim="$v.newComment.message.$model"
+                          :class="{'is-invalid': $v.newComment.message.$error, 'is-valid': !$v.newComment.message.$invalid}"
+                >
                 </textarea>
-                <div class="error-message small">
-                  <span>Test Error</span>
+                <div class="invalid-feedback small">
+                  <span v-if="!$v.newComment.message.required">Message is required. </span>
                 </div>
               </div>
               <button type="submit" class="btn vmc-btn-circle vmc-btn-prime-2 px-5">SEND</button>
@@ -138,15 +156,44 @@
 
 <script>
 import Swal from 'sweetalert2';
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import {email, maxLength, minLength, numeric, required} from 'vuelidate/lib/validators';
+Vue.use(VueAxios, axios)
 
 export default {
   name: 'ContactUsNew',
   data() {
     return {
-      fullName      : '',
-      contactNumber : '',
-      emailMessage  : '',
+      newComment : {
+          name : '',
+          email : '',
+          contact_number : '',
+          message : '',
+      }
     };
+  },
+  validations: {
+    newComment: {
+      name: {
+        required,
+        minLength: minLength(3)
+      },
+      contact_number: {
+        required,
+        numeric,
+        minLength: minLength(5),
+        maxLength: maxLength(16)
+      },
+      email: {
+        required,
+        email
+      },
+      message: {
+        required
+      }
+    }
   },
   methods: {
     sendFeedback() {
@@ -160,21 +207,30 @@ export default {
         cancelButtonText: 'Cancel',
       }).then((result) => {
         if (result.value) {
-          window.location.href =
-              `mailto:shantycajulao@gmail.com?subject=Name: ${this.fullName} — Contact Number: ${this.contactNumber}&body=Message: %0D%0A${this.emailMessage}`
-          Swal.fire(
-              'Email opened',
-              'Opened your email to validate your email and message',
-              'success',
-          )
-          this.fullName = ''
-          this.contactNumber = ''
-          this.emailMessage = ''
+          // window.location.href =
+          //     `mailto:shantycajulao@gmail.com?subject=Name: ${this.fullName} — Contact Number: ${this.contactNumber}&body=Message: %0D%0A${this.emailMessage}`
+          Vue.axios.post('http://vmc_website_api.test/api/public/comments',this.newComment)
+          .then((res)=> {
+            Swal.fire(
+                'Success',
+                res.data,
+                'success',
+            )
+          })
+
+          this.newComment = ''
           this.$nextTick(() => { this.$v.$reset(); });
         }
       })
     },
-
+    // sendComment(e) {
+    //   Vue.axios.post('http://vmc_website_api.test/api/public/comments',this.newComment)
+    //   .then((res)=> {
+    //     console.log(res.data)
+    //   })
+    //   console.log(this.newComment)
+    //   e.preventDefault();
+    // }
   }
 };
 </script>
@@ -185,13 +241,6 @@ export default {
   opacity: .5;
   font-weight: bold;
 }
-
-
-
-
-
-
-
 
 .swal2-confirm .swal2-styled {
   border-radius: 100px;

@@ -154,7 +154,7 @@
                 <router-link class="nav-link" :to="{name: 'Career'}" style="width: 87px">Career</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" :to="{name: 'Contact'}" style="width: 128px">Contact Us</router-link>
+                <router-link class="nav-link" :to="{name: 'ContactUsNew'}" style="width: 128px">Contact Us</router-link>
               </li>
             </ul>
           </div>
