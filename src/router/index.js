@@ -35,6 +35,7 @@ import Covid19Update from '../components/news/Covid19Update';
 import RetiredCrewVirtualAwardingCeremony
   from '../components/news/articles/RetiredCrewVirtualAwardingCeremony';
 import ContactUsNew from '../components/contact-us/ContactUsNew';
+import CrewVeritasStory from '../components/news/articles/CrewVeritasStory';
 
 Vue.use(VueRouter)
 
@@ -135,6 +136,11 @@ const routes = [
         path: '6',
         name: 'RetiredCrewVirtualAwardingCeremony',
         component: RetiredCrewVirtualAwardingCeremony
+      },
+      {
+        path: '7',
+        name: 'CrewVeritasStory',
+        component: CrewVeritasStory
       },
     ]
   },

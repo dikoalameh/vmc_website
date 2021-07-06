@@ -14,6 +14,26 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news7" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">VMC Crew Experience / Story</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 6, 2021
+                    </p>
+                    <p class="d-none d-lg-block">
+                      During this hard time of pandemic, we cannot think more other than our health. It has been everyone's priority since the Covid-19 outbreak started.                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'CrewVeritasStory'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news6" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -149,6 +169,7 @@ export default {
       'news4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
       'news5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
       'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
+      'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`)
     }
   }
 }
