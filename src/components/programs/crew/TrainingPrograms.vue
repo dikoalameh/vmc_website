@@ -18,21 +18,24 @@
     </div>
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light">Crew Upgrading / Promotion Program /(in-house)</h4>
-          </div>
-        </div>
         <div class="row d-flex align-items-center">
-          <div class="col-lg-4 order-md-10">
-            <photo-gallery-modal :caption="`Crew in Training`"
-                                 :thumbnail="upgrading[0]"
-                                 :images="upgrading" />
+          <div class="col-lg-4">
+            <photo-gallery-modal :caption="``"
+                                 :thumbnail="upgrading1[0]"
+                                 :images="upgrading1" />
           </div>
-          <div class="col-lg-8  order-md-0">
+          <div class="col-lg-8">
+            <h4 class="font-weight-light">Crew Upgrading / Promotion Program /(in-house)</h4>
             <p>
               This in-house training program is designed to enhance and correct noted performances and reported deficiencies of ex-crew and who have served on board any of the VMC manned ships with the aim of improving their performance for the next vessel assignments as based on the revised STCW 95 and ISM SEP requirements.
             </p>
+          </div>
+          <div class="col-lg-4 order-md-10">
+            <photo-gallery-modal :caption="``"
+                                 :thumbnail="upgrading2[0]"
+                                 :images="upgrading2" />
+          </div>
+          <div class="col-lg-8">
             <p>
               This seminar also aims to mold and develop the crew into becoming qualified and competent officers and crew in the performance of new functions as required for the next rank. The program provides to the participants the opportunity to enhance their theoretical and technical knowledge as based on the revised STCW 95, and ISM requirements.
             </p>
@@ -46,19 +49,19 @@
     <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-md-3 my-3">
-            <img :src="cook" alt="">
+          <div class="col-lg-3">
+            <img :src="cook" alt="" class="mb-2">
           </div>
-          <div class="col-md-9">
+          <div class="col-lg-9">
             <h4 class="font-weight-light">Cooks’ Development Program</h4>
             <p>
               Veritas started its Steward Development Program in 2001 primarily to develop a new breed of young messmen and cooks.  In 2003, Veritas goes steps further with the launching of its Cooks’ Development Program.
             </p>
+          </div>
+          <div class="col-12">
             <p>
               VERITAS MARITIME CORPORATION faces the challenges of growth and development especially in supplying qualified and competent grew to its expanding fleets.  Part of its thrust is the development of cooks and stewards capable of meeting the standards required for international crewing.
             </p>
-          </div>
-          <div class="col-12">
             <p class="pr-1">
               Thus, Veritas Maritime Corporation introduces a two-thrust development program for the Steward Department – 1) the COOKS UPGRADING PROGRAM  - for development of skills of Cooks and Second Cooks, and 2) the COOK CADET Educational Sponsorship / FAST TRACK Program for students aiming for careers in the Steward Department (as Cooks).
             </p>
@@ -69,15 +72,16 @@
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-md-3 order-md-10 my-3">
-            <photo-gallery-modal :caption="``"
-                                 :thumbnail="rating[0]"
-                                 :images="rating" />
+          <div class="col-lg-3">
+            <img :src="rating[0]" alt="">
           </div>
-          <div class="col-md-9  order-md-0">
+          <div class="col-lg-6  order-md-0">
             <p>
               Veritas started its Ratings Development Program in 2008.  Veritas felt the need to develop crew who will stay to become top-quality No. 1 Oilers unlike regular engine crew whose goals are towards becoming Engine officers.  In the Deck department, this program will develop top-notch Bosuns.
             </p>
+          </div>
+          <div class="col-lg-3">
+            <img :src="rating[1]" alt="">
           </div>
         </div>
       </div>
@@ -97,11 +101,13 @@ export default {
     return {
       'promotion': require(`@/assets/crews/promotionTraining1.jpg`),
       'cook': require(`@/assets/crews/cook_7-7-2021.jpg`),
-      upgrading: [
+      upgrading1: [
         require(`@/assets/crews/crew_upgrade1_7-7-2021.jpg`),
+        require(`@/assets/crews/crew_upgrade4_7-7-2021.jpg`),
+      ],
+      upgrading2: [
         require(`@/assets/crews/crew_upgrade2_7-7-2021.jpg`),
         require(`@/assets/crews/crew_upgrade3_7-7-2021.jpg`),
-        require(`@/assets/crews/crew_upgrade4_7-7-2021.jpg`),
       ],
       rating: [
         require(`@/assets/crews/rating1_7-7-2021.jpg`),
