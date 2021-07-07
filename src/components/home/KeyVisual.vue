@@ -24,18 +24,18 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner4+')'}" id="BannerFour">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner3+')'}" id="BannerThree">
+          <svg class="bd-placeholder-img" style="opacity: 50%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">RETIRED CREW VIRTUAL AWARDING CEREMONY</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS ACQUIRED NEW VESSEL</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                MAY 27, 2021
+                MV VIJAYANAGAR
               </p>
               <p class="vmc-text-white font-weight-light caption-three">
-                15 - 31 Service years in Veritas Maritime Corporation
+                Despite the pandemic, Veritas never stop giving quality service to the shipping industry and even acquired their 61st vessel this year.
               </p>
             </div>
           </div>
@@ -69,18 +69,18 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner3+')'}" id="BannerThree">
-          <svg class="bd-placeholder-img" style="opacity: 50%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner4+')'}" id="BannerFour">
+          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS ACQUIRED NEW VESSEL</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">RETIRED CREW VIRTUAL AWARDING CEREMONY</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                MV VIJAYANAGAR
+                MAY 27, 2021
               </p>
               <p class="vmc-text-white font-weight-light caption-three">
-                Despite the pandemic, Veritas never stop giving quality service to the shipping industry and even acquired their 61st vessel this year.
+                15 - 31 Service years in Veritas Maritime Corporation
               </p>
             </div>
           </div>
