@@ -1,7 +1,7 @@
 <template>
   <div class="crew">
     <vmc-header />
-    <page-heading page-title-name="SCHEDULES" image-link="crews/crew_group.jpg"/>
+    <page-heading page-title-name="SCHEDULES" image-link="schedules/schedule_bg.jpg"/>
     <router-view></router-view>
     <vmc-footer />
   </div>

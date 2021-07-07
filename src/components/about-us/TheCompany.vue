@@ -10,9 +10,15 @@
             <b>VERITAS MARITIME CORPORATION</b> is a joint business venture between
             <ul>
               <li>Mercury Shipping Corporation Manila</li>
-              <li>Taiyo Nippon Kisen Co. Ltd., Japan </li>
+              <li>K-Line Roro Bulk Ship Management Co., Ltd</li>
             </ul>
-
+          </div>
+          <div class="col-lg-4 col-md-7">
+            <img :src="vmcOfficeLogo" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
             <h2 class="h1 vmc-text-primary vmc-heading">
               Why Veritas was established?
             </h2>
@@ -30,26 +36,26 @@
               </ul>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-7">
-            <img :src="marc2000Tower" alt="">
-          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 mb-4 text-center">
-            <h2 class="h1 vmc-text-primary vmc-heading">
-              Quality Crew Recruitment
-            </h2>
-            <p>To ensure recruitment of quality seafarers for every vessel VERITAS follows very stringent procedures in crew hiring and strict adherences to standard hiring qualifications per rank applying to new hires and ex-crew.</p>
-          </div>
-          <div class="col-lg-12 text-center">
-            <h2 class="h1 vmc-text-primary vmc-heading">
-              Mission Statement
-            </h2>
-            <p>VERITAS MARITIME CORPORATION aims to achieve the Company's stability, credibility and success as a leader in the shipmanning industry, and ensures profitability for its stakeholders, by providing highly qualified and competent seafarers under internationally-accepted standards, to the satisfaction of our Principals and Shipowners through timely, quality and cost-effective service and good management of all resources, as it continues to grow and develop while enhancing the skills, knowledge and well-being of its Corporate members, in an atmosphere of fairness, peace, harmony and compassion.</p>
+    <div class="container-fluid" id="QualityCrew"
+         :style="{ backgroundImage: 'url(' + qualityCrew + ')' }">
+      <div class="bg-overlay  vmc-py-big ">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 mb-4 text-center">
+              <h2 class="h1 vmc-text-primary vmc-heading">
+                Quality Crew Recruitment
+              </h2>
+              <p>To ensure recruitment of quality seafarers for every vessel VERITAS follows very stringent procedures in crew hiring and strict adherences to standard hiring qualifications per rank applying to new hires and ex-crew.</p>
+            </div>
+            <div class="col-lg-12 text-center">
+              <h2 class="h1 vmc-text-primary vmc-heading">
+                Mission Statement
+              </h2>
+              <p>VERITAS MARITIME CORPORATION aims to achieve the Company's stability, credibility and success as a leader in the shipmanning industry, and ensures profitability for its stakeholders, by providing highly qualified and competent seafarers under internationally-accepted standards, to the satisfaction of our Principals and Shipowners through timely, quality and cost-effective service and good management of all resources, as it continues to grow and develop while enhancing the skills, knowledge and well-being of its Corporate members, in an atmosphere of fairness, peace, harmony and compassion.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -108,18 +114,28 @@ export default {
   name: "TheCompany",
   data() {
     return {
-    'marc2000Tower': require(`@/assets/about/Marc2000tower.jpg`)
+    'marc2000Tower' : require(`@/assets/about/Marc2000tower.jpg`),
+    'vmcOfficeLogo' : require(`@/assets/about/vmc_office_logo-7-7-2021.jpg`),
+    'qualityCrew'   : require(`@/assets/about/quality_crew_7-7-2021.jpg`),
     }
   },
   components: {
     'organizational-chart' : OrganizationalChart,
+  },
+  mounted() {
+    document.getElementById('QualityCrew').style.backgroundImage(`${this.vmcOfficeLogo}`)
   }
 }
 </script>
 
 <style scoped>
-#VMCEstablishedReason li:nth-child(n+4) {
-  /*margin-left: 30px;*/
-
+#QualityCrew {
+  background-attachment: fixed;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.bg-overlay {
+  background-color: rgba(244,	244,	243, .85);
 }
 </style>

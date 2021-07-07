@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <vmc-header />
-    <page-heading page-title-name="NEWS & UPDATE" image-link="news_container.jpg"/>
+    <page-heading page-title-name="NEWS & UPDATE" image-link="news/news_bg_7-7-2021.jpg"/>
     <router-view></router-view>
     <vmc-footer />
   </div>

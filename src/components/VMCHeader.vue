@@ -138,10 +138,10 @@
                     </router-link>
                     <div class="dropdown-menu ml-0" aria-labelledby="CrewLink">
                       <router-link class="dropdown-item" :to="{name: 'VeritasCadets'}">
-                        Veritas Cadets
+                        Veritas Scholarship and Cadetship
                       </router-link>
                       <router-link class="dropdown-item" :to="{name: 'TrainingPrograms'}">
-                        Training Programs
+                        Crew Development
                       </router-link>
                     </div>
                   </div>
