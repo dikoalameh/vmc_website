@@ -19,7 +19,7 @@
                                  :images="cleanUp2019" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Christmas Party for Special Children`"
+            <photo-gallery-modal :caption="`Missionaries of the Poor`"
                                  :thumbnail="missionaries2019[0]"
                                  :images="missionaries2019" />
           </div>
