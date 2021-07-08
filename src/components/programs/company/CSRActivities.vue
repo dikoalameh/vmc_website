@@ -28,6 +28,11 @@
                                  :thumbnail="indigent2019[0]"
                                  :images="indigent2019" />
           </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bacolod Dental Mission`"
+                                 :thumbnail="dental2019[0]"
+                                 :images="dental2019" />
+          </div>
         </div>
       </div>
     </div>
@@ -45,14 +50,14 @@
                                  :images="cleanup2018" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Bacolod Dental Mission`"
-                                 :thumbnail="dental2018[0]"
-                                 :images="dental2018" />
+            <photo-gallery-modal :caption="`Iloilo Tree Planting`"
+                                 :thumbnail="iloiloplant2018[0]"
+                                 :images="iloiloplant2018" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Iloilo Tree Planting`"
-                                 :thumbnail="treeplant2018[0]"
-                                 :images="treeplant2018" />
+            <photo-gallery-modal :caption="`Cebu Tree Planting`"
+                                 :thumbnail="cebuplant2018[0]"
+                                 :images="cebuplant2018" />
           </div>
         </div>
       </div>
@@ -137,28 +142,42 @@ export default {
         require(`@/assets/programs/csr/2019/indigent_outreach/indigent6_7-8-2021.jpg`),
         require(`@/assets/programs/csr/2019/indigent_outreach/indigent7_7-8-2021.jpg`)
       ],
+      dental2019: [
+        require(`@/assets/programs/csr/2019/dentalmission/dental1_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental2_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental3_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental4_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental5_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental6_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental7_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental8_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental9_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2019/dentalmission/dental10_7-8-2021.jpg`)
+      ],
       cleanup2018: [
         require(`@/assets/programs/csr/2018/coastalcleanup/cleanup1-7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/coastalcleanup/cleanup2-7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/coastalcleanup/cleanup3-7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/coastalcleanup/cleanup4-7-8-2021.jpg`),
-        require(`@/assets/programs/csr/2018/coastalcleanup/cleanup5-7-8-2021.jpg`)
+        require(`@/assets/programs/csr/2018/coastalcleanup/cleanup5-7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/coastalcleanup/cleanup5-7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/coastalcleanup/cleanup6-7-8-2021.jpg`),
       ],
-      dental2018: [
-        require(`@/assets/programs/csr/2018/dentalmission/dental1_7-8-2021.jpg`),
-        require(`@/assets/programs/csr/2018/dentalmission/dental2_7-8-2021.jpg`),
-        require(`@/assets/programs/csr/2018/dentalmission/dental3_7-8-2021.jpg`),
-        require(`@/assets/programs/csr/2018/dentalmission/dental4_7-8-2021.jpg`),
-        require(`@/assets/programs/csr/2018/dentalmission/dental5_7-8-2021.jpg`),
-        require(`@/assets/programs/csr/2018/dentalmission/dental6_7-8-2021.jpg`),
-      ],
-      treeplant2018: [
+      iloiloplant2018: [
         require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant1_7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant2_7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant3_7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant4_7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant5_7-8-2021.jpg`),
         require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant6_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant7_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/iloilotreeplant/treeplant8_7-8-2021.jpg`),
+      ],
+      cebuplant2018: [
+        require(`@/assets/programs/csr/2018/cebutreeplant/treeplant1_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/cebutreeplant/treeplant2_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/cebutreeplant/treeplant3_7-8-2021.jpg`),
+        require(`@/assets/programs/csr/2018/cebutreeplant/treeplant4_7-8-2021.jpg`),
       ],
       cleanup2017: [
         require(`@/assets/programs/csr/2017/coastalcleanup/cleanup1-7-8-2021.jpg`),

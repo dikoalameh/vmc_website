@@ -9,10 +9,6 @@
             </h2>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
         <div class="row">
           <div class="col-12">
             <h4 class="font-weight-light">
@@ -34,8 +30,106 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light">
+              2019 Allottees Gathering
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bacolod`"
+                                 :thumbnail="bacolod2019[0]"
+                                 :images="bacolod2019" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bohol`"
+                                 :thumbnail="bohol2019[0]"
+                                 :images="bohol2019" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Cebu`"
+                                 :thumbnail="cebu2019[0]"
+                                 :images="cebu2019" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Davao`"
+                                 :thumbnail="davao2019[0]"
+                                 :images="davao2019" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Iloilo`"
+                                 :thumbnail="iloilo2019[0]"
+                                 :images="iloilo2019" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Manila`"
+                                 :thumbnail="manila2019[0]"
+                                 :images="manila2019" />
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid vmc-py-big">
       <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light">
+              2018 Allottees Gathering
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bacolod`"
+                                 :thumbnail="bacolod2018[0]"
+                                 :images="bacolod2018" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bicol`"
+                                 :thumbnail="bicol2018[0]"
+                                 :images="bicol2018" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bohol`"
+                                 :thumbnail="bohol2018[0]"
+                                 :images="bohol2018" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`CDO`"
+                                 :thumbnail="cdo2018[0]"
+                                 :images="cdo2018" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Cebu`"
+                                 :thumbnail="cebu2018[0]"
+                                 :images="cebu2018" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Davao`"
+                                 :thumbnail="davao2018[0]"
+                                 :images="davao2018" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Iloilo`"
+                                 :thumbnail="iloilo2018[0]"
+                                 :images="iloilo2018" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light">
+              2015, 2016, 2017 Allottees Gathering
+            </h4>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Bicol`"
@@ -108,6 +202,77 @@ export default {
         require(`@/assets/programs/allottees/2020/iloilo_a_70121.jpg`),
         require(`@/assets/programs/allottees/2020/iloilo_b_70121.jpg`),
         require(`@/assets/programs/allottees/2020/iloilo_c_70121.jpg`),
+      ],
+      bacolod2019: [
+        require(`@/assets/programs/allottees/2019/bacolod/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/bacolod/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/bacolod/allottee3_7-8-2021.jpg`),
+      ],
+      bohol2019: [
+        require(`@/assets/programs/allottees/2019/bohol/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/bohol/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/bohol/allottee3_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/bohol/allottee4_7-8-2021.jpg`)
+      ],
+      cebu2019: [
+        require(`@/assets/programs/allottees/2019/cebu/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/cebu/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/cebu/allottee3_7-8-2021.jpg`)
+      ],
+      davao2019: [
+        require(`@/assets/programs/allottees/2019/davao/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/davao/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/davao/allottee3_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/davao/allottee4_7-8-2021.jpg`)
+      ],
+      iloilo2019: [
+        require(`@/assets/programs/allottees/2019/iloilo/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/iloilo/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/iloilo/allottee3_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/iloilo/allottee4_7-8-2021.jpg`)
+      ],
+      manila2019: [
+        require(`@/assets/programs/allottees/2019/manila/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/manila/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/manila/allottee3_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/manila/allottee4_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2019/manila/allottee5_7-8-2021.jpg`)
+      ],
+      bacolod2018: [
+        require(`@/assets/programs/allottees/2018/bacolod/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/bacolod/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/bacolod/allottee3_7-8-2021.jpg`)
+      ],
+      bicol2018: [
+        require(`@/assets/programs/allottees/2018/bicol/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/bicol/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/bicol/allottee3_7-8-2021.jpg`)
+      ],
+      bohol2018: [
+        require(`@/assets/programs/allottees/2018/bohol/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/bohol/allottee2_7-8-2021.jpg`)
+      ],
+      cdo2018: [
+        require(`@/assets/programs/allottees/2018/cdo/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/cdo/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/cdo/allottee3_7-8-2021.jpg`)
+      ],
+      cebu2018: [
+        require(`@/assets/programs/allottees/2018/cebu/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/cebu/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/cebu/allottee3_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/cebu/allottee4_7-8-2021.jpg`)
+      ],
+      davao2018: [
+        require(`@/assets/programs/allottees/2018/davao/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/davao/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/davao/allottee3_7-8-2021.jpg`)
+      ],
+      iloilo2018: [
+        require(`@/assets/programs/allottees/2018/iloilo/allottee1_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/iloilo/allottee2_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/iloilo/allottee3_7-8-2021.jpg`),
+        require(`@/assets/programs/allottees/2018/iloilo/allottee4_7-8-2021.jpg`)
       ],
       bicol: [
         require(`@/assets/programs/allottees/2017_bicol.jpg`),
