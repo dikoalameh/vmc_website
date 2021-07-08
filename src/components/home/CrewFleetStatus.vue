@@ -1,5 +1,5 @@
 <template>
-  <div class="row vmc-bg-dark-1 rounded-medium py-4 px-3">
+  <div class="row vmc-bg-dark-half rounded-medium py-4 px-3">
     <div class="col-12">
       <h2 class="h1 vmc-text-primary text-center mb-3 vmc-heading">
         Crew and Fleet Status
@@ -59,5 +59,7 @@ export default {
 </script>
 
 <style scoped>
-
+.vmc-bg-dark-half {
+  background-color: rgba(244, 244, 243, .5);
+}
 </style>
