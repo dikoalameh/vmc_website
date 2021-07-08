@@ -33,6 +33,11 @@
             <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Fire Drill 2019`"
+                                 :thumbnail="firedrill2019[0]"
+                                 :images="firedrill2019" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Veritas Christmas Party`"
                                  :thumbnail="vmcXmasParty1[0]"
                                  :images="vmcXmasParty1" />
@@ -134,6 +139,13 @@ export default {
       cadetsTeambuilding1: [
         require(`@/assets/programs/office/cadets_teambuilding.jpg`)
       ],
+      firedrill2019: [
+        require(`@/assets/programs/office/2019/firedrill/drill1_7-7-2021.jpg`),
+        require(`@/assets/programs/office/2019/firedrill/drill2_7-7-2021.jpg`),
+        require(`@/assets/programs/office/2019/firedrill/drill3_7-7-2021.jpg`),
+        require(`@/assets/programs/office/2019/firedrill/drill4_7-7-2021.jpg`),
+        require(`@/assets/programs/office/2019/firedrill/drill5_7-7-2021.jpg`),
+      ],
       vesselVisitation: [
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_1_63021_crop.jpg`),
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_2_63021.jpg`),
@@ -150,11 +162,11 @@ export default {
         require(`@/assets/programs/office/vesselvisitation/vessel_visitation_13_63021.jpg`),
       ],
       loyaltyAward2021: [
-        require(`@/assets/programs/office/loyaltyaward2021/AB_Avellaneda.jpg`),
-        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Albay.jpg`),
-        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Daluz.jpg`),
-        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Panaguiton.jpg`),
-        require(`@/assets/programs/office/loyaltyaward2021/CAPT_Suyat.jpg`),
+        require(`@/assets/programs/office/2021/loyaltyaward/AB_Avellaneda.jpg`),
+        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Albay.jpg`),
+        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Daluz.jpg`),
+        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Panaguiton.jpg`),
+        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Suyat.jpg`),
       ]
     }
   }

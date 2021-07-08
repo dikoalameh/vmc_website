@@ -36,6 +36,13 @@ import RetiredCrewVirtualAwardingCeremony
   from '../components/news/articles/RetiredCrewVirtualAwardingCeremony';
 import ContactUsNew from '../components/contact-us/ContactUsNew';
 import CrewVeritasStory from '../components/news/articles/CrewVeritasStory';
+import BoqTnkcHouseInspection
+  from '../components/news/articles/BoqTnkcHouseInspection';
+import JoiningCrewBritainBay2020
+  from '../components/news/articles/JoiningCrewBritainBay2020';
+import NewNormalOffice2020
+  from '../components/news/articles/NewNormalOffice2020';
+import TnkcHouseSwabTest from '../components/news/articles/TnkcHouseSwabTest';
 
 Vue.use(VueRouter)
 
@@ -141,6 +148,26 @@ const routes = [
         path: '7',
         name: 'CrewVeritasStory',
         component: CrewVeritasStory
+      },
+      {
+        path: '8',
+        name: 'BoqTnkcHouseInspection',
+        component: BoqTnkcHouseInspection
+      },
+      {
+        path: '9',
+        name: 'JoiningCrewBritainBay2020',
+        component: JoiningCrewBritainBay2020
+      },
+      {
+        path: '10',
+        name: 'NewNormalOffice2020',
+        component: NewNormalOffice2020
+      },
+      {
+        path: '11',
+        name: 'TnkcHouseSwabTest',
+        component: TnkcHouseSwabTest
       },
     ]
   },

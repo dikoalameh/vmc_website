@@ -116,6 +116,78 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news8" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">BOQ TNKC House Inspection 2020</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 8, 2021
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'BoqTnkcHouseInspection'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news9" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">TNKC House Swab Test 2020</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 8, 2021
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'TnkcHouseSwabTest'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news10" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Joining Crew 2020</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 8, 2021
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'JoiningCrewBritainBay2020'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news11" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">New Normal Office 2020</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 8, 2021
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'NewNormalOffice2020'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news1" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -169,7 +241,11 @@ export default {
       'news4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
       'news5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
       'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
-      'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`)
+      'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
+      'news8': require(`@/assets/news/2020/tnkcinspection/boqinspect1_7-8-2021.jpg`),
+      'news9': require(`@/assets/news/2020/tnkcswabtest/swab1_7-8-2021.jpg`),
+      'news10': require(`@/assets/news/2020/joiningcrew/crew1_7-8-2021.jpg`),
+      'news11': require(`@/assets/news/2020/newnormaloffice/office1_7-8-2021.jpg`),
     }
   }
 }
