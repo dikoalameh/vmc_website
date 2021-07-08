@@ -73,7 +73,7 @@ export default {
     return {
       'affiliateISO' :require(`@/assets/affiliates/iso_9001.jpg`),
       'affiliateTexture' :require(`@/assets/fabric-texture.png`),
-      'video': require(`@/assets/keyvisuals/KRBS 6mb.mp4`),
+      'video': require(`@/assets/keyvisuals/KRBS 4mb.mp4`),
     }
   },
 }
@@ -116,7 +116,7 @@ export default {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.35;
   z-index: 1;
 }
 @media only screen and (max-width: 768px) {
