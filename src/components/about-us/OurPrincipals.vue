@@ -10,7 +10,7 @@
             <img :src="krbs" alt="">
           </div>
           <div class="col-lg-8 my-3">
-            <h4 class="font-weight-light mb-0">"K" Line RoRo Bulk Ship Management Co., Ltd. (KRBS)</h4>
+            <h4 class="font-weight-normal vmc-text-primary-2 mb-0">"K" Line RoRo Bulk Ship Management Co., Ltd. (KRBS)</h4>
             <p class="mb-1 small">
               2-2-3, Kaigan-Dori, Chuo-Ki, Kobe
               650-0024, Japan —
@@ -30,7 +30,7 @@
             <img :src="kagoshima" alt="">
           </div>
           <div class="col-lg-8 order-lg-0 my-3">
-            <h4 class="font-weight-light mb-0">KAGOSHIMA SENPAKU KAISHA, LTD. – Affiliate of Fujitrans</h4>
+            <h4 class="font-weight-normal vmc-text-primary-2 mb-0">KAGOSHIMA SENPAKU KAISHA, LTD. – Affiliate of Fujitrans</h4>
             <p class="mb-1 small">
               37-75, Shiomi-cho, Minato-ku, Nagoya, AICHI, 455-0028, Japan —
               TEL 81-52-614-5870 / FAX 81-52-614-5867
@@ -50,7 +50,7 @@
             <img :src="ftlogistics" alt="">
           </div>
           <div class="col-lg-8 my-3">
-            <h4 class="font-weight-light mb-0">FT LOGISTICS (ASIA) PTE. LTD. – Affiliate of Fujitrans</h4>
+            <h4 class="font-weight-normal vmc-text-primary-2 mb-0">FT LOGISTICS (ASIA) PTE. LTD. – Affiliate of Fujitrans</h4>
             <p class="small mb-1">
               8 Shenton way, # 07-04 / 05 AXA Tower, Singapore 068811 —
               Tel: + 65-6333-8595 / Fax: + 65-6836-9258
@@ -71,20 +71,31 @@
 <!--          </div>-->
 <!--          <div class="col-lg-8 order-lg-0 my-3">-->
           <div class="col-lg-12 order-lg-0 my-3">
-            <h4 class="font-weight-light mb-0">SANSHO KAIUN CO., LTD. </h4>
+            <h4 class="font-weight-normal mb-0 vmc-text-primary-2">SANSHO KAIUN CO., LTD. </h4>
             <p class="mb-1 small">
               2f Hikari Bldg, 3-10-3 Chome  Nihonbashi-Kabayacho Chuo-ku, Tokyo Japan
               <br/> —
               Tel: + 81 03 3663 5191 / Fax: +81 03 3663 5193
             </p>
 <!--            <p class="vmc-text-primary-2 mb-1">President: KAORU MUKAI</p>-->
-            <p class="font-weight-light mb-0">
-              Sansho Kaiun - SANSHO KAIUN COMPANY, LTD. Manages operation of ocean going chemical tankers and oil tankers, under the following basic policy.
-              <br/>
-              "Our objective is to ensure safety of human life, vessel and its cargo,
-              brand to protect the environment by pursuing no accident,
-              no incident and zero spills. Continuous reduction of Carbon Dioxide emissions"
-            </p>
+<!--            <p class="font-weight-light mb-0">-->
+<!--              Sansho Kaiun - SANSHO KAIUN COMPANY, LTD. Manages operation of ocean going chemical tankers and oil tankers, under the following basic policy.-->
+<!--              <br/>-->
+<!--              "Our objective is to ensure safety of human life, vessel and its cargo,-->
+<!--              brand to protect the environment by pursuing no accident,-->
+<!--              no incident and zero spills. Continuous reduction of Carbon Dioxide emissions"-->
+<!--            </p>-->
+
+            <ul>
+              <li>Ship Operation</li>
+              <li>Ship Chartering</li>
+              <li>Ship Sales and Purchase</li>
+              <li>Ship Agency</li>
+              <li>Ship Brokerage</li>
+              <li>Bringing the Ship</li>
+              <li>Ship Management and Manning of Foreign Seafarers</li>
+              <li>Any Other Available Business in Connection with the Above Mentioned Items</li>
+            </ul>
           </div>
         </div>
       </div>

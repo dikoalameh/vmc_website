@@ -32,12 +32,21 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1 vmc-bg-img-repeat"
+         :style="{ backgroundImage: 'url('+affiliateTexture+')' }">
+      <government-affiliations />
+    </div>
   </div>
 </template>
 
 <script>
+import GovernmentAffiliations from './app-layout/GovernmentAffiliations';
+
 export default {
   name: 'GovernmentAdvisories',
+  components: {
+    'government-affiliations': GovernmentAffiliations,
+  },
   data() {
     return {
       'news2': require(`@/assets/news/news_10-03-2021.jpg`),

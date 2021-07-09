@@ -14,7 +14,7 @@ import OurPrincipals from '../components/about-us/OurPrincipals';
 import AllNews from '../components/news/AllNews';
 import CarryingAFamilyLegacyTowardGrowthStability from '../components/news/articles/CarryingAFamilyLegacyTowardGrowthStability';
 import SeafaringOrganizationUnderProposedOFWDeptPushed from '../components/news/articles/SeafaringOrganizationUnderProposedOFWDeptPushed';
-import ModernDayHeroesInTheNewNormal from '../components/news/articles/ModernDayHeroesInTheNewNormal';
+import SeafarersHeroesOfPandemic from '../components/news/articles/SeafarersHeroesOfPandemic';
 import CSRActivities from '../components/programs/company/CSRActivities';
 import OfficePrograms from '../components/programs/company/OfficePrograms';
 import Allottees from '../components/programs/company/Allottees';
@@ -31,7 +31,7 @@ import CrewNews from '../components/news/CrewNews';
 import GovernmentAdvisories from '../components/news/GovernmentAdvisories';
 // import PrincipalMemo from '../components/news/PrincipalMemo';
 import CookiePolicy from '../components/CookiePolicy';
-import Covid19Update from '../components/news/Covid19Update';
+// import Covid19Update from '../components/news/Covid19Update';
 import RetiredCrewVirtualAwardingCeremony
   from '../components/news/articles/RetiredCrewVirtualAwardingCeremony';
 import ContactUsNew from '../components/contact-us/ContactUsNew';
@@ -109,11 +109,11 @@ const routes = [
       //   name: 'PrincipalMemo',
       //   component: PrincipalMemo
       // },
-      {
-        path: 'covid-19',
-        name: 'Covid19Update',
-        component: Covid19Update
-      },
+      // {
+      //   path: 'covid-19',
+      //   name: 'Covid19Update',
+      //   component: Covid19Update
+      // },
       {
         path: '1',
         name: 'CarryingAFamilyLegacyTowardGrowthStability',
@@ -126,8 +126,8 @@ const routes = [
       },
       {
         path: '3',
-        name: 'ModernDayHeroesInTheNewNormal',
-        component: ModernDayHeroesInTheNewNormal
+        name: 'SeafarersHeroesOfPandemic',
+        component: SeafarersHeroesOfPandemic
       },
       {
         path: '4',

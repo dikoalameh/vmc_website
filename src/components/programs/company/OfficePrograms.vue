@@ -38,14 +38,14 @@
                                  :images="firedrill2019" />
           </div>
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Veritas 30th Anniversary 2019`"
+                                 :thumbnail="vmc30Anniversary[0]"
+                                 :images="vmc30Anniversary" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Veritas Christmas Party`"
                                  :thumbnail="vmcXmasParty1[0]"
                                  :images="vmcXmasParty1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas 30th Anniversary`"
-                                 :thumbnail="vmc30Anniversary[0]"
-                                 :images="vmc30Anniversary" />
           </div>
         </div>
       </div>

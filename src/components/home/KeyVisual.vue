@@ -17,7 +17,7 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">PROUD SEAMAN OF VERITAS MARITIME CORPORATION</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">SALUTE TO ALL OUR FRONTLINERS</p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 TAGA VERITAS AKO!
               </p>
@@ -94,11 +94,11 @@
               ADVISORIES
             </router-link>
           </div>
-          <div class="col-auto p-1">
-            <router-link class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn" :to="{name: 'Covid19Update'}">
-              COVID-19 Update
-            </router-link>
-          </div>
+<!--          <div class="col-auto p-1">-->
+<!--            <router-link class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn" :to="{name: 'Covid19Update'}">-->
+<!--              COVID-19 Update-->
+<!--            </router-link>-->
+<!--          </div>-->
         </div>
       </div>
   </div>

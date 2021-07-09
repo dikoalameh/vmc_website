@@ -11,6 +11,20 @@
         </div>
         <div class="row">
           <div class="col-12">
+            <h4 class="font-weight-light mb-3">2021 Veritas Activities</h4>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Health and Wealth Summit`"
+                                 :thumbnail="health2021[0]"
+                                 :images="health2021" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <h4 class="font-weight-light mb-3">2019 Outside Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
@@ -36,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big ">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -62,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="col-12">
           <h4 class="font-weight-light mb-3">2017 Outside Veritas Activities</h4>
@@ -93,6 +107,11 @@ export default {
   },
   data() {
     return {
+      health2021: [
+        require(`@/assets/programs/csr/2021/healthwealth/health1_7-9-2021.jpg`),
+        require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
+        require(`@/assets/programs/csr/2021/healthwealth/health3_7-9-2021.jpg`)
+      ],
       cleanUp2019: [
         require(`@/assets/programs/csr/2019/manilabaycleanup/Manila-Bay-Clean-Up-Drive-1.jpg`),
         require(`@/assets/programs/csr/2019/manilabaycleanup/Manila Bay Cleanup Drive 2.jpg`),

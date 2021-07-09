@@ -59,14 +59,14 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Modern Day Heroes in the New Normal</h4>
+                    <h4 class="font-weight-normal mb-1">Seafarers, Heroes of the Pandemic as Shipping Plays Vital Role in Crisis</h4>
                     <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — March 31, 2021
+                      By Veritas Admin — November 12, 2020
                     </p>
                     <p class="d-none d-lg-block">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      The global shipping industry has played a vital role in the global response to the COVID-19 pandemic, and demand for its services has limited the annual decline in maritime trade volumes to around 4.1 per cent in 2020, the UN Conference on Trade and Development (UNCTAD) said in its annual report on the shipping industry on Thursday.
                     </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'ModernDayHeroesInTheNewNormal'}">continue reading . . .</router-link>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'SeafarersHeroesOfPandemic'}">continue reading . . .</router-link>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default {
   name: 'CrewNews',
   data() {
     return {
-      'news3': require(`@/assets/news/news_31-03-2021.jpg`),
+      'news3': require(`@/assets/news/SeafarersHeroesOfPandemic_7-9-2021.jpg`),
       'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
       'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`)
     }
