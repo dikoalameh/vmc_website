@@ -1,16 +1,16 @@
 <template>
   <div class="container-fluid vmc-py-big">
     <div class="container">
-<!--      <div class="row">-->
-<!--        <div class="col-12 text-center">-->
-<!--          <h2 class="h1 vmc-text-primary vmc-heading">-->
-<!--            Veritas Maritime Corporation Top Management Chart-->
-<!--          </h2>-->
-<!--        </div>-->
-<!--      </div>-->
       <div class="row">
         <div class="col-12 text-center">
-          <img :src="topChart" alt="">
+          <h2 class="h1 vmc-text-primary vmc-heading">
+            Veritas Maritime Corporation Positions Organizational Chart
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <img :src="allvmcorgchart" alt="">
         </div>
       </div>
 <!--      <div class="row my-2">-->
@@ -69,7 +69,8 @@ export default {
   data() {
     return {
       // 'vmcContainer': require(`@/assets/veritas_logo.png`)
-      'topChart'   : require(`@/assets/about/topmgmtchart.jpg`)
+      'topChart'   : require(`@/assets/about/topmgmtchart.jpg`),
+      'allvmcorgchart'   : require(`@/assets/about/allvmcorgchart.jpg`),
     }
   }
 };

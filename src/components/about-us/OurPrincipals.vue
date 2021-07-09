@@ -66,14 +66,15 @@
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row my-3 d-flex align-items-center">
-          <div class="col-lg-4 order-lg-9">
-            <img :src="sansho" alt="">
-          </div>
-          <div class="col-lg-8 order-lg-0 my-3">
+<!--          <div class="col-lg-4 order-lg-9">-->
+<!--            <img :src="sansho" alt="">-->
+<!--          </div>-->
+<!--          <div class="col-lg-8 order-lg-0 my-3">-->
+          <div class="col-lg-12 order-lg-0 my-3">
             <h4 class="font-weight-light mb-0">SANSHO KAIUN CO., LTD. </h4>
             <p class="mb-1 small">
-              Kayabacho Hikari Bldg. 2F, 3-10, 3-Chome,
-              Nihonbashi-Kayabacho, Chuo-ku, Tokyo, Japan  <br/> —
+              2f Hikari Bldg, 3-10-3 Chome  Nihonbashi-Kabayacho Chuo-ku, Tokyo Japan
+              <br/> —
               Tel: + 81 03 3663 5191 / Fax: +81 03 3663 5193
             </p>
 <!--            <p class="vmc-text-primary-2 mb-1">President: KAORU MUKAI</p>-->

@@ -14,7 +14,7 @@
             <crew-fleet-status />
           </div>
           <div class="col-lg-2 col-md-4 col-6 py-2">
-            <img :src="affiliateISO" alt="">
+            <img :src="affiliateISODNV" alt="">
           </div>
           <div class="col-lg-2 col-md-4 col-6 pl-0 py-2">
             <p class="mb-0 text-white">
@@ -71,7 +71,8 @@ export default {
   },
   data() {
     return {
-      'affiliateISO' :require(`@/assets/affiliates/iso_9001.jpg`),
+      // 'affiliateISO' :require(`@/assets/affiliates/iso_9001.jpg`),
+      'affiliateISODNV' :require(`@/assets/affiliates/iso_9001_dnv.jpg`),
       'affiliateTexture' :require(`@/assets/fabric-texture.png`),
       'video': require(`@/assets/keyvisuals/KRBS 4mb.mp4`),
     }

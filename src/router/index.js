@@ -29,7 +29,7 @@ import VeritasChristmasVideo2020
 import CompanyNews from '../components/news/CompanyNews';
 import CrewNews from '../components/news/CrewNews';
 import GovernmentAdvisories from '../components/news/GovernmentAdvisories';
-import PrincipalMemo from '../components/news/PrincipalMemo';
+// import PrincipalMemo from '../components/news/PrincipalMemo';
 import CookiePolicy from '../components/CookiePolicy';
 import Covid19Update from '../components/news/Covid19Update';
 import RetiredCrewVirtualAwardingCeremony
@@ -104,11 +104,11 @@ const routes = [
         name: 'GovernmentAdvisories',
         component: GovernmentAdvisories
       },
-      {
-        path: 'memo',
-        name: 'PrincipalMemo',
-        component: PrincipalMemo
-      },
+      // {
+      //   path: 'memo',
+      //   name: 'PrincipalMemo',
+      //   component: PrincipalMemo
+      // },
       {
         path: 'covid-19',
         name: 'Covid19Update',
