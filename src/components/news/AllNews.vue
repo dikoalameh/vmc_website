@@ -14,7 +14,7 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
-                  <img class="card-img" :src="news13" alt="Suresh Dasari Card">
+                  <img class="card-img" :src="news14" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
@@ -308,7 +308,8 @@ export default {
       'news10': require(`@/assets/news/2020/joiningcrew/crew1_7-8-2021.jpg`),
       'news11': require(`@/assets/news/2020/newnormaloffice/office1_7-8-2021.jpg`),
       'news12': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
-      'news13': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`)
+      'news13': require(`@/assets/news/newsStaff_7-10-2021.jpg`),
+      'news14': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`)
     }
   }
 }

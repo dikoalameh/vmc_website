@@ -14,14 +14,14 @@
             <h4 class="font-weight-light">Crew Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
-            <photo-gallery-modal :caption="`Veritas Latest Vessel Visitation`"
-                                 :thumbnail="vesselVisitation[0]"
-                                 :images="vesselVisitation" />
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
             <photo-gallery-modal :caption="`Loyalty Award 2021`"
                                  :thumbnail="loyaltyAward2021[0]"
                                  :images="loyaltyAward2021" />
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <photo-gallery-modal :caption="`Veritas Latest Vessel Visitation`"
+                                 :thumbnail="vesselVisitation[0]"
+                                 :images="vesselVisitation" />
           </div>
         </div>
       </div>
@@ -33,6 +33,11 @@
             <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Veritas Christmas Party 2020`"
+                                 :thumbnail="vmcXmasParty1[0]"
+                                 :images="vmcXmasParty1" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Fire Drill 2019`"
                                  :thumbnail="firedrill2019[0]"
                                  :images="firedrill2019" />
@@ -41,11 +46,6 @@
             <photo-gallery-modal :caption="`Veritas 30th Anniversary 2019`"
                                  :thumbnail="vmc30Anniversary[0]"
                                  :images="vmc30Anniversary" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas Christmas Party`"
-                                 :thumbnail="vmcXmasParty1[0]"
-                                 :images="vmcXmasParty1" />
           </div>
         </div>
       </div>

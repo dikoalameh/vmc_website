@@ -182,7 +182,7 @@ export default {
       'news9': require(`@/assets/news/2020/tnkcswabtest/swab1_7-8-2021.jpg`),
       'news10': require(`@/assets/news/2020/joiningcrew/crew1_7-8-2021.jpg`),
       'news11': require(`@/assets/news/2020/newnormaloffice/office1_7-8-2021.jpg`),
-      'news13': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`)
+      'news13': require(`@/assets/news/newsStaff_7-10-2021.jpg`)
     }
   }
 };
