@@ -43,6 +43,8 @@ import JoiningCrewBritainBay2020
 import NewNormalOffice2020
   from '../components/news/articles/NewNormalOffice2020';
 import TnkcHouseSwabTest from '../components/news/articles/TnkcHouseSwabTest';
+import TeodoroLocsinMessageDaySeafarer25June2021
+  from '../components/news/articles/TeodoroLocsinMessageDaySeafarer25June2021';
 
 Vue.use(VueRouter)
 
@@ -168,6 +170,11 @@ const routes = [
         path: '11',
         name: 'TnkcHouseSwabTest',
         component: TnkcHouseSwabTest
+      },
+      {
+        path: '12',
+        name: 'TeodoroLocsinMessageDaySeafarer25June2021',
+        component: TeodoroLocsinMessageDaySeafarer25June2021
       },
     ]
   },

@@ -29,6 +29,21 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer5" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title">MESSAGE of H.E. TEODORO L. LOCSIN, JR. Secretary of Foreign Affairs on the Day of the Seafarer 25 June 2021</h4>
+                <p>
+                  The Department of Foreign Affairs is honored to celebrate the Day of the Seafarer.
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">25 June 2021</p>
+              <router-link :to="{name: 'TeodoroLocsinMessageDaySeafarer25June2021'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -57,16 +72,16 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer5" alt="Card image cap">
+            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title">Veritas Christmas Video 2020</h4>
+                <h4 class="card-title" style="height: 56px; overflow: hidden">Seafarers, Heroes of the Pandemic as Shipping Plays Vital Role in Crisis</h4>
                 <p>
-                  The talented and hardworking staff of Veritas made a video tribute for the Christmas season to remind us that we are one family facing this pandemic.
+                  The global shipping industry has played a vital role in the global response to the COVID-19 pandemic, and demand for its services has limited the annual decline in maritime trade volumes to around 4.1 ...
                 </p>
               </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">25 December 2020</p>
-              <router-link :to="{name: 'VeritasChristmasVideo2020'}" class="stretched-link"></router-link>
+              <p class="mb-0 mt-3" style="opacity: 50%">12 November 2020</p>
+              <router-link :to="{name: 'SeafarersHeroesOfPandemic'}" class="stretched-link"></router-link>
             </div>
           </div>
         </div>
@@ -83,34 +98,6 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Veritas 30th Anniversary Same Day Edit Video</h4>
-                <p>
-                  Same day video shoot and edit for the 30th-anniversary celebration of Veritas.
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">11 July 2019</p>
-              <router-link :to="{name: 'Veritas30thAnniversarySameDayEditVideo'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-<!--        <div class="col-lg-4 col-md-6 my-3">-->
-<!--          <div class="card shadow border-0 news-card rounded-medium">-->
-<!--            <img class="card-img-top" :src="newsContainer1" alt="Card image cap">-->
-<!--            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">-->
-<!--              <div style="height: 200px; overflow-y: hidden">-->
-<!--                <h4 class="card-title">Seafaring organization under proposed OFW Department pushed</h4>-->
-<!--                <p>With the Senate trying to rush the enactment of the new law creating the Department of Overseas Filipino Workers, he country’s biggest umbrella group in the</p>-->
-<!--              </div>-->
-<!--              <p class="mb-0 mt-3" style="opacity: 50%">10 March 2021</p>-->
-<!--              <router-link :to="{name: 'SeafaringOrganizationUnderProposedOFWDeptPushed'}" class="stretched-link"></router-link>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
@@ -124,8 +111,8 @@ name: "LatestNews",
       'newsContainer1': require(`@/assets/news/news_10-03-2021.jpg`),
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
-      'newsContainer4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
-      'newsContainer5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
+      'newsContainer4': require(`@/assets/news/SeafarersHeroes_home.jpg`),
+      'newsContainer5': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
       'newsContainer6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
     }
   }

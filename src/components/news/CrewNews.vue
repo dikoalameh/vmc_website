@@ -83,7 +83,7 @@ export default {
   name: 'CrewNews',
   data() {
     return {
-      'news3': require(`@/assets/news/SeafarersHeroesOfPandemic_7-9-2021.jpg`),
+      'news3': require(`@/assets/news/SeafarersHeroes_home.jpg`),
       'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
       'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`)
     }
