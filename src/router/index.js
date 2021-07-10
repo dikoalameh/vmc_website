@@ -45,6 +45,10 @@ import NewNormalOffice2020
 import TnkcHouseSwabTest from '../components/news/articles/TnkcHouseSwabTest';
 import TeodoroLocsinMessageDaySeafarer25June2021
   from '../components/news/articles/TeodoroLocsinMessageDaySeafarer25June2021';
+import MyPersonalExperiencePenelopeLumanog
+  from '../components/news/articles/MyPersonalExperiencePenelopeLumanog';
+import SeamansWifeInsights
+  from '../components/news/articles/SeamansWifeInsights';
 
 Vue.use(VueRouter)
 
@@ -175,6 +179,16 @@ const routes = [
         path: '12',
         name: 'TeodoroLocsinMessageDaySeafarer25June2021',
         component: TeodoroLocsinMessageDaySeafarer25June2021
+      },
+      {
+        path: '13',
+        name: 'MyPersonalExperiencePenelopeLumanog',
+        component: MyPersonalExperiencePenelopeLumanog
+      },
+      {
+        path: '14',
+        name: 'SeamansWifeInsights',
+        component: SeamansWifeInsights
       },
     ]
   },

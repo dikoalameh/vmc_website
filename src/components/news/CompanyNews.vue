@@ -14,6 +14,27 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news13" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">My Personal Experience with Veritas Maritime Corporation</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 10, 2021
+                    </p>
+                    <p class="d-none d-lg-block">
+                      I, Penelope L. Lumanog graduated on December 2019 at Centro Escolar University and looked for a job in various platforms such as jobstreet. I have applied to a lot of companies and went on interviews, but what really picked my interest and attention was the Veritas Maritime Corporation.
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'MyPersonalExperiencePenelopeLumanog'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news5" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -161,6 +182,7 @@ export default {
       'news9': require(`@/assets/news/2020/tnkcswabtest/swab1_7-8-2021.jpg`),
       'news10': require(`@/assets/news/2020/joiningcrew/crew1_7-8-2021.jpg`),
       'news11': require(`@/assets/news/2020/newnormaloffice/office1_7-8-2021.jpg`),
+      'news13': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`)
     }
   }
 };
