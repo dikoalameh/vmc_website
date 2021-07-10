@@ -25,6 +25,20 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
+            <h4 class="font-weight-light mb-3">2020 Outside Veritas Activities</h4>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Missionaries of the Poor`"
+                                 :thumbnail="missionaries2020[0]"
+                                 :images="missionaries2020" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <h4 class="font-weight-light mb-3">2019 Outside Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
@@ -50,7 +64,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big ">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -76,7 +90,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="col-12">
           <h4 class="font-weight-light mb-3">2017 Outside Veritas Activities</h4>
@@ -111,6 +125,9 @@ export default {
         require(`@/assets/programs/csr/2021/healthwealth/health1_7-9-2021.jpg`),
         require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
         require(`@/assets/programs/csr/2021/healthwealth/health3_7-9-2021.jpg`)
+      ],
+      missionaries2020: [
+        require(`@/assets/programs/csr/2020/missionariesofpoor/missionaries1_7-10-2021.jpg`)
       ],
       cleanUp2019: [
         require(`@/assets/programs/csr/2019/manilabaycleanup/Manila-Bay-Clean-Up-Drive-1.jpg`),
