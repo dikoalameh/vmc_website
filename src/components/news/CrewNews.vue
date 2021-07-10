@@ -25,7 +25,7 @@
                     <p class="d-none d-lg-block">
                       As a wife of a seafarer, it is not an easy job or task simply because there is a lot of challenges that I encounter in our daily life.
                     </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MyPersonalExperiencePenelopeLumanog'}">continue reading . . .</router-link>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'SeamansWifeInsights'}">continue reading . . .</router-link>
                   </div>
                 </div>
               </div>
