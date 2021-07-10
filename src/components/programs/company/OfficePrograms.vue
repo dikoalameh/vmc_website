@@ -33,7 +33,7 @@
             <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas Christmas Party 2020`"
+            <photo-gallery-modal :caption="`Veritas Christmas Party 2019`"
                                  :thumbnail="vmcXmasParty1[0]"
                                  :images="vmcXmasParty1" />
           </div>
