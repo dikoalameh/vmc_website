@@ -8,6 +8,7 @@
           <li data-target="#VMCKeyVisual" data-slide-to="2"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="3"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
+          <li data-target="#VMCKeyVisual" data-slide-to="5"></li>
         </ol>
       </div>
       <div class="carousel-inner">
@@ -21,6 +22,20 @@
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">
                 TAGA VERITAS AKO!
               </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner6+')'}" id="BannerSix">
+          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <p class="mb-2 font-weight-normal text-white caption-one">"TAGA VERITAS AKO!"</p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
+                VERITAS FRONT LINERS
+              </p>
+              <p class="vmc-text-white font-weight-light caption-three"></p>
             </div>
           </div>
         </div>
@@ -114,6 +129,7 @@ export default {
       'banner3': require(`@/assets/keyvisuals/VIJAYANAGAR.jpg`),
       'banner4': require(`@/assets/keyvisuals/retirees_63021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
+      'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
     }
   },
   mounted() {

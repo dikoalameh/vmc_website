@@ -18,7 +18,7 @@
           </div>
           <div class="col-lg-2 col-md-4 col-6 pl-0 py-2">
             <p class="mb-0 text-white">
-              ISO 9001:2015 Crew Management for International Shipping Certified by DNV-GL
+              ISO 9001:2015 Crew Management for International Shipping Certified by DNV
             </p>
           </div>
         </div>
