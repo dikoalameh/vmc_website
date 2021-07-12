@@ -32,11 +32,6 @@
       <div class="item">
         <img :src="pamas" alt="PAMAS">
       </div>
-      <div class="item">
-        <a href="https://pdosph.com/" target="_blank" >
-          <img :src="pdos" alt="PDOS">
-        </a>
-      </div>
     </carousel>
   </div>
 </template>
@@ -55,7 +50,6 @@ export default {
       'marina' :require(`@/assets/affiliates/marina.jpg`),
       'pjmcc' :require(`@/assets/affiliates/pjmcc.jpg`),
       'pamas' :require(`@/assets/affiliates/pamas.jpg`),
-      'pdos' :require(`@/assets/affiliates/pdos.jpg`),
     }
   },
 }

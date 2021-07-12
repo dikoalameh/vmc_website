@@ -49,6 +49,8 @@ import MyPersonalExperiencePenelopeLumanog
   from '../components/news/articles/MyPersonalExperiencePenelopeLumanog';
 import SeamansWifeInsights
   from '../components/news/articles/SeamansWifeInsights';
+import HealthWealthSummit2021
+  from '../components/news/articles/HealthWealthSummit2021';
 
 Vue.use(VueRouter)
 
@@ -189,6 +191,11 @@ const routes = [
         path: '14',
         name: 'SeamansWifeInsights',
         component: SeamansWifeInsights
+      },
+      {
+        path: '15',
+        name: 'HealthWealthSummit2021',
+        component: HealthWealthSummit2021
       },
     ]
   },

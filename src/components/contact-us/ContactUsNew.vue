@@ -100,9 +100,9 @@
                 <span class="ml-2">:</span>
               </div>
               <div class="col-lg-8 text-break">
-                <a href="https://www.facebook.com/profile.php?id=100069043972456"
+                <a href="https://www.facebook.com/vmcallottee"
                    target="_blank" class="vmc-text-primary-2">
-                  https://www.facebook.com/profile.php?id=100069043972456</a>
+                  https://www.facebook.com/vmcallottee</a>
               </div>
             </div>
 

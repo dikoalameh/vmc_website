@@ -50,7 +50,7 @@
                 MV VIJAYANAGAR
               </p>
               <p class="vmc-text-white font-weight-light caption-three">
-                Despite the pandemic, Veritas never stop giving quality service to the shipping industry and even acquired their 61st vessel this year.
+                Despite the pandemic, Veritas never stopped giving quality service to the shipping industry and even acquired their 61st vessel this year.
               </p>
             </div>
           </div>
@@ -90,13 +90,9 @@
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">RETIRED CREW VIRTUAL AWARDING CEREMONY</p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                MAY 27, 2021
-              </p>
-              <p class="vmc-text-white font-weight-light caption-three">
-                15 - 31 Service years in Veritas Maritime Corporation
-              </p>
+              <p class="mb-2 font-weight-normal text-white caption-one"></p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
+              <p class="vmc-text-white font-weight-light caption-three"></p>
             </div>
           </div>
         </div>
@@ -127,7 +123,7 @@ export default {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
       'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
       'banner3': require(`@/assets/keyvisuals/VIJAYANAGAR.jpg`),
-      'banner4': require(`@/assets/keyvisuals/retirees_63021.jpg`),
+      'banner4': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
       'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
     }

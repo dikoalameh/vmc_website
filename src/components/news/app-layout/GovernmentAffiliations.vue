@@ -54,6 +54,11 @@
           <img :src="ppa" alt="PPA">
         </a>
       </div>
+      <div class="item">
+        <a href="https://pdosph.com/" target="_blank" >
+          <img :src="pdos" alt="PDOS">
+        </a>
+      </div>
     </carousel>
   </div>
 </template>
@@ -77,6 +82,7 @@ export default {
       'pcg' :require(`@/assets/affiliates/govlogo/pcg.jpg`),
       'pmma' :require(`@/assets/affiliates/govlogo/pmma.jpg`),
       'ppa' :require(`@/assets/affiliates/govlogo/ppa.jpg`),
+      'pdos' :require(`@/assets/affiliates/pdos.jpg`),
     }
   },
 };
