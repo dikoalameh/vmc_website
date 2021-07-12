@@ -15,7 +15,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p>Content coming soon . . .</p>
+            <h4 class="font-weight-normal mb-0">Training Schedule</h4>
+          </div>
+          <div class="col-md-12 my-2" v-for="schedule in trainingScheds" v-bind:key="schedule">
+            <img :src="schedule" alt="" class="border">
           </div>
         </div>
       </div>
@@ -25,7 +28,15 @@
 
 <script>
 export default {
-name: "SchedulesOfVMC"
+  name: "SchedulesOfVMC",
+  data() {
+    return  {
+      trainingScheds: [
+        require(`@/assets/schedules/2021/training/schedule1_7-12-2021.jpg`),
+        require(`@/assets/schedules/2021/training/schedule2_7-12-2021.jpg`),
+      ]
+    }
+  }
 }
 </script>
 
