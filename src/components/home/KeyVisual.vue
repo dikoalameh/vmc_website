@@ -136,6 +136,7 @@ export default {
     const carousel3 = document.getElementById('BannerThree');
     const carousel4 = document.getElementById('BannerFour');
     const carousel5 = document.getElementById('BannerFive');
+    const carousel6 = document.getElementById('BannerSix');
 
     if (w > 992 && w < h) {
       carousel1.style.height = "60vh"
@@ -143,6 +144,7 @@ export default {
       carousel3.style.height = "60vh"
       carousel4.style.height = "60vh"
       carousel5.style.height = "60vh"
+      carousel6.style.height = "60vh"
     }
     // console.log('width ' + w);
     // console.log('height ' + h);
