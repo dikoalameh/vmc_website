@@ -14,6 +14,19 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">Congratulations, Hidilyn Diaz! Saludo kami sayo.</h4>
+                <p></p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">28 July 2021</p>
+              <router-link :to="{name: 'HidilynDiazWeightliftingTokyo2020'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -70,21 +83,6 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Seafarers, Heroes of the Pandemic as Shipping Plays Vital Role in Crisis</h4>
-                <p>
-                  The global shipping industry has played a vital role in the global response to the COVID-19 pandemic, and demand for its services has limited the annual decline in maritime trade volumes to around 4.1 ...
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">12 November 2020</p>
-              <router-link :to="{name: 'SeafarersHeroesOfPandemic'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer2" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -109,7 +107,7 @@ name: "LatestNews",
       'newsContainer1': require(`@/assets/news/news_10-03-2021.jpg`),
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
-      'newsContainer4': require(`@/assets/news/SeafarersHeroes_home.jpg`),
+      'newsContainer4': require(`@/assets/news/weightlifting_07-28-2021.jpg`),
       'newsContainer5': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
       'newsContainer6': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`)
     }

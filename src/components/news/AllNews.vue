@@ -14,6 +14,25 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news16" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Congratulations, Hidilyn Diaz! Saludo kami sayo.</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 28, 2021
+                    </p>
+                    <p class="d-none d-lg-block"></p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'HidilynDiazWeightliftingTokyo2020'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news14" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -329,7 +348,8 @@ export default {
       'news12': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
       'news13': require(`@/assets/news/newsStaff_7-10-2021.jpg`),
       'news14': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`),
-      'news15': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`)
+      'news15': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
+      'news16': require(`@/assets/news/weightlifting_07-28-2021.jpg`)
     }
   }
 }
