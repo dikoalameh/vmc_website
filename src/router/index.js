@@ -53,6 +53,8 @@ import HealthWealthSummit2021
   from '../components/news/articles/HealthWealthSummit2021';
 import HidilynDiazWeightliftingTokyo2020
   from '../components/news/articles/HidilynDiazWeightliftingTokyo2020';
+import SaludoToAllOurAthletesTokyo2020
+  from '../components/news/articles/SaludoToAllOurAthletesTokyo2020';
 
 Vue.use(VueRouter)
 
@@ -203,6 +205,11 @@ const routes = [
         path: '16',
         name: 'HidilynDiazWeightliftingTokyo2020',
         component: HidilynDiazWeightliftingTokyo2020
+      },
+      {
+        path: '17',
+        name: 'SaludoToAllOurAthletesTokyo2020',
+        component: SaludoToAllOurAthletesTokyo2020
       },
     ]
   },
