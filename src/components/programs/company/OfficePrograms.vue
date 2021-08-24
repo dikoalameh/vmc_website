@@ -33,6 +33,11 @@
             <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`2021 Veritas Anniversary`"
+                                 :thumbnail="vmcAnniversary2021[0]"
+                                 :images="vmcAnniversary2021" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Veritas Christmas Party 2019`"
                                  :thumbnail="vmcXmasParty1[0]"
                                  :images="vmcXmasParty1" />
@@ -167,7 +172,37 @@ export default {
         require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Daluz.jpg`),
         require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Panaguiton.jpg`),
         require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Suyat.jpg`),
-      ]
+      ],
+      vmcAnniversary2021: [
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv1_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv2_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv3_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv6_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv8_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv12_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv4_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv5_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv7_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv9_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv10_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv11_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv13_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv15_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv16_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv14_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv17_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv19_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv20_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv18_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv22_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv21_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv23_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv24_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv26_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv27_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv28_24Aug2021.jpg`),
+        require(`@/assets/programs/office/2021/anniversary/vmc_aniv25_24Aug2021.jpg`),
+      ],
     }
   }
 };
