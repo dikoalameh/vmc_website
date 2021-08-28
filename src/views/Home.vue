@@ -46,7 +46,7 @@
       <membershipa-affiliations />
     </div>
     <vmc-footer />
-<!--    <privacy-notice />-->
+    <job-hiring />
   </div>
 </template>
 
@@ -58,6 +58,8 @@ import CrewFleetStatus from '../components/home/CrewFleetStatus';
 import MembershipAffiliations from '../components/home/MembershipAffiliations';
 import VMCHeader from '../components/VMCHeader';
 import VMCFooter from '../components/VMCFooter';
+import JobHiring28Aug2021 from '../components/home/JobHiring28Aug2021';
+import $ from 'jquery';
 
 export default {
   name: 'Home',
@@ -68,6 +70,7 @@ export default {
     'latest-news': LatestNews,
     'crew-fleet-status': CrewFleetStatus,
     'membershipa-affiliations': MembershipAffiliations,
+    'job-hiring': JobHiring28Aug2021,
   },
   data() {
     return {
@@ -77,6 +80,9 @@ export default {
       'video': require(`@/assets/keyvisuals/KRBS 4mb.mp4`),
     }
   },
+  mounted(){
+    $('#JobHiring').modal('show');
+  }
 }
 </script>
 
