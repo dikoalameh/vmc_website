@@ -14,7 +14,12 @@
             <h4 class="font-weight-light mb-3">2021 Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Health and Wealth Summit`"
+            <photo-gallery-modal :caption="`Oct Health and Wealth Summit`"
+                                 :thumbnail="healthOct2021[0]"
+                                 :images="healthOct2021" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Jul Health and Wealth Summit`"
                                  :thumbnail="health2021[0]"
                                  :images="health2021" />
           </div>
@@ -121,6 +126,10 @@ export default {
   },
   data() {
     return {
+      healthOct2021: [
+        require(`@/assets/programs/office/2021/healthwealth/health2_18-10-2021.jpg`),
+        require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
+      ],
       health2021: [
         require(`@/assets/programs/csr/2021/healthwealth/health1_7-9-2021.jpg`),
         require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),

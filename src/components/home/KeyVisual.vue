@@ -123,7 +123,7 @@ export default {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
       'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
       'banner3': require(`@/assets/keyvisuals/capebrolga_92921.jpg`),
-      'banner4': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
+      'banner4': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
       'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
     }
