@@ -57,6 +57,8 @@ import SaludoToAllOurAthletesTokyo2020
   from '../components/news/articles/SaludoToAllOurAthletesTokyo2020';
 import HealthWealthSummitOct2021
   from '../components/news/articles/HealthWealthSummitOct2021';
+import MarinaTwgVaccinationSchedules
+  from '../components/news/articles/MarinaTwgVaccinationSchedules';
 
 Vue.use(VueRouter)
 
@@ -217,6 +219,11 @@ const routes = [
         path: '18',
         name: 'HealthWealthSummitOct2021',
         component: HealthWealthSummitOct2021
+      },
+      {
+        path: '19',
+        name: 'MarinaTwgVaccinationSchedules',
+        component: MarinaTwgVaccinationSchedules
       },
     ]
   },

@@ -14,6 +14,21 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top px-5" :src="newsContainer5" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title">MARINA TWG Vaccination Schedules</h4>
+                <p>
+                  Please be informed of the new vaccination schedule this month. Kindly refer to the enclosed info graphics.
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">21 October 2021</p>
+              <router-link :to="{name: 'MarinaTwgVaccinationSchedules'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -68,34 +83,6 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer5" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title">MESSAGE of H.E. TEODORO L. LOCSIN, JR. Secretary of Foreign Affairs on the Day of the Seafarer 25 June 2021</h4>
-                <p>
-                  The Department of Foreign Affairs is honored to celebrate the Day of the Seafarer.
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">25 June 2021</p>
-              <router-link :to="{name: 'TeodoroLocsinMessageDaySeafarer25June2021'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-<!--        <div class="col-lg-4 col-md-6 my-3">-->
-<!--          <div class="card shadow border-0 news-card rounded-medium">-->
-<!--            <img class="card-img-top" :src="newsContainer1" alt="Card image cap">-->
-<!--            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">-->
-<!--              <div style="height: 200px; overflow-y: hidden">-->
-<!--                <h4 class="card-title">Seafaring organization under proposed OFW Department pushed</h4>-->
-<!--                <p>With the Senate trying to rush the enactment of the new law creating the Department of Overseas Filipino Workers, he country’s biggest umbrella group in the</p>-->
-<!--              </div>-->
-<!--              <p class="mb-0 mt-3" style="opacity: 50%">10 March 2021</p>-->
-<!--              <router-link :to="{name: 'SeafaringOrganizationUnderProposedOFWDeptPushed'}" class="stretched-link"></router-link>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer2" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -121,7 +108,7 @@ name: "LatestNews",
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
       'newsContainer4': require(`@/assets/news/weightlifting_07-28-2021.jpg`),
-      'newsContainer5': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
+      'newsContainer5': require(`@/assets/news/2021/vaccinesched/area_thumbnail_211021.jpg`),
       'newsContainer6': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`)
     }
   }
