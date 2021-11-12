@@ -59,6 +59,8 @@ import HealthWealthSummitOct2021
   from '../components/news/articles/HealthWealthSummitOct2021';
 import MarinaTwgVaccinationSchedules
   from '../components/news/articles/MarinaTwgVaccinationSchedules';
+import MarinaIndustrySponsoredCadets2021
+  from '../components/news/articles/MarinaIndustrySponsoredCadets2021';
 
 Vue.use(VueRouter)
 
@@ -224,6 +226,11 @@ const routes = [
         path: '19',
         name: 'MarinaTwgVaccinationSchedules',
         component: MarinaTwgVaccinationSchedules
+      },
+      {
+        path: '20',
+        name: 'MarinaIndustrySponsoredCadets2021',
+        component: MarinaIndustrySponsoredCadets2021
       },
     ]
   },
