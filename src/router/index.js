@@ -61,6 +61,8 @@ import MarinaTwgVaccinationSchedules
   from '../components/news/articles/MarinaTwgVaccinationSchedules';
 import MarinaIndustrySponsoredCadets2021
   from '../components/news/articles/MarinaIndustrySponsoredCadets2021';
+import AllotteesBacolodIloiloPanay2021Gathering
+  from '../components/news/articles/AllotteesBacolodIloiloPanay2021Gathering';
 
 Vue.use(VueRouter)
 
@@ -231,6 +233,11 @@ const routes = [
         path: '20',
         name: 'MarinaIndustrySponsoredCadets2021',
         component: MarinaIndustrySponsoredCadets2021
+      },
+      {
+        path: '21',
+        name: 'AllotteesBacolodIloiloPanay2021Gathering',
+        component: AllotteesBacolodIloiloPanay2021Gathering
       },
     ]
   },
