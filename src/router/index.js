@@ -63,6 +63,8 @@ import MarinaIndustrySponsoredCadets2021
   from '../components/news/articles/MarinaIndustrySponsoredCadets2021';
 import AllotteesBacolodIloiloPanay2021Gathering
   from '../components/news/articles/AllotteesBacolodIloiloPanay2021Gathering';
+import AllotteesCebuBoholBicolcdoDavaoMm2021
+  from '../components/news/articles/AllotteesCebuBoholBicolcdoDavaoMm2021';
 
 Vue.use(VueRouter)
 
@@ -238,6 +240,11 @@ const routes = [
         path: '21',
         name: 'AllotteesBacolodIloiloPanay2021Gathering',
         component: AllotteesBacolodIloiloPanay2021Gathering
+      },
+      {
+        path: '22',
+        name: 'AllotteesCebuBoholBicolcdoDavaoMm2021',
+        component: AllotteesCebuBoholBicolcdoDavaoMm2021
       },
     ]
   },

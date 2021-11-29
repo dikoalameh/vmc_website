@@ -14,6 +14,31 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news22" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Veritas Allotees Year End Gathering for Bacolod/Iloilo Panay Island Group</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — November 27, 2021
+                    </p>
+                    <p class="d-none d-lg-block">
+                      SAVE THE DATE! 🥳🎉
+                      You are invited to the Veritas Allotees Year End Gathering for Cebu, Bohol, Bicol, CDO, Davao, Metro Manila/Luzon and other Provinces on December 5, 2021 at 1-4pm.
+
+                      Registration is a must! Please click on this link to register:
+                      <a href="https://forms.gle/LGQ87nSz9VWQX2Ts9" target="_blank">https://forms.gle/LGQ87nSz9VWQX2Ts9</a>
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'AllotteesCebuBoholBicolcdoDavaoMm2021'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news21" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -133,7 +158,8 @@ export default {
       'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
       'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
       'news13': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`),
-      'news21': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`)
+      'news21': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
+      'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`)
     }
   }
 };

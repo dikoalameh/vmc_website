@@ -14,6 +14,24 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">Veritas Allotees Year End Gathering for Cebu, Bohol, Bicol, CDO, Davao, Metro Manila/Luzon and other Provinces</h4>
+                <p>
+                  SAVE THE DATE! 🥳🎉
+                </p>
+                <p>
+                  You are invited to the Veritas Allotees Year End Gathering for Cebu, Bohol, Bicol, CDO, Davao, Metro Manila/Luzon and other Provinces on December 5, 2021 at 1-4pm.
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">27 November 2021</p>
+              <router-link :to="{name: 'AllotteesCebuBoholBicolcdoDavaoMm2021'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer1" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -63,19 +81,6 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Health and Wealth Summit</h4>
-                <p></p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">20 October 2021</p>
-              <router-link :to="{name: 'HealthWealthSummitOct2021'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer3" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -117,7 +122,7 @@ name: "LatestNews",
       'newsContainer3': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
       'newsContainer4': require(`@/assets/news/2021/mis_news_111221.jpg`),
       'newsContainer5': require(`@/assets/news/2021/vaccinesched/area_thumbnail_211021.jpg`),
-      'newsContainer6': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`)
+      'newsContainer6': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`)
     }
   }
 }
