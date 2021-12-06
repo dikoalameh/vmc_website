@@ -8,7 +8,7 @@
               MARINA TWG Vaccination Schedules
             </h2>
             <p class="vmc-text-primary-2 letter-spacing-1 mb-0">
-              By Veritas Admin — October 21, 2021
+              By Veritas Admin — December 06, 2021
             </p>
           </div>
         </div>
@@ -34,14 +34,14 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12 text-center">
-            <a href="https://www.facebook.com/VeritasMaritimeCorporation/posts/176142124693290"
-               target="_blank" class="mb-0 mt-3 vmc-text-primary-2" style="opacity: 75%">
-              See Original Post: https://www.facebook.com/VeritasMaritimeCorporation/posts/176142124693290
-            </a>
-          </div>
-        </div>
+<!--        <div class="row">-->
+<!--          <div class="col-12 text-center">-->
+<!--            <a href="https://www.facebook.com/VeritasMaritimeCorporation/posts/176142124693290"-->
+<!--               target="_blank" class="mb-0 mt-3 vmc-text-primary-2" style="opacity: 75%">-->
+<!--              See Original Post: https://www.facebook.com/VeritasMaritimeCorporation/posts/176142124693290-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
   </div>
@@ -53,6 +53,7 @@ export default {
   data() {
     return {
       participants: [
+        require(`@/assets/news/2021/vaccinesched/area1_061221.jpg`),
         require(`@/assets/news/2021/vaccinesched/area1_211021.jpg`),
         require(`@/assets/news/2021/vaccinesched/area2_211021.jpg`),
         require(`@/assets/news/2021/vaccinesched/area3_211021.jpg`),

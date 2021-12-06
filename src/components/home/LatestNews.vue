@@ -14,6 +14,21 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top px-5" :src="newsContainer5" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title">MARINA TWG Vaccination Schedules</h4>
+                <p>
+                  Please be informed of the new vaccination schedule this month. Kindly refer to the enclosed info graphics.
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">06 Dec 2021</p>
+              <router-link :to="{name: 'MarinaTwgVaccinationSchedules'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -66,21 +81,6 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top px-5" :src="newsContainer5" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title">MARINA TWG Vaccination Schedules</h4>
-                <p>
-                  Please be informed of the new vaccination schedule this month. Kindly refer to the enclosed info graphics.
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">21 October 2021</p>
-              <router-link :to="{name: 'MarinaTwgVaccinationSchedules'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer3" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -121,7 +121,7 @@ name: "LatestNews",
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
       'newsContainer4': require(`@/assets/news/2021/mis_news_111221.jpg`),
-      'newsContainer5': require(`@/assets/news/2021/vaccinesched/area_thumbnail_211021.jpg`),
+      'newsContainer5': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`),
       'newsContainer6': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`)
     }
   }

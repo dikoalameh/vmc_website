@@ -20,7 +20,7 @@
                   <div class="card-body">
                     <h4 class="font-weight-normal mb-1">MARINA TWG Vaccination Schedules</h4>
                     <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — October 21, 2021
+                      By Veritas Admin — December 06, 2021
                     </p>
                     <p class="d-none d-lg-block"></p>
                     <router-link class="vmc-text-primary-2" :to="{name: 'MarinaTwgVaccinationSchedules'}">continue reading . . .</router-link>
@@ -89,7 +89,7 @@ export default {
     return {
       'news2': require(`@/assets/news/news_10-03-2021.jpg`),
       'news12': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
-      'news19': require(`@/assets/news/2021/vaccinesched/area_thumbnail_211021.jpg`)
+      'news19': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`)
     }
   }
 };

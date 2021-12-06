@@ -14,6 +14,25 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news19" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">MARINA TWG Vaccination Schedules</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 06, 2021
+                    </p>
+                    <p class="d-none d-lg-block"></p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaTwgVaccinationSchedules'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news22" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -77,25 +96,6 @@
                       pre-selected cadets. This is part of the Mariners' Industry Sponsored Cadets (MIS) Program selection process.
                     </p>
                     <router-link class="vmc-text-primary-2" :to="{name: 'MarinaIndustrySponsoredCadets2021'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news19" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">MARINA TWG Vaccination Schedules</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — October 21, 2021
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaTwgVaccinationSchedules'}">continue reading . . .</router-link>
                   </div>
                 </div>
               </div>
@@ -481,7 +481,7 @@ export default {
       'news16': require(`@/assets/news/weightlifting_07-28-2021.jpg`),
       'news17': require(`@/assets/news/medalist_cv_tokyo2020-08_08_2021.jpg`),
       'news18': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
-      'news19': require(`@/assets/news/2021/vaccinesched/area_thumbnail_211021.jpg`),
+      'news19': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`),
       'news20': require(`@/assets/news/2021/mis_news_111221.jpg`),
       'news21': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
       'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`)
