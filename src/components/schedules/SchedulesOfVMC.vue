@@ -32,8 +32,9 @@ export default {
   data() {
     return  {
       trainingScheds: [
-        require(`@/assets/schedules/2021/training/schedule1_7-12-2021.jpg`),
-        require(`@/assets/schedules/2021/training/schedule2_7-12-2021.jpg`),
+        // require(`@/assets/schedules/2021/training/schedule1_7-12-2021.jpg`),
+        // require(`@/assets/schedules/2021/training/schedule2_7-12-2021.jpg`),
+        require(`@/assets/schedules/2022/training/Matrix-2022.jpg`),
       ]
     }
   }
