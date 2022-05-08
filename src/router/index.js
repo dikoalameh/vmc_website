@@ -65,6 +65,7 @@ import AllotteesBacolodIloiloPanay2021Gathering
   from '../components/news/articles/AllotteesBacolodIloiloPanay2021Gathering';
 import AllotteesCebuBoholBicolcdoDavaoMm2021
   from '../components/news/articles/AllotteesCebuBoholBicolcdoDavaoMm2021';
+import AWomanLikeNoOther2022 from "@/components/news/articles/AWomanLikeNoOther2022";
 
 Vue.use(VueRouter)
 
@@ -245,6 +246,11 @@ const routes = [
         path: '22',
         name: 'AllotteesCebuBoholBicolcdoDavaoMm2021',
         component: AllotteesCebuBoholBicolcdoDavaoMm2021
+      },
+      {
+        path: '23',
+        name: 'AWomanLikeNoOther2022',
+        component: AWomanLikeNoOther2022
       },
     ]
   },
