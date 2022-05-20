@@ -66,6 +66,7 @@ import AllotteesBacolodIloiloPanay2021Gathering
 import AllotteesCebuBoholBicolcdoDavaoMm2021
   from '../components/news/articles/AllotteesCebuBoholBicolcdoDavaoMm2021';
 import AWomanLikeNoOther2022 from "@/components/news/articles/AWomanLikeNoOther2022";
+import MLCCertifiedAndISOCertified from "@/components/news/articles/MLCCertifiedAndISOCertified";
 
 Vue.use(VueRouter)
 
@@ -251,6 +252,11 @@ const routes = [
         path: '23',
         name: 'AWomanLikeNoOther2022',
         component: AWomanLikeNoOther2022
+      },
+      {
+        path: '24',
+        name: 'MLCCertifiedAndISOCertified',
+        component: MLCCertifiedAndISOCertified
       },
     ]
   },

@@ -14,6 +14,29 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news24" alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">QMS-2022-010 MLC Certified and ISO Certified</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — May 20, 2022
+                    </p>
+                    <p class="d-none d-lg-block">
+                      QMS-2022-010 Congratulations Veritas Family for being MLC Certified and ISO Certified
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'MLCCertifiedAndISOCertified'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news23" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -508,7 +531,8 @@ export default {
       'news20': require(`@/assets/news/2021/mis_news_111221.jpg`),
       'news21': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
       'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`),
-      'news23': require(`@/assets/news/2022WomanLikeNoOther.jpg`)
+      'news23': require(`@/assets/news/2022WomanLikeNoOther.jpg`),
+      'news24': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`)
     }
   }
 }

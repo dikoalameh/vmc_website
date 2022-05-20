@@ -14,6 +14,21 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">QMS-2022-010 MLC Certified and ISO Certified</h4>
+                <p>
+                  QMS-2022-010 Congratulations Veritas Family for being MLC Certified and ISO Certified
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">20 May 2022</p>
+              <router-link :to="{name: 'MLCCertifiedAndISOCertified'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer3" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -81,22 +96,6 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Mariners' Industry Sponsored-Cadets (MIS)</h4>
-                <p>
-                  On November 10 and 11, 2021, the VERITAS MARITIME CORPORATION will offer an ONLINE examination and interview for
-                  pre-selected cadets. This is part of the Mariners' Industry Sponsored Cadets (MIS) Program selection process.
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">11 November 2021</p>
-              <router-link :to="{name: 'MarinaIndustrySponsoredCadets2021'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer2" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -121,7 +120,7 @@ name: "LatestNews",
       'newsContainer1': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2022WomanLikeNoOther.jpg`),
-      'newsContainer4': require(`@/assets/news/2021/mis_news_111221.jpg`),
+      'newsContainer4': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`),
       'newsContainer5': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`),
       'newsContainer6': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`)
     }
