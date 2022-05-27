@@ -74,7 +74,7 @@
                 CAPE BROLGA
               </p>
               <p class="vmc-text-white font-weight-light caption-three">
-<!--                Despite the pandemic, Veritas never stopped giving quality service to the shipping industry and even acquired their 61st vessel this year.-->
+                <!--                Despite the pandemic, Veritas never stopped giving quality service to the shipping industry and even acquired their 61st vessel this year.-->
               </p>
             </div>
           </div>
@@ -123,19 +123,19 @@
       </div>
     </div>
     <div class="container bg-white">
-        <div class="row py-3 d-flex align-items-center justify-content-center">
-          <div class="col-auto p-1">
-            <router-link class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn" :to="{name: 'GovernmentAdvisories'}">
-              ADVISORIES
-            </router-link>
-          </div>
-<!--          <div class="col-auto p-1">-->
-<!--            <router-link class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn" :to="{name: 'Covid19Update'}">-->
-<!--              COVID-19 Update-->
-<!--            </router-link>-->
-<!--          </div>-->
+      <div class="row py-3 d-flex align-items-center justify-content-center">
+        <div class="col-auto p-1">
+          <router-link class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn" :to="{name: 'GovernmentAdvisories'}">
+            ADVISORIES
+          </router-link>
         </div>
+        <!--          <div class="col-auto p-1">-->
+        <!--            <router-link class="btn vmc-btn-circle vmc-btn-outline-secondary kv-low-btn" :to="{name: 'Covid19Update'}">-->
+        <!--              COVID-19 Update-->
+        <!--            </router-link>-->
+        <!--          </div>-->
       </div>
+    </div>
   </div>
 </template>
 
