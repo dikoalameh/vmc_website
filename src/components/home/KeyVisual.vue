@@ -10,10 +10,22 @@
           <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="5"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="6"></li>
+          <li data-target="#VMCKeyVisual" data-slide-to="7"></li>
         </ol>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner7+')'}" id="BannerSeven">
+        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner8+')'}" id="BannerEight">
+          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <p class="mb-2 font-weight-normal text-white caption-one"></p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner7+')'}" id="BannerSeven">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
@@ -138,7 +150,8 @@ export default {
       'banner4': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
       'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
-      'banner7': require(`@/assets/keyvisuals/covid_cases_27522KV.jpg`),
+      'banner7': require(`@/assets/keyvisuals/mlcisocert_52022KV.jpg`),
+      'banner8': require(`@/assets/keyvisuals/covid_cases_27522KV.jpg`),
     }
   },
   mounted() {
@@ -151,6 +164,7 @@ export default {
     const carousel5 = document.getElementById('BannerFive');
     const carousel6 = document.getElementById('BannerSix');
     const carousel7 = document.getElementById('BannerSeven');
+    const carousel8 = document.getElementById('BannerEight');
 
     if (w > 992 && w < h) {
       carousel1.style.height = "60vh"
@@ -160,6 +174,7 @@ export default {
       carousel5.style.height = "60vh"
       carousel6.style.height = "60vh"
       carousel7.style.height = "60vh"
+      carousel8.style.height = "60vh"
     }
     // console.log('width ' + w);
     // console.log('height ' + h);
