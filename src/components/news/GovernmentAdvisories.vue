@@ -14,6 +14,27 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news25" alt="Covid Cases">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">New Cases From May 16 to May 22</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — May 27, 2022
+                    </p>
+                    <p class="d-none d-lg-block"></p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'CovidCasesMay16To22'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news19" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -89,7 +110,8 @@ export default {
     return {
       'news2': require(`@/assets/news/news_10-03-2021.jpg`),
       'news12': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
-      'news19': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`)
+      'news19': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`),
+      'news25': require(`@/assets/news/2022/may/covid_cases_27522R.jpg`)
     }
   }
 };

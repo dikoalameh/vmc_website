@@ -14,6 +14,21 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
+            <img class="card-img-top" :src="newsContainer1" alt="Card image cap">
+            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="height: 200px; overflow-y: hidden">
+                <h4 class="card-title" style="height: 56px; overflow: hidden">New Cases From May 16 to May 22</h4>
+                <p>
+                  1,214
+                </p>
+              </div>
+              <p class="mb-0 mt-3" style="opacity: 50%">27 May 2022</p>
+              <router-link :to="{name: 'CovidCasesMay16To22'}" class="stretched-link"></router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -78,24 +93,6 @@
         </div>
         <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top" :src="newsContainer1" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Veritas Allotees Year End Gathering for Bacolod/Iloilo Panay Island Group</h4>
-                <p>
-                  SAVE THE DATE! 🥳🎉
-                </p>
-                <p>
-                  You are invited to the Veritas Allotees Year End Gathering for Bacolod/Iloilo Panay Island Group on December 4, 2021 at 1-4pm.
-                </p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">25 November 2021</p>
-              <router-link :to="{name: 'AllotteesBacolodIloiloPanay2021Gathering'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer2" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
@@ -117,7 +114,7 @@ export default {
 name: "LatestNews",
   data() {
     return {
-      'newsContainer1': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
+      'newsContainer1': require(`@/assets/news/2022/may/covid_cases_27522R.jpg`),
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2022WomanLikeNoOther.jpg`),
       'newsContainer4': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`),
