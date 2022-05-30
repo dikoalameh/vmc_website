@@ -12,7 +12,6 @@
           <li data-target="#VMCKeyVisual" data-slide-to="6"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="7"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="8"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="9"></li>
         </ol>
       </div>
       <div class="carousel-inner">
@@ -87,22 +86,6 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner3+')'}" id="BannerThree">
-          <svg class="bd-placeholder-img" style="opacity: 50%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">NEWEST VESSEL ACQUIRED</p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                CAPE BROLGA
-              </p>
-              <p class="vmc-text-white font-weight-light caption-three">
-                <!--                Despite the pandemic, Veritas never stopped giving quality service to the shipping industry and even acquired their 61st vessel this year.-->
-              </p>
-            </div>
-          </div>
-        </div>
         <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner1+')'}" id="BannerOne">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
@@ -170,7 +153,6 @@ export default {
     return {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
       'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
-      'banner3': require(`@/assets/keyvisuals/capebrolga_92921.jpg`),
       'banner4': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
       'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
@@ -185,7 +167,6 @@ export default {
     const h = window.innerHeight;
     const carousel1 = document.getElementById('BannerOne');
     const carousel2 = document.getElementById('BannerTwo');
-    const carousel3 = document.getElementById('BannerThree');
     const carousel4 = document.getElementById('BannerFour');
     const carousel5 = document.getElementById('BannerFive');
     const carousel6 = document.getElementById('BannerSix');
@@ -197,7 +178,6 @@ export default {
     if (w > 992 && w < h) {
       carousel1.style.height = "60vh"
       carousel2.style.height = "60vh"
-      carousel3.style.height = "60vh"
       carousel4.style.height = "60vh"
       carousel5.style.height = "60vh"
       carousel6.style.height = "60vh"
