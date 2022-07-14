@@ -13,6 +13,11 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-12">
+            <p class="text-center">
+              Congratulations VERITAS for another fruitful year! 33 years and stronger!
+            </p>
+          </div>
           <div class="col-4 my-2" v-for="covidCase in cases" v-bind:key="covidCase">
             <img :src="covidCase" alt="" class="border">
           </div>

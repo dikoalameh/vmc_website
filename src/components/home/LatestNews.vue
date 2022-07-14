@@ -18,7 +18,7 @@
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
                 <h4 class="card-title" style="height: 86px; overflow: hidden">Veritas Maritime Corporation 33rd Anniversary</h4>
-                <p></p>
+                <p>Congratulations VERITAS for another fruitful year! 33 years and stronger!</p>
                 <p></p>
               </div>
               <p class="mb-0 mt-3" style="opacity: 50%">12 July 2022</p>

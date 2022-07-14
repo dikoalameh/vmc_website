@@ -22,7 +22,9 @@
                     <p class="vmc-text-primary-2 letter-spacing-1">
                       By Veritas Admin — July 12, 2022
                     </p>
-                    <p class="d-none d-lg-block"></p>
+                    <p class="d-none d-lg-block">
+                      Congratulations VERITAS for another fruitful year! 33 years and stronger!
+                    </p>
                     <router-link class="vmc-text-primary-2" :to="{name: 'VMC33rdAnniversary'}">continue reading . . .</router-link>
                   </div>
                 </div>
