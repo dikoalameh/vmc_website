@@ -68,6 +68,7 @@ import AllotteesCebuBoholBicolcdoDavaoMm2021
 import AWomanLikeNoOther2022 from "@/components/news/articles/AWomanLikeNoOther2022";
 import MLCCertifiedAndISOCertified from "@/components/news/articles/MLCCertifiedAndISOCertified";
 import CovidCasesMay16To22 from "@/components/news/articles/CovidCasesMay16To22";
+import VMC33rdAnniversary from "@/components/news/articles/VMC33rdAnniversary";
 
 Vue.use(VueRouter)
 
@@ -263,6 +264,11 @@ const routes = [
         path: '25',
         name: 'CovidCasesMay16To22',
         component: CovidCasesMay16To22
+      },
+      {
+        path: '26',
+        name: 'VMC33rdAnniversary',
+        component: VMC33rdAnniversary
       },
     ]
   },

@@ -14,6 +14,27 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news26" alt="Covid Cases">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Veritas Maritime Corporation 33rd Anniversary</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 12, 2022
+                    </p>
+                    <p class="d-none d-lg-block"></p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VMC33rdAnniversary'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news24" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -270,7 +291,8 @@ export default {
       'news15': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
       'news18': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
       'news23': require(`@/assets/news/2022WomanLikeNoOther.jpg`),
-      'news24': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`)
+      'news24': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`),
+      'news26': require(`@/assets/news/2022/jul/33rd_anniversary_0714-A.jpg`)
     }
   }
 };
