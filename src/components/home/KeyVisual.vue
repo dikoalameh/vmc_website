@@ -13,7 +13,6 @@
           <li data-target="#VMCKeyVisual" data-slide-to="7"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="8"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="9"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="10"></li>
         </ol>
       </div>
       <div class="carousel-inner">
@@ -58,17 +57,6 @@
             <div class="carousel-caption text-left">
               <p class="mb-2 font-weight-normal text-white caption-one"></p>
               <p class="vmc-text-white font-weight-normal mb-0 caption-two">CORONA MAJESTY</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner8+')'}" id="BannerEight">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
             </div>
           </div>
         </div>
@@ -176,7 +164,6 @@ export default {
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
       'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
       'banner7': require(`@/assets/keyvisuals/mlcisocert_52022KV.jpg`),
-      'banner8': require(`@/assets/keyvisuals/covid_cases_27522KV.jpg`),
       'banner9': require(`@/assets/keyvisuals/coronamajesty_053022KV.jpg`),
       'banner10': require(`@/assets/keyvisuals/capenormandy_053022KV.jpg`),
       'banner11': require(`@/assets/keyvisuals/intlSeafarer_62722KV.jpg`),
@@ -192,7 +179,6 @@ export default {
     const carousel4 = document.getElementById('BannerFive');
     const carousel5 = document.getElementById('BannerSix');
     const carousel6 = document.getElementById('BannerSeven');
-    const carousel7 = document.getElementById('BannerEight');
     const carousel8 = document.getElementById('BannerNine');
     const carousel9 = document.getElementById('BannerTen');
     const carousel10 = document.getElementById('BannerEleven');
@@ -206,7 +192,6 @@ export default {
       carousel4.style.height = "60vh"
       carousel5.style.height = "60vh"
       carousel6.style.height = "60vh"
-      carousel7.style.height = "60vh"
       carousel8.style.height = "60vh"
       carousel9.style.height = "60vh"
       carousel10.style.height = "60vh"
