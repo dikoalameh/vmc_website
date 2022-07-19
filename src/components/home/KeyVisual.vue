@@ -13,10 +13,22 @@
           <li data-target="#VMCKeyVisual" data-slide-to="7"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="8"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="9"></li>
+          <li data-target="#VMCKeyVisual" data-slide-to="10"></li>
         </ol>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner11+')'}" id="BannerEleven">
+        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner12+')'}" id="BannerTwelve">
+          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <p class="mb-2 font-weight-normal text-white caption-one"></p>
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner11+')'}" id="BannerEleven">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
@@ -168,6 +180,7 @@ export default {
       'banner9': require(`@/assets/keyvisuals/coronamajesty_053022KV.jpg`),
       'banner10': require(`@/assets/keyvisuals/capenormandy_053022KV.jpg`),
       'banner11': require(`@/assets/keyvisuals/intlSeafarer_62722KV.jpg`),
+      'banner12': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022KV.jpg`)
     }
   },
   mounted() {
@@ -183,6 +196,7 @@ export default {
     const carousel8 = document.getElementById('BannerNine');
     const carousel9 = document.getElementById('BannerTen');
     const carousel10 = document.getElementById('BannerEleven');
+    const carousel11 = document.getElementById('BannerTwelve');
     // const carousel10 = document.getElementById('BannerTen');
 
     if (w > 992 && w < h) {
@@ -196,6 +210,7 @@ export default {
       carousel8.style.height = "60vh"
       carousel9.style.height = "60vh"
       carousel10.style.height = "60vh"
+      carousel11.style.height = "60vh"
       // carousel10.style.height = "60vh"
     }
     // console.log('width ' + w);

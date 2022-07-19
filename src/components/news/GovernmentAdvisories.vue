@@ -14,6 +14,27 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news27" alt="Covid Cases">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">New Cases From July 11 to July 17</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 19, 2022
+                    </p>
+                    <p class="d-none d-lg-block"></p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'CovidCasesJul11To172022'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news25" alt="Covid Cases">
                 </div>
                 <div class="col-md-7">
@@ -111,7 +132,8 @@ export default {
       'news2': require(`@/assets/news/news_10-03-2021.jpg`),
       'news12': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
       'news19': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`),
-      'news25': require(`@/assets/news/2022/may/covid_cases_27522R.jpg`)
+      'news25': require(`@/assets/news/2022/may/covid_cases_27522R.jpg`),
+      'news27': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022.jpg`)
     }
   }
 };
