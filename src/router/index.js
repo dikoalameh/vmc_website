@@ -70,6 +70,7 @@ import MLCCertifiedAndISOCertified from "@/components/news/articles/MLCCertified
 import CovidCasesMay16To22 from "@/components/news/articles/CovidCasesMay16To22";
 import VMC33rdAnniversary from "@/components/news/articles/VMC33rdAnniversary";
 import CovidCasesJul11To172022 from "@/components/news/articles/CovidCasesJul11To172022";
+import VoyageToOurLifeHeritage2022 from "@/components/news/articles/VoyageToOurLifeHeritage2022";
 
 Vue.use(VueRouter)
 
@@ -275,6 +276,11 @@ const routes = [
         path: '27',
         name: 'CovidCasesJul11To172022',
         component: CovidCasesJul11To172022
+      },
+      {
+        path: '28',
+        name: 'VoyageToOurLifeHeritage2022',
+        component: VoyageToOurLifeHeritage2022
       },
     ]
   },

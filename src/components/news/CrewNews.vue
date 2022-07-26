@@ -14,6 +14,29 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news28" alt="Covid Cases">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">VOYAGE TO OUR LIFE HERITAGE</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 28, 2022
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Mr. Agustin “Jun” Casten Gagajena, Jr., is the youngest of four children of Major Agustin Gagajena, Sr and Norma Casten Gagajena. By origin, his family name reflects his traits as a Risk Taker, Visionary and Unpretentious.
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VoyageToOurLifeHeritage2022'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news22" alt="Suresh Dasari Card">
                 </div>
                 <div class="col-md-7">
@@ -159,7 +182,8 @@ export default {
       'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
       'news13': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`),
       'news21': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
-      'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`)
+      'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`),
+      'news28': require(`@/assets/news/2022/jul/VoyageLifetimeHeritage/Picture2.jpg`),
     }
   }
 };
