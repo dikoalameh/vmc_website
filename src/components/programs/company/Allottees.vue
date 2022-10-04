@@ -12,6 +12,24 @@
         <div class="row">
           <div class="col-12">
             <h4 class="font-weight-light">
+              2022 Allottees Medical Mission
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allottees Medical Mission & Humanitarian Assistance`"
+                                 :thumbnail="medmission2022[0]"
+                                 :images="medmission2022" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light">
               2020 Allottees Gathering via Zoom
             </h4>
           </div>
@@ -30,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -73,7 +91,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -121,7 +139,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -191,6 +209,17 @@ export default {
   },
   data() {
     return {
+      medmission2022: [
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_A.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_B.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_C.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_D.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_E.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_F.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_G.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_H.jpg`),
+        require(`@/assets/programs/allottees/2022/medmission/medMission_041022_I.jpg`),
+      ],
       all2020: [
         require(`@/assets/programs/allottees/2020/all_a_70121.jpg`),
         require(`@/assets/programs/allottees/2020/all_b_70121.jpg`),

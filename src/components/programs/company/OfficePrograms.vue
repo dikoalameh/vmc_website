@@ -33,6 +33,11 @@
             <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`2022 VERITAS Staff Business Writing Seminar`"
+                                 :thumbnail="writingSeminar2022[0]"
+                                 :images="writingSeminar2022" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`2021 Veritas Anniversary`"
                                  :thumbnail="vmcAnniversary2021[0]"
                                  :images="vmcAnniversary2021" />
@@ -112,6 +117,18 @@ export default {
   },
   data() {
     return {
+      writingSeminar2022: [
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_A.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_B.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_C.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_D.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_E.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_F.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_G.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_H.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_I.jpg`),
+        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_J.jpg`),
+      ],
       vmcXmasParty1: [
         require(`@/assets/programs/office/vmcXmasParty2016.jpg`),
         require(`@/assets/programs/office/vmcXmasPartyHawaiian.jpg`),

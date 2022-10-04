@@ -11,6 +11,20 @@
         </div>
         <div class="row">
           <div class="col-12">
+            <h4 class="font-weight-light mb-3">2022 Outside Veritas Activities</h4>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Coastal Cleanup`"
+                                 :thumbnail="cleanup2022[3]"
+                                 :images="cleanup2022" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <h4 class="font-weight-light mb-3">2021 Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
@@ -26,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -40,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big ">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -69,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big ">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -95,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="col-12">
           <h4 class="font-weight-light mb-3">2017 Outside Veritas Activities</h4>
@@ -126,6 +140,13 @@ export default {
   },
   data() {
     return {
+      cleanup2022: [
+        require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_A.jpg`),
+        require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_B.jpg`),
+        require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_C.jpg`),
+        require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_D.jpg`),
+        require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_E.jpg`)
+      ],
       healthOct2021: [
         require(`@/assets/programs/office/2021/healthwealth/health2_18-10-2021.jpg`),
         require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
