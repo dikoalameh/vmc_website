@@ -13,6 +13,19 @@
       </div>
       <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 my-3">
+          <div class="card shadow border-0 news-card rounded-medium py-2 px-1" style="height: 530px">
+            <div id="fb-root"></div>
+            <div class="fb-page d-flex justify-content-center" data-href="https://www.facebook.com/VeritasMaritimeCorporation"
+                 data-tabs="timeline" data-width="" data-height="" data-small-header="true"
+                 data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/VeritasMaritimeCorporation"
+                          class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/VeritasMaritimeCorporation">Veritas Maritime Corporation</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3">
           <div class="card shadow border-0 news-card rounded-medium">
             <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
@@ -61,19 +74,6 @@
               </div>
               <p class="mb-0 mt-3" style="opacity: 50%">28 Jul 2022</p>
               <router-link :to="{name: 'VoyageToOurLifeHeritage2022'}" class="stretched-link"></router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3">
-          <div class="card shadow border-0 news-card rounded-medium">
-            <img class="card-img-top px-5" :src="newsContainer5" alt="Card image cap">
-            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title">New Cases From July 11 to July 17</h4>
-                <p>14, 640</p>
-              </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">19 Jul 2022</p>
-              <router-link :to="{name: 'CovidCasesJul11To172022'}" class="stretched-link"></router-link>
             </div>
           </div>
         </div>
