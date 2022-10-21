@@ -167,7 +167,7 @@ export default {
       'banner9': require(`@/assets/keyvisuals/coronamajesty_053022KV.jpg`),
       'banner10': require(`@/assets/keyvisuals/capenormandy_053022KV.jpg`),
       'banner11': require(`@/assets/keyvisuals/intlSeafarer_62722KV.jpg`),
-      'banner12': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022KV.jpg`)
+      'banner12': require(`@/assets/keyvisuals/covidCaseSep26toOct2-2022KV.jpg`)
     }
   },
   mounted() {
