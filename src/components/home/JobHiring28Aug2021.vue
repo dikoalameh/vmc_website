@@ -27,6 +27,12 @@
             </ol>
           </div>
           <div class="modal-footer vmc-bg-dark-1 border-top-0">
+            <router-link type="button" :to="{path: '/career'}"
+                    class="btn vmc-btn-circle vmc-btn-prime w-100"
+                    data-dismiss="modal">
+              See Other Company Job Openings
+            </router-link>
+
             <button type="button"
                     class="btn vmc-btn-circle vmc-btn-secondary w-100"
                     data-dismiss="modal">
