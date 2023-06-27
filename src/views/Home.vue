@@ -59,7 +59,7 @@ import MembershipAffiliations from '../components/home/MembershipAffiliations';
 import VMCHeader from '../components/VMCHeader';
 import VMCFooter from '../components/VMCFooter';
 // import JobHiring28Aug2021 from '../components/home/JobHiring28Aug2021';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default {
   name: 'Home',
