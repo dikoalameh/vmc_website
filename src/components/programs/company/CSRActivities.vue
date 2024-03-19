@@ -11,6 +11,30 @@
         </div>
         <div class="row">
           <div class="col-12">
+            <h4 class="font-weight-light mb-3">2023 Outside Veritas Activities</h4>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bacolod Dental and Medical Mission`"
+                                 :thumbnail="csr111223[0]"
+                                 :images="csr111223" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bohol Patrocinio Elementary School Clinic`"
+                                 :thumbnail="csr110923[0]"
+                                 :images="csr110923" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Davao Tree Planting`"
+                                 :thumbnail="csr032423[0]"
+                                 :images="csr032423" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <h4 class="font-weight-light mb-3">2022 Outside Veritas Activities</h4>
           </div>
           <div class="col-md-4 col-sm-6">
@@ -18,10 +42,15 @@
                                  :thumbnail="cleanup2022[3]"
                                  :images="cleanup2022" />
           </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`4th Quarter Bloodletting Activity`"
+                                 :thumbnail="bloodLetting2022[0]"
+                                 :images="bloodLetting2022" />
+          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -40,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -54,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -83,7 +112,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big ">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -109,7 +138,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="col-12">
           <h4 class="font-weight-light mb-3">2017 Outside Veritas Activities</h4>
@@ -140,6 +169,43 @@ export default {
   },
   data() {
     return {
+      csr032423: [
+        require(`@/assets/programs/csr/2023/davao/csr_032423_A.jpg`),
+        require(`@/assets/programs/csr/2023/davao/csr_032423_B.jpg`),
+        require(`@/assets/programs/csr/2023/davao/csr_032423_C.jpg`),
+        require(`@/assets/programs/csr/2023/davao/csr_032423_D.jpg`),
+        require(`@/assets/programs/csr/2023/davao/csr_032423_E.jpg`),
+        require(`@/assets/programs/csr/2023/davao/csr_032423_F.jpg`),
+      ],
+      csr110923: [
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_A.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_B.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_C.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_D.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_E.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_F.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_G.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_H.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_I.jpg`),
+        require(`@/assets/programs/csr/2023/bohol/csr_110923_J.jpg`),
+      ],
+      csr111223: [
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_A.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_B.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_C.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_D.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_E.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_F.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_G.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_H.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_I.jpg`),
+        require(`@/assets/programs/csr/2023/bacolod/csr_111123_J.jpg`),
+      ],
+      bloodLetting2022: [
+        require(`@/assets/programs/csr/2022/bloodLetting/csr_121222_A.jpg`),
+        require(`@/assets/programs/csr/2022/bloodLetting/csr_121222_B.jpg`),
+        require(`@/assets/programs/csr/2022/bloodLetting/csr_121222_C.jpg`),
+      ],
       cleanup2022: [
         require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_A.jpg`),
         require(`@/assets/programs/csr/2022/cleanup/coastCleanUp_041022_B.jpg`),
