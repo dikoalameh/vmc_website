@@ -12,11 +12,64 @@
         <div class="row">
           <div class="col-12">
             <h4 class="font-weight-light">
-              2022 Allottees Medical Mission
+              2023 Allottees Gathering
             </h4>
           </div>
         </div>
         <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Bacolod 2023`"
+                                 :thumbnail="aParty111523[0]"
+                                 :images="aParty111523" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Bohol 2023`"
+                                 :thumbnail="aParty110923[0]"
+                                 :images="aParty110923" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party CDO 2023`"
+                                 :thumbnail="aParty091123[0]"
+                                 :images="aParty091123" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Cebu 2023`"
+                                 :thumbnail="aParty110523[0]"
+                                 :images="aParty110523" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Davao 2023`"
+                                 :thumbnail="aParty032523[0]"
+                                 :images="aParty032523" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party GMA 2023`"
+                                 :thumbnail="aParty121223[0]"
+                                 :images="aParty121223" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party ILOILO 2023`"
+                                 :thumbnail="aParty111223[0]"
+                                 :images="aParty111223" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light">
+              2022 Allottees Gathering
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party 2022`"
+                                 :thumbnail="aParty120822[0]"
+                                 :images="aParty120822" />
+          </div>
           <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Allottees Medical Mission & Humanitarian Assistance`"
                                  :thumbnail="medmission2022[0]"
@@ -25,7 +78,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -48,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -91,7 +144,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -139,7 +192,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -209,6 +262,97 @@ export default {
   },
   data() {
     return {
+      aParty111223: [
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_A.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_B.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_C.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_D.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_E.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_F.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_G.jpg`),
+        require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_H.jpg`),
+      ],
+      aParty121223: [
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_A.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_B.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_C.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_D.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_E.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_F.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_G.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_H.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_I.jpg`),
+        require(`@/assets/programs/allottees/2023/gma/aParty_121223_J.jpg`),
+      ],
+      aParty032523: [
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_A.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_B.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_C.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_D.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_E.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_F.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_G.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_H.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_I.jpg`),
+        require(`@/assets/programs/allottees/2023/davao/aParty_032523_J.jpg`),
+      ],
+      aParty110523: [
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_A.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_B.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_C.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_D.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_E.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_F.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_G.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_H.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_I.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_J.jpg`),
+        require(`@/assets/programs/allottees/2023/cebu/aParty_110523_K.jpg`),
+      ],
+      aParty091123: [
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_A.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_B.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_C.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_D.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_E.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_F.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_G.jpg`),
+        require(`@/assets/programs/allottees/2023/cdo/aParty_091123_H.jpg`),
+      ],
+      aParty110923: [
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_A.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_B.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_C.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_D.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_E.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_F.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_G.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_H.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_I.jpg`),
+        require(`@/assets/programs/allottees/2023/bohol/aParty_110923_J.jpg`),
+      ],
+      aParty111523: [
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_A.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_B.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_C.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_D.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_E.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_F.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_G.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_H.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_I.jpg`),
+        require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_J.jpg`),
+      ],
+      aParty120822: [
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_A.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_B.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_C.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_D.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_E.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_F.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_G.jpg`),
+        require(`@/assets/programs/allottees/2022/party/aParty_1208_H.jpg`),
+      ],
       medmission2022: [
         require(`@/assets/programs/allottees/2022/medmission/medMission_041022_A.jpg`),
         require(`@/assets/programs/allottees/2022/medmission/medMission_041022_B.jpg`),
