@@ -12,6 +12,24 @@
         <div class="row">
           <div class="col-12">
             <h4 class="font-weight-light">
+              2024 Allottees Gathering
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Davao 2024`"
+                                 :thumbnail="aParty042724[0]"
+                                 :images="aParty042724" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light">
               2023 Allottees Gathering
             </h4>
           </div>
@@ -55,7 +73,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big ">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -78,7 +96,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -101,7 +119,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big ">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -144,7 +162,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -192,7 +210,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+    <div class="container-fluid vmc-py-big ">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -262,6 +280,14 @@ export default {
   },
   data() {
     return {
+      aParty042724: [
+        require(`@/assets/programs/allottees/2024/davao/aParty_042724_A.jpg`),
+        require(`@/assets/programs/allottees/2024/davao/aParty_042724_B.jpg`),
+        require(`@/assets/programs/allottees/2024/davao/aParty_042724_C.jpg`),
+        require(`@/assets/programs/allottees/2024/davao/aParty_042724_D.jpg`),
+        require(`@/assets/programs/allottees/2024/davao/aParty_042724_E.jpg`),
+        require(`@/assets/programs/allottees/2024/davao/aParty_042724_F.jpg`),
+      ],
       aParty111223: [
         require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_A.jpg`),
         require(`@/assets/programs/allottees/2023/iloilo/aParty_111223_B.jpg`),
