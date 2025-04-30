@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+/node_modules
 /dist
 
 
@@ -25,3 +26,9 @@ pnpm-debug.log*
 
 # API URL
 /src/config/apiUrl.js
+
+
+#Docker
+.dockerignore
+Dockerfile
+how to's
