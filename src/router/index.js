@@ -71,6 +71,8 @@ import CovidCasesMay16To22 from "@/components/news/articles/CovidCasesMay16To22"
 import VMC33rdAnniversary from "@/components/news/articles/VMC33rdAnniversary";
 import CovidCasesJul11To172022 from "@/components/news/articles/CovidCasesJul11To172022";
 import VoyageToOurLifeHeritage2022 from "@/components/news/articles/VoyageToOurLifeHeritage2022";
+import VmcCrewFamilyParty2024CebuBohol from "@/components/news/articles/VmcCrewFamilyParty2024CebuBohol.vue";
+import VmcCrewFamilyParty2024IloiloBacolod from "@/components/news/articles/VmcCrewFamilyParty2024IloiloBacolod.vue";
 
 Vue.use(VueRouter)
 
@@ -281,6 +283,16 @@ const routes = [
         path: '28',
         name: 'VoyageToOurLifeHeritage2022',
         component: VoyageToOurLifeHeritage2022
+      },
+      {
+        path: '29',
+        name: 'VmcCrewFamilyParty2024CebuBohol',
+        component: VmcCrewFamilyParty2024CebuBohol
+      },
+      {
+        path: '30',
+        name: 'VmcCrewFamilyParty2024IloiloBacolod',
+        component: VmcCrewFamilyParty2024IloiloBacolod
       },
     ]
   },

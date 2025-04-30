@@ -9,6 +9,55 @@
             </h2>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news30" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">2024 Veritas Crew and Family Parties - Iloilo and Bacolod</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 01, 2024
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Veritas Maritime Corporation held its annual Crew and Family Parties, in advance celebration of the holiday season, across several Provincial Chapters.  Activities commenced from October 26 to 28, 2024 in Cebu and Bohol, and November 8 to 10, 2024 in Iloilo and Bacolod.
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2024IloiloBacolod'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news29" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">2024 Veritas Crew and Family Parties - Cebu and Bohol</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 01, 2024
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Veritas Maritime Corporation held its annual Crew and Family Parties, in advance celebration of the holiday season, across several Provincial Chapters.  Activities commenced from October 26 to 28, 2024 in Cebu and Bohol, and November 8 to 10, 2024 in Iloilo and Bacolod.
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2024CebuBohol'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-12 my-2">
             <div class="card">
@@ -625,6 +674,8 @@ export default {
       'news26': require(`@/assets/news/2022/jul/33rd_anniversary_0714-A.jpg`),
       'news27': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022.jpg`),
       'news28': require(`@/assets/news/2022/jul/VoyageLifetimeHeritage/Picture2.jpg`),
+      'news29': require(`@/assets/news/2024/CebuBohol2024.jpg`),
+      'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`)
     }
   }
 }
