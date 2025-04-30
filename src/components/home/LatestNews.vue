@@ -56,11 +56,11 @@
             <img class="card-img-top" :src="newsContainer6" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 86px; overflow: hidden">2022 VERITAS Staff Business Writing Seminar</h4>
-                <p></p>
+                <h4 class="card-title" style="height: 86px; overflow: hidden">Veritas 35th Anniversary Celebration at the Manila Hotel</h4>
+                <p>Veritas held its 35th Anniversary Celebration at the Manila Hotel –Centennial Hall last July 11, 2024.</p>
               </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">04 October 2022</p>
-              <router-link :to="{name: 'OfficePrograms'}" class="stretched-link"></router-link>
+              <p class="mb-0 mt-3" style="opacity: 50%">28 July 2024</p>
+              <router-link :to="{name: 'Vmc35Anniversary2024'}" class="stretched-link"></router-link>
             </div>
           </div>
         </div>
@@ -69,11 +69,11 @@
             <img class="card-img-top" :src="newsContainer4" alt="Card image cap">
             <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div style="height: 200px; overflow-y: hidden">
-                <h4 class="card-title" style="height: 56px; overflow: hidden">Allottees Medical Mission & Humanitarian Assistance</h4>
-                <p></p>
+                <h4 class="card-title" style="height: 56px; overflow: hidden">2023 Veritas Maritime Corporation Staff Christmas Party</h4>
+                <p> The Veritas Maritime Corporation staff party was held last 08 December 2023 at Marc 2000 Tower’s Penthouse, with the theme “At the Movies”.</p>
               </div>
-              <p class="mb-0 mt-3" style="opacity: 50%">04 October 2022</p>
-              <router-link :to="{name: 'Allottees'}" class="stretched-link"></router-link>
+              <p class="mb-0 mt-3" style="opacity: 50%">20 December 2023</p>
+              <router-link :to="{name: 'VmcStaffXmasParty2023'}" class="stretched-link"></router-link>
             </div>
           </div>
         </div>
@@ -103,9 +103,9 @@ name: "LatestNews",
       'newsContainer1': require(`@/assets/news/2024/CebuBohol2024.jpg`),
       'newsContainer2': require(`@/assets/news/news_17-06-2019.jpg`),
       'newsContainer3': require(`@/assets/news/2024/IloiloBacolod2024.jpg`),
-      'newsContainer4': require(`@/assets/programs/allottees/2022/medmission/medMission_041022_A.jpg`),
+      'newsContainer4': require(`@/assets/news/2023/StaffXmasParty.png`),
       'newsContainer5': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022.jpg`),
-      'newsContainer6': require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_A.jpg`)
+      'newsContainer6': require(`@/assets/news/2024/anniversary/Anniversary35A.png`)
     }
   }
 }
