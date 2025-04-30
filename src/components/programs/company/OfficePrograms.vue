@@ -33,6 +33,11 @@
             <h4 class="font-weight-light mb-3">Staff Programs</h4>
           </div>
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Veritas Staff Christmas Party 2022`"
+                                 :thumbnail="xmasParty2022[0]"
+                                 :images="xmasParty2022" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`2022 VERITAS Staff Business Writing Seminar`"
                                  :thumbnail="writingSeminar2022[0]"
                                  :images="writingSeminar2022" />
@@ -117,6 +122,29 @@ export default {
   },
   data() {
     return {
+      xmasParty2022: [
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty1.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty2.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty3.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty4.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty5.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty6.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty7.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty8.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty9.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty10.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty11.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty12.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty13.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty14.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty15.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty16.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty17.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty18.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty19.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty20.jpg`),
+        require(`@/assets/programs/office/2022/xmasparty/xmasParty21.jpg`),
+      ],
       writingSeminar2022: [
         require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_A.jpg`),
         require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_B.jpg`),

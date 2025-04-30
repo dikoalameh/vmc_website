@@ -84,6 +84,11 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Veritas Crew & Family Christmas Party 2022`"
+                                 :thumbnail="aParty120822B[0]"
+                                 :images="aParty120822B" />
+          </div>
+          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Allotte Party 2022`"
                                  :thumbnail="aParty120822[0]"
                                  :images="aParty120822" />
@@ -368,6 +373,29 @@ export default {
         require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_H.jpg`),
         require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_I.jpg`),
         require(`@/assets/programs/allottees/2023/bacolod/aParty_111523_J.jpg`),
+      ],
+      aParty120822B: [
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty1.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty2.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty3.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty4.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty5.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty6.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty7.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty8.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty9.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty10.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty11.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty12.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty13.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty14.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty15.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty16.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty17.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty18.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty18.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty20.jpg`),
+        require(`@/assets/programs/allottees/2022/xmasparty/crewFamilyXmasParty21.jpg`),
       ],
       aParty120822: [
         require(`@/assets/programs/allottees/2022/party/aParty_1208_A.jpg`),
