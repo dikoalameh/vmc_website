@@ -73,6 +73,9 @@ import CovidCasesJul11To172022 from "@/components/news/articles/CovidCasesJul11T
 import VoyageToOurLifeHeritage2022 from "@/components/news/articles/VoyageToOurLifeHeritage2022";
 import VmcCrewFamilyParty2024CebuBohol from "@/components/news/articles/VmcCrewFamilyParty2024CebuBohol.vue";
 import VmcCrewFamilyParty2024IloiloBacolod from "@/components/news/articles/VmcCrewFamilyParty2024IloiloBacolod.vue";
+import VmcStaffXmasParty2023 from "@/components/news/articles/VmcStaffXmasParty2023.vue";
+import VmcCrewFamilyParty2023 from "@/components/news/articles/VmcCrewFamilyParty2023.vue";
+import Vmc35Anniversary2024 from "@/components/news/articles/Vmc35Anniversary2024.vue";
 
 Vue.use(VueRouter)
 
@@ -293,6 +296,26 @@ const routes = [
         path: '30',
         name: 'VmcCrewFamilyParty2024IloiloBacolod',
         component: VmcCrewFamilyParty2024IloiloBacolod
+      },
+      {
+        path: '31',
+        name: 'VmcStaffXmasParty2023',
+        component: VmcStaffXmasParty2023
+      },
+      {
+        path: '32',
+        name: 'VmcCrewFamilyParty2023',
+        component: VmcCrewFamilyParty2023
+      },
+      {
+        path: '32',
+        name: 'VmcCrewFamilyParty2023',
+        component: VmcCrewFamilyParty2023
+      },
+      {
+        path: '33',
+        name: 'Vmc35Anniversary2024',
+        component: Vmc35Anniversary2024
       },
     ]
   },

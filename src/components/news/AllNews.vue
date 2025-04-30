@@ -63,6 +63,78 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news33" alt="Veritas 35th Anniversary Celebration at the Manila Hotel">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Veritas 35th Anniversary Celebration at the Manila Hotel</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 28, 2024
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Veritas held its 35th Anniversary Celebration at the Manila Hotel –Centennial Hall last July 11, 2024.  Event was well attended by different sectors of government, industry, and other business associates and partners. Congratulatory speeches were given by Asec. Jerome Pampolina of the Department of Migrant Workers (DMW), Mr. Toshihito Inoue, Chairman of International Mariners Management Association of Japan (IMMAJ), Capt. Kazumi Tomi, President of Kagoshima Senpaku Kaisha Ltd., and Capt. Nobuyoshi Hiratsuka, Executive Officer of “K” Line Roro Bulk Ship Management Co. Ltd. (KRBS).
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'Vmc35Anniversary2024'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news31" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">2023 Veritas Maritime Corporation Staff Christmas Party</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 20, 2023
+                    </p>
+                    <p class="d-none d-lg-block">
+                      The Veritas Maritime Corporation staff party was held last 08 December 2023 at Marc 2000 Tower’s Penthouse, with the theme “At the Movies”. The event was attended by a total of 195 participants (84 staff and 111 Family/Guests).
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcStaffXmasParty2023'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news32" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">2023 Greater Manila Area Crew and Family Party</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 20, 2023
+                    </p>
+                    <p class="d-none d-lg-block">
+                      The Crew and Family Party for GMA soon followed last 09 December 2023. The event was held at the Century Park Hotel with a record attendance of 609 participants (71 Crew, 538 Family/Guests).
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2023'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news28" alt="Covid Cases">
                 </div>
                 <div class="col-md-7">
@@ -675,7 +747,10 @@ export default {
       'news27': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022.jpg`),
       'news28': require(`@/assets/news/2022/jul/VoyageLifetimeHeritage/Picture2.jpg`),
       'news29': require(`@/assets/news/2024/CebuBohol2024.jpg`),
-      'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`)
+      'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`),
+      'news31': require(`@/assets/news/2023/StaffXmasParty.png`),
+      'news32': require(`@/assets/news/2023/CrewFamilyXmas.png`),
+      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.png`),
     }
   }
 }

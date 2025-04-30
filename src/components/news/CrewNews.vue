@@ -63,6 +63,30 @@
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
                 <div class="col-md-5">
+                  <img class="card-img" :src="news32" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">2023 Greater Manila Area Crew and Family Party</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 20, 2023
+                    </p>
+                    <p class="d-none d-lg-block">
+                      The Crew and Family Party for GMA soon followed last 09 December 2023. The event was held at the Century Park Hotel with a record attendance of 609 participants (71 Crew, 538 Family/Guests).
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2023'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
                   <img class="card-img" :src="news28" alt="Covid Cases">
                 </div>
                 <div class="col-md-7">
@@ -234,7 +258,8 @@ export default {
       'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`),
       'news28': require(`@/assets/news/2022/jul/VoyageLifetimeHeritage/Picture2.jpg`),
       'news29': require(`@/assets/news/2024/CebuBohol2024.jpg`),
-      'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`)
+      'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`),
+      'news32': require(`@/assets/news/2023/CrewFamilyXmas.png`),
     }
   }
 };

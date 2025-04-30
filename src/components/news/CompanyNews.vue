@@ -9,6 +9,55 @@
             </h2>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news33" alt="Veritas 35th Anniversary Celebration at the Manila Hotel">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">Veritas 35th Anniversary Celebration at the Manila Hotel</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — July 28, 2024
+                    </p>
+                    <p class="d-none d-lg-block">
+                      Veritas held its 35th Anniversary Celebration at the Manila Hotel –Centennial Hall last July 11, 2024.  Event was well attended by different sectors of government, industry, and other business associates and partners. Congratulatory speeches were given by Asec. Jerome Pampolina of the Department of Migrant Workers (DMW), Mr. Toshihito Inoue, Chairman of International Mariners Management Association of Japan (IMMAJ), Capt. Kazumi Tomi, President of Kagoshima Senpaku Kaisha Ltd., and Capt. Nobuyoshi Hiratsuka, Executive Officer of “K” Line Roro Bulk Ship Management Co. Ltd. (KRBS).
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'Vmc35Anniversary2024'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 my-2">
+            <div class="card">
+              <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md-5">
+                  <img class="card-img" :src="news31" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-1">2023 Veritas Maritime Corporation Staff Christmas Party</h4>
+                    <p class="vmc-text-primary-2 letter-spacing-1">
+                      By Veritas Admin — December 20, 2023
+                    </p>
+                    <p class="d-none d-lg-block">
+                      The Veritas Maritime Corporation staff party was held last 08 December 2023 at Marc 2000 Tower’s Penthouse, with the theme “At the Movies”. The event was attended by a total of 195 participants (84 staff and 111 Family/Guests).
+                    </p>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcStaffXmasParty2023'}">continue reading . . .</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-12 my-2">
             <div class="card">
@@ -294,7 +343,9 @@ export default {
       'news18': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
       'news23': require(`@/assets/news/2022WomanLikeNoOther.jpg`),
       'news24': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`),
-      'news26': require(`@/assets/news/2022/jul/33rd_anniversary_0714-A.jpg`)
+      'news26': require(`@/assets/news/2022/jul/33rd_anniversary_0714-A.jpg`),
+      'news31': require(`@/assets/news/2023/StaffXmasParty.png`),
+      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.png`),
     }
   }
 };
