@@ -30,10 +30,9 @@
             <img :src="kagoshima" alt="">
           </div>
           <div class="col-lg-8 order-lg-0 my-3">
-            <h4 class="font-weight-normal vmc-text-primary-2 mb-0">KAGOSHIMA SENPAKU KAISHA, LTD. – Affiliate of Fujitrans</h4>
+            <h4 class="font-weight-normal vmc-text-primary-2 mb-0">Ocean Link, Ltd.</h4>
             <p class="mb-1 small">
-              37-75, Shiomi-cho, Minato-ku, Nagoya, AICHI, 455-0028, Japan —
-              TEL 81-52-614-5870 / FAX 81-52-614-5867
+              5F, Miyuki Bldg, 3-20-27, Nishiki, Naka-ku, Nagoya, Aichi, Japan
             </p>
 <!--            <p class="vmc-text-primary-2 mb-1">President: CAPT. KAZUMI TOMI</p>-->
 <!--            <p class="font-weight-light mb-0">-->
