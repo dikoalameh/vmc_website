@@ -76,6 +76,10 @@ import VmcCrewFamilyParty2024IloiloBacolod from "@/components/news/articles/VmcC
 import VmcStaffXmasParty2023 from "@/components/news/articles/VmcStaffXmasParty2023.vue";
 import VmcCrewFamilyParty2023 from "@/components/news/articles/VmcCrewFamilyParty2023.vue";
 import Vmc35Anniversary2024 from "@/components/news/articles/Vmc35Anniversary2024.vue";
+import NewZealandElectronicTravelAuthority2025
+  from "@/components/news/articles/NewZealandElectronicTravelAuthority2025.vue";
+import JapanVisaApplicationAnnouncement2025 from "@/components/news/articles/JapanVisaApplicationAnnouncement2025.vue";
+import MarinaMismoV22025 from "@/components/news/articles/MarinaMismoV22025.vue";
 
 Vue.use(VueRouter)
 
@@ -316,6 +320,21 @@ const routes = [
         path: '33',
         name: 'Vmc35Anniversary2024',
         component: Vmc35Anniversary2024
+      },
+      {
+        path: '34',
+        name: 'NewZealandElectronicTravelAuthority2025',
+        component: NewZealandElectronicTravelAuthority2025
+      },
+      {
+        path: '35',
+        name: 'JapanVisaApplicationAnnouncement2025',
+        component: JapanVisaApplicationAnnouncement2025
+      },
+      {
+        path: '36',
+        name: 'MarinaMismoV22025',
+        component: MarinaMismoV22025
       },
     ]
   },
