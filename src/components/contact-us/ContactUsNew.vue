@@ -83,28 +83,6 @@
                   https://www.facebook.com/VeritasMaritimeCorporation</a>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-4 d-flex justify-content-lg-between align-items-center font-weight-bold pr-0">
-                <span>Veritas Crew</span>
-                <span class="ml-2">:</span>
-              </div>
-              <div class="col-lg-8 text-break">
-                <a href="https://www.facebook.com/veritas.maritime.587"
-                   target="_blank" class="vmc-text-primary-2">
-                  https://www.facebook.com/veritas.maritime.587</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4 d-flex justify-content-lg-between align-items-center font-weight-bold pr-0">
-                <span>Veritas Crew Allottee</span>
-                <span class="ml-2">:</span>
-              </div>
-              <div class="col-lg-8 text-break">
-                <a href="https://www.facebook.com/vmcallottee"
-                   target="_blank" class="vmc-text-primary-2">
-                  https://www.facebook.com/vmcallottee</a>
-              </div>
-            </div>
 
             <h4 class="font-weight-light mb-1 mt-3">Send us comments / feedback :</h4>
             <form @submit.prevent="sendFeedback" ref="sendFeedbackForm" method="post">
