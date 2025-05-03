@@ -15,10 +15,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h4 class="font-weight-normal mb-0">Training Schedule</h4>
-          </div>
-          <div class="col-md-12 my-2" v-for="schedule in trainingScheds" v-bind:key="schedule">
-            <img :src="schedule" alt="" class="border">
+            <h4 class="font-weight-normal mb-0">Coming Soon . . .</h4>
           </div>
         </div>
       </div>
