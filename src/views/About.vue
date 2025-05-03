@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <vmc-header />
-    <page-heading page-title-name="ABOUT VERITAS" image-link="about/VMCTopManagement.jpg"/>
+    <page-heading page-title-name="ABOUT VERITAS" image-link="blue_background.jpg"/>
     <router-view></router-view>
     <vmc-footer />
   </div>
