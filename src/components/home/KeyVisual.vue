@@ -10,9 +10,6 @@
           <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="5"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="6"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="7"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="8"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="9"></li>
         </ol>
       </div>
       <div class="carousel-inner">
@@ -60,17 +57,6 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner7+')'}" id="BannerSeven">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
-            </div>
-          </div>
-        </div>
         <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner5+')'}" id="BannerFive">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
@@ -98,31 +84,6 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner2+')'} " id="BannerTwo">
-          <svg class="bd-placeholder-img" style="opacity: 50%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">VERITAS GEARED TOWARDS</p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                THE NEW NORMAL
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner4+')'}" id="BannerFour">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
-              <p class="vmc-text-white font-weight-light caption-three"></p>
-            </div>
-          </div>
-        </div>
         <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner1+')'}" id="BannerOne">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
@@ -134,7 +95,7 @@
                 TOWARD GROWTH, STABILITY
               </p>
               <p class="vmc-text-white font-weight-light caption-three">
-                One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
+                One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11, 2019 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
               </p>
             </div>
           </div>
@@ -159,14 +120,14 @@ export default {
   data() {
     return {
       'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
-      'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
-      'banner4': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
+      // 'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
+      // 'banner4': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
       'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
       'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
-      'banner7': require(`@/assets/keyvisuals/mlcisocert_52022KV.jpg`),
+      // 'banner7': require(`@/assets/keyvisuals/mlcisocert_52022KV.jpg`),
       'banner9': require(`@/assets/keyvisuals/coronamajesty_053022KV.jpg`),
       'banner10': require(`@/assets/keyvisuals/capenormandy_053022KV.jpg`),
-      'banner11': require(`@/assets/keyvisuals/intlSeafarer_62722KV.jpg`),
+      'banner11': require(`@/assets/keyvisuals/BicolAllottee2025.jpg`),
       'banner12': require(`@/assets/keyvisuals/capehayate_032024KV.jpg`)
     }
   },
@@ -174,29 +135,21 @@ export default {
     const w = window.innerWidth;
     const h = window.innerHeight;
     const carousel1 = document.getElementById('BannerOne');
-    const carousel2 = document.getElementById('BannerTwo');
-    const carousel3 = document.getElementById('BannerFour');
     const carousel4 = document.getElementById('BannerFive');
     const carousel5 = document.getElementById('BannerSix');
-    const carousel6 = document.getElementById('BannerSeven');
     const carousel8 = document.getElementById('BannerNine');
     const carousel9 = document.getElementById('BannerTen');
     const carousel10 = document.getElementById('BannerEleven');
     const carousel11 = document.getElementById('BannerTwelve');
-    // const carousel10 = document.getElementById('BannerTen');
 
     if (w > 992 && w < h) {
       carousel1.style.height = "60vh"
-      carousel2.style.height = "60vh"
-      carousel3.style.height = "60vh"
       carousel4.style.height = "60vh"
       carousel5.style.height = "60vh"
-      carousel6.style.height = "60vh"
       carousel8.style.height = "60vh"
       carousel9.style.height = "60vh"
       carousel10.style.height = "60vh"
       carousel11.style.height = "60vh"
-      // carousel10.style.height = "60vh"
     }
     // console.log('width ' + w);
     // console.log('height ' + h);
