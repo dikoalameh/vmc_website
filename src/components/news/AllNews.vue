@@ -19,14 +19,14 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">NEW ZEALAND ELECTRONIC TRAVEL AUTHORITY (NZeTA)</h4>
+                    <h4 class="font-weight-normal mb-1">MARINA MISMO V2</h4>
                     <p class="vmc-text-primary-2 letter-spacing-1">
                       By Veritas Admin — May 04, 2025
                     </p>
                     <p class="d-none d-lg-block">
-                      Effective 01 April 2025, the NZeTA will be required for present onboard crew vessels calling New Zealand.
+                      The target date to launch the version 2 (V2) will be on 01May2025. In V2, all details will be viewed before submitting and users need to make sure that SIRB Stamp and Sea Service has same data.
                     </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'NewZealandElectronicTravelAuthority2025'}">continue reading . . .</router-link>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaMismoV22025'}">continue reading . . .</router-link>
                   </div>
                 </div>
               </div>
@@ -55,7 +55,6 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-12 my-2">
             <div class="card">
@@ -65,14 +64,14 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">MARINA MISMO V2</h4>
+                    <h4 class="font-weight-normal mb-1">NEW ZEALAND ELECTRONIC TRAVEL AUTHORITY (NZeTA)</h4>
                     <p class="vmc-text-primary-2 letter-spacing-1">
                       By Veritas Admin — May 04, 2025
                     </p>
                     <p class="d-none d-lg-block">
-                      The target date to launch the version 2 (V2) will be on 01May2025. In V2, all details will be viewed before submitting and users need to make sure that SIRB Stamp and Sea Service has same data.
+                      Effective 01 April 2025, the NZeTA will be required for present onboard crew vessels calling New Zealand.
                     </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaMismoV22025'}">continue reading . . .</router-link>
+                    <router-link class="vmc-text-primary-2" :to="{name: 'NewZealandElectronicTravelAuthority2025'}">continue reading . . .</router-link>
                   </div>
                 </div>
               </div>
