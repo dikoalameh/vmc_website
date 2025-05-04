@@ -13,9 +13,9 @@
     </div>
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h4 class="font-weight-normal mb-0">Coming Soon . . .</h4>
+        <div class="row justify-content-center">
+          <div class="col-md-6 my-2">
+            <img :src="section1" alt="" class="border" style="height: auto; width: 100%;">
           </div>
         </div>
       </div>
@@ -28,10 +28,7 @@ export default {
   name: "SchedulesOfVMC",
   data() {
     return  {
-      trainingScheds: [
-        require(`@/assets/schedules/2024/inHouseTrainingSchedule032124.jpg`),
-        require(`@/assets/schedules/2022/training/Matrix-2022.jpg`),
-      ]
+      section1 : require(`@/assets/schedules/2025/bicolAllottee.jpg`),
     }
   }
 }

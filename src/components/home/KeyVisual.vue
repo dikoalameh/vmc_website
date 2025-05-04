@@ -9,7 +9,6 @@
           <li data-target="#VMCKeyVisual" data-slide-to="3"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
           <li data-target="#VMCKeyVisual" data-slide-to="5"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="6"></li>
         </ol>
       </div>
       <div class="carousel-inner">
@@ -24,17 +23,17 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner11+')'}" id="BannerEleven">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>
-            </div>
-          </div>
-        </div>
+<!--        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner11+')'}" id="BannerEleven">-->
+<!--          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">-->
+<!--            <rect width="100%" height="100%" fill="var(&#45;&#45;vmc-primary-3)"/>-->
+<!--          </svg>-->
+<!--          <div class="container">-->
+<!--            <div class="carousel-caption text-left">-->
+<!--              <p class="mb-2 font-weight-normal text-white caption-one"></p>-->
+<!--              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner10+')'}" id="BannerTen">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
@@ -127,7 +126,7 @@ export default {
       // 'banner7': require(`@/assets/keyvisuals/mlcisocert_52022KV.jpg`),
       'banner9': require(`@/assets/keyvisuals/coronamajesty_053022KV.jpg`),
       'banner10': require(`@/assets/keyvisuals/capenormandy_053022KV.jpg`),
-      'banner11': require(`@/assets/keyvisuals/BicolAllottee2025.jpg`),
+      // 'banner11': require(`@/assets/keyvisuals/BicolAllottee2025.jpg`),
       'banner12': require(`@/assets/keyvisuals/capehayate_032024KV.jpg`)
     }
   },
@@ -139,7 +138,6 @@ export default {
     const carousel5 = document.getElementById('BannerSix');
     const carousel8 = document.getElementById('BannerNine');
     const carousel9 = document.getElementById('BannerTen');
-    const carousel10 = document.getElementById('BannerEleven');
     const carousel11 = document.getElementById('BannerTwelve');
 
     if (w > 992 && w < h) {
@@ -148,7 +146,6 @@ export default {
       carousel5.style.height = "60vh"
       carousel8.style.height = "60vh"
       carousel9.style.height = "60vh"
-      carousel10.style.height = "60vh"
       carousel11.style.height = "60vh"
     }
     // console.log('width ' + w);
