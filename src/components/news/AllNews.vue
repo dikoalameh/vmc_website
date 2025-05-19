@@ -819,7 +819,7 @@ export default {
       'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`),
       'news31': require(`@/assets/news/2023/StaffXmasParty.png`),
       'news32': require(`@/assets/news/2023/CrewFamilyXmas.png`),
-      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.png`),
+      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.jpg`),
       'news34': require(`@/assets/news/govt_advisory_template.jpg`),
     }
   }

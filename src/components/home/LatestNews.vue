@@ -105,7 +105,7 @@ name: "LatestNews",
       'newsContainer3': require(`@/assets/news/2024/IloiloBacolod2024.jpg`),
       'newsContainer4': require(`@/assets/news/2023/StaffXmasParty.png`),
       'newsContainer5': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022.jpg`),
-      'newsContainer6': require(`@/assets/news/2024/anniversary/Anniversary35A.png`)
+      'newsContainer6': require(`@/assets/news/2024/anniversary/Anniversary35A.jpg`)
     }
   }
 }

@@ -66,7 +66,7 @@ export default {
   data(){
     return {
       section1 : [
-        require(`@/assets/news/2024/anniversary/Anniversary35A.png`),
+        require(`@/assets/news/2024/anniversary/Anniversary35A.jpg`),
         require(`@/assets/news/2024/anniversary/Anniversary35B.png`),
       ],
       section8 : [

@@ -345,7 +345,7 @@ export default {
       'news24': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`),
       'news26': require(`@/assets/news/2022/jul/33rd_anniversary_0714-A.jpg`),
       'news31': require(`@/assets/news/2023/StaffXmasParty.png`),
-      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.png`),
+      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.jpg`),
     }
   }
 };
