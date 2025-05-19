@@ -18,16 +18,6 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Allotte Party Bacolod 2024`"
-                                 :thumbnail="aParty24Bacolod[0]"
-                                 :images="aParty24Bacolod" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Allotte Party Bohol 2024`"
-                                 :thumbnail="aParty24Bohol[0]"
-                                 :images="aParty24Bohol" />
-          </div>
-          <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Allotte Party CDO 2024`"
                                  :thumbnail="aParty24Cdo[0]"
                                  :images="aParty24Cdo" />
@@ -38,14 +28,24 @@
                                  :images="aParty24Cebu" />
           </div>
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Allotte Party GMA 2024`"
-                                 :thumbnail="aParty24Gma[0]"
-                                 :images="aParty24Gma" />
+            <photo-gallery-modal :caption="`Allotte Party Bohol 2024`"
+                                 :thumbnail="aParty24Bohol[0]"
+                                 :images="aParty24Bohol" />
           </div>
           <div class="col-md-4 col-sm-6">
             <photo-gallery-modal :caption="`Allotte Party Iloilo 2024`"
                                  :thumbnail="aParty24Iloilo[0]"
                                  :images="aParty24Iloilo" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Bacolod 2024`"
+                                 :thumbnail="aParty24Bacolod[0]"
+                                 :images="aParty24Bacolod" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party GMA 2024`"
+                                 :thumbnail="aParty24Gma[0]"
+                                 :images="aParty24Gma" />
           </div>
         </div>
       </div>
