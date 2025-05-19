@@ -18,9 +18,34 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Allotte Party Davao 2024`"
-                                 :thumbnail="aParty042724[0]"
-                                 :images="aParty042724" />
+            <photo-gallery-modal :caption="`Allotte Party Bacolod 2024`"
+                                 :thumbnail="aParty24Bacolod[0]"
+                                 :images="aParty24Bacolod" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Bohol 2024`"
+                                 :thumbnail="aParty24Bohol[0]"
+                                 :images="aParty24Bohol" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party CDO 2024`"
+                                 :thumbnail="aParty24Cdo[0]"
+                                 :images="aParty24Cdo" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Cebu 2024`"
+                                 :thumbnail="aParty24Cebu[0]"
+                                 :images="aParty24Cebu" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party GMA 2024`"
+                                 :thumbnail="aParty24Gma[0]"
+                                 :images="aParty24Gma" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Allotte Party Iloilo 2024`"
+                                 :thumbnail="aParty24Iloilo[0]"
+                                 :images="aParty24Iloilo" />
           </div>
         </div>
       </div>
@@ -285,6 +310,24 @@ export default {
   },
   data() {
     return {
+      aParty24Bacolod:[
+        require(`@/assets/programs/allottees/2024/BACOLOD.jpg`),
+      ],
+      aParty24Bohol:[
+        require(`@/assets/programs/allottees/2024/BOHOL.jpg`),
+      ],
+      aParty24Cdo:[
+        require(`@/assets/programs/allottees/2024/CDO.jpg`),
+      ],
+      aParty24Cebu:[
+        require(`@/assets/programs/allottees/2024/CEBU.jpg`),
+      ],
+      aParty24Gma:[
+        require(`@/assets/programs/allottees/2024/GMA.jpg`),
+      ],
+      aParty24Iloilo:[
+        require(`@/assets/programs/allottees/2024/ILOILO.jpg`),
+      ],
       aParty042724: [
         require(`@/assets/programs/allottees/2024/davao/aParty_042724_A.jpg`),
         require(`@/assets/programs/allottees/2024/davao/aParty_042724_B.jpg`),
