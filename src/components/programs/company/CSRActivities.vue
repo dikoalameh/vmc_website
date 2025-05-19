@@ -1,6 +1,6 @@
 <template>
   <div class="csr-activities">
-    <div class="container-fluid vmc-py-big">
+    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
@@ -9,6 +9,25 @@
             </h2>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-light mb-3">2024 Outside Veritas Activities</h4>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Bohol CSR`"
+                                 :thumbnail="csr24Bohol[0]"
+                                 :images="csr24Bohol" />
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <photo-gallery-modal :caption="`Iloilo CSR`"
+                                 :thumbnail="csr24Iloilo[0]"
+                                 :images="csr24Iloilo" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid vmc-py-big">
+      <div class="container">
         <div class="row">
           <div class="col-12">
             <h4 class="font-weight-light mb-3">2023 Outside Veritas Activities</h4>
@@ -169,6 +188,12 @@ export default {
   },
   data() {
     return {
+      csr24Bohol: [
+        require(`@/assets/programs/csr/2024/BOHOLCSR.jpg`),
+      ],
+      csr24Iloilo: [
+        require(`@/assets/programs/csr/2024/ILOILOCSR.jpg`),
+      ],
       csr032423: [
         require(`@/assets/programs/csr/2023/davao/csr_032423_A.jpg`),
         require(`@/assets/programs/csr/2023/davao/csr_032423_B.jpg`),
