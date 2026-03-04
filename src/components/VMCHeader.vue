@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <div class="row d-flex align-items-center">
           <div class="col-auto">
-            <a href="/"><img :src="vmcLogo" alt="" style="width: 85px;"></a>
+            <a href="/"><img :src="vmcLogo" alt="" style="width: 80px;"></a>
           </div>
           <div class="col-auto px-0 d-none d-sm-inline-block">
             <a href="/" style="text-decoration: none">

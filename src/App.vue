@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
     <privacy-notice />
   </div>
 </template>
@@ -34,5 +34,21 @@ export default {
 <style scoped>
 * {
   font-family: 'Roboto', "Noto Sans SC", "Open Sans", sans-serif;
+}
+</style>
+<style>
+.instant-enter-active {
+  transition: opacity 0.25s ease;
+}
+
+.instant-leave-active {
+  transition: none !important;
+}.instant-leave-active {
+  transition: none !important;  /* removes moving/sliding effect */
+}
+
+.instant-enter,
+.instant-leave-to {
+  opacity: 0;
 }
 </style>

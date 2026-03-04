@@ -9,6 +9,31 @@ import Home from '../views/Home.vue'
 // import Career from '../views/Career';
 // import Contact from '../views/Contact';
 // import Page404 from '../views/Page404.vue'
+// import Auth from '../views/Auth.vue';
+// import adminCMS from '../views/adminCMS.vue';
+import LoginPage from '../components/auth/LoginPage';
+import ForgotPassword from '../components/auth/ForgotPassword';
+import SendOTP from '../components/auth/SendOTP';
+import ChangePassword from '../components/auth/ChangePassword';
+import JobHiringCMS from '../components/admin/JobHiringCMS';
+import KeyVisualsCMS from '../components/admin/KeyVisualsCMS';
+import DashboardCMS from '../components/admin/DashboardCMS';
+import NewsCMS from '../components/admin/NewsCMS';
+import NewsHistoryCMS from '../components/admin/NewsHistoryCMS';
+import TheCompanyCMS from '../components/admin/TheCompanyCMS';
+import OurPrincipalsCMS from '../components/admin/OurPrincipalsCMS';
+import ContactUsCMS from '../components/admin/ContactUsCMS';
+import MembershipAffiliationsCMS from '../components/admin/MembershipAffiliationsCMS';
+import SchedulesCMS from '../components/admin/SchedulesCMS';
+import CareerCMS from '../components/admin/CareerCMS';
+import ScholarshipCadetshipCMS from '../components/admin/ScholarshipCadetshipCMS';
+import OfficeProgramsCMS from '../components/admin/OfficeProgramsCMS';
+import AllotteeCMS from '../components/admin/AllotteeCMS';
+import CSRActivitiesCMS from '../components/admin/CSRActivitiesCMS';
+import CrewAndFleetStatusCMS from '../components/admin/CrewAndFleetStatusCMS';
+import CrewDevelopmentCMS from '../components/admin/CrewDevelopmentCMS';
+import ActionLogCMS from '../components/admin/ActionLogCMS';
+import UsersListsCMS from '../components/admin/UsersListsCMS';
 import TheCompany from '../components/about-us/TheCompany';
 import OurPrincipals from '../components/about-us/OurPrincipals';
 import AllNews from '../components/news/AllNews';
@@ -80,7 +105,6 @@ import NewZealandElectronicTravelAuthority2025
   from "@/components/news/articles/NewZealandElectronicTravelAuthority2025.vue";
 import JapanVisaApplicationAnnouncement2025 from "@/components/news/articles/JapanVisaApplicationAnnouncement2025.vue";
 import MarinaMismoV22025 from "@/components/news/articles/MarinaMismoV22025.vue";
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -94,6 +118,156 @@ const routes = [
     path: '/home',
     // name: 'Home',
     component: Home,
+  },
+  {
+    path: '/auth/',
+    name: 'Auth',
+    component: () => import(/*webpackChunkName: "login"*/ "../views/Auth"),
+    redirect: '/auth/login',
+    children: [
+      {
+        path: 'login',
+        name: 'LoginPage',
+        component: LoginPage
+      },
+      {
+        path: 'forgot-password',
+        name: 'ForgotPassword',
+        component: ForgotPassword
+      },
+      {
+        path: 'send-otp',
+        name: 'SendOTP',
+        component: SendOTP
+      },
+      {
+        path: 'change-password',
+        name: 'ChangePassword',
+        component: ChangePassword
+      }
+    ]
+  },
+  {
+    path: '/admin',
+    name: 'adminCMS',
+    component: () => import(/*webpackChunkName: "login"*/ "../views/adminCMS"),
+    redirect: '/admin/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        name: 'DashboardCMS',
+        component: DashboardCMS,
+        meta: { title: 'Dashboard' }
+      },
+      {
+        path: 'job-hiring',
+        name: 'JobHiringCMS',
+        component: JobHiringCMS,
+        meta: { title: 'Job Hiring' }
+      },
+      {
+        path: 'key-visuals',
+        name: 'KeyVisualsCMS',
+        component: KeyVisualsCMS,
+        meta: { title: 'Key Visuals' }
+      },
+      {
+        path: 'crew-and-fleet',
+        name: 'CrewAndFleetStatusCMS',
+        component: CrewAndFleetStatusCMS,
+        meta: { title: 'Crew and Fleet' }
+      },
+      {
+        path: 'the-company',
+        name: 'TheCompanyCMs',
+        component: TheCompanyCMS,
+        meta: { title: 'Company' }
+      },
+      {
+        path: 'our-principals',
+        name: 'OurPrincipalsCMS',
+        component: OurPrincipalsCMS,
+        meta: { title: 'Principals' }
+      },
+      {
+        path: 'news',
+        name: 'NewsCMS',
+        component: NewsCMS,
+        meta: { title: 'News Article' }
+      },
+      {
+        path: 'news-history',
+        name: 'NewsHistoryCMS',
+        component: NewsHistoryCMS,
+        meta: { title: 'News History' }
+      },
+      {
+        path: 'contact-us',
+        name: 'ContactUsCMS',
+        component: ContactUsCMS,
+        meta: { title: 'Contacts' }
+      },
+      {
+        path: 'membership-affiliations',
+        name: 'MembershipAffiliationsCMS',
+        component: MembershipAffiliationsCMS,
+        meta: { title: 'Membership and Affiliations' }
+      },
+      {
+        path: 'schedules',
+        name: 'SchedulesCMS',
+        component: SchedulesCMS,
+        meta: { title: 'Schedules' }
+      },
+      {
+        path: 'careers',
+        name: 'CareerCMS',
+        component: CareerCMS,
+        meta: { title: 'Career' }
+      },
+      {
+        path: 'scholarship-cadetship',
+        name: 'ScholarshipCadetshipCMS',
+        component: ScholarshipCadetshipCMS,
+        meta: { title: 'Scholarship and Cadetship' }
+      },
+      {
+        path: 'office-programs',
+        name: 'OfficeProgramsCMS',
+        component: OfficeProgramsCMS,
+        meta: { title: 'Office Programs' }
+      },
+      {
+        path: 'allottees',
+        name: 'AllotteeCMS',
+        component: AllotteeCMS,
+        meta: { title: 'Allottees' }
+      },
+      {
+        path: 'csr-activities',
+        name: 'CSRActivitiesCMS',
+        component: CSRActivitiesCMS,
+        meta: { title: 'CSR Activities' }
+      },
+      {
+        path: 'crew-development',
+        name: 'CrewDevelopmentCMS',
+        component: CrewDevelopmentCMS,
+        meta: { title: 'Crew Development' }
+      },
+      {
+        path: 'action-log',
+        name: "ActionLogCMS",
+        component: ActionLogCMS,
+        meta: { title: 'Action Log' }
+      },
+      {
+        path: 'users-lists',
+        name: "UsersListsCMS",
+        component: UsersListsCMS,
+        meta: { title: 'User Lists' }
+      }
+    ]
   },
   {
     path: '/about',
@@ -112,7 +286,7 @@ const routes = [
         name: 'OurPrincipals',
         component: OurPrincipals
       },
-      ]
+    ]
   },
   {
     path: '/news',
@@ -305,11 +479,6 @@ const routes = [
         path: '31',
         name: 'VmcStaffXmasParty2023',
         component: VmcStaffXmasParty2023
-      },
-      {
-        path: '32',
-        name: 'VmcCrewFamilyParty2023',
-        component: VmcCrewFamilyParty2023
       },
       {
         path: '32',

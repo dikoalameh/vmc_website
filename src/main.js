@@ -26,16 +26,16 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
 
-library.add( faPhoneAlt,
-    faEnvelope,
-    faGreaterThan,
-    faChevronRight,
-    faBars,
-    faThumbsUp,
-    faHandHoldingHeart,
-    faHandshake,
-    faChevronLeft,
-    faFacebookF)
+library.add(faPhoneAlt,
+  faEnvelope,
+  faGreaterThan,
+  faChevronRight,
+  faBars,
+  faThumbsUp,
+  faHandHoldingHeart,
+  faHandshake,
+  faChevronLeft,
+  faFacebookF)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)

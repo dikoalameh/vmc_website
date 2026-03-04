@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <vmc-header />
-    <page-heading page-title-name="NEWS & UPDATE" image-link="news/news_bg_7-7-2021.jpg"/>
+    <page-heading page-title-name="NEWS & UPDATE" image-link="news/news_bg_7-7-2021.jpg" />
     <router-view></router-view>
     <vmc-footer />
   </div>
@@ -15,13 +15,11 @@ import PageHeading from '../components/PageHeading';
 export default {
   name: "News",
   components: {
-    'vmc-header':VMCHeader,
-    'vmc-footer':VMCFooter,
+    'vmc-header': VMCHeader,
+    'vmc-footer': VMCFooter,
     'page-heading': PageHeading,
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
