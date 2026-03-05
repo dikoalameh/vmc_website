@@ -54,5 +54,18 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShanCaj/vmc_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShanCaj/vmc_website/issues"
+  },
+  "homepage": "https://github.com/ShanCaj/vmc_website#readme"
 }

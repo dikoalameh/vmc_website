@@ -11,12 +11,31 @@
         </div>
       </div>
     </div>
+
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-6 my-2">
-            <img :src="section1" alt="" class="border" style="height: auto; width: 100%;">
+          
+          <div 
+            class="col-md-6 my-2" 
+            v-for="(item, index) in (cms.scheduleImages || [])" 
+            :key="index"
+          >
+            <!-- Replaced raw <img> with your PhotoGalleryModal component -->
+            <photo-gallery-modal 
+                v-if="item.image"
+                :thumbnail="item.image"
+                :images="[item.image]" 
+            />
           </div>
+
+          <div 
+             v-if="!cms.scheduleImages || cms.scheduleImages.length === 0" 
+             class="col-12 text-center text-white"
+          >
+            <p class="no-schedule-msg">No schedule available.</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -24,16 +43,19 @@
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
+// Successfully mapped to the exact path you found!
+import PhotoGalleryModal from '@/components/programs/app-layout/PhotoGalleryModal';
+
 export default {
   name: "SchedulesOfVMC",
-  data() {
-    return  {
-      section1 : require(`@/assets/schedules/2025/bicolAllottee.jpg`),
-    }
+  mixins: [cmsMixin],
+  components: {
+    'photo-gallery-modal': PhotoGalleryModal
   }
 }
 </script>
 
 <style scoped>
-
+/* Removed all the manual custom modal CSS since PhotoGalleryModal handles everything automatically! */
 </style>

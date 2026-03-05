@@ -1,309 +1,75 @@
 <template>
   <div class="office-programs">
-    <div class="container-fluid vmc-py-big">
-      <div class="container">
+    
+    <!-- Dynamic CMS background -->
+    <div class="dynamic-page-heading">
+      <video v-if="cms.officeProgramsBackgroundVideo" :key="cms.officeProgramsBackgroundVideo" playsinline autoplay muted loop :src="cms.officeProgramsBackgroundVideo" class="bg-media"></video>
+      <img v-else-if="cms.officeProgramsBackgroundImage" :src="cms.officeProgramsBackgroundImage" class="bg-media" alt="Background">
+      <img v-else :src="require('@/assets/no_image.jpg')" class="bg-media" alt="Default Background">
+      
+      <div class="heading-overlay"></div>
+      
+      <div class="container heading-content">
         <div class="row">
           <div class="col-12 text-center">
-            <h2 class="h1 vmc-text-primary vmc-heading">
-              Office Programs
+            <h2 class="h1 text-white vmc-heading mb-0" style="letter-spacing: 3px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7);">
+              OFFICE PROGRAMS
             </h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light">Crew Programs</h4>
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
-            <photo-gallery-modal :caption="`Loyalty Award 2021`"
-                                 :thumbnail="loyaltyAward2021[0]"
-                                 :images="loyaltyAward2021" />
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
-            <photo-gallery-modal :caption="`Veritas Latest Vessel Visitation`"
-                                 :thumbnail="vesselVisitation[0]"
-                                 :images="vesselVisitation" />
-          </div>
-        </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+
+    <div v-for="(category, index) in (cms.officePrograms || [])" :key="index" :class="['container-fluid', 'vmc-py-big', index % 2 !== 0 ? 'vmc-bg-dark-1' : '']">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h4 class="font-weight-light mb-3">Staff Programs</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas Staff Christmas Party 2024`"
-                                 :thumbnail="xmasParty2024[0]"
-                                 :images="xmasParty2024" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas Staff Christmas Party 2023`"
-                                 :thumbnail="xmasParty2023[0]"
-                                 :images="xmasParty2023" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas Staff Christmas Party 2022`"
-                                 :thumbnail="xmasParty2022[0]"
-                                 :images="xmasParty2022" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`2022 VERITAS Staff Business Writing Seminar`"
-                                 :thumbnail="writingSeminar2022[0]"
-                                 :images="writingSeminar2022" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`2021 Veritas Anniversary`"
-                                 :thumbnail="vmcAnniversary2021[0]"
-                                 :images="vmcAnniversary2021" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas Christmas Party 2019`"
-                                 :thumbnail="vmcXmasParty1[0]"
-                                 :images="vmcXmasParty1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Fire Drill 2019`"
-                                 :thumbnail="firedrill2019[0]"
-                                 :images="firedrill2019" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Veritas 30th Anniversary 2019`"
-                                 :thumbnail="vmc30Anniversary[0]"
-                                 :images="vmc30Anniversary" />
+            <h4 class="font-weight-light mb-3">{{ category.categoryTitle }}</h4>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container-fluid vmc-py-big">
-      <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h4 class="font-weight-light mb-3">Vessel Send Off Party</h4>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Loyalty Awardee`"
-                                 :thumbnail="loyaltyAwardee[0]"
-                                 :images="loyaltyAwardee" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Cadets Teambuilding`"
-                                 :thumbnail="cadetsTeambuilding1[0]"
-                                 :images="cadetsTeambuilding1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Horizon Highway`"
-                                 :thumbnail="horizonHighway1[0]"
-                                 :images="horizonHighway1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Cape Hayatomo`"
-                                 :thumbnail="capeHayatomo1[0]"
-                                 :images="capeHayatomo1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Shining Bliss`"
-                                 :thumbnail="shiningBliss1[0]"
-                                 :images="shiningBliss1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Corona Utility`"
-                                 :thumbnail="coronaUtility1[0]"
-                                 :images="coronaUtility1" />
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <photo-gallery-modal :caption="`Send-Off Ceremony M/V Drive Green`"
-                                 :thumbnail="driveGreen1[0]"
-                                 :images="driveGreen1" />
+          <div class="col-md-4 col-sm-6 mt-3" v-for="(event, eIndex) in category.activities" :key="eIndex">
+            <photo-gallery-modal v-if="event.images && event.images.length > 0" :caption="event.title" :thumbnail="event.images[0]" :images="event.images" />
           </div>
         </div>
       </div>
     </div>
+
+    <div v-if="!cms.officePrograms || cms.officePrograms.length === 0" class="container text-center py-5">
+        <p class="text-muted">No office programs found.</p>
+    </div>
+
   </div>
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
 import PhotoGalleryModal from '../app-layout/PhotoGalleryModal';
 
 export default {
   name: 'OfficePrograms',
+  mixins: [cmsMixin], 
   components: {
     'photo-gallery-modal' : PhotoGalleryModal
-  },
-  data() {
-    return {
-      xmasParty2024: [
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty1.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty2.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty3.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty4.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty5.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty6.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty7.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty8.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty9.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty10.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty11.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty12.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty13.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty14.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty15.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty16.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty17.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty18.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty19.jpg`),
-        require(`@/assets/programs/office/2024/xmasparty/xmasParty20.jpg`),
-      ],
-      xmasParty2023: [
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty1.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty2.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty3.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty4.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty5.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty6.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty7.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty8.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty9.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty10.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty11.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty12.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty13.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty14.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty15.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty16.jpg`),
-        require(`@/assets/programs/office/2023/xmasparty/xmasParty17.jpg`),
-      ],
-      xmasParty2022: [
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty1.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty2.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty3.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty4.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty5.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty6.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty7.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty8.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty9.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty10.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty11.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty12.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty13.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty14.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty15.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty16.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty17.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty18.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty19.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty20.jpg`),
-        require(`@/assets/programs/office/2022/xmasparty/xmasParty21.jpg`),
-      ],
-      writingSeminar2022: [
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_A.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_B.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_C.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_D.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_E.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_F.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_G.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_H.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_I.jpg`),
-        require(`@/assets/programs/office/2022/seminar/writingSeminar_041022_J.jpg`),
-      ],
-      vmcXmasParty1: [
-        require(`@/assets/programs/office/vmcXmasParty2016.jpg`),
-        require(`@/assets/programs/office/vmcXmasPartyHawaiian.jpg`),
-      ],
-      vmc30Anniversary: [
-        require(`@/assets/programs/office/30YearsGroupPhoto.jpg`),
-        require(`@/assets/programs/office/vmc25Anniversary.jpg`),
-        require(`@/assets/programs/office/30YearsFront.png`),
-        require(`@/assets/programs/office/JMMSpeech.png`),
-        require(`@/assets/programs/office/JMMSoloSpeech.png`),
-      ],
-      loyaltyAwardee: [
-        require(`@/assets/programs/office/2014-Loyalty-Awardee_18.jpg`)
-      ],
-      horizonHighway1: [
-        require(`@/assets/programs/office/2017_horizon.jpg`)
-      ],
-      capeHayatomo1: [
-        require(`@/assets/programs/office/2017_hayatomo.jpg`)
-      ],
-      shiningBliss1: [
-        require(`@/assets/programs/office/shining_bliss.jpg`)
-      ],
-      coronaUtility1: [
-        require(`@/assets/programs/office/corona_utility.jpg`)
-      ],
-      driveGreen1: [
-        require(`@/assets/programs/office/drive_green.jpg`)
-      ],
-      cadetsTeambuilding1: [
-        require(`@/assets/programs/office/cadets_teambuilding.jpg`)
-      ],
-      firedrill2019: [
-        require(`@/assets/programs/office/2019/firedrill/drill1_7-7-2021.jpg`),
-        require(`@/assets/programs/office/2019/firedrill/drill2_7-7-2021.jpg`),
-        require(`@/assets/programs/office/2019/firedrill/drill3_7-7-2021.jpg`),
-        require(`@/assets/programs/office/2019/firedrill/drill4_7-7-2021.jpg`),
-        require(`@/assets/programs/office/2019/firedrill/drill5_7-7-2021.jpg`),
-      ],
-      vesselVisitation: [
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_1_63021_crop.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_2_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_3_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_4_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_5_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_6_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_7_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_8_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_9_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_10_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_11_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_12_63021.jpg`),
-        require(`@/assets/programs/office/vesselvisitation/vessel_visitation_13_63021.jpg`),
-      ],
-      loyaltyAward2021: [
-        require(`@/assets/programs/office/2021/loyaltyaward/AB_Avellaneda.jpg`),
-        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Albay.jpg`),
-        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Daluz.jpg`),
-        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Panaguiton.jpg`),
-        require(`@/assets/programs/office/2021/loyaltyaward/CAPT_Suyat.jpg`),
-      ],
-      vmcAnniversary2021: [
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv1_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv2_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv3_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv6_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv8_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv12_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv4_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv5_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv7_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv9_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv10_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv11_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv13_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv15_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv16_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv14_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv17_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv19_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv20_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv18_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv22_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv21_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv23_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv24_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv26_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv27_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv28_24Aug2021.jpg`),
-        require(`@/assets/programs/office/2021/anniversary/vmc_aniv25_24Aug2021.jpg`),
-      ],
-    }
   }
 };
 </script>
 
 <style scoped>
-
+.dynamic-page-heading {
+  position: relative;
+  width: 100%;
+  height: 40vh; 
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+  margin-top: 85px; 
+}
+.bg-media { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: 100%; height: 100%; object-fit: cover; transform: translateX(-50%) translateY(-50%); z-index: 0; }
+.heading-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.45); z-index: 1; }
+.heading-content { position: relative; z-index: 2; }
+@media (min-width: 992px) { .dynamic-page-heading { margin-top: 105px; } }
 </style>

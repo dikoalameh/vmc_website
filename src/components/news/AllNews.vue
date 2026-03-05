@@ -2,830 +2,112 @@
   <div class="news">
     <div class="container-fluid vmc-py-big">
       <div class="container">
+        
         <div class="row">
           <div class="col-12 text-center">
             <h2 class="h1 vmc-text-primary vmc-heading">
-              All News
+              All News & Updates
             </h2>
           </div>
         </div>
 
-        <div class="row">
+        <div v-for="article in allNewsList" :key="article.id" class="row">
           <div class="col-12 my-2">
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
+                
                 <div class="col-md-5">
-                  <img class="card-img" :src="news34" alt="Government Advisories">
+                  <!-- CHANGED: Safely load either images[0] or fallback to legacy image string -->
+                  <img class="card-img" 
+                      :src="(article.images && article.images.length > 0) ? article.images[0] : (article.image || require('@/assets/no_image.jpg'))" 
+                      alt="News Image"
+                      style="object-fit: cover; height: 100%; min-height: 250px;">
+                  
                 </div>
+
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">MARINA MISMO V2</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 04, 2025
-                    </p>
-                    <p class="d-none d-lg-block">
-                      The target date to launch the version 2 (V2) will be on 01May2025. In V2, all details will be viewed before submitting and users need to make sure that SIRB Stamp and Sea Service has same data.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaMismoV22025'}">continue reading . . .</router-link>
+                    
+                    <div class="font-weight-normal mb-1">
+                      <h4 class="title-clamp">{{ article.title }}</h4>
+                    </div>  
+
+                    <div class="letter-spacing-1">
+                      <p class="author-date-clamp">
+                        <span class="badge badge-info mr-2" style="background-color: #85a8c7; color: white; padding: 5px;">{{ article.category }}</span>
+                        By {{ article.author }} — {{ article.date }} 
+                      </p>
+                    </div>
+
+                    <div class="d-none d-lg-block"> 
+                      <p class="news-clamp"> {{ article.content }}</p> 
+                    </div>
+
+                    <router-link class="vmc-text-primary-2" :to="'/news/' + article.id">continue reading . . .</router-link> 
+
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news34" alt="Government Advisories">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">JAPAN VISA APPLICATION</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 04, 2025
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Japan Embassy announced the opening of Japan Visa Application Centre (JVAC) to accept and issue visa applications. The Japan Visa Centre by VFS Service Philippines, Inc. is scheduled to begin its operation on 07 April 2025.                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'JapanVisaApplicationAnnouncement2025'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news34" alt="Government Advisories">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">NEW ZEALAND ELECTRONIC TRAVEL AUTHORITY (NZeTA)</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 04, 2025
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Effective 01 April 2025, the NZeTA will be required for present onboard crew vessels calling New Zealand.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'NewZealandElectronicTravelAuthority2025'}">continue reading . . .</router-link>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news30" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">2024 Veritas Crew and Family Parties - Iloilo and Bacolod</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — December 01, 2024
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Veritas Maritime Corporation held its annual Crew and Family Parties, in advance celebration of the holiday season, across several Provincial Chapters.  Activities commenced from October 26 to 28, 2024 in Cebu and Bohol, and November 8 to 10, 2024 in Iloilo and Bacolod.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2024IloiloBacolod'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div v-if="allNewsList.length === 0" class="row mt-5">
+          <div class="col-12 text-center">
+            <p class="text-muted">No news articles found.</p> 
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news29" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">2024 Veritas Crew and Family Parties - Cebu and Bohol</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — December 01, 2024
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Veritas Maritime Corporation held its annual Crew and Family Parties, in advance celebration of the holiday season, across several Provincial Chapters.  Activities commenced from October 26 to 28, 2024 in Cebu and Bohol, and November 8 to 10, 2024 in Iloilo and Bacolod.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2024CebuBohol'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news33" alt="Veritas 35th Anniversary Celebration at the Manila Hotel">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Veritas 35th Anniversary Celebration at the Manila Hotel</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 28, 2024
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Veritas held its 35th Anniversary Celebration at the Manila Hotel –Centennial Hall last July 11, 2024.  Event was well attended by different sectors of government, industry, and other business associates and partners. Congratulatory speeches were given by Asec. Jerome Pampolina of the Department of Migrant Workers (DMW), Mr. Toshihito Inoue, Chairman of International Mariners Management Association of Japan (IMMAJ), Capt. Kazumi Tomi, President of Kagoshima Senpaku Kaisha Ltd., and Capt. Nobuyoshi Hiratsuka, Executive Officer of “K” Line Roro Bulk Ship Management Co. Ltd. (KRBS).
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'Vmc35Anniversary2024'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news31" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">2023 Veritas Maritime Corporation Staff Christmas Party</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — December 20, 2023
-                    </p>
-                    <p class="d-none d-lg-block">
-                      The Veritas Maritime Corporation staff party was held last 08 December 2023 at Marc 2000 Tower’s Penthouse, with the theme “At the Movies”. The event was attended by a total of 195 participants (84 staff and 111 Family/Guests).
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcStaffXmasParty2023'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news32" alt="2024 Veritas Crew and Family Parties - Cebu and Bohol">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">2023 Greater Manila Area Crew and Family Party</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — December 20, 2023
-                    </p>
-                    <p class="d-none d-lg-block">
-                      The Crew and Family Party for GMA soon followed last 09 December 2023. The event was held at the Century Park Hotel with a record attendance of 609 participants (71 Crew, 538 Family/Guests).
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VmcCrewFamilyParty2023'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news28" alt="Covid Cases">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">VOYAGE TO OUR LIFE HERITAGE</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 28, 2022
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Mr. Agustin “Jun” Casten Gagajena, Jr., is the youngest of four children of Major Agustin Gagajena, Sr and Norma Casten Gagajena. By origin, his family name reflects his traits as a Risk Taker, Visionary and Unpretentious.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VoyageToOurLifeHeritage2022'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news27" alt="Covid Cases">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">New Cases From July 11 to July 17</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 19, 2022
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'CovidCasesJul11To172022'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news26" alt="Covid Cases">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Veritas Maritime Corporation 33rd Anniversary</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 12, 2022
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Congratulations VERITAS for another fruitful year! 33 years and stronger!
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VMC33rdAnniversary'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news25" alt="Covid Cases">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">New Cases From May 16 to May 22</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 27, 2022
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'CovidCasesMay16To22'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news24" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">QMS-2022-010 MLC Certified and ISO Certified</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 20, 2022
-                    </p>
-                    <p class="d-none d-lg-block">
-                      QMS-2022-010 Congratulations Veritas Family for being MLC Certified and ISO Certified
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MLCCertifiedAndISOCertified'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news23" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">A Woman Like No Other</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 08, 2022
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Miss Naty… a woman like no other, who dedicated 31 years of her life at Veritas Maritime Corporation, and still actively mentoring the next generation of leaders, extending her motherly love to all the office staff and crew surrounding her on and off work.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'AWomanLikeNoOther2022'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news19" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">MARINA TWG Vaccination Schedules</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — December 06, 2021
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaTwgVaccinationSchedules'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news22" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Veritas Allotees Year End Gathering for Bacolod/Iloilo Panay Island Group</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — November 27, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      SAVE THE DATE! 🥳🎉
-                      You are invited to the Veritas Allotees Year End Gathering for Cebu, Bohol, Bicol, CDO, Davao, Metro Manila/Luzon and other Provinces on December 5, 2021 at 1-4pm.
-
-                      Registration is a must! Please click on this link to register:
-                      <a href="https://forms.gle/LGQ87nSz9VWQX2Ts9" target="_blank">https://forms.gle/LGQ87nSz9VWQX2Ts9</a>
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'AllotteesCebuBoholBicolcdoDavaoMm2021'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news21" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Veritas Allotees Year End Gathering for Bacolod/Iloilo Panay Island Group</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — November 25, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      SAVE THE DATE! 🥳🎉
-                      You are invited to the Veritas Allotees Year End Gathering for Bacolod/Iloilo Panay Island Group on December 4, 2021 at 1-4pm.
-
-                      Registration is a must! Please click on this link to register:
-                      <a href="https://forms.gle/dPkMNhFoCbJBZDEZA" target="_blank">https://forms.gle/dPkMNhFoCbJBZDEZA</a>
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'AllotteesBacolodIloiloPanay2021Gathering'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news20" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Mariners' Industry Sponsored-Cadets (MIS)</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — November 11, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      On November 10 and 11, 2021, the VERITAS MARITIME CORPORATION will offer an ONLINE examination and interview for
-                      pre-selected cadets. This is part of the Mariners' Industry Sponsored Cadets (MIS) Program selection process.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MarinaIndustrySponsoredCadets2021'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news18" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Health and Wealth Summit Oct 2021</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — October 20, 2021
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'HealthWealthSummitOct2021'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news17" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">SALUDO To All Our Athletes!</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — August 08, 2021
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'SaludoToAllOurAthletesTokyo2020'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news16" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Congratulations, Hidilyn Diaz! Saludo kami sayo.</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 28, 2021
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'HidilynDiazWeightliftingTokyo2020'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news14" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Seamans Wife Insights</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 10, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      As a wife of a seafarer, it is not an easy job or task simply because there is a lot of challenges that I encounter in our daily life.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'SeamansWifeInsights'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news13" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">My Personal Experience with Veritas Maritime Corporation</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 10, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      I, Penelope L. Lumanog graduated on December 2019 at Centro Escolar University and looked for a job in various platforms such as jobstreet. I have applied to a lot of companies and went on interviews, but what really picked my interest and attention was the Veritas Maritime Corporation.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'MyPersonalExperiencePenelopeLumanog'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news15" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Health and Wealth Summit</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 7, 2021
-                    </p>
-                    <p class="d-none d-lg-block"></p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'HealthWealthSummit2021'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news7" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">VMC Crew Experience / Story</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 6, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      During this hard time of pandemic, we cannot think more other than our health. It has been everyone's priority since the Covid-19 outbreak started.                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'CrewVeritasStory'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news12" alt="">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">MESSAGE of H.E. TEODORO L. LOCSIN, JR. Secretary of Foreign Affairs on the Day of the Seafarer 25 June 2021</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      Embassy of the Republic of the Philippines — June 25, 2021
-                    </p>
-                    <p class="d-none d-lg-block">The Department of Foreign Affairs is honored to celebrate the Day of the Seafarer. </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'TeodoroLocsinMessageDaySeafarer25June2021'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news6" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Retired Crew Virtual Awarding Ceremony</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — May 27, 2021
-                    </p>
-                    <p class="d-none d-lg-block">
-                      On May 27, 2021, 15 - 31 service years crew in Veritas Maritime Corporation held a retired crew virtual awarding ceremony via zoom.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'RetiredCrewVirtualAwardingCeremony'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news2" alt="">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Seafaring organization under proposed OFW dept pushed</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By The Manila Times — March 10, 2021
-                    </p>
-                    <p class="d-none d-lg-block">With the Senate trying to rush the enactment of the new law creating the Department of Overseas Filipino Workers, the country’s biggest umbrella group in the manning sector has strongly lobbied for a dedicated organization for the seafaring sector </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'SeafaringOrganizationUnderProposedOFWDeptPushed'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news5" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Veritas Christmas Video 2020</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — December 25, 2020
-                    </p>
-                    <p class="d-none d-lg-block">
-                      The talented and hardworking staff of Veritas made a video tribute for the Christmas season to remind us that we are one family facing this pandemic.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'VeritasChristmasVideo2020'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news3" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Seafarers, Heroes of the Pandemic as Shipping Plays Vital Role in Crisis</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — November 12, 2020
-                    </p>
-                    <p class="d-none d-lg-block">
-                      The global shipping industry has played a vital role in the global response to the COVID-19 pandemic, and demand for its services has limited the annual decline in maritime trade volumes to around 4.1 per cent in 2020, the UN Conference on Trade and Development (UNCTAD) said in its annual report on the shipping industry on Thursday.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'SeafarersHeroesOfPandemic'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news8" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">BOQ TNKC House Inspection 2020</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 8, 2021
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'BoqTnkcHouseInspection'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news9" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">TNKC House Swab Test 2020</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 8, 2021
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'TnkcHouseSwabTest'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news10" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Joining Crew 2020</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 8, 2021
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'JoiningCrewBritainBay2020'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news11" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">New Normal Office 2020</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 8, 2021
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'NewNormalOffice2020'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news1" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Carrying a family legacy toward growth, stability</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Yashika F. Torib — July 17, 2019
-                    </p>
-                    <p class="d-none d-lg-block">One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.</p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'CarryingAFamilyLegacyTowardGrowthStability'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <div class="card">
-              <div class="row no-gutters d-flex align-items-center">
-                <div class="col-md-5">
-                  <img class="card-img" :src="news4" alt="Suresh Dasari Card">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-1">Veritas 30th Anniversary Same Day Edit Video</h4>
-                    <p class="vmc-text-primary-2 letter-spacing-1">
-                      By Veritas Admin — July 11, 2019
-                    </p>
-                    <p class="d-none d-lg-block">
-                      Same day video shoot and edit for the 30th-anniversary celebration of Veritas.
-                    </p>
-                    <router-link class="vmc-text-primary-2" :to="{name: 'Veritas30thAnniversarySameDayEditVideo'}">continue reading . . .</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
+
 export default {
-  name: "AllNews",
-  data() {
-    return {
-      'news1': require(`@/assets/news/news_17-06-2019.jpg`),
-      'news2': require(`@/assets/news/news_10-03-2021.jpg`),
-      'news3': require(`@/assets/news/SeafarersHeroes_home.jpg`),
-      'news4': require(`@/assets/news/news_28-04-2021-30thAnniversary.jpg`),
-      'news5': require(`@/assets/news/news_28-04-2021-XmasParty.jpg`),
-      'news6': require(`@/assets/keyvisuals/retirees_63021.jpg`),
-      'news7': require(`@/assets/news/2014E015_covid_7-6-2021.jpg`),
-      'news8': require(`@/assets/news/2020/tnkcinspection/boqinspect1_7-8-2021.jpg`),
-      'news9': require(`@/assets/news/2020/tnkcswabtest/swab1_7-8-2021.jpg`),
-      'news10': require(`@/assets/news/2020/joiningcrew/crew1_7-8-2021.jpg`),
-      'news11': require(`@/assets/news/2020/newnormaloffice/office1_7-8-2021.jpg`),
-      'news12': require(`@/assets/news/TeodoroLocsinMessage_home.jpg`),
-      'news13': require(`@/assets/news/newsStaff_7-10-2021.jpg`),
-      'news14': require(`@/assets/news/tagaveritasako_7-9-2021.jpg`),
-      'news15': require(`@/assets/programs/csr/2021/healthwealth/health2_7-9-2021.jpg`),
-      'news16': require(`@/assets/news/weightlifting_07-28-2021.jpg`),
-      'news17': require(`@/assets/news/medalist_cv_tokyo2020-08_08_2021.jpg`),
-      'news18': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
-      'news19': require(`@/assets/news/2021/vaccinesched/area1_thumbnail_061221.jpg`),
-      'news20': require(`@/assets/news/2021/mis_news_111221.jpg`),
-      'news21': require(`@/assets/programs/allottees/2021/2021AllotteeVisayas.jpg`),
-      'news22': require(`@/assets/programs/allottees/2021/2021AllotteeOthers.jpg`),
-      'news23': require(`@/assets/news/2022WomanLikeNoOther.jpg`),
-      'news24': require(`@/assets/news/2022/may/mlcisocert_52022-thumbnail.jpg`),
-      'news25': require(`@/assets/news/2022/may/covid_cases_27522R.jpg`),
-      'news26': require(`@/assets/news/2022/jul/33rd_anniversary_0714-A.jpg`),
-      'news27': require(`@/assets/news/2022/jul/covidCaseJul11to17-2022.jpg`),
-      'news28': require(`@/assets/news/2022/jul/VoyageLifetimeHeritage/Picture2.jpg`),
-      'news29': require(`@/assets/news/2024/CebuBohol2024.jpg`),
-      'news30': require(`@/assets/news/2024/IloiloBacolod2024.jpg`),
-      'news31': require(`@/assets/news/2023/StaffXmasParty.png`),
-      'news32': require(`@/assets/news/2023/CrewFamilyXmas.png`),
-      'news33': require(`@/assets/news/2024/anniversary/Anniversary35A.jpg`),
-      'news34': require(`@/assets/news/govt_advisory_template.jpg`),
+  name: 'AllNews',
+  mixins: [cmsMixin],
+  computed: {
+    allNewsList() {
+      const list = this.cms.newsArticles || [];
+      return list.slice().sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
     }
   }
-}
+};
 </script>
 
 <style scoped>
+.news-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
 
+.author-date-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+  color: #85a8c7;
+}
+
+.title-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.vmc-py-big { padding-top: 80px; padding-bottom: 80px; }
+.vmc-text-primary { color: #002366; }
+.vmc-text-primary-2 { color: #85a8c7; }
 </style>

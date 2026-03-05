@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+
+//for adminCMS in views folder
+import adminCMS from '../views/adminCMS.vue'
+
 // import About from '../views/About';
 // import News from '../views/News';
 // import Programs from '../views/Programs';
@@ -9,6 +13,11 @@ import Home from '../views/Home.vue'
 // import Career from '../views/Career';
 // import Contact from '../views/Contact';
 // import Page404 from '../views/Page404.vue'
+
+import LoginPage from '../components/auth/LoginPage';
+import ForgotPassword from '../components/auth/ForgotPassword';
+import SendOTP from '../components/auth/SendOTP';
+import ChangePassword from '../components/auth/ChangePassword';
 import TheCompany from '../components/about-us/TheCompany';
 import OurPrincipals from '../components/about-us/OurPrincipals';
 import AllNews from '../components/news/AllNews';
@@ -83,6 +92,7 @@ import MarinaMismoV22025 from "@/components/news/articles/MarinaMismoV22025.vue"
 
 Vue.use(VueRouter)
 
+
 const routes = [
   {
     path: '/',
@@ -94,6 +104,34 @@ const routes = [
     path: '/home',
     // name: 'Home',
     component: Home,
+  },
+  {
+    path: '/auth/',
+    name: 'Auth',
+    component: () => import(/*webpackChunkName: "login"*/ "../views/Auth"),
+    redirect: '/auth/login',
+    children: [
+      {
+        path: 'login',
+        name: 'LoginPage',
+        component: LoginPage
+      },
+      {
+        path: 'forgot-password',
+        name: 'ForgotPassword',
+        component: ForgotPassword
+      },
+      {
+        path: 'send-otp',
+        name: 'SendOTP',
+        component: SendOTP
+      },
+      {
+        path: 'change-password',
+        name: 'ChangePassword',
+        component: ChangePassword
+      }
+    ]
   },
   {
     path: '/about',
@@ -312,11 +350,6 @@ const routes = [
         component: VmcCrewFamilyParty2023
       },
       {
-        path: '32',
-        name: 'VmcCrewFamilyParty2023',
-        component: VmcCrewFamilyParty2023
-      },
-      {
         path: '33',
         name: 'Vmc35Anniversary2024',
         component: Vmc35Anniversary2024
@@ -451,10 +484,31 @@ const routes = [
       },
     ]
   },
+
+  //for adminCMS in views folder
+  {
+  path: '/admin',
+  name: 'adminCMS',
+  component: adminCMS
+},
+  
+
+  
+  // {
+  //   path: '/*',
+  //   name: 'Page404',
+  //   // component: Page404
+  //   component: () => import(/* webpackChunkName: "404" */ "../views/Page404.vue")
+  // }
+
+  {// route for news article view
+    path: '/news/:id',
+    name: 'ArticleView',
+    component: () => import('../views/articleviewCMS.vue')
+  }, 
   {
     path: '/*',
     name: 'Page404',
-    // component: Page404
     component: () => import(/* webpackChunkName: "404" */ "../views/Page404.vue")
   }
 ]

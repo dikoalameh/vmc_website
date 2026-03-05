@@ -8,7 +8,9 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">2303</h2>
+          <h2 class="mb-0 vmc-text-primary" style="font-size: clamp(24px, 4vw, 38px);">
+            {{ totalCrewCalculated }}
+          </h2>
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
@@ -19,7 +21,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">1310</h2>
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ cms.onBoard }}</h2> <!-- On Board -->
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
@@ -30,7 +32,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">993</h2>
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ cms.standBy }}</h2> <!-- Stand By -->
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
@@ -41,7 +43,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">64</h2>
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ cms.totalVessels }}</h2> <!-- Total Vessels -->
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
@@ -53,10 +55,23 @@
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
+
 export default {
   name: 'CrewFleetStatus',
+
+  mixins: [cmsMixin], 
+  computed: {
+    totalCrewCalculated() {
+      // Force them to be numbers so they don't combine as text (e.g. "10" + "20" = "1020")
+      const onBoard = Number(this.cms.onBoard) || 0;
+      const standBy = Number(this.cms.standBy) || 0;
+      return onBoard + standBy;
+    }
+  }
 };
 </script>
+
 
 <style scoped>
 .vmc-bg-dark-half {

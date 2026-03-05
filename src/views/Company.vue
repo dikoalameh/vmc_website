@@ -1,8 +1,10 @@
 <template>
   <div class="company">
     <vmc-header />
-    <page-heading page-title-name="VERITAS PROGRAMS" image-link="news_container.jpg"/>
+    
+    <!-- We removed the global page-heading so the child pages can display their own unique headers! -->
     <router-view></router-view>
+    
     <vmc-footer />
   </div>
 </template>
@@ -10,18 +12,15 @@
 <script>
 import VMCHeader from '../components/VMCHeader';
 import VMCFooter from '../components/VMCFooter';
-import PageHeading from '../components/PageHeading';
 
 export default {
   name: 'Company',
   components: {
-    'vmc-header':VMCHeader,
-    'vmc-footer':VMCFooter,
-    'page-heading': PageHeading,
+    'vmc-header': VMCHeader,
+    'vmc-footer': VMCFooter
   }
 };
 </script>
 
 <style scoped>
-
 </style>

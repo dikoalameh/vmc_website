@@ -12,14 +12,17 @@
         </ol>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active parallax-effect" :style="{backgroundImage:'url('+banner12+')'}" id="BannerTwelve">
+        <div class="carousel-item active parallax-effect" 
+             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide1) ? 'url('+cms.keyVisuals.slide1+')' : 'url('+banner12+')'}" 
+             id="BannerTwelve">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">CAPE HAYATE</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP1 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP1 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP1 }}</p> <!-- CMS controlled -->
             </div>
           </div>
         </div>
@@ -34,68 +37,73 @@
 <!--            </div>-->
 <!--          </div>-->
 <!--        </div>-->
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner10+')'}" id="BannerTen">
+        <div class="carousel-item parallax-effect" 
+             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide2) ? 'url('+cms.keyVisuals.slide2+')' : 'url('+banner10+')'}" 
+             id="BannerTen">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">CAPE NORMANDY</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP2 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP2 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP2 }}</p> <!-- CMS controlled -->
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner9+')'}" id="BannerNine">
+        <div class="carousel-item parallax-effect" 
+             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide3) ? 'url('+cms.keyVisuals.slide3+')' : 'url('+banner9+')'}" 
+             id="BannerNine">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one"></p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">CORONA MAJESTY</p>
+              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP3 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP3 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP3 }}</p> <!-- CMS controlled -->
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner5+')'}" id="BannerFive">
+        <div class="carousel-item parallax-effect" 
+             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide4) ? 'url('+cms.keyVisuals.slide4+')' : 'url('+banner5+')'}" 
+             id="BannerFive">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">SALUTE TO ALL OUR FRONTLINERS</p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                TAGA VERITAS AKO!
-              </p>
+              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP4 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP4 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP4 }}</p> <!-- CMS controlled -->
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner6+')'}" id="BannerSix">
+        <div class="carousel-item parallax-effect" 
+             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide5) ? 'url('+cms.keyVisuals.slide5+')' : 'url('+banner6+')'}" 
+             id="BannerSix">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">"TAGA VERITAS AKO!"</p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                VERITAS FRONT LINERS
-              </p>
-              <p class="vmc-text-white font-weight-light caption-three"></p>
+              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP5 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP5 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP5 }}</p> <!-- CMS controlled -->
             </div>
           </div>
         </div>
-        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner1+')'}" id="BannerOne">
+        <div class="carousel-item parallax-effect" 
+          :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide6) ? 'url('+cms.keyVisuals.slide6+')' : 'url('+banner1+')'}" 
+          id="BannerOne">
           <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
           </svg>
           <div class="container">
             <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">CARRYING A FAMILY LEGACY</p>
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">
-                TOWARD GROWTH, STABILITY
-              </p>
-              <p class="vmc-text-white font-weight-light caption-three">
-                One of the country’s pioneers in the maritime manning sector, Veritas Maritime Corp. welcomed on July 11, 2019 its new leader, Francis Jerome “Jiro” Marquez, to family, friends and colleagues.
-              </p>
+              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP6 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP6 }}</p> <!-- CMS controlled -->
+              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP6 }}</p> <!-- CMS controlled -->
             </div>
           </div>
         </div>
@@ -113,7 +121,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   name: "KeyVisual",
   data() {
@@ -152,7 +160,51 @@ export default {
     // console.log('height ' + h);
   }
 }
+</script> -->
+
+<script>
+import { cmsMixin } from '@/mixins/cmsMixin'; // Import the CMS mixin (copy and paste this line)
+
+export default {
+  name: "KeyVisual",
+  
+  mixins: [cmsMixin], // Include the CMS mixin here (copy and paste this line)
+
+  // Use data function to define your images
+  data() {
+    return {
+      'banner1': require(`@/assets/no_image.jpg`),
+      'banner5': require(`@/assets/no_image.jpg`),
+      'banner6': require(`@/assets/no_image.jpg`),
+      'banner9': require(`@/assets/no_image.jpg`),
+      'banner10': require(`@/assets/no_image.jpg`),
+      'banner12': require(`@/assets/no_image.jpg`)
+      
+    }
+  },
+  mounted() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const carousel1 = document.getElementById('BannerOne');
+    const carousel4 = document.getElementById('BannerFive');
+    const carousel5 = document.getElementById('BannerSix');
+    const carousel8 = document.getElementById('BannerNine');
+    const carousel9 = document.getElementById('BannerTen');
+    const carousel11 = document.getElementById('BannerTwelve');
+
+    if (w > 992 && w < h) {
+      if (carousel1) carousel1.style.height = "60vh";
+      if (carousel4) carousel4.style.height = "60vh";
+      if (carousel5) carousel5.style.height = "60vh";
+      if (carousel8) carousel8.style.height = "60vh";
+      if (carousel9) carousel9.style.height = "60vh";
+      if (carousel11) carousel11.style.height = "60vh";
+    }
+
+  }
+}
 </script>
+
 
 <style scoped>
 /* CUSTOMIZE THE CAROUSEL
@@ -198,9 +250,9 @@ export default {
 }
 
 .parallax-effect {
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: top;
+  /* Stretch the background image to fill the entire slide */
+  background-attachment: scroll;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }

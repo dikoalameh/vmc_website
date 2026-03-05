@@ -8,23 +8,18 @@
             <h4 class="modal-title text-center w-100 font-weight-normal vmc-text-white letter-spacing-1" id="JobHiringTitle">Urgent Hiring</h4>
           </div>
           <div class="modal-body">
-            <h4 class="font-weight-normal vmc-text-primary-2 mt-3 text-left">MASTER MARINER:</h4>
-            <ol class="text-left">
-              <li class="pl-2">Holder of valid Master Mariner COC/COE and other documents required as per STCW</li>
-              <li class="pl-2">With Cape size vessel experience as Master for 18 months.</li>
-            </ol>
+            <!-- Main contents of the Hiring pop up -->
 
-            <h4 class="font-weight-normal vmc-text-primary-2">CHIEF MATE (CHIEF OFFICER):</h4>
-            <ol>
-              <li class="pl-2">Holder of valid Chief Mate COC/COE and other documents required as per STCW</li>
-              <li class="pl-2">With Cape size (or Panamax) vessel experience as C/M for 18 months</li>
-            </ol>
+         
+            <div v-for="(job, index) in cms.jobList" :key="index" class="mb-4">
+              <h4 class="font-weight-normal vmc-text-primary-2 mt-3 text-left">{{ job.title }}</h4>
+              <ol class="text-left">
+                <li v-for="(req, rIndex) in (job.requirements ? job.requirements.split('\n') : [])" :key="rIndex" class="pl-2">{{ req }}</li>
+              </ol>
+            </div>
+            
 
-            <h4 class="font-weight-normal vmc-text-primary-2">FITTER OR NO. 1 OILER:</h4>
-            <ol>
-              <li class="pl-2">Certified welder with valid documents required as per SCTW</li>
-              <li class="pl-2">With at least 18 months experience as Fitter or No.1 Oiler onboard worldwide vessels.</li>
-            </ol>
+            <!-- End of pup up info -->
           </div>
           <div class="modal-footer vmc-bg-dark-1 border-top-0">
             <router-link type="button" :to="{path: '/career'}"
@@ -46,8 +41,11 @@
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
 export default {
   name: 'JobHiring28Aug2021',
+  
+  mixins: [cmsMixin], 
 };
 </script>
 

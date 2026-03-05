@@ -36,10 +36,10 @@
           </div>
           <div class="col-auto">
             <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1 mb-1">
-              Globe: 0917-511-1372
+              Globe: {{ cms.globenumber }}
             </a> <br/>
             <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
-              Smart: 0947-996-0107
+              Smart: {{ cms.smartnumber }}
             </a>
           </div>
         </div>
@@ -53,10 +53,10 @@
             <font-awesome-icon icon="phone-alt" class="mx-2"/>
             <span style="font-weight: 500" class="vmc-text-primary-2">Hotlines: </span>
             <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
-              Globe: 0917-511-1372
+              Globe: {{ cms.globenumber }}
             </a>
             <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
-              Smart: 0947-996-0107
+              Smart: {{ cms.smartnumber }}
             </a>
           </div>
         </div>
@@ -167,10 +167,10 @@
           <font-awesome-icon icon="phone-alt" class="mx-2"/>
           <span style="font-weight: 500" class="vmc-text-primary-2">Hotlines: </span>
           <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
-            Globe: 0917-511-1372
+            Globe: {{ cms.globenumber }}
           </a>
           <a href="#" class="btn btn-sm vmc-btn-circle vmc-btn-secondary text-white mx-1">
-            Smart: 0947-996-0107
+            Smart: {{ cms.smartnumber }}
           </a>
         </div>
       </div>
@@ -179,8 +179,12 @@
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
+
 export default {
   name: "VMCHeader",
+  mixins: [cmsMixin],
+
   data() {
     return {
       'vmcLogo': require(`@/assets/veritas_logo.png`)

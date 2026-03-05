@@ -3,68 +3,81 @@
     <h2 class="h1 vmc-text-primary text-center mb-3 vmc-heading">
       Memberships and Affiliations
     </h2>
-    <carousel :responsive="{
-        0:{items:2,nav:false},
-        500:{items:3,nav:false},
-        992:{items:5,nav:false}}"
+
+    <div v-if="cms.affiliates && cms.affiliates.length > 0">
+      
+      <carousel 
+        :responsive="{
+          0:{items:2,nav:false},
+          500:{items:3,nav:false},
+          992:{items:5,nav:false}
+        }"
         :autoplay="true"
-    >
-      <div class="item">
-        <a href="https://krbsgroup.com/" target="_blank" >
-          <img :src="kline" alt="KLINE">
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://www.prc.gov.ph/" target="_blank" >
-          <img :src="prc" alt="PRC">
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://marina.gov.ph/" target="_blank" >
-          <img :src="marina" alt="MARINA">
-        </a>
-      </div>
-      <div class="item">
-        <a href="http://immajpjmccfoundation.org/" target="_blank" >
-          <img :src="pjmcc" alt="PJMCC">
-        </a>
-      </div>
-      <div class="item">
-        <img :src="pamas" alt="PAMAS">
-      </div>
-    </carousel>
+        :dots="false"
+        :nav="false"
+        :margin="20"
+        :loop="cms.affiliates.length > 5"
+      >
+        <div 
+          v-for="(partner, index) in cms.affiliates" 
+          :key="index" 
+          class="item text-center"
+        >
+          <img 
+            :src="partner.image || 'https://via.placeholder.com/150?text=Logo'" 
+            alt="Affiliate Logo" 
+            class="img-fluid grayscale-hover"
+          >
+        </div>
+      </carousel>
+
+    </div>
+
+    <div v-else class="text-center py-4">
+      <p class="text-muted">Loading affiliations...</p>
+    </div>
+
   </div>
 </template>
 
 <script>
-import carousel from 'v-owl-carousel'
-export default {
-  name: "MembershipAffiliations",
-  components: {
-    carousel
-  },
-  data() {
-    return {
-      'kline' :require(`@/assets/affiliates/klma.jpg`),
-      'prc' :require(`@/assets/affiliates/prc.jpg`),
-      'marina' :require(`@/assets/affiliates/marina.jpg`),
-      'pjmcc' :require(`@/assets/affiliates/pjmcc.jpg`),
-      'pamas' :require(`@/assets/affiliates/pamas.jpg`),
+  import { cmsMixin } from '@/mixins/cmsMixin';
+  import carousel from 'v-owl-carousel';
+
+  export default {
+    name: "MembershipAffiliations",
+    mixins: [cmsMixin],
+    components: {
+      carousel
     }
-  },
-}
+  }
 </script>
 
 <style scoped>
+/* RESTORED: Shadow and Radius */
 .item {
   margin: .75rem;
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16); /* Shadow is back */
+  border-radius: 10px;                         /* Radius is back */
+  background: white;                           /* Added white bg so shadow is visible if logo is transparent */
+  overflow: hidden;                            /* Ensures image doesn't poke out of rounded corners */
 }
+
 .item img, .item a {
   width: 100%;
   height: auto;
   margin: auto;
-  border-radius:inherit;
+  display: block;
 }
+
+/* .grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  opacity: 0.7;
+}
+
+.grayscale-hover:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+} */
 </style>

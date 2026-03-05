@@ -1,65 +1,57 @@
 <template>
   <div id="Company">
+    
     <div class="container-fluid vmc-py-big" >
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-lg-8">
+          <!-- Text column dynamically expands to full width if no logo is uploaded -->
+          <div :class="cms.aboutOfficeLogo ? 'col-lg-8' : 'col-12'">
             <h2 class="h1 vmc-text-primary vmc-heading">
               Company
             </h2>
-            <b>VERITAS MARITIME CORPORATION</b> is a joint business venture between
-            <ul>
-              <li>Mercury Shipping Corporation Manila</li>
-              <li>K-Line Roro Bulk Ship Management Co., Ltd</li>
-            </ul>
+            <p style="white-space: pre-wrap;">{{ cms.TCdescription }}</p>
           </div>
-          <div class="col-lg-4 col-md-7">
-            <img :src="vmcOfficeLogo" alt="">
+          <div class="col-lg-4 col-md-7" v-if="cms.aboutOfficeLogo">
+            <img :src="cms.aboutOfficeLogo" alt="Company Logo" class="img-fluid rounded shadow-sm">
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 mt-4">
             <h2 class="h1 vmc-text-primary vmc-heading">
               Why Veritas was established?
             </h2>
-            <ul id="VMCEstablishedReason">
-              <li>To supply qualified seafarers to man ocean going vessels for international trade.</li>
-              <li>To provide Crew Management to Shipowners,</li>
-              <li>In addition to the manning services, to provide support services in the form of administrative, accounting and financial services:  </li>
-              <ul>
-                <li>Orientation of Senior Officers of any nationality joining Veritas-manned vessel</li>
-                <li>Budgeting and accounting of vessel funds</li>
-                <li>Crew Training and upgrading seminars</li>
-                <li>PNI Handling and management</li>
-                <li>Supply of safety and personal gears, recreational materials and other vessel supplies requested</li>
-                <li>Other support services requested by Principals  </li>
-              </ul>
-            </ul>
+            <p style="white-space: pre-wrap;">{{ cms.whyVeritas }}</p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- CMS Background Image: Shows nothing if not uploaded -->
     <div class="container-fluid" id="QualityCrew"
-         :style="{ backgroundImage: 'url(' + qualityCrew + ')' }">
-      <div class="bg-overlay  vmc-py-big ">
+         :style="{ 
+           backgroundImage: cms.aboutQualityCrewBg ? 'url(' + cms.aboutQualityCrewBg + ')' : 'none',
+           backgroundColor: cms.aboutQualityCrewBg ? 'transparent' : '#f8f9fa' 
+         }">
+      <div class="bg-overlay vmc-py-big">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 mb-4 text-center">
               <h2 class="h1 vmc-text-primary vmc-heading">
                 Quality Crew Recruitment
               </h2>
-              <p>To ensure recruitment of quality seafarers for every vessel VERITAS follows very stringent procedures in crew hiring and strict adherences to standard hiring qualifications per rank applying to new hires and ex-crew.</p>
+              <p style="white-space: pre-wrap;">{{ cms.qualityCrewRecruitment }}</p>
             </div>
             <div class="col-lg-12 text-center">
               <h2 class="h1 vmc-text-primary vmc-heading">
                 Mission Statement
               </h2>
-              <p>VERITAS MARITIME CORPORATION aims to achieve the Company's stability, credibility and success as a leader in the shipmanning industry, and ensures profitability for its stakeholders, by providing highly qualified and competent seafarers under internationally-accepted standards, to the satisfaction of our Principals and Shipowners through timely, quality and cost-effective service and good management of all resources, as it continues to grow and develop while enhancing the skills, knowledge and well-being of its Corporate members, in an atmosphere of fairness, peace, harmony and compassion.</p>
+              <p style="white-space: pre-wrap;">{{ cms.missionStatement }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="container-fluid vmc-py-big" >
       <div class="container text-center">
         <div class="row d-flex justify-content-center align-items-center">
@@ -71,59 +63,54 @@
           <div class="col-md-6 col-lg-4 mb-2">
             <font-awesome-icon icon="hand-holding-heart" class="fa-5x" />
             <h4 class="vmc-text-primary-2 font-weight-normal my-3">HONESTY</h4>
-            <p>We value openness and expect truthfulness with each other, with our employees and crew, with our vendors and customers, as reflected in our business records and transactions.</p>
+            <p style="white-space: pre-wrap;">{{ cms.coreValuesHonesty }}</p>
           </div>
           <div class="col-md-6 col-lg-4 mb-2">
             <font-awesome-icon icon="handshake" class="fa-5x" />
             <h4 class="vmc-text-primary-2 font-weight-normal my-3">INTEGRITY</h4>
-            <p class="px-2">We act in accordance with our moral and ethical values, as the foundation of our individual and corporate actions that drives our organization to succeed.</p>
+            <p style="white-space: pre-wrap;">{{ cms.coreValuesIntegrity }}</p>
           </div>
           <div class="col-md-6 col-lg-4 mb-2">
             <font-awesome-icon icon="thumbs-up" class="fa-5x" />
             <h4 class="vmc-text-primary-2 font-weight-normal my-3">QUALITY SERVICE</h4>
-            <p>We meet or exceed expectations of customers, in providing our reliable service without compromising quality, and continuously improving to achieve service excellence. </p>
+            <p style="white-space: pre-wrap;">{{ cms.coreValuesQualityService }}</p>
           </div>
         </div>
       </div>
     </div>
+
     <div class="container-fluid vmc-py-big vmc-bg-dark-1">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-lg-8 order-lg-5">
+          <!-- Text column dynamically expands to full width if no history image is uploaded -->
+          <div :class="cms.aboutTowerImg ? 'col-lg-8 order-lg-5' : 'col-12'">
             <h2 class="h1 vmc-text-primary vmc-heading">
               History
             </h2>
-            <p>Established in 1989, Veritas Maritime has grown steadily in stature and reputation in the Philippine crew management business. Today, with a pool over 1500 qualified and competent officers and ratings, Veritas Maritime Corporation can provide full crew line up and crew management services to Internationl clients as well as the "K" Line Roro Bulk Ship Management Co., Ltd. (KRBS). Vessel types under manning include drybulk vessels of all sizes, cape size,general cargo, between deckers, and pure car carriers. Veritas employs clearly defined procedures and attains high standards in all aspects of recruiting, screening, evaluation, training, upgrading and performance monitoring through the rigorous application of a fully documnented management system, as required by the company's ISO 9001-2000 quality assurance system.</p>
-            <p>Veritas' own software programming staff enables the company to keep abreast with IT developments and ensures it remains flexible and readily adaptable to principals requirements.</p>
-            <p>Veritas has been particularly successful in developing a loyalty culture, which extends to the family and next of kin. Consequently crew retention exceeds 90% in all ranks. This careful attention to the human factor allied with an extensive and structured cadet development program ensures the company will remain at the forefront of Philippine manning in the years ahead.</p>
+            <p style="white-space: pre-wrap;">{{ cms.history }}</p>
           </div>
-          <div class="col-lg-4 col-md-7 order-lg-0">
-            <img :src="marc2000Tower" alt="">
+          <div class="col-lg-4 col-md-7 order-lg-0" v-if="cms.aboutTowerImg">
+            <img :src="cms.aboutTowerImg" alt="History Image" class="img-fluid rounded shadow-sm">
           </div>
         </div>
       </div>
     </div>
+
     <organizational-chart />
+    
   </div>
 </template>
 
 <script>
+import { cmsMixin } from '@/mixins/cmsMixin';
 import OrganizationalChart from './OrganizationalChart';
 
 export default {
   name: "TheCompany",
-  data() {
-    return {
-    'marc2000Tower' : require(`@/assets/about/Marc2000tower.jpg`),
-    'vmcOfficeLogo' : require(`@/assets/about/vmc_office_logo-7-7-2021.jpg`),
-    'qualityCrew'   : require(`@/assets/about/quality_crew_7-7-2021.jpg`),
-    }
-  },
+  mixins: [cmsMixin],
+  // Note: Removed the hardcoded local images entirely
   components: {
     'organizational-chart' : OrganizationalChart,
-  },
-  mounted() {
-    document.getElementById('QualityCrew').style.backgroundImage(`${this.vmcOfficeLogo}`)
   }
 }
 </script>
@@ -136,6 +123,6 @@ export default {
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .bg-overlay {
-  background-color: rgba(244,	244,	243, .85);
+  background-color: rgba(244, 244,  243, .85);
 }
 </style>

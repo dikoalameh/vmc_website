@@ -10,7 +10,8 @@
           </div>
           <div class="col-md-6">
             <h4 class="font-weight-light mb-1">Address</h4>
-            <p>15 Floor, MARC2000 Tower 1973 Taft Ave., Malate, Manila Philippines 1004</p>
+            <!-- CMS Dynamic Address with fallback -->
+            <p style="white-space: pre-wrap;">{{ cms.address || '15 Floor, MARC2000 Tower 1973 Taft Ave., Malate, Manila Philippines 1004' }}</p>
             <a href="https://goo.gl/maps/PWLBE4UL9ECrVMW37" target="_blank" class="btn vmc-btn-circle vmc-btn-prime-2 px-3 mx-1">
               Google Maps
             </a>
@@ -22,53 +23,70 @@
               <tr>
                 <th>PCC Division</th>
                 <th class="px-2"> : </th>
-                <td>(632) 85362775</td>
+                <td>{{ cms.pcc }}</td>
+                <!-- (632) 85362775 -->
               </tr>
               <tr>
                 <th>BULK Division</th>
                 <th class="px-2"> : </th>
-                <td>(632) 85268041</td>
+                <td>{{ cms.bulk }}</td>
+                <!-- (632) 85268041 -->
               </tr>
               <tr>
                 <th>DOCS Division</th>
                 <th class="px-2"> : </th>
-                <td>(632) 85241691</td>
+                <td>{{ cms.docs }}</td>
+                <!-- (632) 85241691 -->
               </tr>
               <tr>
                 <th>Training Division</th>
                 <th class="px-2"> : </th>
-                <td>(632) 53100317</td>
+                <td>{{ cms.training }}</td>
+                <!-- (632) 53100317 -->
               </tr>
               <tr>
                 <th>Accounting Dept</th>
                 <th class="px-2"> : </th>
-                <td>(632) 85243661</td>
+                <td>{{ cms.accounting }}</td>
+                <!-- (632) 85243661 -->
               </tr>
               <tr>
                 <th></th>
                 <th class="px-2"> : </th>
-                <td>(632) 85362757</td>
+                <td>{{ cms.accounting2}}</td>
+                <!-- (632) 85362757 -->
               </tr>
               <tr>
                 <th>Exec. Offices</th>
                 <th class="px-2"> : </th>
-                <td>(632) 53101319</td>
+                <td>{{ cms.execOffices }}</td>
+                <!-- (632) 53101319 -->
               </tr>
               <tr>
                 <th>Admin Dept</th>
                 <th class="px-2"> : </th>
-                <td>(632) 85261034</td>
+                <td>{{ cms.adminDept }}</td>
+                <!-- (632) 85261034 -->
               </tr>
             </table>
             <h4 class="font-weight-light mb-1 mt-3">Fax Number</h4>
-            <p>(632) 85261029</p>
+            <p>{{ cms.faxnumber }}</p>
             <h4 class="font-weight-light mb-1">Veritas Hotline</h4>
-            <p class="mb-0">0917-511-1372</p>
-            <p>0947-996-0107</p>
+            <p class="mb-0">{{ cms.globenumber }}</p>
+            <p>{{ cms.smartnumber }}</p>
 
-            <h4 class="font-weight-light mb-1">E-mail Address</h4>
-            <p class="mb-0"><a class="vmc-text-primary-2" href="mailto:vmcgroup@veritas.com.ph">vmcgroup@veritas.com.ph</a></p>
-            <p class=""><a class="vmc-text-primary-2" href="mailto:vmccomm@veritas.com.ph">vmccomm@veritas.com.ph</a></p>
+            <h4 class="font-weight-light mb-1 mt-3">E-mail Address</h4>
+            <!-- CMS Dynamic Emails with fallbacks -->
+            <p class="mb-0">
+              <a class="vmc-text-primary-2" :href="'mailto:' + (cms.email1 || 'vmcgroup@veritas.com.ph')">
+                {{ cms.email1 || 'vmcgroup@veritas.com.ph' }}
+              </a>
+            </p>
+            <p class="">
+              <a class="vmc-text-primary-2" :href="'mailto:' + (cms.email2 || 'vmccomm@veritas.com.ph')">
+                {{ cms.email2 || 'vmccomm@veritas.com.ph' }}
+              </a>
+            </p>
           </div>
           <div class="col-md-6">
             <h4 class="font-weight-light mb-1">Facebook Contact</h4>
@@ -163,9 +181,11 @@ import VueAxios from 'vue-axios'
 import {email, maxLength, minLength, numeric, required} from 'vuelidate/lib/validators';
 Vue.use(VueAxios, axios)
 import {API_URL} from '../../config/apiUrl';
+import { cmsMixin } from '@/mixins/cmsMixin';
 
 export default {
   name: 'ContactUsNew',
+  mixins: [cmsMixin],
   data() {
     return {
       newComment : {

@@ -1,123 +1,83 @@
 <template>
-  <div class="vmc-cadets">
-    <div class="container-fluid vmc-py-big">
+  <div class="training-programs">
+    
+    <!-- Dynamic CMS background -->
+    <div class="dynamic-page-heading">
+      <video v-if="cms.trainingBackgroundVideo" :key="cms.trainingBackgroundVideo" playsinline autoplay muted loop :src="cms.trainingBackgroundVideo" class="bg-media"></video>
+      <img v-else-if="cms.trainingBackgroundImage" :src="cms.trainingBackgroundImage" class="bg-media" alt="Background">
+      <img v-else :src="require('@/assets/no_image.jpg')" class="bg-media" alt="Default Background">
+      
+      <div class="heading-overlay"></div>
+      
+      <div class="container heading-content">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="h1 text-white vmc-heading mb-0" style="letter-spacing: 3px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7);">
+              TRAINING PROGRAMS
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid vmc-py-big pb-0">
       <div class="container">
         <div class="row d-flex align-items-center">
           <div class="col-12 text-center">
-            <h2 class="h1 vmc-text-primary vmc-heading">
+            <h2 class="h2 vmc-text-primary vmc-heading">
               Crew Development Program (All Crew)
             </h2>
           </div>
-          <div class="col-md-12">
-            <p class="pr-1 mb-0">
-              With its commitment to the development and upgrading of the seaman profession, Veritas launched its Crew Development Program in late 1993 to provide a continuing educational and upgrading program aimed at ensuring the development of Veritas seafarers into becoming competent and reliable Marine Officers.  The Crew Development Program has resulted to increase in crew’s efficiency and performance.  The program has been an invaluable help in their aspirations for promotion and passing the Philippine Licensing Examinations for Deck and Engine Officers.  The seminars and courses integral in the program are:
-            </p>
+          <div class="col-md-12 mt-3">
+            <p class="pr-1 mb-0" style="white-space: pre-wrap;">{{ cms.trainingIntro }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
+
+    <div v-for="(program, index) in (cms.trainingList || [])" :key="index" :class="['container-fluid vmc-py-big', index % 2 !== 0 ? 'vmc-bg-dark-1' : '']">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-lg-4">
-            <photo-gallery-modal :caption="``"
-                                 :thumbnail="upgrading1[0]"
-                                 :images="upgrading1" />
+          
+          <div :class="['col-md-8', index % 2 !== 0 ? 'order-md-2' : 'order-md-1']">
+            <h4 class="font-weight-light mb-3" v-if="program.title">{{ program.title }}</h4>
+            <p style="white-space: pre-wrap;">{{ program.description }}</p>
           </div>
-          <div class="col-lg-8">
-            <h4 class="font-weight-light">Crew Upgrading / Promotion Program /(in-house)</h4>
-            <p>
-              This in-house training program is designed to enhance and correct noted performances and reported deficiencies of ex-crew and who have served on board any of the VMC manned ships with the aim of improving their performance for the next vessel assignments as based on the revised STCW 95 and ISM SEP requirements.
-            </p>
+
+          <div :class="['col-md-4', index % 2 !== 0 ? 'order-md-1' : 'order-md-2']">
+            <img v-if="program.image" :src="program.image" alt="Training Program" class="img-fluid mb-3 mb-md-0" style="width: 100%; height: auto; border-radius: 4px;">
           </div>
-          <div class="col-lg-4 order-md-10">
-            <photo-gallery-modal :caption="``"
-                                 :thumbnail="upgrading2[0]"
-                                 :images="upgrading2" />
-          </div>
-          <div class="col-lg-8">
-            <p>
-              This seminar also aims to mold and develop the crew into becoming qualified and competent officers and crew in the performance of new functions as required for the next rank. The program provides to the participants the opportunity to enhance their theoretical and technical knowledge as based on the revised STCW 95, and ISM requirements.
-            </p>
-            <p>
-              Each seminar is tailored to answer to specific training needs of participants based on their individual training needs analyses and evaluations.
-            </p>
-          </div>
+
         </div>
       </div>
     </div>
-    <div class="container-fluid vmc-py-big">
-      <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-lg-3">
-            <img :src="cook" alt="" class="mb-2">
-          </div>
-          <div class="col-lg-9">
-            <h4 class="font-weight-light">Cooks’ Development Program</h4>
-            <p>
-              Veritas started its Steward Development Program in 2001 primarily to develop a new breed of young messmen and cooks.  In 2003, Veritas goes steps further with the launching of its Cooks’ Development Program.
-            </p>
-          </div>
-          <div class="col-12">
-            <p>
-              VERITAS MARITIME CORPORATION faces the challenges of growth and development especially in supplying qualified and competent grew to its expanding fleets.  Part of its thrust is the development of cooks and stewards capable of meeting the standards required for international crewing.
-            </p>
-            <p class="pr-1">
-              Thus, Veritas Maritime Corporation introduces a two-thrust development program for the Steward Department – 1) the COOKS UPGRADING PROGRAM  - for development of skills of Cooks and Second Cooks, and 2) the COOK CADET Educational Sponsorship / FAST TRACK Program for students aiming for careers in the Steward Department (as Cooks).
-            </p>
-          </div>
-        </div>
-      </div>
+
+    <div v-if="!cms.trainingList || cms.trainingList.length === 0" class="container text-center py-5">
+        <p class="text-muted">No training programs available at the moment.</p>
     </div>
-    <div class="container-fluid vmc-py-big vmc-bg-dark-1">
-      <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-lg-3">
-            <img :src="rating[0]" alt="">
-          </div>
-          <div class="col-lg-6  order-md-0">
-            <p>
-              Veritas started its Ratings Development Program in 2008.  Veritas felt the need to develop crew who will stay to become top-quality No. 1 Oilers unlike regular engine crew whose goals are towards becoming Engine officers.  In the Deck department, this program will develop top-notch Bosuns.
-            </p>
-          </div>
-          <div class="col-lg-3">
-            <img :src="rating[1]" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </template>
 
 <script>
-import PhotoGalleryModal from '../app-layout/PhotoGalleryModal';
+import { cmsMixin } from '@/mixins/cmsMixin';
 
 export default {
   name: 'TrainingPrograms',
-  components: {
-    'photo-gallery-modal' : PhotoGalleryModal
-  },
-  data() {
-    return {
-      'promotion': require(`@/assets/crews/promotionTraining1.jpg`),
-      'cook': require(`@/assets/crews/cook_7-7-2021.jpg`),
-      upgrading1: [
-        require(`@/assets/crews/crew_upgrade1_7-7-2021.jpg`),
-        require(`@/assets/crews/crew_upgrade4_7-7-2021.jpg`),
-      ],
-      upgrading2: [
-        require(`@/assets/crews/crew_upgrade2_7-7-2021.jpg`),
-        require(`@/assets/crews/crew_upgrade3_7-7-2021.jpg`),
-      ],
-      rating: [
-        require(`@/assets/crews/rating1_7-7-2021.jpg`),
-        require(`@/assets/crews/rating2_7-7-2021.jpg`),
-      ],
-    }
-  }
+  mixins: [cmsMixin]
 };
 </script>
 
 <style scoped>
+.dynamic-page-heading {
+  position: relative; width: 100%; height: 40vh; min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: #000; margin-top: 85px; 
+}
+.bg-media { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: 100%; height: 100%; object-fit: cover; transform: translateX(-50%) translateY(-50%); z-index: 0; }
+.heading-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.45); z-index: 1; }
+.heading-content { position: relative; z-index: 2; }
+@media (min-width: 992px) { .dynamic-page-heading { margin-top: 105px; } }
 
+.vmc-py-big { padding-top: 80px; padding-bottom: 80px; }
+.vmc-bg-dark-1 { background-color: #f4f4f3; } 
+.vmc-text-primary { color: #002366; }
 </style>
