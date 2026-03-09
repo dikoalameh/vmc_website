@@ -34,7 +34,7 @@
     </div>
 
     <div v-else class="text-center py-4">
-      <p class="text-muted">Loading affiliations...</p>
+      <p class="text-muted">No content displayed</p>
     </div>
 
   </div>

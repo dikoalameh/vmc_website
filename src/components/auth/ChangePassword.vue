@@ -1,14 +1,14 @@
 <template>
     <div class="vmc-forgot-password d-flex align-items-center justify-content-center">
         <div>
-            <div class="password-container d-flex align-items-center justify-content-center">
-                <img :src="vmcLogo" alt="" style="width: 80px;">
-                <div class="logo-desc">
-                    <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
-                    <p class="mb-0 text-center" id="VMCTag">QUALITY SERVICE, QUALITY CREW</p>
+            <div class="password-box px-4 py-4 bg-white d-flex flex-column align-items-center justify-content-center">
+                <div class="password-container d-flex align-items-center justify-content-center">
+                    <img :src="vmcLogo" alt="" style="width: 70px;">
+                    <div class="logo-desc">
+                        <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
+                        <p class="mb-0 text-center" id="VMCTag">QUALITY SERVICE, QUALITY CREW</p>
+                    </div>
                 </div>
-            </div>
-            <div class="password-box px-4 py-4 bg-white d-flex align-items-center justify-content-center">
                 <form action="">
                     <h2 class="text-dark">Change Password</h2>
                     <div class="vmc-input-box my-4 position-relative">
@@ -16,7 +16,8 @@
                             <i v-if="showNewPassword" class="text-dark bi bi-eye-fill"></i>
                             <i v-else class="text-dark bi bi-eye-slash-fill"></i>
                         </span>
-                        <input class="text-dark w-100 bg-transparent border-0" :type="showNewPassword ? 'text' : 'password'" required>
+                        <input class="text-dark w-100 bg-transparent border-0"
+                            :type="showNewPassword ? 'text' : 'password'" required>
                         <label class="position-absolute">New Password</label>
                     </div>
                     <div class="vmc-input-box my-4 position-relative">
@@ -24,7 +25,8 @@
                             <i v-if="showConfirmNewPassword" class="text-dark bi bi-eye-fill"></i>
                             <i v-else class="text-dark bi bi-eye-slash-fill"></i>
                         </span>
-                        <input class="text-dark w-100 bg-transparent border-0" :type="showConfirmNewPassword ? 'text' : 'password'" required>
+                        <input class="text-dark w-100 bg-transparent border-0"
+                            :type="showConfirmNewPassword ? 'text' : 'password'" required>
                         <label class="position-absolute">Confirm New Password</label>
                     </div>
                     <div class="mb-3">

@@ -2,7 +2,7 @@
   <div class="news">
     <div class="container-fluid vmc-py-big">
       <div class="container">
-        
+
         <div class="row">
           <div class="col-12 text-center">
             <h2 class="h1 vmc-text-primary vmc-heading">
@@ -15,32 +15,31 @@
           <div class="col-12 my-2">
             <div class="card">
               <div class="row no-gutters d-flex align-items-center">
-                
-                <div class="col-md-5">
-                  <img class="card-img" 
-                      :src="article.image || require('@/assets/no_image.jpg')" 
-                      alt="News Image"
-                      style="object-fit: cover; height: 100%; min-height: 250px;">
-                  </div>
 
+                <div class="col-md-5">
+                  <img class="card-img"
+                    :src="(article.images && article.images.length > 0) ? article.images[0] : (article.image || require('@/assets/no_image.jpg'))"
+                    alt="News Image" style="object-fit: cover; height: 100%; min-height: 250px;">
+                </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    
+
                     <div class="font font-weight-normal mb-1">
-                    <h4 class="title-clamp">{{ article.title }}</h4>
-                    </div>  
+                      <h4 class="title-clamp">{{ article.title }}</h4>
+                    </div>
 
                     <div class="letter-spacing-1">
-                    <p class="author-date-clamp">
-                      By {{ article.author }} — {{ article.date }}
-                    </p>
+                      <p class="author-date-clamp">
+                        By {{ article.author }} — {{ formatDate(article.date) }}
+                      </p>
                     </div>
 
                     <div class="d-none d-lg-block">
                       <p class="news-clamp"> {{ article.content }}</p>
                     </div>
 
-                    <router-link class="vmc-text-primary-2" :to="'/news/' + article.id">continue reading . . .</router-link> <!-- Link to full article -->
+                    <router-link class="vmc-text-primary-2" :to="'/news/' + article.id">continue reading . .
+                      .</router-link> <!-- Link to full article -->
 
                   </div>
                 </div>
@@ -51,7 +50,8 @@
         </div>
         <div v-if="companyNewsList.length === 0" class="row mt-5">
           <div class="col-12 text-center">
-            <p class="text-muted">No company news updates available at the moment.</p> <!-- appears when there are no company news articles -->
+            <p class="text-muted">No company news updates available at the moment.</p>
+            <!-- appears when there are no company news articles -->
           </div>
         </div>
 
@@ -71,12 +71,24 @@ export default {
     companyNewsList() {
       // Safety check
       if (!this.cms.newsArticles) return [];
-      
+
       // 1. Filter (Get only Company News)
       // 2. Sort (Newest Date First)
       return this.cms.newsArticles
         .filter(article => article.category === 'Company News')
         .sort((a, b) => new Date(b.date) - new Date(a.date));
+    }
+  },
+  methods: {
+    formatDate(date) {
+      if (!date) return ''
+
+      const dateformat = new Date(date)
+      return dateformat.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
     }
   }
 };
@@ -86,7 +98,8 @@ export default {
 /* Keeping your exact style requirements */
 .news-clamp {
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* Limits text to specified amount of lines so cards stay neat */
+  -webkit-line-clamp: 5;
+  /* Limits text to specified amount of lines so cards stay neat */
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 10px;
@@ -94,7 +107,8 @@ export default {
 
 .author-date-clamp {
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* Limits text to specified amount of lines so cards stay neat */
+  -webkit-line-clamp: 1;
+  /* Limits text to specified amount of lines so cards stay neat */
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 10px;
@@ -103,20 +117,29 @@ export default {
 
 .title-clamp {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Limits text to specified number lines. Change this number to fit perfectly. */
+  -webkit-line-clamp: 2;
+  /* Limits text to specified number lines. Change this number to fit perfectly. */
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 10px;
 }
 
-.vmc-py-big { padding-top: 80px; padding-bottom: 80px; }
-.vmc-text-primary { color: #002366; }
-.vmc-text-primary-2 { color: #85a8c7; }
+.vmc-py-big {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
+.vmc-text-primary {
+  color: #002366;
+}
+
+.vmc-text-primary-2 {
+  color: #85a8c7;
+}
 </style>
 
 
-{<!-- <template>
+<!-- <template>
   <div class="news">
     <div class="container-fluid vmc-py-big">
       <div class="container">

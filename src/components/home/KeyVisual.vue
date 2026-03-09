@@ -1,120 +1,200 @@
 <template>
   <div>
-    <div id="VMCKeyVisual" class="carousel slide" data-ride="carousel">
-      <div class="container">
-        <ol class="carousel-indicators">
-          <li data-target="#VMCKeyVisual" data-slide-to="0" class="active"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="1"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="2"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="3"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
-          <li data-target="#VMCKeyVisual" data-slide-to="5"></li>
-        </ol>
+    <div v-if="cms && cms.keyVisuals">
+      <div id="VMCKeyVisual" class="carousel slide" data-ride="carousel">
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#VMCKeyVisual" data-slide-to="0" class="active"></li>
+            <li data-target="#VMCKeyVisual" data-slide-to="1"></li>
+            <li data-target="#VMCKeyVisual" data-slide-to="2"></li>
+            <li data-target="#VMCKeyVisual" data-slide-to="3"></li>
+            <li data-target="#VMCKeyVisual" data-slide-to="4"></li>
+            <li data-target="#VMCKeyVisual" data-slide-to="5"></li>
+          </ol>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active parallax-effect"
+            :style="{ backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide1) ? 'url(' + cms.keyVisuals.slide1 + ')' : 'url(' + banner12 + ')' }"
+            id="BannerTwelve">
+            <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+              <rect width="100%" height="100%" fill="var(--vmc-primary-3)" />
+            </svg>
+            <div class="container">
+              <div
+                v-if="cms.captionOneP1.length === 0 || cms.captionTwoP1.length === 0 || cms.captionThreeP1.length === 0">
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white" style="font-size: 28px;">No text</p>
+                </div>
+              </div>
+              <div v-else>
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP1 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP1 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP1 }}</p>
+                  <!-- CMS controlled -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner11+')'}" id="BannerEleven">-->
+          <!--          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">-->
+          <!--            <rect width="100%" height="100%" fill="var(&#45;&#45;vmc-primary-3)"/>-->
+          <!--          </svg>-->
+          <!--          <div class="container">-->
+          <!--            <div class="carousel-caption text-left">-->
+          <!--              <p class="mb-2 font-weight-normal text-white caption-one"></p>-->
+          <!--              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--        </div>-->
+          <div class="carousel-item parallax-effect"
+            :style="{ backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide2) ? 'url(' + cms.keyVisuals.slide2 + ')' : 'url(' + banner10 + ')' }"
+            id="BannerTen">
+            <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+              <rect width="100%" height="100%" fill="var(--vmc-primary-3)" />
+            </svg>
+            <div class="container">
+              <div
+                v-if="cms.captionOneP2.length === 0 || cms.captionTwoP2.length === 0 || cms.captionThreeP2.length === 0">
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white" style="font-size: 28px;">No text</p>
+                </div>
+              </div>
+              <div v-else>
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP2 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP2 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP2 }}</p>
+                  <!-- CMS controlled -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item parallax-effect"
+            :style="{ backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide3) ? 'url(' + cms.keyVisuals.slide3 + ')' : 'url(' + banner9 + ')' }"
+            id="BannerNine">
+            <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+              <rect width="100%" height="100%" fill="var(--vmc-primary-3)" />
+            </svg>
+            <div class="container">
+              <div
+                v-if="cms.captionOneP3.length === 0 || cms.captionTwoP3.length === 0 || cms.captionThreeP3.length === 0">
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white" style="font-size: 28px;">No text</p>
+                </div>
+              </div>
+              <div v-else>
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP3 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP3 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP3 }}</p>
+                  <!-- CMS controlled -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item parallax-effect"
+            :style="{ backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide4) ? 'url(' + cms.keyVisuals.slide4 + ')' : 'url(' + banner5 + ')' }"
+            id="BannerFive">
+            <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+              <rect width="100%" height="100%" fill="var(--vmc-primary-3)" />
+            </svg>
+            <div class="container">
+              <div
+                v-if="cms.captionOneP4.length === 0 || cms.captionTwoP4.length === 0 || cms.captionThreeP4.length === 0">
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white" style="font-size: 28px;">No text</p>
+                </div>
+              </div>
+              <div v-else>
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP4 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP4 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP4 }}</p>
+                  <!-- CMS controlled -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item parallax-effect"
+            :style="{ backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide5) ? 'url(' + cms.keyVisuals.slide5 + ')' : 'url(' + banner6 + ')' }"
+            id="BannerSix">
+            <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+              <rect width="100%" height="100%" fill="var(--vmc-primary-3)" />
+            </svg>
+            <div class="container">
+              <div
+                v-if="cms.captionOneP5.length === 0 || cms.captionTwoP5.length === 0 || cms.captionThreeP5.length === 0">
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white" style="font-size: 28px;">No text</p>
+                </div>
+              </div>
+              <div v-else>
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP5 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP5 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP5 }}</p>
+                  <!-- CMS controlled -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item parallax-effect"
+            :style="{ backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide6) ? 'url(' + cms.keyVisuals.slide6 + ')' : 'url(' + banner1 + ')' }"
+            id="BannerOne">
+            <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+              <rect width="100%" height="100%" fill="var(--vmc-primary-3)" />
+            </svg>
+            <div class="container">
+              <div
+                v-if="cms.captionOneP6.length === 0 || cms.captionTwoP6.length === 0 || cms.captionThreeP6.length === 0">
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white" style="font-size: 28px;">No text</p>
+                </div>
+              </div>
+              <div v-else>
+                <div class="carousel-caption text-left">
+                  <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP6 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP6 }}</p>
+                  <!-- CMS controlled -->
+                  <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP6 }}</p>
+                  <!-- CMS controlled -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active parallax-effect" 
-             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide1) ? 'url('+cms.keyVisuals.slide1+')' : 'url('+banner12+')'}" 
-             id="BannerTwelve">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP1 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP1 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP1 }}</p> <!-- CMS controlled -->
-            </div>
+      <div class="container bg-white">
+        <div class="row py-3 d-flex align-items-center justify-content-center">
+          <div class="col-auto p-1">
+            <router-link class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn" :to="{ name: 'GovernmentAdvisories' }">
+              ADVISORIES
+            </router-link>
           </div>
-        </div>
-<!--        <div class="carousel-item parallax-effect" :style="{backgroundImage:'url('+banner11+')'}" id="BannerEleven">-->
-<!--          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">-->
-<!--            <rect width="100%" height="100%" fill="var(&#45;&#45;vmc-primary-3)"/>-->
-<!--          </svg>-->
-<!--          <div class="container">-->
-<!--            <div class="carousel-caption text-left">-->
-<!--              <p class="mb-2 font-weight-normal text-white caption-one"></p>-->
-<!--              <p class="vmc-text-white font-weight-normal mb-0 caption-two"></p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-        <div class="carousel-item parallax-effect" 
-             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide2) ? 'url('+cms.keyVisuals.slide2+')' : 'url('+banner10+')'}" 
-             id="BannerTen">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP2 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP2 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP2 }}</p> <!-- CMS controlled -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item parallax-effect" 
-             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide3) ? 'url('+cms.keyVisuals.slide3+')' : 'url('+banner9+')'}" 
-             id="BannerNine">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP3 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP3 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP3 }}</p> <!-- CMS controlled -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item parallax-effect" 
-             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide4) ? 'url('+cms.keyVisuals.slide4+')' : 'url('+banner5+')'}" 
-             id="BannerFive">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP4 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP4 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP4 }}</p> <!-- CMS controlled -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item parallax-effect" 
-             :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide5) ? 'url('+cms.keyVisuals.slide5+')' : 'url('+banner6+')'}" 
-             id="BannerSix">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP5 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP5 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP5 }}</p> <!-- CMS controlled -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item parallax-effect" 
-          :style="{backgroundImage: (cms.keyVisuals && cms.keyVisuals.slide6) ? 'url('+cms.keyVisuals.slide6+')' : 'url('+banner1+')'}" 
-          id="BannerOne">
-          <svg class="bd-placeholder-img" style="opacity: 55%" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="var(--vmc-primary-3)"/>
-          </svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <p class="mb-2 font-weight-normal text-white caption-one">{{ cms.captionOneP6 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-normal mb-0 caption-two">{{ cms.captionTwoP6 }}</p> <!-- CMS controlled -->
-              <p class="vmc-text-white font-weight-light caption-three">{{ cms.captionThreeP6 }}</p> <!-- CMS controlled -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container bg-white">
-      <div class="row py-3 d-flex align-items-center justify-content-center">
-        <div class="col-auto p-1">
-          <router-link class="btn vmc-btn-circle vmc-btn-secondary kv-low-btn" :to="{name: 'GovernmentAdvisories'}">
-            ADVISORIES
-          </router-link>
         </div>
       </div>
     </div>
@@ -167,7 +247,7 @@ import { cmsMixin } from '@/mixins/cmsMixin'; // Import the CMS mixin (copy and 
 
 export default {
   name: "KeyVisual",
-  
+
   mixins: [cmsMixin], // Include the CMS mixin here (copy and paste this line)
 
   // Use data function to define your images
@@ -179,7 +259,6 @@ export default {
       'banner9': require(`@/assets/no_image.jpg`),
       'banner10': require(`@/assets/no_image.jpg`),
       'banner12': require(`@/assets/no_image.jpg`)
-      
     }
   },
   mounted() {
@@ -200,7 +279,6 @@ export default {
       if (carousel9) carousel9.style.height = "60vh";
       if (carousel11) carousel11.style.height = "60vh";
     }
-
   }
 }
 </script>
@@ -224,6 +302,7 @@ export default {
   z-index: 10;
   text-shadow: 1px 3px 6px rgba(0, 0, 0, .5);
 }
+
 .carousel-indicators {
   border-radius: 100px;
   bottom: 5%;
@@ -232,16 +311,19 @@ export default {
   right: auto;
   justify-content: start;
 }
+
 .carousel-indicators li {
   width: 10px;
   height: 10px;
   border-radius: 100%;
 }
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: calc(100vh - 100px);
+  height: 100vh;
 }
-.carousel-item > img {
+
+.carousel-item>img {
   position: absolute;
   top: 0;
   left: 0;
@@ -251,59 +333,73 @@ export default {
 
 .parallax-effect {
   /* Stretch the background image to fill the entire slide */
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .kv-low-btn {
   width: 200px;
 }
+
 #VMCKeyVisual {
   margin-top: 85px;
 }
+
 .caption-one {
   letter-spacing: 3px;
   font-size: 14px;
 }
+
 .caption-two {
-  font-size:40px;
+  font-size: 40px;
   font-weight: 500;
   letter-spacing: 1px;
 }
+
 .caption-three {
   font-size: 16px;
 }
+
 @media (min-width: 40em) {
+
   /* Bump up size of carousel content */
   .carousel-caption {
     width: 100%;
   }
+
   .carousel-caption p {
     width: 100%;
     margin-bottom: 1.25rem;
     line-height: 1.4;
   }
 }
+
 @media (min-width: 576px) {
   #VMCKeyVisual {
     margin-top: 135px;
   }
+
   .carousel-indicators {
     bottom: 20%;
   }
+
   .carousel-caption {
     max-width: 500px;
   }
+
   .caption-one {
     letter-spacing: 3px;
     font-size: 14px;
   }
+
   .caption-two {
-    font-size:50px;
+    font-size: 50px;
     font-weight: 500;
     letter-spacing: 1px;
   }
+
   .caption-three {
     font-size: 21px;
   }
@@ -313,21 +409,26 @@ export default {
   #VMCKeyVisual {
     margin-top: 85px;
   }
+
   .carousel-indicators {
     bottom: 20%;
   }
+
   .carousel-caption {
     max-width: 680px;
   }
+
   .caption-one {
     letter-spacing: 3px;
     font-size: 16px;
   }
+
   .caption-two {
-    font-size:55px;
+    font-size: 55px;
     font-weight: 500;
     letter-spacing: 1px;
   }
+
   .caption-three {
     font-size: 23px;
   }
@@ -337,9 +438,11 @@ export default {
   #VMCKeyVisual {
     margin-top: 105px;
   }
+
   .carousel-indicators {
     bottom: 20%;
   }
+
   .carousel-caption {
     max-width: 940px;
   }
@@ -349,9 +452,11 @@ export default {
   #VMCKeyVisual {
     margin-top: 105px;
   }
+
   .carousel-indicators {
     bottom: 20%;
   }
+
   .carousel-caption {
     max-width: 1140px;
   }

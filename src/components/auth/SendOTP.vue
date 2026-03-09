@@ -1,14 +1,14 @@
 <template>
     <div class="vmc-send-otp d-flex align-items-center justify-content-center">
         <div>
-            <div class="send-otp-container d-flex align-items-center justify-content-center">
-                <img :src="vmcLogo" alt="" style="width: 80px;">
-                <div class="logo-desc">
-                    <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
-                    <p class="mb-0 text-center" id="VMCTag">QUALITY SERVICE, QUALITY CREW</p>
+            <div class="send-otp-box px-4 py-4 bg-white d-flex flex-column  align-items-center justify-content-center">
+                <div class="send-otp-container d-flex align-items-center justify-content-center mb-4">
+                    <img :src="vmcLogo" alt="" style="width: 70px;">
+                    <div class="logo-desc">
+                        <p class="mb-0 text-center vmc-text-primary" id="VMCMeaning">VERITAS MARITIME CORPORATION</p>
+                        <p class="mb-0 text-center" id="VMCTag">QUALITY SERVICE, QUALITY CREW</p>
+                    </div>
                 </div>
-            </div>
-            <div class="send-otp-box px-4 py-4 bg-white d-flex align-items-center justify-content-center">
                 <form action="">
                     <h2 class="text-dark">Send OTP</h2>
                     <div class="text-center">
@@ -98,7 +98,7 @@ input::-webkit-inner-spin-button {
 }
 
 #VMCTag {
-    color: var(--vmc-primary-1);
+    color: var(--vmc-primary-3);
 }
 
 .send-otp-box {

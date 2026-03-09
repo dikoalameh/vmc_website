@@ -17,11 +17,11 @@
       
       <!-- Fixed Navigation Arrows -->
       <span class="nav-arrow left-arrow" :class="{'invisible': !hasPrevious()}" @click.stop="previous">
-        <font-awesome-icon icon="chevron-left" size="3x"/>
+        <font-awesome-icon icon="chevron-left" size="2x"/>
       </span>
       
       <span class="nav-arrow right-arrow" :class="{'invisible': !hasNext()}" @click.stop="next">
-        <font-awesome-icon icon="chevron-right" size="3x"/>
+        <font-awesome-icon icon="chevron-right" size="2x"/>
       </span>
 
       <!-- Stretched Image Container -->

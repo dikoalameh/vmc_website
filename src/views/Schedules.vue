@@ -68,8 +68,7 @@ export default {
 .dynamic-page-heading {
   position: relative;
   width: 100%;
-  height: 40vh; /* Standard page heading height */
-  min-height: 250px;
+  height: 390px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +96,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.45); /* Dark overlay for text readability */
+  background-color: rgba(132, 168, 197, 0.5);
   z-index: 1;
 }
 
@@ -109,6 +108,10 @@ export default {
 @media (min-width: 992px) {
   .dynamic-page-heading {
     margin-top: 105px;
+  }
+  .dynamic-page-heading h2 {
+    font-size: 4.75rem;
+    font-weight: 300;
   }
 }
 </style>

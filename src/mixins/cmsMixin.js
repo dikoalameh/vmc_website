@@ -5,7 +5,9 @@ export const cmsMixin = {
       // Removed 'polling' variable
     };
   },
-
+  mounted() {
+    this.loadCMSData();
+  },
   methods: {
     async loadCMSData() {
       try {

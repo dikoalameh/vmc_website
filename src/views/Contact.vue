@@ -94,7 +94,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.45); /* Dark overlay for text readability */
+  background-color: rgba(132, 168, 197, 0.5);
   z-index: 1;
 }
 
@@ -112,8 +112,10 @@ export default {
   .dynamic-page-heading {
     margin-top: 105px;
   }
-  .page-title {
-    font-size: 3.5rem;
+  
+  .dynamic-page-heading h2 {
+    font-size: 4.75rem;
+    font-weight: 300;
   }
 }
 </style>

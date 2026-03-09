@@ -283,8 +283,8 @@
               </div>
               
               <div class="col-md-6 form-group">
-                 <label class="font-weight-bold">Crew & Fleet Status Logo</label>
-                 <div class="card bg-light border-0 p-3 h-100 d-flex flex-column justify-content-center shadow-sm">
+                <label class="font-weight-bold">Crew & Fleet Status Logo</label>
+                <div class="card bg-light border-0 p-3 h-100 d-flex flex-column justify-content-center shadow-sm">
                      <div class="image-preview w-100 bg-white border-white shadow-sm" :style="{ backgroundImage: form.homeCrewFleetStatusLogo.image ? `url(${form.homeCrewFleetStatusLogo.image})` : 'none' }">
                          <span v-if="!form.homeCrewFleetStatusLogo.image" class="text-muted small">No Image Selected</span>
                      </div>
@@ -294,7 +294,7 @@
                      </div>
                      <input ref="cfsInput" type="file" accept="image/*" style="display: none" @change="(e) => handleUpload(e, form.homeCrewFleetStatusLogo, 'image')">
                      <textarea v-model="form.cfsimgdesc" rows="2" placeholder="Write description under logo..." class="form-control mt-3 form-control-sm"></textarea>
-                 </div>
+                </div>
               </div>
             </div>
           </div>
