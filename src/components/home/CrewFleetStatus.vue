@@ -21,7 +21,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ 0 + cms.onBoard }}</h2> <!-- On Board -->
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ 0 + Number(cms.onBoard) }}</h2> <!-- On Board -->
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
@@ -32,7 +32,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ 0 + cms.standBy }}</h2> <!-- Stand By -->
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ 0 + Number(cms.standBy) }}</h2> <!-- Stand By -->
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
@@ -43,7 +43,7 @@
     <div class="col-md-3 col-sm-6 mb-3 px-2">
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
-          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ 0 + cms.totalVessels }}</h2> <!-- Total Vessels -->
+          <h2 class="mb-0 vmc-text-primary" style="font-size: 38px;">{{ 0 + Number(cms.totalVessels) }}</h2> <!-- Total Vessels -->
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
              style="border-bottom-left-radius: inherit; border-bottom-right-radius: inherit;">
