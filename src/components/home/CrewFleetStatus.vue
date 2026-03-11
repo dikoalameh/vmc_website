@@ -9,7 +9,7 @@
       <div class="card border-0 rounded-medium shadow">
         <div class="card-body text-center p-3">
           <h2 class="mb-0 vmc-text-primary" style="font-size: clamp(24px, 4vw, 38px);">
-            {{ 0 + totalCrewCalculated }}
+            {{ 0 + Number(totalCrewCalculated) }}
           </h2>
         </div>
         <div class="card-footer text-center vmc-bg-prime-5 p-2"
@@ -71,7 +71,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 .vmc-bg-dark-half {

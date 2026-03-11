@@ -201,47 +201,6 @@
   </div>
 </template>
 
-<!-- <script>
-export default {
-  name: "KeyVisual",
-  data() {
-    return {
-      'banner1': require(`@/assets/keyvisuals/banner1.jpg`),
-      // 'banner2': require(`@/assets/keyvisuals/banner2_0.jpg`),
-      // 'banner4': require(`@/assets/programs/office/2021/healthwealth/health1_18-10-2021.jpg`),
-      'banner5': require(`@/assets/keyvisuals/Taga_Veritas_Ako_63021.jpg`),
-      'banner6': require(`@/assets/keyvisuals/VeritasFront-Liners_7-12-2019.jpg`),
-      // 'banner7': require(`@/assets/keyvisuals/mlcisocert_52022KV.jpg`),
-      'banner9': require(`@/assets/keyvisuals/coronamajesty_053022KV.jpg`),
-      'banner10': require(`@/assets/keyvisuals/capenormandy_053022KV.jpg`),
-      // 'banner11': require(`@/assets/keyvisuals/BicolAllottee2025.jpg`),
-      'banner12': require(`@/assets/keyvisuals/capehayate_032024KV.jpg`)
-    }
-  },
-  mounted() {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
-    const carousel1 = document.getElementById('BannerOne');
-    const carousel4 = document.getElementById('BannerFive');
-    const carousel5 = document.getElementById('BannerSix');
-    const carousel8 = document.getElementById('BannerNine');
-    const carousel9 = document.getElementById('BannerTen');
-    const carousel11 = document.getElementById('BannerTwelve');
-
-    if (w > 992 && w < h) {
-      carousel1.style.height = "60vh"
-      carousel4.style.height = "60vh"
-      carousel5.style.height = "60vh"
-      carousel8.style.height = "60vh"
-      carousel9.style.height = "60vh"
-      carousel11.style.height = "60vh"
-    }
-    // console.log('width ' + w);
-    // console.log('height ' + h);
-  }
-}
-</script> -->
-
 <script>
 import { cmsMixin } from '@/mixins/cmsMixin'; // Import the CMS mixin (copy and paste this line)
 

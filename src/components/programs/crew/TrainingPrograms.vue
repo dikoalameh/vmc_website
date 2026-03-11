@@ -30,17 +30,17 @@
               Crew Development Program (All Crew)
             </h2>
           </div>
-          <div class="col-md-12 mt-3">
+          <div class="col-md-12">
             <p class="pr-1 mb-0" style="white-space: pre-wrap;">{{ cms.trainingIntro }}</p>
           </div>
         </div>
       </div>
-      <div v-if="!cms.trainingList || cms.trainingList.length === 0" class="container text-center vmc-py-big">
+      <div v-if="!cms.trainingList || cms.trainingList.length === 0" class="container text-center vmc-py-big mt-5">
         <p class="text-muted">No training programs available at the moment.</p>
       </div>
       <div v-else>
         <div v-for="(program, index) in (cms.trainingList || [])" :key="index"
-          :class="[index % 2 !== 0 ? 'vmc-bg-dark-1' : '']" class="container-fluid vmc-py-big">
+          :class="[index % 2 === 0 ? 'vmc-bg-dark-1' : '']" class="container-fluid vmc-py-big mt-5">
           <div class="container">
             <div class="row d-flex align-items-center">
               <div :class="['col-md-8', index % 2 !== 0 ? 'order-md-2' : 'order-md-1']">
