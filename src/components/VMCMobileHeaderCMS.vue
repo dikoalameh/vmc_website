@@ -766,7 +766,7 @@ button {
 
 @media (min-width: 330px) {
     .margin {
-        margin-bottom: 70px;
+        margin-bottom: 60px;
     }
 
     /* HEADER */

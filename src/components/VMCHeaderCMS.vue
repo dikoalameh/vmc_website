@@ -112,7 +112,6 @@
                     <div class="vmc-profile">
                         <ul v-if="isDropdownOpen"
                             class="dropdown-menu dropdown-menu-end shadow show vmc-teleported-dropdown">
-                            <!-- PROFILE INFO -->
                             <li class="px-3 py-2 d-flex align-items-center">
                                 <img :src="profile" class="rounded-circle me-1" style="width:40px; height:40px;">
                                 <strong class="text-dark">ACCOUNT NAME</strong>
@@ -120,7 +119,6 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <!-- DROPDOWN ITEMS -->
                             <li>
                                 <button
                                     class="dropdown-menu-items bg-transparent border-0 list-unstyled w-100 py-2 d-flex align-items-center justify-content-between px-3"
@@ -139,7 +137,6 @@
                                     <span class="material-symbols-outlined text-dark"
                                         :class="{ 'rotate': isSettingsOpen }">keyboard_arrow_right</span>
                                 </button>
-                                <!-- SETTINGS DROPDOWN ITEMS -->
                                 <ul v-if="isSettingsOpen" class="list-unstyled pb-2">
                                     <li>
                                         <button
@@ -393,6 +390,15 @@ export default {
         pageTitle() {
             return this.$route.meta.title
         }
+    },
+
+    watch: {
+        '$route.meta.title': {
+            immediate: true,
+            handler(newTitle) {
+                document.title = newTitle
+            }
+        }
     }
 }
 </script>
@@ -436,7 +442,7 @@ export default {
 
     header {
         margin-left: 310px;
-        z-index: 1;
+        z-index: 99;
         background-color: #e1e1e1;
         width: calc(100% - 310px);
     }
@@ -601,4 +607,4 @@ export default {
         }
     }
 }
-</style>
+</style> 

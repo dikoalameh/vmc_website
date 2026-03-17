@@ -19,15 +19,16 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between mb-3 px-3">
-            <div class="crew-fleet-header text-dark">
-                Crew and Fleet Status
+        <div class="sticky-controls">
+            <div class="main-header d-flex align-items-center justify-content-between mb-3 px-3">
+                <div class="crew-fleet-header text-dark">
+                    Crew and Fleet Status
+                </div>
+                <button type="button" @click="clearText" class="vmc-bg-prime-6 text-white border-0 rounded px-2 py-1">
+                    Clear Text
+                </button>
             </div>
-            <button type="button" @click="clearText" class="vmc-bg-prime-6 text-white border-0 rounded px-2 py-1">
-                Clear Text
-            </button>
         </div>
-        <hr class="px-0">
         <form action="" id="crewfleet" @submit.prevent="saveAllChanges">
             <div class="px-3">
                 <div class="number-inputs align-items-center justify-content-center">
@@ -298,15 +299,22 @@ hr {
     border-top: 1px solid black;
 }
 
-@media (min-width: 330px) {
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
 
-    /* CREW FLEET HEADER */
+@media (min-width: 330px) {
+    .main-header {
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+    }
     .crew-fleet-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
-    /* UPLOAD IMAGE */
     .img-container {
         width: 100%;
         height: 140px;
@@ -398,6 +406,16 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
+}
+
+@media (min-width: 750px) {
+    .crew-fleet-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -413,7 +431,7 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
     }
 
     /* UPLOAD IMAGE */
@@ -427,6 +445,10 @@ hr {
         width: 330px;
         height: 140px;
         cursor: pointer;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

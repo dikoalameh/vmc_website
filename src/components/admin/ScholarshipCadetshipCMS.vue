@@ -19,13 +19,15 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between px-3">
-            <div class="scholar-header text-dark">Scholarship and Cadetship</div>
-            <button type="button" @click="addContainer" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1">
-                Add Item
-            </button>
+        <div class="sticky-controls">
+            <div class="d-flex align-items-center justify-content-between px-3">
+                <div class="scholar-header text-dark">Scholarship and Cadetship</div>
+                <button type="button" @click="addContainer" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1">
+                    Add Item
+                </button>
+            </div>
+            <hr class="px-0">
         </div>
-        <hr class="px-0">
         <form action="" id="scholarship" @submit.prevent="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
@@ -253,6 +255,13 @@ hr {
     border-top: 1px solid black;
 }
 
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+    padding-top: 18px;
+}
+
 @media (min-width: 330px) {
     .scholar-header {
         font-size: 20px;
@@ -304,6 +313,10 @@ hr {
     .modal-content img {
         max-height: 80vh;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -322,7 +335,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

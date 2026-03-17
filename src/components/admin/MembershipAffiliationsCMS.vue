@@ -19,16 +19,18 @@
                 </div>
             </div>
         </div>
-        <div class="membership-wrapper d-flex align-items-center justify-content-between px-3">
-            <div class="member-affiliations-header text-dark">Membership and Affiliations</div>
-            <button type="button" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1" @click="addContainer">Add
-                Image</button>
+        <div class="sticky-controls">
+            <div class="membership-wrapper d-flex align-items-center justify-content-between px-3">
+                <div class="member-affiliations-header text-dark">Membership and Affiliations</div>
+                <button type="button" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1"
+                    @click="addContainer">Add
+                    Image</button>
+            </div>
         </div>
-        <hr class="px-0">
         <form action="" id="membership" @submit="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
-                    <div class="w-100" v-for="(container, index) in containers" :key="container.id">
+                    <div class="w-100 mb-4" v-for="(container, index) in containers" :key="container.id">
                         <div class="d-flex px-3 align-items-center justify-content-between w-100 mt-2">
                             <div class="d-flex align-items-center justify-content-between w-100 mt-2">
                                 <span class="logo-number text-dark">
@@ -71,7 +73,6 @@
                                 Remove Photo
                             </button>
                         </div>
-                        <hr class="px-0">
                     </div>
                 </div>
             </div>
@@ -236,9 +237,19 @@ hr {
     border-top: 1px solid black;
 }
 
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
+
 @media (min-width: 330px) {
+    .membership-wrapper {
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
     .member-affiliations-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
@@ -277,6 +288,16 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
+}
+
+@media (min-width: 750px) {
+    .member-affiliations-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -299,7 +320,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+    
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

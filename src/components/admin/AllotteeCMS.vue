@@ -30,18 +30,20 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between px-3">
-            <div class="allottee-header text-dark">Allottee</div>
-            <button type="button" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1" @click="addContainer">
-                Add Items
-            </button>
+        <div class="sticky-controls">
+            <div class="d-flex align-items-center justify-content-between px-3">
+                <div class="allottee-header text-dark">Allottee</div>
+                <button type="button" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1" @click="addContainer">
+                    Add Items
+                </button>
+            </div>
+            <hr class="px-0">
         </div>
-        <hr class="px-0">
         <form action="" id="allottees" @submit.prevent="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
-                    <div class="w-100 box" v-for="(container, index) in containers" :key="index">
-                        <div class="mb-4 px-2">
+                    <div class="w-100 mb-4" v-for="(container, index) in containers" :key="index">
+                        <div class="mt-2 px-2">
                             <div class="d-flex px-3 align-items-center justify-content-between w-100">
                                 <span class="item-number text-dark">
                                     Item # {{ index + 1 }}
@@ -121,7 +123,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr class="px-0">
                     </div>
                 </div>
             </div>
@@ -351,6 +352,15 @@ hr {
     border-top: 1px solid black;
 }
 
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+    padding-top: 18px;
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+
 @media (min-width: 330px) {
     .allottee-header {
         font-size: 20px;
@@ -461,6 +471,10 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
 }
 
 @media (min-width: 750px) {
@@ -502,7 +516,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

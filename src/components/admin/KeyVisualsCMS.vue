@@ -22,13 +22,14 @@
         <div class="form-container">
             <form action="" id="keyvisuals" @submit.prevent="saveAllChanges">
                 <div class="vmc-main-content">
-                    <div class="kv-wrapper d-flex justify-content-between align-items-center px-3">
-                        <div class="text-dark key-visual-header">Key Visual Slides</div>
+                    <div class="sticky-controls">
+                        <div class="kv-wrapper d-flex justify-content-between align-items-center">
+                            <div class="text-dark key-visual-header mx-3">Key Visual Slides</div>
+                        </div>
                     </div>
-                    <hr class="px-0">
                     <div>
                         <div class="grid-header">
-                            <div class="w-100 mb-3" v-for="n in 6" :key="n">
+                            <div class="w-100 mt-4" v-for="n in 6" :key="n">
                                 <div class="px-3">
                                     <div class="d-flex justify-content-between">
                                         <h3 class="kv-slide-no text-dark">Slide # {{ n }}</h3>
@@ -58,16 +59,18 @@
                                             v-model="form[`description${n}`]"></textarea>
                                     </div>
                                 </div>
-                                <hr class="px-0">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-header px-3 text-dark">Home Page Slider (Key Visuals)</div>
-                <hr class="px-0">
+                <div class="sticky-controls">
+                    <div class="slider-header px-3 text-dark">
+                        Image Slider (Key Visuals)
+                    </div>
+                </div>
                 <div>
                     <div class="grid-header">
-                        <div class="w-100" v-for="n in 6" :key="n">
+                        <div class="w-100 mt-4" v-for="n in 6" :key="n">
                             <div class="px-3 py-2">
                                 <div class="d-flex align-items-center justify-content-between mb-2" style="gap:5px;">
                                     <span class="img-slide-header text-dark">Slide # {{ n }}</span>
@@ -100,12 +103,11 @@
                                     Remove Photo
                                 </button>
                             </div>
-                            <hr class="px-0">
                         </div>
                     </div>
                 </div>
             </form>
-            <div class="px-3 mb-4">
+            <div class="px-3 my-4">
                 <button type="submit" form="keyvisuals"
                     class="vmc-bg-prime-4 border-0 px-3 py-1 text-white mx-1 rounded">
                     Save All Changes
@@ -283,28 +285,43 @@ hr {
     border-top: 1px solid black;
 }
 
-@media (min-width: 330px) {
-    .cms-container {
-        overflow-x: hidden;
-    }
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
 
+@media (min-width: 330px) {
     .kv-wrapper {
         margin-top: 1px;
     }
 
     .key-visual-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
     }
 
     .kv-slide-no {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .slider-header,
     .img-slide-header {
-        font-size: 20px;
         font-weight: 600;
+    }
+
+    .slider-header {
+        font-size: 17px;
+    }
+
+    .kv-wrapper,
+    .slider-header {
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .img-slide-header {
+        font-size: 18px;
     }
 
     .input-group {
@@ -381,6 +398,18 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
+}
+
+@media (min-width: 750px) {
+
+    .key-visual-header,
+    .slider-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -397,12 +426,22 @@ hr {
     .modal-content img {
         max-height: 80vh;
     }
+
+
+    .key-visual-header,
+    .slider-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
     .cms-container {
         margin-left: 310px;
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

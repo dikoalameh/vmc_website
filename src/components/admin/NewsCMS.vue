@@ -30,20 +30,21 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between px-3">
-            <div class="article-header text-dark">
-                News Articles
+        <div class="sticky-controls">
+            <div class="main-header d-flex align-items-center justify-content-between px-3">
+                <div class="article-header text-dark">
+                    News Articles
+                </div>
+                <button type="button" @click="addContainer"
+                    class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1">
+                    Add New Article</button>
             </div>
-            <button type="button" @click="addContainer" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1">Add
-                New
-                Article</button>
         </div>
-        <hr class="px-0">
         <form action="" id="news" @submit.prevent="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
-                    <div class="w-100" v-for="(container, index) in containers" :key="index">
-                        <div class="d-flex px-3 align-items-center justify-content-between w-100 mt-2">
+                    <div class="w-100 mt-4" v-for="(container, index) in containers" :key="index" style="border-bottom:1px solid #ccc;">
+                        <div class="d-flex px-3 align-items-center justify-content-between w-100">
                             <span class="item-number text-dark">
                                 Item # {{ index + 1 }}
                             </span>
@@ -84,7 +85,7 @@
                                 v-model="container.description"></textarea>
                         </div>
 
-                        <div class="mt-3 px-3">
+                        <div class="mt-3 mb-3 px-3">
                             <input type="file" multiple :id="'upload-news-img-' + container.id"
                                 accept="image/png, image/jpeg, image/jpg" hidden
                                 @change="onImageChange($event, container.id)">
@@ -134,12 +135,11 @@
                                 </button>
                             </div>
                         </div>
-                        <hr class="px-0">
                     </div>
                 </div>
             </div>
         </form>
-        <div class="px-3">
+        <div class="px-3 mt-4">
             <button type="submit" form="news" class="vmc-bg-prime-4 text-white border-0 rounded px-3 py-1">
                 Save All Changes
             </button>
@@ -366,21 +366,19 @@ hr {
     border-top: 1px solid black;
 }
 
-.vmc-bg-prime-6:hover {
-    background-color: var(--vmc-primary-8);
-}
-
-.vmc-bg-prime-4:hover {
-    background-color: var(--vmc-primary-6)
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
 }
 
 @media (min-width: 330px) {
-    .cms-container {
-        overflow-x: hidden !important;
+    .main-header {
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
     }
-
     .article-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
@@ -494,6 +492,10 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
 }
 
 @media (min-width: 750px) {
@@ -508,6 +510,10 @@ hr {
         font-size: 16px;
         object-fit: cover;
         border: 1px solid #ccc;
+    }
+    
+    .article-header {
+        font-size: 20px;
     }
 }
 
@@ -535,7 +541,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

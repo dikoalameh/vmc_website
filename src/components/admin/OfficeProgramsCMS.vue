@@ -30,17 +30,19 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between px-3">
-            <div class="programs-header text-dark">Office Programs</div>
-            <button type="button" @click="addContainer" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1">
-                Add Item
-            </button>
+        <div class="sticky-controls">
+            <div class="d-flex align-items-center justify-content-between px-3">
+                <div class="programs-header text-dark">Office Programs</div>
+                <button type="button" @click="addContainer" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1">
+                    Add Item
+                </button>
+            </div>
+            <hr class="px-0">
         </div>
-        <hr class="px-0">
         <form action="" id="officeprograms" @submit.prevent="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
-                    <div class="w-100" v-for="(container, index) in containers" :key="index">
+                    <div class="w-100 mb-4" v-for="(container, index) in containers" :key="index">
                         <div class="d-flex px-3 align-items-center justify-content-between w-100 mt-2">
                             <span class="item-number text-dark">
                                 Item # {{ index + 1 }}
@@ -117,7 +119,6 @@
                                 </button>
                             </div>
                         </div>
-                        <hr class="px-0">
                     </div>
                 </div>
             </div>
@@ -346,9 +347,18 @@ hr {
     border-top: 1px solid black;
 }
 
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+    padding-top: 18px;
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+
 @media (min-width: 330px) {
     .programs-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
@@ -423,6 +433,10 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
 }
 
 @media (min-width: 750px) {
@@ -437,6 +451,10 @@ hr {
         font-size: 16px;
         object-fit: cover;
         border: 1px solid #ccc;
+    }
+
+    .programs-header {
+        font-size: 20px;
     }
 }
 
@@ -464,7 +482,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

@@ -7,25 +7,24 @@
                 <div class="modal-content bg-transparent position-relative border-0">
                     <button class="close-btn position-fixed text-white bg-transparent border-0"
                         @click="closePreviewImage">&times;</button>
-
                     <div class="d-flex justify-content-between align-items-center border-0">
                         <!-- DISPLAY THE FIRST IMAGE -->
                         <img :src="previewImages[currentPreviewIndex]" alt="Preview Image">
                     </div>
                 </div>
-
                 <div class="text-center mt-3">
                     <span class="text-white">Image {{ currentPreviewIndex + 1 }} of {{ previewImages.length }}</span>
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between px-3">
-            <div class="desc-header text-dark">Company Description</div>
-            <button type="button" @click="clearText" class="vmc-bg-prime-6 text-white rounded border-0 px-2 py-1">
-                Clear Inputs
-            </button>
+        <div class="sticky-controls">
+            <div class="company-header d-flex align-items-center justify-content-between px-3">
+                <div class="desc-header text-dark">Company Description</div>
+                <button type="button" @click="clearText" class="vmc-bg-prime-6 text-white rounded border-0 px-2 py-1">
+                    Clear Inputs
+                </button>
+            </div>
         </div>
-        <hr class="px-0">
         <form action="" id="thecompany" @submit.prevent="saveAllChanges">
             <div class="grid d-block d-sm-flex px-3">
                 <div class="w-100 mt-3">
@@ -68,12 +67,13 @@
                 </div>
             </div>
             <div class="grid d-block d-sm-flex px-3">
-                <div class="w-100 mt-3">
+                <div class="w-100 mt-4">
                     <div class="d-flex align-items-center justify-content-between w-100 mt-2">
                         <span class="logo-number text-dark" style="font-weight:600;">
                             Company Logo
                         </span>
-                        <button type="button" @click="previewImage('companyLogo')" class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
+                        <button type="button" @click="previewImage('companyLogo')"
+                            class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
                             View
                         </button>
                     </div>
@@ -101,12 +101,13 @@
                         Remove Photo
                     </button>
                 </div>
-                <div class="w-100 mt-3">
+                <div class="w-100 mt-4">
                     <div class="d-flex align-items-center justify-content-between w-100 mt-2">
                         <span class="logo-number text-dark" style="font-weight:600;">
                             Quality Crew Background
                         </span>
-                        <button type="button" @click="previewImage('qualityCrew')" class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
+                        <button type="button" @click="previewImage('qualityCrew')"
+                            class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
                             View
                         </button>
                     </div>
@@ -117,8 +118,8 @@
                             style="height:100%; width:100%; object-fit:contain;">
 
                         <template v-else>
-                            <input type="file" id="upload-qualitycrew-img" accept="image/png, image/jpeg, image/jpg" hidden
-                                @change="(e) => onImageChange(e, 'qualityCrew')">
+                            <input type="file" id="upload-qualitycrew-img" accept="image/png, image/jpeg, image/jpg"
+                                hidden @change="(e) => onImageChange(e, 'qualityCrew')">
 
                             <label for="upload-qualitycrew-img"
                                 class="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center"
@@ -136,12 +137,13 @@
                 </div>
             </div>
             <div class="grid d-block d-sm-flex px-3">
-                <div class="w-100 mt-3">
+                <div class="w-100 mt-4">
                     <div class="d-flex align-items-center justify-content-between w-100 mt-2">
                         <span class="logo-number text-dark" style="font-weight:600;">
                             History
                         </span>
-                        <button type="button" @click="previewImage('history')" class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
+                        <button type="button" @click="previewImage('history')"
+                            class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
                             View
                         </button>
                     </div>
@@ -169,12 +171,13 @@
                         Remove Photo
                     </button>
                 </div>
-                <div class="w-100 mt-3">
+                <div class="w-100 mt-4">
                     <div class="d-flex align-items-center justify-content-between w-100 mt-2">
                         <span class="logo-number text-dark" style="font-weight:600;">
                             Organizational Chart
                         </span>
-                        <button type="button" @click="previewImage('chart')" class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
+                        <button type="button" @click="previewImage('chart')"
+                            class="vmc-bg-prime-4 text-white rounded px-3 py-1 border-0">
                             View
                         </button>
                     </div>
@@ -326,7 +329,7 @@ export default {
                 this.$refs.toast.showToast('No images to view', "warning");
                 return;
             }
-            
+
             this.previewImages = [this.images[key]];
             this.currentPreviewIndex = 0;
             this.showPreviewModal = true;
@@ -463,9 +466,19 @@ hr {
     border-top: 1px solid black;
 }
 
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
+
 @media (min-width: 330px) {
+    .company-header {
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
     .desc-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
@@ -509,6 +522,16 @@ hr {
     .modal-content img {
         max-height: 80vh;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
+}
+
+@media (min-width: 750px) {
+    .desc-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {}
@@ -517,7 +540,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

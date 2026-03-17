@@ -20,17 +20,19 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between mb-3 px-3">
-            <div class="principals-header text-dark">Our Principals</div>
-            <button type="button" class="bg-primary border-0 rounded px-2 py-1 text-white" @click="addContainer">
-                Add Item
-            </button>
+        <div class="sticky-controls">
+            <div class="main-header d-flex align-items-center justify-content-between mb-3 px-3">
+                <div class="principals-header text-dark">Our Principals</div>
+                <button type="button" class="vmc-bg-prime-4 border-0 rounded px-2 py-1 text-white"
+                    @click="addContainer">
+                    Add Item
+                </button>
+            </div>
         </div>
-        <hr class="px-0">
         <form action="" id="principals" @submit.prevent="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
-                    <div class="w-100" v-for="(container, index) in containers" :key="index">
+                    <div class="w-100 mb-4" v-for="(container, index) in containers" :key="index">
                         <div class="d-flex px-3 align-items-center justify-content-between w-100 mt-2">
                             <span class="content-header text-dark">
                                 Company # {{ index + 1 }}
@@ -101,7 +103,6 @@
                                 Remove Photo
                             </button>
                         </div>
-                        <hr class="px-0">
                     </div>
                 </div>
             </div>
@@ -271,18 +272,24 @@ hr {
     border-top: 1px solid black;
 }
 
-@media (min-width: 330px) {
-    .cms-container {
-        overflow-x: hidden;
-    }
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
 
+@media (min-width: 330px) {
+    .main-header {
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
     .principals-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
     .content-header {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
     }
 
@@ -369,6 +376,18 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
+}
+
+@media (min-width: 750px) {
+
+    .principals-header,
+    .content-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -391,7 +410,11 @@ hr {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>

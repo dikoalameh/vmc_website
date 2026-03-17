@@ -1,28 +1,27 @@
 <template>
   <div class="cms-container">
     <ToastCMS ref="toast" />
-    <div class="toggle-wrapper d-flex px-3">
-      <label class="switch">
-        <input type="checkbox" class="w-0 h-0" @click="toastNotif" v-model="isEnabled" @change="toastNotif">
-        <span class="slider round"></span>
-      </label>
-      <span class="toggle-label ml-3">Enable Job Hiring Popup</span>
+    <div class="sticky-controls">
+      <div class="toggle-wrapper d-flex px-3">
+        <label class="switch">
+          <input type="checkbox" class="w-0 h-0" @click="toastNotif" v-model="isEnabled" @change="toastNotif">
+          <span class="slider round"></span>
+        </label>
+        <span class="toggle-label ml-3">Enable Job Hiring Popup</span>
+      </div>
+      <div class="job-lists d-flex align-items-center justify-content-between px-3">
+        <div class="job-header text-dark">Job Openings List</div>
+        <button class="vmc-bg-prime-4 border-0 text-white px-2 py-1 rounded" @click="addContainer">
+          Add Job
+        </button>
+      </div>
     </div>
-
-    <hr class="px-0">
-    <div class="job-lists d-flex align-items-center justify-content-between mb-3 px-3">
-      <div class="job-header text-dark">Job Openings List</div>
-      <button class="vmc-bg-prime-4 border-0 text-white px-2 py-1 rounded" @click="addContainer">
-        Add Job
-      </button>
-    </div>
-    <hr class="px-0">
 
     <form action="" id="jobhiring" @submit="saveAllChanges">
       <div class="job-section">
         <div class="py-2">
           <div class="grid-header">
-            <div class="text-dark" v-for="(container, index) in containers" :key="index">
+            <div class="text-dark mt-4" v-for="(container, index) in containers" :key="index">
               <div class="px-3">
                 <div class="d-flex align-items-center justify-content-between text-dark">
                   <span class="job-header-2 text-dark">Job # {{ index + 1 }}</span>
@@ -42,7 +41,6 @@
                     v-model="container.requirements"></textarea>
                 </div>
               </div>
-              <hr class="px-0">
             </div>
           </div>
         </div>
@@ -159,14 +157,20 @@ hr {
   border-top: 1px solid black;
 }
 
-@media (min-width: 330px) {
-  .cms-container {
-    overflow-x: hidden;
-  }
+.sticky-controls {
+  position: sticky;
+  z-index: 50;
+  background-color: white;
+}
 
-  /* TOGGLE SWITCH */
+@media (min-width: 330px) {
   .toggle-wrapper {
-    margin-top: 15px;
+    margin-top: 0;
+  }
+  .toggle-wrapper,
+  .job-lists {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
   }
 
   .switch {
@@ -233,7 +237,7 @@ hr {
   }
 
   .job-header {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .job-header-2 {
@@ -301,6 +305,16 @@ hr {
   .grid-header>div {
     width: 100%;
   }
+
+  .sticky-controls {
+    top: 60px;
+  }
+}
+
+@media (min-width: 750px) {
+  .job-header {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -313,13 +327,17 @@ hr {
     width: 50% !important;
     box-sizing: border-box;
   }
+
+  .job-header {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
   .cms-container {
     margin-left: 310px;
     width: calc(100% - 310px);
-    margin-top: 105px;
+    margin-top: 82px;
   }
 
   .kv-wrapper {
@@ -328,6 +346,10 @@ hr {
 
   .toggle-wrapper {
     margin-top: 0;
+  }
+
+  .sticky-controls {
+    top: 82px;
   }
 }
 </style>

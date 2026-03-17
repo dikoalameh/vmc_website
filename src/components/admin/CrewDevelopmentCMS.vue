@@ -20,18 +20,21 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between mb-3 px-3">
-            <div class="crew-header text-dark">Crew Development</div>
-            <button type="button" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1" @click="addContainer">
-                Add Item
-            </button>
+        <div class="sticky-controls">
+            <div class="d-flex align-items-center justify-content-between mb-3 px-3">
+                <div class="crew-header text-dark">Crew Development</div>
+                <button type="button" class="vmc-bg-prime-4 border-0 text-white rounded px-2 py-1"
+                    @click="addContainer">
+                    Add Item
+                </button>
+            </div>
+            <hr class="px-0">
         </div>
-        <hr class="px-0">
         <form action="" id="crewdevelopment" @submit.prevent="saveAllChanges">
             <div class="pb-3">
                 <div class="grid-header">
-                    <div class="w-100" v-for="(container, index) in containers" :key="index">
-                        <div class="mb-4 px-2">
+                    <div class="w-100 mb-4" v-for="(container, index) in containers" :key="index">
+                        <div class="mt-2 px-2">
                             <div class="d-flex align-items-center justify-content-between mb-2 px-2">
                                 <span class="item-number text-dark">
                                     Item # {{ index + 1 }}
@@ -64,7 +67,7 @@
 
                                     <img v-if="images[container.id]" :src="images[container.id]" alt="Slide Image"
                                         style="height:100%; width:100%; object-fit:contain;">
-  
+
                                     <template v-else>
                                         <input type="file" :id="'upload-crewdevelopment-img-' + container.id"
                                             accept="image/png, image/jpeg, image/jpg" hidden
@@ -84,7 +87,6 @@
                                 </button>
                             </div>
                         </div>
-                        <hr class="px-0">
                     </div>
                 </div>
             </div>
@@ -207,7 +209,7 @@ export default {
             }, 1500);
         }
     },
-    
+
     mounted() {
         // GET THE SAVED LOCAL STORAGE DATA
         const crewDevelopmentInput = localStorage.getItem("crewDevelopmentInput");
@@ -247,9 +249,16 @@ hr {
     border-top: 1px solid black;
 }
 
+.sticky-controls {
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+    padding-top: 18px;
+}
+
 @media (min-width: 330px) {
     .crew-header {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
     }
 
@@ -330,6 +339,10 @@ hr {
         font-size: 24px;
         cursor: pointer;
     }
+
+    .sticky-controls {
+        top: 60px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -346,13 +359,21 @@ hr {
     .modal-content img {
         max-height: 80vh;
     }
+
+    .crew-header {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
     .cms-container {
         margin-left: 310px;
         width: calc(100% - 310px);
-        margin-top: 105px;
+        margin-top: 82px;
+    }
+
+    .sticky-controls {
+        top: 82px;
     }
 }
 </style>
